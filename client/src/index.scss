@@ -1,7 +1,52 @@
+@import "./variables";
+
+// Basic elements
+
 body {
   margin: 0;
   font-family: "Nunito", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+button {
+  height: 50px;
+}
+
+// General classes
+
+.full-height {
+  height: 100vh;
 }
