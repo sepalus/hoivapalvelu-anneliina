@@ -10,7 +10,7 @@ export default function Header() {
         <h4>
           Luotettavaa ja ammattitaitoista hoitopalvelua Etelä-Suomen alueella.
         </h4>
-        <Button text="Ota yhteyttä" />
+        <Button text="Ota yhteyttä" className="footer-button" />
       </div>
       <div className="footer-information">
         <div className="footer-information-services">

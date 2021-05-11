@@ -3,7 +3,7 @@
 .info-card-container {
   display: flex;
   flex-direction: column;
-  gap: $space-quadruple-s;
+  gap: $space-triple-s;
   padding: $outer-padding-content-block-s;
   background-color: $color-lightblue-light;
 }
@@ -11,5 +11,5 @@
 .info-card-wrapper {
   display: flex;
   flex-direction: column;
-  gap: $space-double-s;
+  gap: $space-medium-s;
 }

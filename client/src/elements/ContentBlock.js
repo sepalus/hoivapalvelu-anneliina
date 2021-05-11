@@ -30,6 +30,7 @@ export default function ContentBlock({
         <Button
           imageUrl={buttonImage ? `./assets/logos/${buttonImage}` : null}
           text={buttonText}
+          className="content-block-button"
         ></Button>
       </div>
     </div>
