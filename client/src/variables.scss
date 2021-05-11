@@ -13,15 +13,16 @@ $color-beige-light: #f4f1e966; //66 = 40% Opacity
 $color-pink: #efbfcb;
 $color-pink-light: #efbfcb4c; //4C = 30% Opacity
 
-$space-vertical-small-s: 8px;
-$space-vertical-medium-s: 16px;
-$space-vertical-large-s: 24px;
+$space-single-s: 8px;
+$space-medium-s: 12px;
+$space-double-s: 16px;
+$space-triple-s: 24px;
+$space-quadruple-s: 32px;
+
 $outer-padding-content-block-s: 32px 24px 40px;
 $inner-padding-content-block-s: 24px 16px;
 $extra-padding-content-block-s: 48px 40px 56px;
-$gap-text-s: 8px;
-$gap-content-block-s: 16px;
-$gap-content-block-double-s: 32px;
+
 $border-radius: 3px;
 $box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);

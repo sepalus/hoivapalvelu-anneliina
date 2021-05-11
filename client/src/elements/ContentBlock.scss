@@ -13,7 +13,7 @@
   border-radius: $border-radius;
 
   &:not(:first-child) {
-    margin-top: $space-vertical-small-s;
+    margin-top: $space-single-s;
   }
 }
 
@@ -27,11 +27,11 @@
   display: flex;
   flex-direction: column;
   padding: $inner-padding-content-block-s;
-  gap: $gap-text-s;
+  gap: $space-single-s;
 }
 
 .content-block-button {
-  margin-top: $space-vertical-small-s;
+  margin-top: $space-medium-s;
 }
 
 .content-block-image-button {

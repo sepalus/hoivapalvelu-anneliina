@@ -6,6 +6,7 @@ import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
+import Footer from "../elements/Footer";
 
 export default function Home() {
   return (
@@ -53,6 +54,7 @@ export default function Home() {
           buttonText="Ota yhteyttä"
         />
       </ContentBlockContainer>
+      <Footer />
     </div>
   );
 }

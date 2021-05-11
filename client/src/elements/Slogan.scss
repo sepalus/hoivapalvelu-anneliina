@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: $extra-padding-content-block-s;
-  gap: $gap-content-block-double-s;
+  gap: $space-quadruple-s;
 }
 
 .slogan-image {
@@ -17,5 +17,5 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: $gap-text-s;
+  gap: $space-double-s;
 }

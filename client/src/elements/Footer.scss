@@ -1,0 +1,52 @@
+@import "../variables";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: $space-quadruple-s;
+  color: $color-darkblue;
+  background-color: $color-lightblue-light;
+  padding: $outer-padding-content-block-s;
+}
+
+.footer-slogan {
+  display: flex;
+  flex-direction: column;
+  gap: $space-single-s;
+}
+
+.footer-slogan-button {
+  margin-top: $space-medium-s;
+}
+
+.footer-information {
+  display: flex;
+  flex-direction: column;
+  gap: $space-double-s;
+
+  h3 {
+    margin-bottom: 4px;
+  }
+}
+
+.footer-information-content-items {
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+.footer-information-contact {
+  .footer-information-content-items > p {
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      padding-bottom: 2px;
+    }
+  }
+}
+
+.footer-information-contact-icon {
+  font-size: 1.25em;
+  padding-left: 2px;
+  padding-right: 6px;
+}
