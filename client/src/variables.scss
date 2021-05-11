@@ -13,11 +13,11 @@ $color-beige-light: #f4f1e966; //66 = 40% Opacity
 $color-pink: #efbfcb;
 $color-pink-light: #efbfcb4c; //4C = 30% Opacity
 
-$outer-padding-content-block-s: 32px 24px;
+$outer-padding-content-block-s: 32px 24px 40px;
 $inner-padding-content-block-s: 24px 16px;
 $gap-text-s: 8px;
 $gap-content-block-s: 16px;
 $gap-content-block-double-s: 32px;
-// $border-radius-content-block: 3px;
-$box-shadow-content-block: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+$border-radius: 3px;
+$box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);

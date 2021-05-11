@@ -1,0 +1,15 @@
+@import "../variables";
+
+.info-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-content-block-double-s;
+  padding: $outer-padding-content-block-s;
+  background-color: $color-lightblue-light;
+}
+
+.info-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-content-block-s;
+}
