@@ -1,0 +1,41 @@
+@import "../variables";
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.content-block-with-image {
+  background-color: $color-white;
+  box-shadow: $box-shadow-around;
+  border-radius: $border-radius;
+
+  &:not(:first-child) {
+    margin-top: $space-vertical-small-s;
+  }
+}
+
+.content-block-image {
+  width: 100%;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.content-block-information {
+  display: flex;
+  flex-direction: column;
+  padding: $inner-padding-content-block-s;
+  gap: $gap-text-s;
+}
+
+.content-block-button {
+  margin-top: $space-vertical-small-s;
+}
+
+.content-block-image-button {
+  height: 50px;
+  object-fit: contain;
+  align-self: flex-start;
+}

@@ -11,7 +11,11 @@ export default function Slogan() {
           ylpeyttä ja teemme työtämme pilke silmäkulmassa.
         </p>
       </div>
-      <img className="slogan-image" src="./assets/home-logo-hand.png" alt="" />
+      <img
+        className="slogan-image"
+        src="./assets/icons/home-logo-hand.png"
+        alt=""
+      />
     </div>
   );
 }

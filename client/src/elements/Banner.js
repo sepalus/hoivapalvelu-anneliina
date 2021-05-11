@@ -11,7 +11,11 @@ export default function Banner() {
         </h4>
         <button>Tutustu palveluihimme</button>
       </div>
-      <img className="banner-image" src="./assets/home-banner.jpeg" alt="" />
+      <img
+        className="banner-image"
+        src="./assets/images/home-banner.jpeg"
+        alt=""
+      />
     </div>
   );
 }

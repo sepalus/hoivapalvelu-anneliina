@@ -1,0 +1,9 @@
+@import "../variables";
+
+.content-block-container {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-content-block-double-s;
+  padding: $outer-padding-content-block-s;
+  background-color: $color-beige-light;
+}
