@@ -6,10 +6,10 @@ export default function Banner() {
   return (
     <div className="banner">
       <div className="banner-tagline">
-        <h4>
+        <h3>
           Meiltä saat kaikki kotona asumista tukevat palvelut vaivattomasti
           saman katon alta
-        </h4>
+        </h3>
         <Button text="Tutustu palveluihimme"></Button>
       </div>
       <img

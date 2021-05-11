@@ -5,19 +5,24 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  height: calc(100% - 60px);
+  max-height: calc(100vh - 60px);
 }
 
 .banner-tagline {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   gap: $space-double-s;
+  min-height: 150px;
   padding: $outer-padding-content-block-s;
   background-color: $color-beige-light;
 }
 
 .banner-image {
-  flex: 1;
+  flex: 0 1 auto;
   object-fit: cover;
   object-position: 50% 0;
+  height: calc(100vh - 260px);
+  min-height: 250px;
+  max-height: 105vw;
 }
