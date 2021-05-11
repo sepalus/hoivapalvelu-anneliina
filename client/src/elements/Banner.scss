@@ -1,0 +1,24 @@
+@import "../variables";
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+}
+
+.banner-tagline {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-content-block-s;
+  padding: $outer-padding-content-block-s;
+  background-color: $color-beige-light;
+}
+
+.banner-image {
+  flex: 1;
+  object-fit: cover;
+  object-position: 50% 0;
+}

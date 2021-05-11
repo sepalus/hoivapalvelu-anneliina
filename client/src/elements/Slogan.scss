@@ -1,0 +1,21 @@
+@import "../variables";
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $outer-padding-content-block-s;
+  gap: $gap-content-block-double-s;
+}
+
+.slogan-image {
+  box-sizing: border-box;
+  width: 80%;
+}
+
+.slogan-tagline {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: $gap-text-s;
+}
