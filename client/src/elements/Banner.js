@@ -1,5 +1,6 @@
 import React from "react";
 import "./Banner.scss";
+import Button from "../components/Button";
 
 export default function Banner() {
   return (
@@ -9,7 +10,7 @@ export default function Banner() {
           Meiltä saat kaikki kotona asumista tukevat palvelut vaivattomasti
           saman katon alta
         </h4>
-        <button>Tutustu palveluihimme</button>
+        <Button text="Tutustu palveluihimme"></Button>
       </div>
       <img
         className="banner-image"

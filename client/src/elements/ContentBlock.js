@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContentBlock.scss";
+import Button from "../components/Button";
 
 export default function ContentBlock({
   imageFileName,
@@ -26,15 +27,10 @@ export default function ContentBlock({
       <div className="content-block-information">
         <h2 className="content-block-title">{title}</h2>
         <p className="content-block-text">{text}</p>
-        {buttonImage ? (
-          <img
-            className="content-block-button content-block-image-button"
-            src={`./assets/logos/${buttonImage}`}
-            alt=""
-          />
-        ) : (
-          <button className="content-block-button">{buttonText}</button>
-        )}
+        <Button
+          imageUrl={buttonImage ? `./assets/logos/${buttonImage}` : null}
+          text={buttonText}
+        ></Button>
       </div>
     </div>
   );

@@ -1,0 +1,27 @@
+@import "../variables";
+
+.action-button {
+  height: 50px;
+  margin-top: $space-medium-s;
+  font-weight: 400;
+  color: $color-darkblue;
+  background-color: $color-white;
+  border: 1px solid $color-darkblue;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-below;
+}
+
+.action-button:hover {
+  background-color: $color-lightblue-ultralight;
+  transform: translateY(-1px);
+}
+
+.action-button-image {
+  align-self: flex-start;
+  border: none;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+}

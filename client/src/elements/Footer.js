@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import Button from "../components/Button";
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
         <h4>
           Luotettavaa ja ammattitaitoista hoitopalvelua Etelä-Suomen alueella.
         </h4>
-        <button className="footer-slogan-button">Ota yhteyttä</button>
+        <Button text="Ota yhteyttä" />
       </div>
       <div className="footer-information">
         <div className="footer-information-services">
