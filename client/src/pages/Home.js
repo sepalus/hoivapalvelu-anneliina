@@ -11,10 +11,8 @@ import Footer from "../elements/Footer";
 export default function Home() {
   return (
     <div>
-      <div className="full-height">
-        <Header />
-        <Banner />
-      </div>
+      <Header />
+      <Banner />
       <Slogan />
       <InfoCardContainer title="Yksilöllistä hoivapalvelua kaikille sitä tarvitseville">
         <InfoCard

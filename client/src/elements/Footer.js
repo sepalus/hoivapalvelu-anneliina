@@ -2,14 +2,18 @@ import React from "react";
 import "./Footer.scss";
 import Button from "../components/Button";
 
-export default function Header() {
+export default function Footer() {
   return (
     <div className="footer">
       <div className="footer-slogan">
-        <h2 className="bold-text">Hoivapalvelu Anneliina</h2>
-        <h4>
+        <img
+          className="footer-image"
+          src="./assets/logos/hoivapalvelu-anneliina-darkblue.png"
+          alt=""
+        />
+        <p className="bold-text">
           Luotettavaa ja ammattitaitoista hoitopalvelua Etelä-Suomen alueella.
-        </h4>
+        </p>
         <Button text="Ota yhteyttä" className="footer-button" />
       </div>
       <div className="footer-information">

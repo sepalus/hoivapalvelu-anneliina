@@ -14,7 +14,7 @@ export default function ContentBlock({
       className={
         imageFileName
           ? "content-block content-block-with-image"
-          : "content-block"
+          : "content-block content-block-without-image"
       }
     >
       {imageFileName && (

@@ -17,6 +17,14 @@
   }
 }
 
+.content-block-without-image {
+  &:last-child {
+    .content-block-information {
+      padding-bottom: 0px;
+    }
+  }
+}
+
 .content-block-image {
   width: 100%;
   border-top-left-radius: $border-radius;

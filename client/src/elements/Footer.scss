@@ -9,10 +9,21 @@
   padding: $outer-padding-content-block-s;
 }
 
+.footer-image {
+  height: 28px;
+  object-fit: contain;
+  align-self: start;
+}
+
 .footer-slogan {
   display: flex;
   flex-direction: column;
   gap: $space-single-s;
+
+  p,
+  button {
+    width: 280px;
+  }
 }
 
 .footer-information {

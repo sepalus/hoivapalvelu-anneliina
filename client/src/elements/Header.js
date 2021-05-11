@@ -2,5 +2,13 @@ import React from "react";
 import "./Header.scss";
 
 export default function Header() {
-  return <h4 className="header">Hoivapalvelu Anneliina</h4>;
+  return (
+    <div className="header">
+      <img
+        className="header-image"
+        src="./assets/logos/hoivapalvelu-anneliina.png"
+        alt=""
+      />
+    </div>
+  );
 }
