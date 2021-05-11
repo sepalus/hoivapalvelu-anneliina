@@ -1,11 +1,19 @@
 import React from "react";
 import "./Button.scss";
 
-export default function Button({ imageUrl, text, className }) {
+export default function Button({ children, imageUrl, text, className }) {
   return (
     <>
-      {imageUrl ? (
-        <button className={`action-button action-button-image ${className}`}>
+      {children ? (
+        <button
+          className={`action-button action-button-with-content ${className}`}
+        >
+          {children}
+        </button>
+      ) : imageUrl ? (
+        <button
+          className={`action-button action-button-with-image ${className}`}
+        >
           <img src={imageUrl} alt="" />
         </button>
       ) : (

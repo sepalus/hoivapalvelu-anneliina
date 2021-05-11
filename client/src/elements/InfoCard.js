@@ -1,9 +1,10 @@
 import React from "react";
 import "./InfoCard.scss";
+import Button from "../components/Button";
 
 export default function InfoCard({ iconFileName, logoFileName }) {
   return (
-    <div className="info-card">
+    <Button className="info-card">
       <div className="info-card-icon-wrapper">
         <img
           className="info-card-icon"
@@ -20,6 +21,6 @@ export default function InfoCard({ iconFileName, logoFileName }) {
       ) : (
         <div className="info-card-text"></div>
       )}
-    </div>
+    </Button>
   );
 }

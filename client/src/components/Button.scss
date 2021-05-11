@@ -12,11 +12,11 @@
 }
 
 .action-button:hover {
-  background-color: $color-lightblue-ultralight;
   transform: translateY(-1px);
+  font-weight: 600;
 }
 
-.action-button-image {
+.action-button-with-image {
   align-self: flex-start;
   border: none;
 
@@ -24,4 +24,8 @@
     height: 100%;
     object-fit: contain;
   }
+}
+
+.action-button-with-content {
+  border: none;
 }
