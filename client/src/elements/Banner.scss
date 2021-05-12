@@ -14,8 +14,8 @@
   flex-direction: column;
   gap: $space-double-s;
   min-height: 150px;
-  padding: $outer-padding-content-block-s;
   background-color: $color-beige-light;
+  @include setOuterPaddings();
 }
 
 .banner-image {

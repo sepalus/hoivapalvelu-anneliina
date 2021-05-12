@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: $space-triple-s;
-  padding: $outer-padding-content-block-s;
   background-color: $color-lightblue-light;
+  @include setOuterPaddings();
 }
 
 .info-card-wrapper {

@@ -21,9 +21,21 @@ $space-triple-s: 24px;
 $space-quadruple-s: 32px;
 
 $outer-padding-content-block-s: 32px 24px 40px;
+$outer-padding-content-block-m: 40px 32px 48px;
 $inner-padding-content-block-s: 24px 16px;
 $extra-padding-content-block-s: 48px 40px 56px;
 
 $border-radius: 3px;
 $box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+
+@mixin setOuterPaddings() {
+  padding: $outer-padding-content-block-s;
+  @media only screen and (min-width: $width-m) {
+    padding: $outer-padding-content-block-m;
+  }
+}
+
+@mixin setInnerPaddings() {
+  padding: $inner-padding-content-block-s;
+}

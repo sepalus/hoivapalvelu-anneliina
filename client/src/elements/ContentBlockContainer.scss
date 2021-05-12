@@ -4,6 +4,6 @@
   display: flex;
   flex-direction: column;
   gap: $space-triple-s;
-  padding: $outer-padding-content-block-s;
   background-color: $color-beige-light;
+  @include setOuterPaddings();
 }

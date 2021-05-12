@@ -8,11 +8,11 @@
   width: 100%;
   height: 60px;
   background-color: $color-white;
-  padding: $outer-padding-content-block-s;
-  padding-top: 0;
-  padding-bottom: 0;
   z-index: 1;
   box-shadow: $box-shadow-below;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  @include setOuterPaddings();
 }
 
 .header-image {

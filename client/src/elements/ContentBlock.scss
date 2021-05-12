@@ -34,8 +34,8 @@
 .content-block-information {
   display: flex;
   flex-direction: column;
-  padding: $inner-padding-content-block-s;
   gap: $space-single-s;
+  @include setInnerPaddings();
 }
 
 .content-block-button {

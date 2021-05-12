@@ -6,7 +6,7 @@
   gap: $space-quadruple-s;
   color: $color-darkblue;
   background-color: $color-lightblue-light;
-  padding: $outer-padding-content-block-s;
+  @include setOuterPaddings();
 }
 
 .footer-image {
