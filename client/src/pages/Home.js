@@ -1,17 +1,14 @@
 import React from "react";
-import Header from "../elements/Header";
 import Banner from "../elements/Banner";
 import Slogan from "../elements/Slogan";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
-import Footer from "../elements/Footer";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
+    <div className="home">
       <Banner />
       <Slogan />
       <InfoCardContainer title="Yksilöllistä hoivapalvelua kaikille sitä tarvitseville">
@@ -52,7 +49,6 @@ export default function Home() {
           buttonText="Ota yhteyttä"
         />
       </ContentBlockContainer>
-      <Footer />
     </div>
   );
 }
