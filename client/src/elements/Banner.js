@@ -14,7 +14,7 @@ export default function Banner() {
       </div>
       <img
         className="banner-image"
-        src="./assets/images/home-banner.jpeg"
+        src="./assets/images/home-banner-wide.jpg"
         alt=""
       />
     </div>
