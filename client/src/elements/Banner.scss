@@ -14,8 +14,8 @@
   flex-direction: column;
   min-height: 150px;
   background-color: $color-beige-light;
-  @include setOuterPaddings();
-  gap: $x2;
+  @include setOuterPaddings(true);
+  gap: $x2_5;
 }
 
 .banner-image {
@@ -39,7 +39,7 @@
     gap: $x4;
     background: none;
     h3 {
-      line-height: 1.75em;
+      line-height: 1.66em;
     }
     button {
       margin-right: auto;

@@ -5,8 +5,8 @@
   flex-direction: column;
   color: $color-darkblue;
   background-color: $color-lightblue-light;
-  @include setOuterPaddings();
-  gap: $x4;
+  @include setOuterPaddings(true);
+  gap: $x5;
 }
 
 .footer-image {
@@ -65,6 +65,9 @@
 }
 
 @media only screen and (min-width: $width-xs) {
+  .footer {
+    gap: $x3;
+  }
   .footer-slogan {
     flex-direction: row;
   }

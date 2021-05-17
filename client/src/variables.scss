@@ -56,6 +56,7 @@ $outer-gap-l: $x6;
 $outer-gap-xl: $x7;
 
 $inner-half-padding-content-block-s: $x3_5 $x1_5 $x4_5;
+$outer-extra-padding-content-block-s: $x6 $x5 $x7;
 
 $extra-padding-content-block-s: $x6 $x5 $x7;
 
@@ -63,8 +64,17 @@ $border-radius: 3px;
 $box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
-@mixin setOuterPaddings() {
-  padding: $outer-padding-content-block-s;
+@mixin setOuterPaddings($extraSidePadding: false, $noVerticalPadding: false) {
+  @if $extraSidePadding {
+    padding: $outer-extra-padding-content-block-s;
+  } @else {
+    padding: $outer-padding-content-block-s;
+  }
+  @if $noVerticalPadding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
   gap: $outer-gap-s;
 
   @media only screen and (min-width: $width-m) {

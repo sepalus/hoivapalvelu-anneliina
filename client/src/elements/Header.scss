@@ -10,9 +10,7 @@
   background-color: $color-white;
   z-index: 1;
   box-shadow: $box-shadow-below;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  @include setOuterPaddings();
+  @include setOuterPaddings(true, true);
 }
 
 .header-image {
