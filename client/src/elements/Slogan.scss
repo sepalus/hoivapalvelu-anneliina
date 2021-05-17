@@ -4,13 +4,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: $extra-padding-content-block-s;
-  gap: $x4;
+  @include setExtraPaddings();
+}
+.slogan-image-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .slogan-image {
   box-sizing: border-box;
   width: 80%;
+  max-width: 400px;
 }
 
 .slogan-tagline {
@@ -18,4 +22,22 @@
   flex-direction: column;
   text-align: center;
   gap: $x2;
+}
+@media only screen and (min-width: $width-m) {
+  .slogan {
+    flex-direction: row-reverse;
+    height: 100vh;
+    > * {
+      width: 50%;
+    }
+  }
+  .slogan-image {
+    min-width: 300px;
+    max-width: 400px;
+    margin-left: auto;
+  }
+  .slogan-tagline {
+    min-width: 310px;
+    text-align: start;
+  }
 }
