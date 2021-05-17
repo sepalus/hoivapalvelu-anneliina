@@ -7,3 +7,9 @@
   background-color: $color-beige-light;
   @include setOuterPaddings();
 }
+
+@media only screen and (min-width: $width-m) {
+  .content-block-container {
+    background-color: $color-white;
+  }
+}

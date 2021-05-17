@@ -32,6 +32,7 @@ export default function Home() {
           text="Jokainen meistä on yksilö. Meillä on kaikilla oma tarinamme, omat kokemuksemme, omat ilomme ja surumme ja ennen kaikkea oma tapa elää. Me Anneliinahoivassa pidämme ihmisiä ihmisinä, emme ikänä tai sairautena. Yksilöllinen sydämestä lähtevä hoivamme tarkoittaa sitä, että asiakasta kohdellaan ainutlaatuisena ihmisenä, jolla on paljon annettavaa ja oikeus hyvään elämään."
           buttonText="Lue lisää yrityksemme arvoista"
           backgroundColor="beige"
+          imagePosition="100% 0"
         />
         <ContentBlock
           title="Voisitko sinä tai läheisesi hyötyä palvelustamme?"

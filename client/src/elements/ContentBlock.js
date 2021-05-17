@@ -10,6 +10,7 @@ export default function ContentBlock({
   buttonImage,
   buttonText,
   backgroundColor,
+  imagePosition,
 }) {
   return (
     <div
@@ -20,11 +21,14 @@ export default function ContentBlock({
       })}
     >
       {imageFileName && (
-        <img
-          className="content-block-image"
-          src={`./assets/images/${imageFileName}`}
-          alt=""
-        />
+        <div className="content-block-image-wrapper">
+          <img
+            className="content-block-image"
+            src={`./assets/images/${imageFileName}`}
+            alt=""
+            style={{ objectPosition: imagePosition }}
+          />
+        </div>
       )}
       <div className="content-block-information">
         <h2 className="content-block-title">{title}</h2>
