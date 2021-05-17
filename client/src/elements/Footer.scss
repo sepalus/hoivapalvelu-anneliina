@@ -3,10 +3,10 @@
 .footer {
   display: flex;
   flex-direction: column;
-  gap: $space-quadruple-s;
   color: $color-darkblue;
   background-color: $color-lightblue-light;
   @include setOuterPaddings();
+  gap: $space-quadruple-s;
 }
 
 .footer-image {

@@ -3,11 +3,11 @@
 .info-card {
   display: flex;
   align-items: flex-end;
-  gap: $space-double-s;
   width: 100%;
   height: 80px;
   background-color: $color-white;
   @include setInnerPaddings();
+  gap: $space-double-s;
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
 }

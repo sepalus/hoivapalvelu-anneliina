@@ -54,6 +54,7 @@ h4 {
 
 p {
   font-size: 16px;
+  line-height: 1.66em;
 }
 
 p.text-small {
@@ -69,18 +70,6 @@ p.text-extrasmall {
 // General classes
 .bold-text {
   font-weight: 300;
-}
-
-.background-lightblue {
-  background-color: $color-lightblue-light !important;
-}
-
-.background-beige {
-  background-color: $color-beige-light !important;
-}
-
-.background-pink {
-  background-color: $color-pink-light !important;
 }
 
 @media only screen and (min-width: $width-m) {
@@ -104,6 +93,18 @@ p.text-extrasmall {
   p.text-extrasmall {
     font-size: 13px;
     line-height: 25.5px;
+  }
+
+  .background-lightblue {
+    background-color: $color-lightblue-light !important;
+  }
+
+  .background-beige {
+    background-color: $color-beige-light !important;
+  }
+
+  .background-pink {
+    background-color: $color-pink-light !important;
   }
 }
 

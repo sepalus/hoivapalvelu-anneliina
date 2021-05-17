@@ -18,12 +18,21 @@ $color-pink-light: #efbfcb4c; //4C = 30% Opacity
 $space-single-s: 8px;
 $space-medium-s: 12px;
 $space-double-s: 16px;
+$space-double-plus-s: 20px;
 $space-triple-s: 24px;
 $space-quadruple-s: 32px;
+$space-quintuple-s: 40px;
 
-$outer-padding-content-block-s: 32px 24px 40px;
-$outer-padding-content-block-m: 40px 32px 48px;
-$inner-padding-content-block-s: 24px 16px;
+$outer-padding-content-block-s: 48px 28px 56px;
+$outer-padding-content-block-m: 56px 36px 64px;
+$outer-padding-content-block-l: 64px 44px 72px;
+
+$inner-padding-content-block-s: 28px 24px 36px;
+$inner-padding-content-block-m: 36px 32px 44px;
+$inner-padding-content-block-l: 48px 40px 56px;
+
+$inner-half-padding-content-block-s: 28px 12px 36px;
+
 $extra-padding-content-block-s: 48px 40px 56px;
 
 $border-radius: 3px;
@@ -32,11 +41,47 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
 @mixin setOuterPaddings() {
   padding: $outer-padding-content-block-s;
+  gap: 12px;
+
   @media only screen and (min-width: $width-m) {
     padding: $outer-padding-content-block-m;
+    gap: 44px;
+  }
+  @media only screen and (min-width: $width-l) {
+    padding: $outer-padding-content-block-l;
+    gap: 52px;
   }
 }
 
-@mixin setInnerPaddings() {
-  padding: $inner-padding-content-block-s;
+@mixin setInnerPaddings($halfSidePadding: false, $noBottomPadding: false) {
+  @if $halfSidePadding {
+    padding: $inner-half-padding-content-block-s;
+    padding-bottom: $space-quintuple-s;
+  } @else {
+    padding: $inner-padding-content-block-s;
+  }
+
+  @if $noBottomPadding {
+    padding-bottom: 0px;
+  }
+
+  gap: $space-single-s;
+  button {
+    margin-top: $space-medium-s;
+    margin-right: auto;
+  }
+  & .content-block-without-image {
+    padding: 0px;
+  }
+  @media only screen and (min-width: $width-m) {
+    padding: $inner-padding-content-block-m;
+    gap: $space-medium-s;
+    button {
+      margin-top: $space-double-s;
+      margin-right: auto;
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    padding: $inner-padding-content-block-l;
+  }
 }

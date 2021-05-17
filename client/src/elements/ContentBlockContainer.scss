@@ -3,7 +3,6 @@
 .content-block-container {
   display: flex;
   flex-direction: column;
-  gap: $space-triple-s;
   background-color: $color-beige-light;
   @include setOuterPaddings();
 }

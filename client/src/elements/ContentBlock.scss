@@ -11,22 +11,23 @@
   background-color: $color-white;
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
-
-  &:not(:first-child) {
-    margin-top: $space-single-s;
-  }
 }
 
 .content-block-without-image {
+  .content-block-information {
+    @include setInnerPaddings(true);
+  }
+
   &:last-child {
     .content-block-information {
-      padding-bottom: 0px;
+      @include setInnerPaddings(true, true);
     }
   }
 }
 
 .content-block-image-wrapper {
   position: relative;
+  line-height: 0;
 }
 .content-block-image {
   width: 100%;
@@ -39,13 +40,7 @@
 .content-block-information {
   display: flex;
   flex-direction: column;
-  gap: $space-single-s;
   @include setInnerPaddings();
-}
-
-.content-block-button {
-  margin-top: $space-medium-s;
-  margin-right: auto;
 }
 
 @media only screen and (min-width: $width-m) {

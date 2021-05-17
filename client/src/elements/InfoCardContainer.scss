@@ -3,9 +3,9 @@
 .info-card-container {
   display: flex;
   flex-direction: column;
-  gap: $space-triple-s;
   background-color: $color-lightblue-light;
   @include setOuterPaddings();
+  gap: $space-triple-s;
 }
 
 .info-card-wrapper {
