@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import "./ContentBlock.scss";
 import Button from "../components/Button";
 
@@ -8,14 +9,15 @@ export default function ContentBlock({
   text,
   buttonImage,
   buttonText,
+  backgroundColor,
 }) {
   return (
     <div
-      className={
-        imageFileName
-          ? "content-block content-block-with-image"
-          : "content-block content-block-without-image"
-      }
+      className={classNames("content-block", {
+        "content-block-with-image": imageFileName,
+        "content-block-without-image": !imageFileName,
+        [`background-${backgroundColor}`]: true,
+      })}
     >
       {imageFileName && (
         <img

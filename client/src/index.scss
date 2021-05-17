@@ -71,6 +71,18 @@ p.text-extrasmall {
   font-weight: 300;
 }
 
+.background-lightblue {
+  background-color: $color-lightblue-light !important;
+}
+
+.background-beige {
+  background-color: $color-beige-light !important;
+}
+
+.background-pink {
+  background-color: $color-pink-light !important;
+}
+
 @media only screen and (min-width: $width-m) {
   p {
     font-size: 17px;
