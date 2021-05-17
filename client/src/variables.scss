@@ -4,6 +4,10 @@ $width-m: 768px;
 $width-l: 992px;
 $width-xl: 1200px;
 
+$line-height-p-16: calc(16px * 1.66);
+$line-height-p-17: calc(17px * 1.66);
+$line-height-p-18: calc(18px * 1.66);
+
 $color-white: #ffffff;
 $color-black: #000000;
 $color-lightblue: #a4d3f2;
@@ -15,25 +19,45 @@ $color-beige-light: #f4f1e966; //66 = 40% Opacity
 $color-pink: #efbfcb;
 $color-pink-light: #efbfcb4c; //4C = 30% Opacity
 
-$space-single-s: 8px;
-$space-medium-s: 12px;
-$space-double-s: 16px;
-$space-double-plus-s: 20px;
-$space-triple-s: 24px;
-$space-quadruple-s: 32px;
-$space-quintuple-s: 40px;
+$x1: 8px;
+$x1_5: 12px;
+$x2: 16px;
+$x2_5: 20px;
+$x3: 24px;
+$x3_5: 28px;
+$x4: 32px;
+$x4_5: 36px;
+$x5: 40px;
+$x5_5: 44px;
+$x6: 48px;
+$x6_5: 52px;
+$x7: 56px;
+$x8: 64px;
+$x9: 72px;
+$x10: 72px;
 
-$outer-padding-content-block-s: 48px 28px 56px;
-$outer-padding-content-block-m: 56px 36px 64px;
-$outer-padding-content-block-l: 64px 44px 72px;
+$outer-padding-content-block-s: $x6 $x3_5 $x7;
+$outer-padding-content-block-m: $x7 $x4_5 $x8;
+$outer-padding-content-block-l: $x8 $x5_5 $x9;
+$outer-padding-content-block-xl: $x9 $x6_5 $x10;
 
-$inner-padding-content-block-s: 28px 24px 36px;
-$inner-padding-content-block-m: 36px 32px 44px;
-$inner-padding-content-block-l: 48px 40px 56px;
+$inner-padding-content-block-s: $x3_5 $x3 $x4_5;
+$inner-padding-content-block-m: $x4_5 $x4 $x5_5;
+$inner-padding-content-block-l: $x6 $x5 $x7;
+$inner-padding-content-block-xl: $x7 $x6 $x8;
 
-$inner-half-padding-content-block-s: 28px 12px 36px;
+$inner-gap-s: $x1;
+$inner-gap-m: $x1;
+$inner-gap-l: $x1_5;
 
-$extra-padding-content-block-s: 48px 40px 56px;
+$outer-gap-s: $x1_5;
+$outer-gap-m: $x5;
+$outer-gap-l: $x6;
+$outer-gap-xl: $x7;
+
+$inner-half-padding-content-block-s: $x3_5 $x1_5 $x4_5;
+
+$extra-padding-content-block-s: $x6 $x5 $x7;
 
 $border-radius: 3px;
 $box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
@@ -41,22 +65,26 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
 @mixin setOuterPaddings() {
   padding: $outer-padding-content-block-s;
-  gap: 12px;
+  gap: $outer-gap-s;
 
   @media only screen and (min-width: $width-m) {
     padding: $outer-padding-content-block-m;
-    gap: 44px;
+    gap: $outer-gap-m;
   }
   @media only screen and (min-width: $width-l) {
     padding: $outer-padding-content-block-l;
-    gap: 52px;
+    gap: $outer-gap-l;
+  }
+  @media only screen and (min-width: $width-xl) {
+    padding: $outer-padding-content-block-xl;
+    gap: $outer-gap-xl;
   }
 }
 
 @mixin setInnerPaddings($halfSidePadding: false, $noBottomPadding: false) {
   @if $halfSidePadding {
     padding: $inner-half-padding-content-block-s;
-    padding-bottom: $space-quintuple-s;
+    padding-bottom: $x5;
   } @else {
     padding: $inner-padding-content-block-s;
   }
@@ -65,23 +93,28 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
     padding-bottom: 0px;
   }
 
-  gap: $space-single-s;
+  gap: $inner-gap-s;
+
   button {
-    margin-top: $space-medium-s;
+    margin-top: $inner-gap-s;
     margin-right: auto;
   }
   & .content-block-without-image {
     padding: 0px;
   }
+
   @media only screen and (min-width: $width-m) {
     padding: $inner-padding-content-block-m;
-    gap: $space-medium-s;
+    gap: $inner-gap-m;
     button {
-      margin-top: $space-double-s;
-      margin-right: auto;
+      margin-top: $inner-gap-m;
     }
   }
   @media only screen and (min-width: $width-l) {
     padding: $inner-padding-content-block-l;
+    gap: $inner-gap-l;
+    button {
+      margin-top: $inner-gap-l;
+    }
   }
 }

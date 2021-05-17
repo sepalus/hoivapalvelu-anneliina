@@ -54,17 +54,15 @@ h4 {
 
 p {
   font-size: 16px;
-  line-height: 1.66em;
+  line-height: $line-height-p-16;
 }
 
 p.text-small {
   font-size: 14px;
-  line-height: 24px;
 }
 
 p.text-extrasmall {
   font-size: 12px;
-  line-height: 24px;
 }
 
 // General classes
@@ -75,6 +73,7 @@ p.text-extrasmall {
 @media only screen and (min-width: $width-m) {
   p {
     font-size: 17px;
+    line-height: $line-height-p-17;
   }
 
   h2 {
@@ -87,12 +86,10 @@ p.text-extrasmall {
 
   p.text-small {
     font-size: 15px;
-    line-height: 25.5px;
   }
 
   p.text-extrasmall {
     font-size: 13px;
-    line-height: 25.5px;
   }
 
   .background-lightblue {
@@ -111,6 +108,7 @@ p.text-extrasmall {
 @media only screen and (min-width: $width-l) {
   p {
     font-size: 18px;
+    line-height: $line-height-p-18;
   }
 
   h2 {
@@ -122,11 +120,9 @@ p.text-extrasmall {
   }
   p.text-small {
     font-size: 16px;
-    line-height: 27x;
   }
 
   p.text-extrasmall {
     font-size: 14px;
-    line-height: 27px;
   }
 }

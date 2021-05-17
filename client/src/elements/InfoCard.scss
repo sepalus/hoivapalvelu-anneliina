@@ -7,7 +7,7 @@
   height: 80px;
   background-color: $color-white;
   @include setInnerPaddings();
-  gap: $space-double-s;
+  gap: $x2;
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
 }

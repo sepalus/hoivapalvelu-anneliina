@@ -5,11 +5,11 @@
   flex-direction: column;
   background-color: $color-lightblue-light;
   @include setOuterPaddings();
-  gap: $space-triple-s;
+  gap: $x3;
 }
 
 .info-card-wrapper {
   display: flex;
   flex-direction: column;
-  gap: $space-medium-s;
+  gap: $x1_5;
 }

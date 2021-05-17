@@ -6,7 +6,7 @@
   color: $color-darkblue;
   background-color: $color-lightblue-light;
   @include setOuterPaddings();
-  gap: $space-quadruple-s;
+  gap: $x4;
 }
 
 .footer-image {
@@ -18,7 +18,7 @@
 .footer-slogan {
   display: flex;
   flex-direction: column;
-  gap: $space-double-s;
+  gap: $x2;
 
   p,
   button {
@@ -29,13 +29,13 @@
 .footer-slogan-content {
   display: flex;
   flex-direction: column;
-  gap: $space-single-s;
+  gap: $x1;
 }
 
 .footer-information {
   display: flex;
   flex-direction: column;
-  gap: $space-double-s;
+  gap: $x2;
 
   h3 {
     margin-bottom: 4px;
@@ -97,6 +97,6 @@
   }
   .footer-information {
     flex-grow: 1;
-    gap: $space-quadruple-s;
+    gap: $x4;
   }
 }
