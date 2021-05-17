@@ -21,8 +21,33 @@
 .banner-image {
   flex: 0 1 auto;
   object-fit: cover;
-  object-position: 50% 0;
+  object-position: 80% 0;
   height: calc(100vh - 260px);
   min-height: 250px;
   max-height: 105vw;
+}
+
+@media only screen and (min-width: $width-m) {
+  .banner {
+    height: calc(100vh - 60px);
+  }
+  .banner-tagline {
+    position: absolute;
+    min-width: 360px;
+    width: 50%;
+    padding-top: 56px;
+    gap: $space-quadruple-s;
+    background: none;
+    h3 {
+      line-height: 1.75em;
+    }
+    button {
+      width: auto;
+      margin-right: auto;
+    }
+  }
+  .banner-image {
+    object-position: 65% 0;
+    height: 100%;
+  }
 }
