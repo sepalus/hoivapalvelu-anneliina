@@ -70,3 +70,50 @@ p.text-extrasmall {
 .bold-text {
   font-weight: 300;
 }
+
+@media only screen and (min-width: $width-m) {
+  p {
+    font-size: 17px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p.text-small {
+    font-size: 15px;
+    line-height: 25.5px;
+  }
+
+  p.text-extrasmall {
+    font-size: 13px;
+    line-height: 25.5px;
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+  p.text-small {
+    font-size: 16px;
+    line-height: 27x;
+  }
+
+  p.text-extrasmall {
+    font-size: 14px;
+    line-height: 27px;
+  }
+}
