@@ -18,12 +18,18 @@
 .footer-slogan {
   display: flex;
   flex-direction: column;
-  gap: $space-single-s;
+  gap: $space-double-s;
 
   p,
   button {
-    width: 280px;
+    width: 264px;
   }
+}
+
+.footer-slogan-content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-single-s;
 }
 
 .footer-information {
@@ -58,6 +64,39 @@
   padding-right: 6px;
 }
 
-.footer-button {
-  margin-top: $space-medium-s;
+@media only screen and (min-width: $width-xs) {
+  .footer-slogan {
+    flex-direction: row;
+  }
+  .footer-slogan-content {
+    width: 100%;
+  }
+  .footer-slogan-button {
+    align-self: flex-end;
+    width: 100% !important;
+  }
+  .footer-information {
+    flex-direction: row;
+    & > * {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (min-width: $width-m) {
+  .footer {
+    flex-direction: row;
+  }
+  .footer-slogan {
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .footer-slogan-button {
+    align-self: flex-start;
+    width: 264px !important;
+  }
+  .footer-information {
+    flex-grow: 1;
+    gap: $space-quadruple-s;
+  }
 }
