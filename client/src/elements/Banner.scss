@@ -2,14 +2,19 @@
 
 .banner {
   scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
   position: relative;
   width: 100%;
   max-height: $content-height;
 }
 
+.banner-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include setContentMaxWidth();
+}
+
 .banner-tagline {
+  z-index: 1;
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
@@ -23,6 +28,7 @@
   flex: 0 1 auto;
   object-fit: cover;
   object-position: 80% 0;
+  width: 100%;
   height: calc(100vh - 260px);
   min-height: 250px;
   max-height: 105vw;
@@ -35,6 +41,7 @@
   .banner-tagline {
     position: absolute;
     min-width: 360px;
+    max-width: 600px;
     width: 50%;
     padding-top: 56px;
     gap: $x4;
@@ -49,5 +56,12 @@
   .banner-image {
     object-position: 65% 0;
     height: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
+@media only screen and (min-width: $width-xl) {
+  .banner-image {
+    object-position: 75% 0;
   }
 }

@@ -1,11 +1,15 @@
 @import "../variables";
 
 .info-card-container {
+  background-color: $color-lightblue-light;
+}
+
+.info-card-container-content-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: $color-lightblue-light;
   @include setOuterPaddings();
   @include setGap(true);
+  @include setContentMaxWidth();
 }
 
 .info-card-wrapper {

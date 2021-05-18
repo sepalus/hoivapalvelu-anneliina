@@ -1,10 +1,13 @@
 @import "../variables";
 
 .content-block-container {
+  background-color: $color-beige-light;
+}
+.content-block-container-content-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: $color-beige-light;
   @include setOuterPaddings();
+  @include setContentMaxWidth();
 }
 
 @media only screen and (min-width: $width-m) {

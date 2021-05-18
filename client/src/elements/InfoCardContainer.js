@@ -4,8 +4,10 @@ import "./InfoCardContainer.scss";
 export default function InfoCardContainer({ title, children }) {
   return (
     <div className="info-card-container">
-      <h2>{title}</h2>
-      <div className="info-card-wrapper">{children}</div>
+      <div className="info-card-container-content-wrapper">
+        <h2>{title}</h2>
+        <div className="info-card-wrapper">{children}</div>
+      </div>
     </div>
   );
 }

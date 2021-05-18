@@ -1,16 +1,20 @@
 @import "../variables";
 
 .header {
-  display: flex;
-  align-items: center;
   position: sticky;
   top: 0;
   width: 100%;
   height: $header-height;
+  z-index: 2;
   background-color: $color-white;
-  z-index: 1;
   box-shadow: $box-shadow-below;
+}
+.header-content-wrapper {
+  display: flex;
+  align-items: center;
+
   @include setOuterPaddings(true, true);
+  @include setContentMaxWidth();
 }
 
 .header-image {

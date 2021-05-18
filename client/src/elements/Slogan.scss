@@ -1,11 +1,13 @@
 @import "../variables";
 
-.slogan {
+.slogan-content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   @include setExtraPaddings();
+  @include setContentMaxWidth();
 }
+
 .slogan-image-wrapper {
   display: flex;
   justify-content: center;
@@ -27,7 +29,7 @@
   max-width: 440px;
 }
 @media only screen and (min-width: $width-m) {
-  .slogan {
+  .slogan-content-wrapper {
     flex-direction: row-reverse;
     height: $content-height;
     > * {
