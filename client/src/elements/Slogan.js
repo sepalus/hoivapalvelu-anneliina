@@ -6,7 +6,7 @@ export default function Slogan() {
     <div className="slogan">
       <div className="slogan-tagline">
         <h2 className="slogan-tagline-title">Sydämen asialla</h2>
-        <p className="slogan-title-text">
+        <p className="slogan-tagline-text">
           Päivittäinen toimintamme perustuu arvoihimme. Tunnemme iloa ja
           ylpeyttä ja teemme työtämme pilke silmäkulmassa.
         </p>

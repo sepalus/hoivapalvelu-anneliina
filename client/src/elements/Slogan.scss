@@ -8,38 +8,43 @@
 }
 .slogan-image-wrapper {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 .slogan-image {
   box-sizing: border-box;
   width: 80%;
-  max-width: 400px;
+  max-width: 360px;
 }
 
 .slogan-tagline {
   display: flex;
   flex-direction: column;
-  max-width: 440px;
   text-align: center;
   @include setGap();
+}
+.slogan-tagline-text {
+  max-width: 440px;
 }
 @media only screen and (min-width: $width-m) {
   .slogan {
     flex-direction: row-reverse;
-    height: 100vh;
+    height: $content-height;
     > * {
       width: 50%;
     }
   }
   .slogan-image {
-    min-width: 300px;
+    min-width: 310px;
     max-width: 400px;
     margin-left: auto;
   }
   .slogan-tagline {
-    min-width: 310px;
-    max-width: 480px;
     text-align: start;
+    margin-right: auto;
+  }
+  .slogan-tagline-text {
+    min-width: 310px;
+    max-width: 400px;
   }
 }

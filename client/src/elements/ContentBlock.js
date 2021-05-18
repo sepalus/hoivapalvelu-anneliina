@@ -4,6 +4,7 @@ import "./ContentBlock.scss";
 import Button from "../components/Button";
 
 export default function ContentBlock({
+  isReverse,
   imageFileName,
   title,
   text,
@@ -17,6 +18,7 @@ export default function ContentBlock({
       className={classNames("content-block", {
         "content-block-with-image": imageFileName,
         "content-block-without-image": !imageFileName,
+        "content-block-reverse": isReverse,
         [`background-${backgroundColor}`]: true,
       })}
     >

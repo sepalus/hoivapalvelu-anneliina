@@ -39,6 +39,7 @@ $x8: 64px;
 $x9: 72px;
 $x10: 80px;
 $x11: 88px;
+$x12: 96px;
 
 $outer-padding-content-block-s: $x6 $x3_5 $x7;
 $outer-padding-content-block-m: $x7 $x4_5 $x8;
@@ -66,8 +67,9 @@ $outer-gap-l: $x6;
 $outer-gap-xl: $x7;
 
 $extra-gap-s: $x4;
-$extra-gap-m: $x8;
+$extra-gap-m: $x6;
 $extra-gap-l: $x10;
+$extra-gap-xl: $x12;
 
 $inner-half-horizontal-padding-content-block-s: $x1_5;
 $inner-half-horizontal-padding-content-block-m: $x2;
@@ -192,6 +194,7 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
   }
   @media only screen and (min-width: $width-xl) {
     padding: $extra-padding-content-block-xl;
+    gap: $extra-gap-xl;
   }
 }
 

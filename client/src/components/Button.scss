@@ -3,11 +3,13 @@
 .action-button {
   height: 50px;
   padding: 0px 32px;
-  font-weight: 400;
-  color: $color-darkblue;
-  background-color: $color-white;
+  margin-right: auto;
   border: 1px solid $color-darkblue;
   border-radius: $border-radius;
+  font-weight: 400;
+  white-space: nowrap;
+  color: $color-darkblue;
+  background-color: $color-white;
   box-shadow: $box-shadow-below;
 }
 
