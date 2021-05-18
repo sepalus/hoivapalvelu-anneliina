@@ -1,11 +1,12 @@
 @import "../variables";
 
 .banner {
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  position: relative;
   width: 100%;
-  max-height: calc(100vh - 60px);
+  max-height: $content-height;
 }
 
 .banner-tagline {
@@ -29,7 +30,7 @@
 
 @media only screen and (min-width: $width-m) {
   .banner {
-    height: calc(100vh - 60px);
+    height: $content-height;
   }
   .banner-tagline {
     position: absolute;

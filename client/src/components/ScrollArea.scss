@@ -1,0 +1,13 @@
+@import "../variables";
+
+.scroll-area {
+  scroll-snap-align: start;
+  height: $content-height;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,14 @@
+@import "../variables";
+
+.snap-scroll-area {
+  height: $content-height;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
