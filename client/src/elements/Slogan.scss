@@ -20,8 +20,9 @@
 .slogan-tagline {
   display: flex;
   flex-direction: column;
-  text-align: center;
   gap: $x2;
+  max-width: 440px;
+  text-align: center;
 }
 @media only screen and (min-width: $width-m) {
   .slogan {
@@ -38,6 +39,7 @@
   }
   .slogan-tagline {
     min-width: 310px;
+    max-width: 480px;
     text-align: start;
   }
 }
