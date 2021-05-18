@@ -10,28 +10,9 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-      <Header />
       <Router>
+        <Header />
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Kotiin</Link>
-              </li>
-              <li>
-                <Link to="/palvelut">Palvelut</Link>
-              </li>
-              <li>
-                <Link to="/hinnasto">Hinnasto</Link>
-              </li>
-              <li>
-                <Link to="/meista">Meistä</Link>
-              </li>
-              <li>
-                <Link to="/yhteystiedot">Yhteystiedot</Link>
-              </li>
-            </ul>
-          </nav>
           <Switch>
             <Route path="/palvelut">
               <Services />

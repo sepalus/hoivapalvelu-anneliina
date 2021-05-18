@@ -12,12 +12,21 @@
 .header-content-wrapper {
   display: flex;
   align-items: center;
-
   @include setOuterPaddings(true, true);
   @include setContentMaxWidth();
 }
 
+.header-navigation-list {
+  display: flex;
+  align-items: center;
+  @include setNavigationGap();
+  li p {
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
+
 .header-image {
   height: 24px;
-  padding-top: 6px;
+  padding-top: 10px;
 }
