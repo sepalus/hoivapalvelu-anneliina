@@ -12,3 +12,14 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.freeze-child-scroll {
+  .scroll-area {
+    overflow-y: hidden;
+  }
+}
+.unfreeze-child-scroll {
+  .scroll-area {
+    overflow-y: scroll;
+  }
+}
