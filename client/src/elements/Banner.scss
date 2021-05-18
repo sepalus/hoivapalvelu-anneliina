@@ -5,12 +5,19 @@
   position: relative;
   width: 100%;
   max-height: $content-height;
+  display: flex;
+  flex-direction: column;
 }
 
 .banner-content-wrapper {
   display: flex;
   flex-direction: column;
   @include setContentMaxWidth();
+  height: auto;
+}
+
+.banner-image-wrapper {
+  overflow: hidden;
 }
 
 .banner-tagline {
@@ -29,7 +36,7 @@
   object-fit: cover;
   object-position: 80% 0;
   width: 100%;
-  height: calc(100vh - 260px);
+  height: 100vh;
   min-height: 250px;
   max-height: 105vw;
 }
@@ -40,6 +47,8 @@
   }
   .banner-tagline {
     position: absolute;
+    top: 0;
+    left: 0;
     min-width: 360px;
     max-width: 600px;
     width: 50%;

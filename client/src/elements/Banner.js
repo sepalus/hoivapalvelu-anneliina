@@ -14,11 +14,13 @@ export default function Banner() {
           <Button text="Tutustu palveluihimme"></Button>
         </div>
       </div>
-      <img
-        className="banner-image"
-        src="./assets/images/home-banner-wide.jpg"
-        alt=""
-      />
+      <div className="banner-image-wrapper">
+        <img
+          className="banner-image"
+          src="./assets/images/home-banner-wide.jpg"
+          alt=""
+        />
+      </div>
     </div>
   );
 }
