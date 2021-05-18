@@ -4,15 +4,20 @@
   display: flex;
   align-items: flex-end;
   width: 100%;
-  height: 80px;
+  height: 84px;
   background-color: $color-white;
-  @include setInnerPaddings();
+  margin-top: 2px;
+  @include setInnerPaddings(false, false, true);
   gap: $x2;
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
 }
 
 .info-card:hover {
+  .info-card-logo,
+  .info-card-icon-wrapper {
+    transform: translate(-2px, 0.5px);
+  }
   .info-card-logo {
     height: 20.5px;
   }
@@ -23,9 +28,7 @@
 }
 
 .info-card-icon-wrapper {
-  flex-shrink: 0;
-  display: flex;
-  align-items: flex-end;
+  display: none;
   width: 40px;
   height: 32px;
 }
@@ -38,4 +41,42 @@
 .info-card-logo {
   flex-shrink: 1;
   height: 20px;
+}
+
+@media only screen and (min-width: $width-xs) {
+  .info-card {
+    height: 96px;
+  }
+  .info-card-icon-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    align-items: flex-end;
+  }
+}
+
+@media only screen and (min-width: $width-m) {
+  .info-card {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    gap: $x3;
+  }
+  .info-card:hover {
+    .info-card-logo,
+    .info-card-icon-wrapper {
+      transform: none;
+    }
+  }
+  .info-card-icon-wrapper {
+    width: 64px;
+    height: 50px;
+  }
+  .info-card:hover {
+    margin-top: 0px;
+    .info-card-icon-wrapper {
+      width: 65.6px;
+      height: 51.25px;
+    }
+  }
 }
