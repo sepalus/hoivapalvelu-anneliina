@@ -5,17 +5,23 @@
   flex-direction: column;
   background-color: $color-lightblue-light;
   @include setOuterPaddings();
-  gap: $x3;
+  @include setGap(true);
 }
 
 .info-card-wrapper {
   display: flex;
   flex-direction: column;
-  gap: $x2;
+  gap: $x2 $x3;
 }
 
 @media only screen and (min-width: $width-m) {
   .info-card-wrapper {
     flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  .info-card-wrapper {
+    gap: $x2 $x4;
   }
 }

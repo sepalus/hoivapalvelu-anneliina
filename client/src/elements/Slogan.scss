@@ -20,9 +20,9 @@
 .slogan-tagline {
   display: flex;
   flex-direction: column;
-  gap: $x2;
   max-width: 440px;
   text-align: center;
+  @include setGap();
 }
 @media only screen and (min-width: $width-m) {
   .slogan {

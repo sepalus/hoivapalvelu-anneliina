@@ -5,7 +5,7 @@
   flex-direction: column;
   color: $color-darkblue;
   background-color: $color-lightblue-light;
-  @include setOuterPaddings(true);
+  @include setOuterPaddings(false, true);
   gap: $x5;
 }
 

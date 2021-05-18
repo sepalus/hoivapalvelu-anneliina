@@ -53,6 +53,12 @@ $inner-padding-content-block-xl: $x7 $x6 $x8;
 $inner-gap-s: $x1;
 $inner-gap-m: $x1;
 $inner-gap-l: $x1_5;
+$inner-gap-double-s: $x2;
+$inner-gap-double-m: $x2;
+$inner-gap-double-l: $x2_5;
+$inner-gap-triple-s: $x3;
+$inner-gap-triple-m: $x3;
+$inner-gap-triple-l: $x3_5;
 
 $outer-gap-s: $x1_5;
 $outer-gap-m: $x5;
@@ -66,7 +72,7 @@ $extra-gap-l: $x10;
 $inner-half-horizontal-padding-content-block-s: $x1_5;
 $inner-half-horizontal-padding-content-block-m: $x2;
 $inner-even-vertical-padding-content-block-s: $x4;
-$outer-extra-padding-content-block-s: $x6 $x5 $x7;
+$outer-extra-padding-content-block-s: $x5;
 
 $extra-padding-content-block-s: $x7 $x6 $x8;
 $extra-padding-content-block-m: $x8 $x7 $x9;
@@ -77,12 +83,13 @@ $border-radius: 3px;
 $box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
-@mixin setOuterPaddings($extraSidePadding: false, $noVerticalPadding: false) {
+@mixin setOuterPaddings($noVerticalPadding: false, $extraSidePadding: false) {
+  padding: $outer-padding-content-block-s;
   @if $extraSidePadding {
-    padding: $outer-extra-padding-content-block-s;
-  } @else {
-    padding: $outer-padding-content-block-s;
+    padding-left: $outer-extra-padding-content-block-s;
+    padding-right: $outer-extra-padding-content-block-s;
   }
+
   @if $noVerticalPadding {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
@@ -107,7 +114,8 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 @mixin setInnerPaddings(
   $noBottomPadding: false,
   $halfSidePadding: false,
-  $verticalAlignCenter: false
+  $verticalAlignCenter: false,
+  $doubleGap: false
 ) {
   padding: $inner-padding-content-block-s;
   @if $halfSidePadding == "s" {
@@ -132,7 +140,11 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
     padding-bottom: 0px;
   }
 
-  gap: $inner-gap-s;
+  @if $doubleGap {
+    gap: $inner-gap-double-s;
+  } @else {
+    gap: $inner-gap-s;
+  }
 
   button {
     margin-top: $inner-gap-s;
@@ -144,14 +156,23 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
   @media only screen and (min-width: $width-m) {
     padding: $inner-padding-content-block-m;
-    gap: $inner-gap-m;
+    @if $doubleGap {
+      gap: $inner-gap-double-m;
+    } @else {
+      gap: $inner-gap-m;
+    }
+
     button {
       margin-top: $inner-gap-m;
     }
   }
   @media only screen and (min-width: $width-l) {
     padding: $inner-padding-content-block-l;
-    gap: $inner-gap-l;
+    @if $doubleGap {
+      gap: $inner-gap-double-l;
+    } @else {
+      gap: $inner-gap-l;
+    }
     button {
       margin-top: $inner-gap-l;
     }
@@ -171,5 +192,27 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
   }
   @media only screen and (min-width: $width-xl) {
     padding: $extra-padding-content-block-xl;
+  }
+}
+
+@mixin setGap($tripleGap: false) {
+  @if $tripleGap {
+    gap: $inner-gap-double-s;
+  } @else {
+    gap: $inner-gap-s;
+  }
+  @media only screen and (min-width: $width-m) {
+    @if $tripleGap {
+      gap: $inner-gap-triple-m;
+    } @else {
+      gap: $inner-gap-m;
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    @if $tripleGap {
+      gap: $inner-gap-triple-l;
+    } @else {
+      gap: $inner-gap-l;
+    }
   }
 }

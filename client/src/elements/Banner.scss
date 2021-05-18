@@ -15,7 +15,7 @@
   flex-direction: column;
   min-height: 150px;
   background-color: $color-beige-light;
-  @include setOuterPaddings(true);
+  @include setOuterPaddings(false, true);
   gap: $x2_5;
 }
 
