@@ -63,8 +63,9 @@ $extra-gap-s: $x4;
 $extra-gap-m: $x8;
 $extra-gap-l: $x10;
 
-$inner-half-padding-content-block-s: $x3_5 $x1_5 $x4_5;
-$inner-even-vertical-padding-content-block-s: $x4 $x3 $x4;
+$inner-half-horizontal-padding-content-block-s: $x1_5;
+$inner-half-horizontal-padding-content-block-m: $x2;
+$inner-even-vertical-padding-content-block-s: $x4;
 $outer-extra-padding-content-block-s: $x6 $x5 $x7;
 
 $extra-padding-content-block-s: $x7 $x6 $x8;
@@ -104,20 +105,27 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 @mixin setInnerPaddings(
-  $halfSidePadding: false,
   $noBottomPadding: false,
+  $halfSidePadding: false,
   $verticalAlignCenter: false
 ) {
-  @if $halfSidePadding {
-    padding: $inner-half-padding-content-block-s;
+  padding: $inner-padding-content-block-s;
+  @if $halfSidePadding == "s" {
+    padding-left: $inner-half-horizontal-padding-content-block-s;
+    padding-right: $inner-half-horizontal-padding-content-block-s;
     padding-bottom: $x5;
-  } @else if $verticalAlignCenter {
-    padding: $inner-even-vertical-padding-content-block-s;
+  } @else if $halfSidePadding == "m" {
+    @media only screen and (min-width: $width-m) {
+      padding-left: $inner-half-horizontal-padding-content-block-m !important;
+      padding-right: $inner-half-horizontal-padding-content-block-m !important;
+    }
+  }
+  @if $verticalAlignCenter {
+    padding-top: $inner-even-vertical-padding-content-block-s;
+    padding-bottom: $inner-even-vertical-padding-content-block-s;
     @media only screen and (min-width: $width-xs) {
       padding: $inner-padding-content-block-s;
     }
-  } @else {
-    padding: $inner-padding-content-block-s;
   }
 
   @if $noBottomPadding {

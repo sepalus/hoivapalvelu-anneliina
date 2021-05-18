@@ -17,9 +17,5 @@
 @media only screen and (min-width: $width-m) {
   .info-card-wrapper {
     flex-direction: row;
-
-    > * {
-      width: 33.3% !important;
-    }
   }
 }
