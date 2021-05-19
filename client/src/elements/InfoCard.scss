@@ -12,7 +12,7 @@
   @include setInnerPaddings(false, "m", false, true, true);
 }
 
-/**.info-card:hover {
+.info-card:hover {
   .info-card-logo,
   .info-card-icon-wrapper {
     transform: translate(-2px, 0.5px);
@@ -24,7 +24,7 @@
     width: 41px;
     height: 32.75px;
   }
-}**/
+}
 
 .info-card-icon-wrapper {
   display: none;
@@ -67,7 +67,7 @@
     height: 50px;
   }
 
-  /**.info-card:hover {
+  .info-card:hover {
     margin-top: 0px;
     .info-card-icon-wrapper {
       width: 65.6px;
@@ -80,16 +80,16 @@
     .info-card-logo {
       height: 16px;
     }
-  }**/
+  }
 }
 
 @media only screen and (min-width: $width-l) {
   .info-card-logo {
     height: 20px;
   }
-  /**.info-card:hover {
+  .info-card:hover {
     .info-card-logo {
       height: 20.5px;
     }
-  }**/
+  }
 }
