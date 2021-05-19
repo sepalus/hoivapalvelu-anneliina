@@ -1,0 +1,89 @@
+@import "../variables";
+
+.info-card-value {
+  @media only screen and (min-width: $width-m) {
+    gap: $x1_5;
+    .info-card-icon-wrapper {
+      margin-top: $x0_5;
+      height: $x4;
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    gap: $x2;
+    .info-card-icon-wrapper {
+      height: $x5;
+    }
+  }
+  @media only screen and (min-width: $width-xl) {
+    gap: $x2_5;
+    .info-card-icon-wrapper {
+      height: $x6;
+    }
+  }
+
+  &:hover {
+    @media only screen and (min-width: $width-m) {
+      margin-top: 0px;
+      .info-card-icon-wrapper {
+        height: increaseSize($x4, 1.03);
+      }
+      .info-card-text p {
+        font-size: increaseFontSize($text-small-m, 0.5px);
+      }
+    }
+    @media only screen and (min-width: $width-l) {
+      .info-card-icon-wrapper {
+        height: increaseSize($x5, 1.03);
+      }
+      .info-card-text p {
+        font-size: increaseFontSize($text-small-l, 0.5px);
+      }
+    }
+    @media only screen and (min-width: $width-xl) {
+      .info-card-icon-wrapper {
+        height: increaseSize($x6, 1.03);
+      }
+    }
+  }
+
+  &.info-card-active {
+    border: 1px solid $color-darkblue;
+    margin-top: 0px;
+    @media only screen and (min-width: $width-m) {
+      .info-card-icon-wrapper {
+        margin-top: 0px;
+        margin-bottom: $x0_5;
+        height: increaseSize($x4, 1.08);
+      }
+      .info-card-text p {
+        font-size: increaseFontSize($text-small-m);
+        font-weight: 600;
+      }
+    }
+    @media only screen and (min-width: $width-l) {
+      .info-card-icon-wrapper {
+        height: increaseSize($x5, 1.08);
+      }
+      .info-card-text p {
+        font-size: increaseFontSize($text-small-l);
+      }
+    }
+    @media only screen and (min-width: $width-xl) {
+      .info-card-icon-wrapper {
+        height: increaseSize($x6, 1.08);
+      }
+    }
+  }
+
+  &.info-card-disactive {
+    background-color: $color-disactive;
+    > * {
+      opacity: 0.5;
+    }
+    &:hover {
+      > * {
+        opacity: 1;
+      }
+    }
+  }
+}

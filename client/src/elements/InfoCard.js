@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import "./InfoCard.scss";
+import "./InfoCardValue.scss";
 import Button from "../components/Button";
 
 export default function InfoCard({
