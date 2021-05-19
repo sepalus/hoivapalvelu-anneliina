@@ -24,10 +24,13 @@
   flex-direction: column;
   gap: $x2;
 
-  p,
-  button {
+  p {
     width: 264px;
   }
+}
+
+.footer-slogan-button {
+  width: 264px;
 }
 
 .footer-slogan-content {
@@ -80,7 +83,7 @@
   }
   .footer-slogan-button {
     align-self: flex-end;
-    width: 100% !important;
+    width: 100%;
   }
   .footer-information {
     flex-direction: row;
@@ -100,7 +103,7 @@
   }
   .footer-slogan-button {
     align-self: flex-start;
-    width: 264px !important;
+    width: 264px;
   }
   .footer-information {
     flex-grow: 1;

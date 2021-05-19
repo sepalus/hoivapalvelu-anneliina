@@ -117,16 +117,6 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
 @mixin setOuterPaddings($noVerticalPadding: false, $extraSidePadding: false) {
   padding: $outer-padding-content-block-s;
-  @if $extraSidePadding {
-    padding-left: $outer-extra-padding-content-block-s;
-    padding-right: $outer-extra-padding-content-block-s;
-  }
-
-  @if $noVerticalPadding {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-  }
-
   gap: $outer-gap-s;
 
   @media only screen and (min-width: $width-m) {
@@ -141,6 +131,19 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
     padding: $outer-padding-content-block-xl;
     gap: $outer-gap-xl;
   }
+
+  @if $noVerticalPadding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    @media only screen and (min-width: $width-m) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  @if $extraSidePadding {
+    padding-left: $outer-extra-padding-content-block-s;
+    padding-right: $outer-extra-padding-content-block-s;
+  }
 }
 
 @mixin setInnerPaddings(
@@ -151,6 +154,12 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
   $doubleGap: false
 ) {
   padding: $inner-padding-content-block-s;
+  @media only screen and (min-width: $width-m) {
+    padding: $inner-padding-content-block-m;
+  }
+  @media only screen and (min-width: $width-l) {
+    padding: $inner-padding-content-block-l;
+  }
 
   @if ($halfHorizontalPadding == "s" or $halfHorizontalPadding == "sm") {
     padding-left: $inner-half-horizontal-padding-content-block-s;
@@ -158,8 +167,8 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
   }
   @if $halfHorizontalPadding == "m" or $halfHorizontalPadding == "sm" {
     @media only screen and (min-width: $width-m) {
-      padding-left: $inner-half-horizontal-padding-content-block-m !important;
-      padding-right: $inner-half-horizontal-padding-content-block-m !important;
+      padding-left: $inner-half-horizontal-padding-content-block-m;
+      padding-right: $inner-half-horizontal-padding-content-block-m;
     }
   }
 
@@ -170,8 +179,18 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
   @if $halfHorizontalPadding == "m" or $halfHorizontalPadding == "sm" {
     @media only screen and (min-width: $width-m) {
-      padding-top: $inner-half-vertical-padding-content-block-m !important;
-      padding-bottom: $inner-half-vertical-padding-content-block-m !important;
+      padding-top: $inner-half-vertical-padding-content-block-m;
+      padding-bottom: $inner-half-vertical-padding-content-block-m;
+    }
+  }
+
+  @if $removeBottomPadding == "s" or $removeBottomPadding == "sm" {
+    padding-bottom: 0px;
+  }
+
+  @if $removeBottomPadding == "m" or $removeBottomPadding == "sm" {
+    @media only screen and (min-width: $width-m) {
+      padding-bottom: 0px;
     }
   }
 
@@ -193,44 +212,28 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
     }
   }
 
-  @if $removeBottomPadding == "s" or $removeBottomPadding == "sm" {
-    padding-bottom: 0px;
-  }
-
-  @if $removeBottomPadding == "m" or $removeBottomPadding == "sm" {
-    @media only screen and (min-width: $width-m) {
-      padding-bottom: 0px !important;
-    }
-  }
-
   @if $doubleGap {
     gap: $inner-gap-double-s;
   } @else {
     gap: $inner-gap-s;
   }
-
   button {
     margin-top: $inner-gap-s;
     margin-right: auto;
   }
-  & .content-block-without-image {
-    padding: 0px;
-  }
 
   @media only screen and (min-width: $width-m) {
-    padding: $inner-padding-content-block-m;
     @if $doubleGap {
       gap: $inner-gap-double-m;
     } @else {
       gap: $inner-gap-m;
     }
-
     button {
       margin-top: $inner-gap-m;
     }
   }
+
   @media only screen and (min-width: $width-l) {
-    padding: $inner-padding-content-block-l;
     @if $doubleGap {
       gap: $inner-gap-double-l;
     } @else {

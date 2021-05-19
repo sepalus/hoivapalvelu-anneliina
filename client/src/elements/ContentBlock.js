@@ -10,6 +10,7 @@ export default function ContentBlock({
   text,
   buttonImage,
   buttonText,
+  backgroundColor,
   backgroundColorMedium,
   imagePosition,
 }) {
@@ -19,6 +20,7 @@ export default function ContentBlock({
         "content-block-with-image": imageFileName,
         "content-block-without-image": !imageFileName,
         "content-block-reverse": isReverse,
+        [`background-${backgroundColor}`]: backgroundColor,
         [`background-medium-${backgroundColorMedium}`]: backgroundColorMedium,
       })}
     >

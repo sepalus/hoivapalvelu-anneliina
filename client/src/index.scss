@@ -84,6 +84,26 @@ p.text-extrasmall {
   font-size: $text-extrasmall-s;
 }
 
+.background-white {
+  background-color: $color-white;
+}
+
+.background-lightblue {
+  background-color: $color-lightblue-light;
+}
+
+.background-ultralightblue {
+  background-color: $color-lightblue-ultralight;
+}
+
+.background-beige {
+  background-color: $color-beige-light;
+}
+
+.background-pink {
+  background-color: $color-pink-light;
+}
+
 // General classes
 .text-medium {
   font-weight: 300;
@@ -117,37 +137,25 @@ p.text-extrasmall {
     font-size: $text-extrasmall-m;
   }
 
+  .background-medium-white {
+    background-color: $color-white;
+  }
+
   .background-medium-lightblue {
-    background-color: $color-lightblue-light !important;
+    background-color: $color-lightblue-light;
   }
 
   .background-medium-ultralightblue {
-    background-color: $color-lightblue-ultralight !important;
+    background-color: $color-lightblue-ultralight;
   }
 
   .background-medium-beige {
-    background-color: $color-beige-light !important;
+    background-color: $color-beige-light;
   }
 
   .background-medium-pink {
-    background-color: $color-pink-light !important;
+    background-color: $color-pink-light;
   }
-}
-
-.background-lightblue {
-  background-color: $color-lightblue-light !important;
-}
-
-.background-ultralightblue {
-  background-color: $color-lightblue-ultralight !important;
-}
-
-.background-beige {
-  background-color: $color-beige-light !important;
-}
-
-.background-pink {
-  background-color: $color-pink-light !important;
 }
 
 @media only screen and (min-width: $width-l) {

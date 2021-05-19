@@ -85,6 +85,7 @@ export default function About() {
             imageFileName="placeholder.jpeg"
             title="Tarinamme"
             text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli Annen halu luoda asiakkaillensa parempi arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Tuntui, että niin paljon oli tehtävää, jotta asiakkaat voisivat asua kotona turvallisin mielin. Suomalaisen perheyrityksen Anneliinahoivan uudet tuulet jatkavat Annen viitoittamaa tietä."
+            backgroundColor="white"
             backgroundColorMedium="beige"
           />
         </ContentBlockContainer>
