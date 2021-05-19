@@ -8,6 +8,7 @@ $width-xxl: 1440px;
 $header-height: 60px;
 $content-height: calc(100vh - 60px);
 $content-max-width: 1140px;
+$content-outer-margin: calc(50vw - #{$content-max-width / 2});
 
 $line-height-p-16: calc(16px * 1.66);
 $line-height-p-17: calc(17px * 1.66);
