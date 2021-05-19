@@ -17,12 +17,15 @@
 .info-card-container-expander {
   display: flex;
   flex-direction: column;
-  @include setInnerPaddings(true, "m", "m", false, true);
+  @include setInnerPaddings("both", "m", "m", false, true);
 }
 
 @media only screen and (min-width: $width-m) {
   .info-card-wrapper {
     flex-direction: row;
+  }
+  .info-card-container-expander {
+    padding-top: $x1 !important;
   }
 }
 

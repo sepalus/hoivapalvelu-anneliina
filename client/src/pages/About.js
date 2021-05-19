@@ -63,7 +63,7 @@ export default function About() {
         />
         <InfoCardContainer
           title="Anneliinan arvot"
-          backgroundColor="beige"
+          backgroundColor="pink"
           className="info-card-container-about"
           expanderElement={infoCards[activeInfoCardIndex]}
         >
@@ -81,7 +81,12 @@ export default function About() {
           ))}
         </InfoCardContainer>
         <ContentBlockContainer>
-          <ContentBlock />
+          <ContentBlock
+            imageFileName="placeholder.jpeg"
+            title="Tarinamme"
+            text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli Annen halu luoda asiakkaillensa parempi arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Tuntui, että niin paljon oli tehtävää, jotta asiakkaat voisivat asua kotona turvallisin mielin. Suomalaisen perheyrityksen Anneliinahoivan uudet tuulet jatkavat Annen viitoittamaa tietä."
+            backgroundColorMedium="beige"
+          />
         </ContentBlockContainer>
         <Footer />
       </ScrollArea>

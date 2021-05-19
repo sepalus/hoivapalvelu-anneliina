@@ -84,6 +84,7 @@
       opacity: 0.5;
     }
     &:hover {
+      background-color: $color-disactive-hover;
       > * {
         opacity: 1;
       }

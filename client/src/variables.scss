@@ -16,7 +16,8 @@ $line-height-p-18: calc(18px * 1.66);
 
 $color-white: #ffffff;
 $color-black: #000000;
-$color-disactive: #f0f0f0;
+$color-disactive: #e4e4e4;
+$color-disactive-hover: #e8e8e8;
 $color-lightblue: #a4d3f2;
 $color-darkblue: #0b4269;
 $color-lightblue-light: #a4d3f233; //33 = 20% Opacity
@@ -24,7 +25,7 @@ $color-lightblue-ultralight: #a4d3f219; //19 = 10% Opacity
 $color-beige: #f4f1e9;
 $color-beige-light: #f4f1e966; //66 = 40% Opacity
 $color-pink: #efbfcb;
-$color-pink-light: #efbfcb4c; //4C = 30% Opacity
+$color-pink-light: #efbfcb33; //33 = 20% Opacity
 
 $x0_5: 4px;
 $x1: 8px;
@@ -142,7 +143,7 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 @mixin setInnerPaddings(
-  $noBottomPadding: false,
+  $removePadding: false,
   $halfHorizontalPadding: false,
   $halfVerticalPadding: false,
   $verticalAlignCenter: false,
@@ -176,10 +177,22 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
     }
   }
 
-  @if $noBottomPadding {
+  @if $removePadding == "both" {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    @media only screen and (min-width: $width-m) {
+      padding-bottom: 0px !important;
+      padding-top: 0px !important;
+    }
+  } @else if $removePadding == "bottom" {
     padding-bottom: 0px !important;
     @media only screen and (min-width: $width-m) {
       padding-bottom: 0px !important;
+    }
+  } @else if $removePadding == "top" {
+    padding-top: 0px !important;
+    @media only screen and (min-width: $width-m) {
+      padding-top: 0px !important;
     }
   }
 
