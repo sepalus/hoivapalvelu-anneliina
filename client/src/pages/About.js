@@ -48,7 +48,6 @@ export default function About() {
             text="Ammattitaito"
             className="info-card-about"
           />
-          <InfoCard className="info-card-about invisible" />
         </InfoCardContainer>
         <ContentBlockContainer>
           <ContentBlock />

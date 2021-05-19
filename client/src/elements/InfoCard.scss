@@ -12,6 +12,27 @@
   @include setInnerPaddings(false, "m", false, true, true);
 }
 
+.info-card-about {
+  @media only screen and (min-width: $width-m) {
+    gap: $x1_5;
+    .info-card-icon-wrapper {
+      padding-top: $x0_5;
+      height: $x4;
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    gap: $x2;
+    .info-card-icon-wrapper {
+      height: $x5;
+    }
+  }
+  @media only screen and (min-width: $width-xl) {
+    gap: $x2_5;
+    .info-card-icon-wrapper {
+      height: $x6;
+    }
+  }
+}
 /**.info-card:hover {
   .info-card-logo,
   .info-card-icon-wrapper {

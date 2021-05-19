@@ -9,7 +9,6 @@ export default function InfoCard({
   text,
   className,
 }) {
-  console.log("className ", className);
   return (
     <Button
       className={classNames("info-card", { [`${className}`]: className })}
