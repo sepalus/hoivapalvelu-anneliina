@@ -85,8 +85,14 @@ p.text-extrasmall {
 }
 
 // General classes
-.bold-text {
+.text-medium {
   font-weight: 300;
+}
+.text-semibold {
+  font-weight: 400;
+}
+.text-bold {
+  font-weight: 600;
 }
 
 @media only screen and (min-width: $width-m) {
