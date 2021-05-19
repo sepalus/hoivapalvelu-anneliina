@@ -20,7 +20,7 @@
   @include setInnerPaddings(false, "m", false, true, true);
 }
 
-.info-card-about {
+.info-card-value {
   @media only screen and (min-width: $width-m) {
     gap: $x1_5;
     .info-card-icon-wrapper {
@@ -42,7 +42,7 @@
   }
 }
 
-.info-card-about:hover {
+.info-card-value:hover {
   @media only screen and (min-width: $width-m) {
     margin-top: 0px;
     .info-card-icon-wrapper {
@@ -67,7 +67,7 @@
   }
 }
 
-.info-card-about.info-card-active {
+.info-card-value.info-card-active {
   border: 1px solid $color-darkblue;
   margin-top: 0px;
   @media only screen and (min-width: $width-m) {
