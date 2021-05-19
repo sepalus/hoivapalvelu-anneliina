@@ -13,7 +13,12 @@ export default function Home() {
   return (
     <div className="home">
       <SnapScrollArea>
-        <Banner />
+        <Banner
+          imageFileName="home-banner-wide.jpg"
+          text="Meiltä saat kaikki kotona asumista tukevat palvelut vaivattomasti
+        saman katon alta"
+          buttonText="Tutustu palveluihimme"
+        />
         <ScrollArea>
           <Slogan />
           <InfoCardContainer title="Yksilöllistä hoivapalvelua kaikille sitä tarvitseville">
