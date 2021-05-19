@@ -72,7 +72,10 @@ export default function About() {
               iconFileName={infoCard.iconFileName}
               text={infoCard.text}
               className={infoCard.className}
-              isCardActive={index === activeInfoCardIndex}
+              isCardActive={activeInfoCardIndex === index}
+              isCardDisactive={
+                activeInfoCardIndex !== index && activeInfoCardIndex !== -1
+              }
               setCardToActive={() => setActiveInfoCardIndex(index)}
             />
           ))}

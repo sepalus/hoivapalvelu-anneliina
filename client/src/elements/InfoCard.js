@@ -9,11 +9,16 @@ export default function InfoCard({
   text,
   className,
   isCardActive,
+  isCardDisactive,
   setCardToActive,
 }) {
   return (
     <Button
-      className={classNames("info-card", { [`${className}`]: className })}
+      className={classNames("info-card", {
+        "info-card-active": isCardActive,
+        "info-card-disactive": isCardDisactive,
+        [`${className}`]: className,
+      })}
       onClick={setCardToActive}
     >
       <div className="info-card-icon-wrapper">
