@@ -16,6 +16,7 @@
 .content-block-without-image {
   .content-block-information {
     @include setInnerPaddings(false, "s");
+    padding-bottom: $x5;
   }
 
   &:last-child {

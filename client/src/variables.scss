@@ -95,6 +95,7 @@ $inner-half-vertical-padding-content-block-s: $x1;
 $inner-half-vertical-padding-content-block-m: $x2;
 
 $inner-even-vertical-padding-content-block-s: $x4;
+$inner-even-half-vertical-padding-content-block-s: $x3;
 $outer-extra-padding-content-block-s: $x5;
 
 $extra-padding-content-block-s: $x7 $x6 $x8;
@@ -154,7 +155,6 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
   @if ($halfHorizontalPadding == "s" or $halfHorizontalPadding == "sm") {
     padding-left: $inner-half-horizontal-padding-content-block-s;
     padding-right: $inner-half-horizontal-padding-content-block-s;
-    padding-bottom: $x5;
   }
   @if $halfHorizontalPadding == "m" or $halfHorizontalPadding == "sm" {
     @media only screen and (min-width: $width-m) {
@@ -176,10 +176,20 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
   }
 
   @if $verticalAlignCenter {
-    padding-top: $inner-even-vertical-padding-content-block-s;
-    padding-bottom: $inner-even-vertical-padding-content-block-s;
-    @media only screen and (min-width: $width-xs) {
-      padding: $inner-padding-content-block-s;
+    @if $halfVerticalPadding == "s" or $halfVerticalPadding == "sm" {
+      padding-top: $inner-even-half-vertical-padding-content-block-s;
+      padding-bottom: $inner-even-half-vertical-padding-content-block-s;
+    } @else {
+      padding-top: $inner-even-vertical-padding-content-block-s;
+      padding-bottom: $inner-even-vertical-padding-content-block-s;
+    }
+
+    @if $halfVerticalPadding == "m" or $halfVerticalPadding == "sm" {
+      @media only screen and (min-width: $width-m) {
+      }
+    } @else {
+      @media only screen and (min-width: $width-m) {
+      }
     }
   }
 

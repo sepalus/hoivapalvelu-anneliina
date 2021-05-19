@@ -1,6 +1,22 @@
 @import "../variables";
 
 .info-card-value {
+  min-width: 95px;
+  height: 105px;
+  flex: 1 0;
+  flex-direction: column;
+  align-items: center;
+  @include setInnerPaddings(false, "s", "s", true, false);
+
+  .info-card-icon-wrapper {
+    display: flex;
+    width: 36px;
+    height: 28px;
+  }
+  .info-card-text p {
+    font-size: $text-extrasmall-s;
+  }
+
   @media only screen and (min-width: $width-m) {
     gap: $x1_5;
     .info-card-icon-wrapper {
