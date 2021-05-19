@@ -111,17 +111,37 @@ p.text-extrasmall {
     font-size: 13px;
   }
 
-  .background-lightblue {
+  .background-medium-lightblue {
+    background-color: $color-lightblue-light !important;
+  }
+
+  .background-medium-ultralightblue {
     background-color: $color-lightblue-ultralight !important;
   }
 
-  .background-beige {
+  .background-medium-beige {
     background-color: $color-beige-light !important;
   }
 
-  .background-pink {
+  .background-medium-pink {
     background-color: $color-pink-light !important;
   }
+}
+
+.background-lightblue {
+  background-color: $color-lightblue-light !important;
+}
+
+.background-ultralightblue {
+  background-color: $color-lightblue-ultralight !important;
+}
+
+.background-beige {
+  background-color: $color-beige-light !important;
+}
+
+.background-pink {
+  background-color: $color-pink-light !important;
 }
 
 @media only screen and (min-width: $width-l) {
