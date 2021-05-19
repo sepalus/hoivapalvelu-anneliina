@@ -14,6 +14,12 @@
   gap: $x2 $x3;
 }
 
+.info-card-container-expander {
+  display: flex;
+  flex-direction: column;
+  @include setInnerPaddings(true, "m", "m", false, true);
+}
+
 @media only screen and (min-width: $width-m) {
   .info-card-wrapper {
     flex-direction: row;

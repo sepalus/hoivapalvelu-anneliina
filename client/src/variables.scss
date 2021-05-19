@@ -156,7 +156,10 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
   }
 
   @if $noBottomPadding {
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
+    @media only screen and (min-width: $width-m) {
+      padding-bottom: 0px !important;
+    }
   }
 
   @if $doubleGap {
