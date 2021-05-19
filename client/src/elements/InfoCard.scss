@@ -28,6 +28,8 @@
 
 .info-card-icon-wrapper {
   display: none;
+  align-items: flex-end;
+  justify-content: center;
   width: 40px;
   height: 32px;
 }
@@ -47,8 +49,6 @@
   }
   .info-card-icon-wrapper {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
   }
 }
 

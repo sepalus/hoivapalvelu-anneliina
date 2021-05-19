@@ -64,7 +64,7 @@ export default function About() {
         <InfoCardContainer
           title="Anneliinan arvot"
           backgroundColor="pink"
-          className="info-card-container-about"
+          className="info-card-container-value"
           expanderElement={infoCards[activeInfoCardIndex]}
         >
           {infoCards.map((infoCard, index) => (

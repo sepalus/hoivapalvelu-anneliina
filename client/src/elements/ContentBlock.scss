@@ -20,7 +20,7 @@
 
   &:last-child {
     .content-block-information {
-      @include setInnerPaddings("bottom", "s");
+      @include setInnerPaddings("s", "s");
     }
   }
 }

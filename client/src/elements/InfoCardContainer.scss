@@ -11,26 +11,36 @@
 .info-card-wrapper {
   display: flex;
   flex-direction: column;
-  gap: $x2 $x3;
+  gap: $x2;
 }
 
 .info-card-container-expander {
   display: flex;
   flex-direction: column;
-  @include setInnerPaddings("both", "m", "m", false, true);
+  @include setInnerPaddings("sm", "sm", "sm", false, false);
 }
 
 @media only screen and (min-width: $width-m) {
   .info-card-wrapper {
     flex-direction: row;
+    gap: $x3;
   }
   .info-card-container-expander {
     padding-top: $x1 !important;
+    gap: $x1_5;
   }
 }
 
 @media only screen and (min-width: $width-l) {
   .info-card-wrapper {
-    gap: $x2 $x4;
+    gap: $x4;
+  }
+}
+
+.info-card-container-value {
+  .info-card-wrapper {
+    flex-direction: row;
+    gap: $x1;
+    overflow-x: scroll;
   }
 }
