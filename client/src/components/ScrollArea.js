@@ -10,6 +10,7 @@ export default function ScrollArea({ children }) {
     const snapScrollElement = document.getElementById("snap-scroll-area");
 
     const updateSnapScrollPosition = () => {
+      if (!scrollElement || !snapScrollElement) return;
       const currentSnapScrollYOffset = snapScrollElement.scrollTop;
       //TODO: use ref instead
       if (currentSnapScrollYOffset < contentHeight)

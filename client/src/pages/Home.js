@@ -15,7 +15,7 @@ export default function Home() {
       <SnapScrollArea>
         <Banner
           imageFileName="home-banner-wide.jpg"
-          text="Meiltä saat kaikki kotona asumista tukevat palvelut vaivattomasti
+          sloganText="Meiltä saat kaikki kotona asumista tukevat palvelut vaivattomasti
         saman katon alta"
           buttonText="Tutustu palveluihimme"
         />
