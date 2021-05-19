@@ -73,6 +73,9 @@
         height: increaseSize($x6, 1.08);
       }
     }
+    &:hover {
+      transform: none;
+    }
   }
 
   &.info-card-disactive {
