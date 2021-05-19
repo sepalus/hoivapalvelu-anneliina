@@ -1,12 +1,19 @@
 import React from "react";
 import "./Button.scss";
 
-export default function Button({ children, imageUrl, text, className }) {
+export default function Button({
+  children,
+  imageUrl,
+  text,
+  className,
+  onClick,
+}) {
   return (
     <>
       {children ? (
         <button
           className={`action-button action-button-with-content ${className}`}
+          onClick={onClick}
         >
           {children}
         </button>

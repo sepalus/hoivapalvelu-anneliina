@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Banner from "../elements/Banner";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
 import Footer from "../elements/Footer";
-
 import ScrollArea from "../components/ScrollArea";
 
 const infoCards = [
@@ -52,6 +51,7 @@ const infoCards = [
 ];
 
 export default function About() {
+  const [activeInfoCardIndex, setActiveInfoCardIndex] = useState(-1);
   return (
     <div className="about">
       <ScrollArea>
@@ -65,32 +65,17 @@ export default function About() {
           title="Anneliinan arvot"
           backgroundColor="beige"
           className="info-card-container-about"
+          expanderElement={infoCards[activeInfoCardIndex]}
         >
-          <InfoCard
-            iconFileName="value-1.png"
-            text="Ykislöllisyys"
-            className="info-card-about"
-          />
-          <InfoCard
-            iconFileName="value-2.png"
-            text="Inhimillisyys"
-            className="info-card-about"
-          />
-          <InfoCard
-            iconFileName="value-3.png"
-            text="Luotettavuus"
-            className="info-card-about"
-          />
-          <InfoCard
-            iconFileName="value-1.png"
-            text="Arvostus"
-            className="info-card-about"
-          />
-          <InfoCard
-            iconFileName="value-2.png"
-            text="Ammattitaito"
-            className="info-card-about"
-          />
+          {infoCards.map((infoCard, index) => (
+            <InfoCard
+              iconFileName={infoCard.iconFileName}
+              text={infoCard.text}
+              className={infoCard.className}
+              isCardActive={index === activeInfoCardIndex}
+              setCardToActive={() => setActiveInfoCardIndex(index)}
+            />
+          ))}
         </InfoCardContainer>
         <ContentBlockContainer>
           <ContentBlock />

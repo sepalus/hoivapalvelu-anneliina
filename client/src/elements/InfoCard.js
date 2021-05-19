@@ -8,10 +8,13 @@ export default function InfoCard({
   logoFileName,
   text,
   className,
+  isCardActive,
+  setCardToActive,
 }) {
   return (
     <Button
       className={classNames("info-card", { [`${className}`]: className })}
+      onClick={setCardToActive}
     >
       <div className="info-card-icon-wrapper">
         <img
