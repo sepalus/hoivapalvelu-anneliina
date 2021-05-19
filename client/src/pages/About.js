@@ -8,6 +8,49 @@ import Footer from "../elements/Footer";
 
 import ScrollArea from "../components/ScrollArea";
 
+const infoCards = [
+  {
+    iconFileName: "value-1.png",
+    text: "Ykislöllisyys",
+    className: "info-card-about",
+    expandedTitle: "Hoito on yksilöllistä",
+    expandedText:
+      "Yksilöllinen sydämestä lähtevä palvelu tarkoittaa sitä, että asiakasta kohdellaan ainutlaatuisena ihmisenä. Meille asiakas on aina yksilö ja oman elämänsä asiantuntija ja kunnioitamme hänen itsemääräämisoikeuttaan. Uskomme ihmisen ainutlaatuisuuteen.",
+  },
+  {
+    iconFileName: "value-2.png",
+    text: "Inhimillisyys",
+    className: "info-card-about",
+    expandedTitle: "Kohtaaminen on ystävällistä ja inhimillistä",
+    expandedText:
+      "Emme tunne sanaa kiire. Hoitajamme tarjoavat aikaa ja läsnäoloa ja kohtelu on lämmintä ja ystävällistä.",
+  },
+  {
+    iconFileName: "value-3.png",
+    text: "Luotettavuus",
+    className: "info-card-about",
+    expandedTitle: "Olemme luotettavia",
+    expandedText:
+      "Panostamme palveluidemme luotettavuuteen ja turvallisuuteen. Palvelemme sovitusti ja täsmällisesti, laadusta tinkimättä. Annettu palvelu perustuu hoito ja –palvelusuunnitelmaan. Kaikessa toiminnassamme edellytämme rehellisyyttä itseä ja toisia kohtaan ja sitä kautta rakennamme vahvan luottamuksen ilmapiirin.",
+  },
+  {
+    iconFileName: "value-1.png",
+    text: "Arvostus",
+    className: "info-card-about",
+    expandedTitle: "Arvostamme toinen toisiamme",
+    expandedText:
+      "Arvostamme ja kunnioitamme asiakkaitamme, yhteistyökumppaneitamme sekä toinen toisiamme. On tärkeätä toimia itse tavalla, mitä myös muilta edellyttää. Toimintamme edellyttää joustavaa ja tavoitteellista toimintatapaa jolloin avoimuuden ja yhteistyön merkitykset korostuvat. Joukkuepelissä meillä kaikilla on oma tärkeä roolimme.",
+  },
+  {
+    iconFileName: "value-2.png",
+    text: "Ammattitaito",
+    className: "info-card-about",
+    expandedTitle: "Tiimimme on ammattitaitoinen",
+    expandedText:
+      "Kannustamme työntekijöidemme kasvua ammattilaisina ja ihmisinä. Palveluksessamme on koulutettua terveydenhuoltoalan henkilökuntaa ja panostamme systemaattisesti heidän ammattitaitonsa ylläpitämiseen ja kehittämiseen. Meille työn ja muun elämän tasapaino on tärkeätä.",
+  },
+];
+
 export default function About() {
   return (
     <div className="about">
