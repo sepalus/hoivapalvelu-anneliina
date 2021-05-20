@@ -52,6 +52,7 @@ const infoCards = [
 
 export default function About() {
   const [activeInfoCardIndex, setActiveInfoCardIndex] = useState(-1);
+  const infoCardContainerCardsRef = useRef();
   const infoCardFirstRef = useRef();
   const infoCardLastRef = useRef();
 
@@ -70,6 +71,7 @@ export default function About() {
           backgroundColor="pink"
           className="info-card-container-value"
           expanderElement={infoCards[activeInfoCardIndex]}
+          infoCardContainerCardsRef={infoCardContainerCardsRef}
           infoCardFirstRef={infoCardFirstRef}
           infoCardLastRef={infoCardLastRef}
         >

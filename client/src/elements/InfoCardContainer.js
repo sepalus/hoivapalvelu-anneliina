@@ -9,6 +9,7 @@ export default function InfoCardContainer({
   backgroundColor,
   className,
   expanderElement,
+  infoCardContainerCardsRef,
   infoCardFirstRef,
   infoCardLastRef,
 }) {
@@ -16,15 +17,10 @@ export default function InfoCardContainer({
   const [showBackButton, setShowBackButton] = useState(true);
   const [showForwardButton, setShowForwardButton] = useState(true);
   const errorMargin = 10;
-  let infoCardContainerCardsElement;
 
   useEffect(() => {
-    infoCardContainerCardsElement = document.getElementById(
-      "info-card-container-cards"
-    );
-
     if (
-      !infoCardContainerCardsElement ||
+      !infoCardContainerCardsRef.current ||
       !infoCardFirstRef.current ||
       !infoCardLastRef.current
     )
@@ -33,14 +29,13 @@ export default function InfoCardContainer({
     const {
       left: wrapperLeft,
       width: wrapperWidth,
-    } = infoCardContainerCardsElement.getBoundingClientRect();
+    } = infoCardContainerCardsRef.current.getBoundingClientRect();
     const {
       left: lastCardLeft,
       width: lastCardWidth,
     } = infoCardLastRef.current.getBoundingClientRect();
     const {
       left: firstCardLeft,
-      width: firstCardWidth,
     } = infoCardFirstRef.current.getBoundingClientRect();
 
     const lastCardIsVisible =
@@ -48,25 +43,25 @@ export default function InfoCardContainer({
     const firstCardIsVisible = firstCardLeft > wrapperLeft - errorMargin;
 
     const updateButtonVisibility = () => {
-      const currentScrollXOffset = infoCardContainerCardsElement.scrollLeft;
+      const currentScrollXOffset = infoCardContainerCardsRef.current.scrollLeft;
       setShowBackButton(!firstCardIsVisible);
       setShowForwardButton(!lastCardIsVisible);
       setPreviousScrollXOffset(currentScrollXOffset);
     };
 
-    infoCardContainerCardsElement.addEventListener(
+    infoCardContainerCardsRef.current.addEventListener(
       "scroll",
       updateButtonVisibility
     );
     return () =>
-      infoCardContainerCardsElement.removeEventListener(
+      infoCardContainerCardsRef.current.removeEventListener(
         "scroll",
         updateButtonVisibility
       );
   }, [previousScrollXOffset, infoCardFirstRef, infoCardLastRef]);
 
   const scrollInDirection = (direction) => {
-    infoCardContainerCardsElement.scrollLeft += direction * 95;
+    infoCardContainerCardsRef.current.scrollLeft += direction * 95;
   };
 
   return (
@@ -88,7 +83,7 @@ export default function InfoCardContainer({
             <span className="material-icons-outlined">arrow_back_ios</span>
           </Button>
           <div
-            id="info-card-container-cards"
+            ref={infoCardContainerCardsRef}
             className="info-card-container-cards"
           >
             {children}
