@@ -97,8 +97,9 @@
 
   &.info-card-active {
     border: 1px solid $color-darkblue;
-    margin-top: 0px;
+    margin-top: 2px;
     @media only screen and (min-width: $width-m) {
+      margin-top: 1px;
       .info-card-icon-wrapper {
         margin-top: 0px;
         margin-bottom: $x0_5;
@@ -119,11 +120,14 @@
     }
     @media only screen and (min-width: $width-xl) {
       .info-card-icon-wrapper {
-        height: increaseSize($x6, 1.08);
+        height: increaseSize($x6, 1.075);
       }
     }
     &:hover {
       transform: none;
+      .info-card-icon-wrapper {
+        transform: translate(0px, 0px);
+      }
     }
   }
 
