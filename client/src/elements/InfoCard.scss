@@ -15,17 +15,17 @@
   @include setInnerPaddings(false, "m", false, true, true);
 }
 
-.info-card:hover {
+.info-card:not(.info-card-active):hover {
   .info-card-logo,
   .info-card-icon-wrapper {
-    transform: translate(-2px, 0.5px);
+    transform: translate(-2px, 1px);
   }
   .info-card-logo {
-    height: 20.5px;
+    height: increaseSize(20px);
   }
   .info-card-icon-wrapper {
-    width: 41px;
-    height: 32.75px;
+    width: increaseSize(40px);
+    height: increaseSize(32px);
   }
 }
 
@@ -70,18 +70,18 @@
     height: 50px;
   }
 
-  .info-card:hover {
+  .info-card:not(.info-card-active):hover {
     margin-top: 0px;
     .info-card-icon-wrapper {
-      width: 65.6px;
-      height: 51.25px;
+      width: increaseSize(64px);
+      height: increaseSize(50px);
     }
     .info-card-logo,
     .info-card-icon-wrapper {
       transform: none;
     }
     .info-card-logo {
-      height: 16px;
+      height: increaseSize(15.5px);
     }
   }
 }
@@ -90,9 +90,9 @@
   .info-card-logo {
     height: 20px;
   }
-  .info-card:hover {
+  .info-card:not(.info-card-active):hover {
     .info-card-logo {
-      height: 20.5px;
+      height: increaseSize(20px);
     }
   }
 }

@@ -62,11 +62,19 @@
     }
   }
 
-  &:hover {
+  &:not(.info-card-active):hover {
+    .info-card-icon-wrapper {
+      width: increaseSize(36px);
+      height: increaseSize(28px);
+      transform: translate(0px, 0px);
+    }
+    .info-card-text p {
+      font-size: increaseFontSize($text-extrasmall-s, 0.5px);
+    }
     @media only screen and (min-width: $width-m) {
       margin-top: 0px;
       .info-card-icon-wrapper {
-        height: increaseSize($x4, 1.03);
+        height: increaseSize($x4);
       }
       .info-card-text p {
         font-size: increaseFontSize($text-small-m, 0.5px);
@@ -74,7 +82,7 @@
     }
     @media only screen and (min-width: $width-l) {
       .info-card-icon-wrapper {
-        height: increaseSize($x5, 1.03);
+        height: increaseSize($x5);
       }
       .info-card-text p {
         font-size: increaseFontSize($text-small-l, 0.5px);
@@ -82,7 +90,7 @@
     }
     @media only screen and (min-width: $width-xl) {
       .info-card-icon-wrapper {
-        height: increaseSize($x6, 1.03);
+        height: increaseSize($x6);
       }
     }
   }
@@ -94,7 +102,7 @@
       .info-card-icon-wrapper {
         margin-top: 0px;
         margin-bottom: $x0_5;
-        height: increaseSize($x4, 1.08);
+        height: increaseSize($x4, 1.075);
       }
       .info-card-text p {
         font-size: increaseFontSize($text-small-m);
@@ -103,7 +111,7 @@
     }
     @media only screen and (min-width: $width-l) {
       .info-card-icon-wrapper {
-        height: increaseSize($x5, 1.08);
+        height: increaseSize($x5, 1.075);
       }
       .info-card-text p {
         font-size: increaseFontSize($text-small-l);
