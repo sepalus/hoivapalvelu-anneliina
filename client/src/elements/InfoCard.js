@@ -12,34 +12,37 @@ export default function InfoCard({
   isCardActive,
   isCardDisactive,
   setCardToActive,
+  id,
 }) {
   return (
-    <Button
-      className={classNames("info-card", {
-        "info-card-active": isCardActive,
-        "info-card-disactive": isCardDisactive,
-        [`${className}`]: className,
-      })}
-      onClick={setCardToActive}
-    >
-      <div className="info-card-icon-wrapper">
-        <img
-          className="info-card-icon"
-          src={`./assets/icons/${iconFileName}`}
-          alt=""
-        />
-      </div>
-      {logoFileName ? (
-        <img
-          className="info-card-logo"
-          src={`./assets/logos/${logoFileName}`}
-          alt=""
-        />
-      ) : (
-        <div className="info-card-text">
-          <p className="text-small text-semibold">{text}</p>
+    <div id={id}>
+      <Button
+        className={classNames("info-card", {
+          "info-card-active": isCardActive,
+          "info-card-disactive": isCardDisactive,
+          [`${className}`]: className,
+        })}
+        onClick={setCardToActive}
+      >
+        <div className="info-card-icon-wrapper">
+          <img
+            className="info-card-icon"
+            src={`./assets/icons/${iconFileName}`}
+            alt=""
+          />
         </div>
-      )}
-    </Button>
+        {logoFileName ? (
+          <img
+            className="info-card-logo"
+            src={`./assets/logos/${logoFileName}`}
+            alt=""
+          />
+        ) : (
+          <div className="info-card-text">
+            <p className="text-small text-semibold">{text}</p>
+          </div>
+        )}
+      </Button>
+    </div>
   );
 }

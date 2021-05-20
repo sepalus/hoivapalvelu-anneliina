@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import "./InfoCardContainer.scss";
 import Button from "../components/Button";
@@ -10,31 +10,62 @@ export default function InfoCardContainer({
   className,
   expanderElement,
 }) {
-  const infoCardContainerCardsRef = useRef();
   const [previousScrollXOffset, setPreviousScrollXOffset] = useState(0);
   const [showBackButton, setShowBackButton] = useState(true);
+  const [showForwardButton, setShowForwardButton] = useState(true);
+  const errorMargin = 10;
+  let infoCardContainerCardsElement;
 
   useEffect(() => {
-    if (!infoCardContainerCardsRef.current) return;
+    infoCardContainerCardsElement = document.getElementById(
+      "info-card-container-cards"
+    );
+    const firstInfoCardElement = document.getElementById("info-card-0");
+    const lastInfoCardElement = document.getElementById("info-card-4");
+    if (
+      !infoCardContainerCardsElement ||
+      !firstInfoCardElement ||
+      !lastInfoCardElement
+    )
+      return;
+
+    const {
+      left: wrapperLeft,
+      width: wrapperWidth,
+    } = infoCardContainerCardsElement.getBoundingClientRect();
+    const {
+      left: lastCardLeft,
+      width: lastCardWidth,
+    } = lastInfoCardElement.getBoundingClientRect();
+    const {
+      left: firstCardLeft,
+      width: firstCardWidth,
+    } = firstInfoCardElement.getBoundingClientRect();
+
+    const lastCardIsVisible =
+      lastCardLeft + lastCardWidth < wrapperLeft + wrapperWidth + errorMargin;
+    const firstCardIsVisible = firstCardLeft > wrapperLeft - errorMargin;
+
     const updateButtonVisibility = () => {
-      const currentScrollXOffset = infoCardContainerCardsRef.current.scrollLeft;
-      setShowBackButton(currentScrollXOffset > 10);
+      const currentScrollXOffset = infoCardContainerCardsElement.scrollLeft;
+      setShowBackButton(!firstCardIsVisible);
+      setShowForwardButton(!lastCardIsVisible);
       setPreviousScrollXOffset(currentScrollXOffset);
     };
 
-    infoCardContainerCardsRef.current.addEventListener(
+    infoCardContainerCardsElement.addEventListener(
       "scroll",
       updateButtonVisibility
     );
     return () =>
-      infoCardContainerCardsRef.current.removeEventListener(
+      infoCardContainerCardsElement.removeEventListener(
         "scroll",
         updateButtonVisibility
       );
-  }, [previousScrollXOffset, infoCardContainerCardsRef]);
+  }, [previousScrollXOffset]);
 
   const scrollInDirection = (direction) => {
-    infoCardContainerCardsRef.current.scrollLeft += direction * 95;
+    infoCardContainerCardsElement.scrollLeft += direction * 95;
   };
 
   return (
@@ -56,13 +87,15 @@ export default function InfoCardContainer({
             <span class="material-icons-outlined">arrow_back_ios</span>
           </Button>
           <div
-            ref={infoCardContainerCardsRef}
+            id="info-card-container-cards"
             className="info-card-container-cards"
           >
             {children}
           </div>
           <Button
-            className="info-card-container-button"
+            className={classNames("info-card-container-button", {
+              "hide-element": !showForwardButton,
+            })}
             onClick={() => scrollInDirection(1)}
           >
             <span class="material-icons-outlined">arrow_forward_ios</span>

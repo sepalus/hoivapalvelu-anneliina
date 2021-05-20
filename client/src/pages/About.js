@@ -52,6 +52,7 @@ const infoCards = [
 
 export default function About() {
   const [activeInfoCardIndex, setActiveInfoCardIndex] = useState(-1);
+
   return (
     <div className="about">
       <ScrollArea>
@@ -78,6 +79,7 @@ export default function About() {
                 activeInfoCardIndex !== index && activeInfoCardIndex !== -1
               }
               setCardToActive={() => setActiveInfoCardIndex(index)}
+              id={`info-card-${index}`}
             />
           ))}
         </InfoCardContainer>
