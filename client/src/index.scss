@@ -114,6 +114,9 @@ p.text-extrasmall {
 .text-bold {
   font-weight: 600;
 }
+.hide-element {
+  display: none !important;
+}
 
 @media only screen and (min-width: $width-m) {
   p {
