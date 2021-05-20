@@ -96,6 +96,10 @@ $inner-half-vertical-padding-content-block-m: $x2;
 
 $inner-even-vertical-padding-content-block-s: $x4;
 $inner-even-half-vertical-padding-content-block-s: $x3;
+$inner-even-vertical-padding-content-block-m: $x5;
+$inner-even-half-vertical-padding-content-block-m: $x3_5;
+$inner-even-vertical-padding-content-block-l: $x6;
+$inner-even-half-vertical-padding-content-block-l: $x4;
 $outer-extra-padding-content-block-s: $x5;
 
 $extra-padding-content-block-s: $x7 $x6 $x8;
@@ -199,15 +203,27 @@ $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
       padding-top: $inner-even-half-vertical-padding-content-block-s;
       padding-bottom: $inner-even-half-vertical-padding-content-block-s;
     } @else {
-      padding-top: $inner-even-vertical-padding-content-block-s;
-      padding-bottom: $inner-even-vertical-padding-content-block-s;
+      padding-top: $inner-even-vertical-padding-content-block-m;
+      padding-bottom: $inner-even-vertical-padding-content-block-m;
     }
 
     @if $halfVerticalPadding == "m" or $halfVerticalPadding == "sm" {
       @media only screen and (min-width: $width-m) {
+        padding-top: $inner-even-half-vertical-padding-content-block-m;
+        padding-bottom: $inner-even-half-vertical-padding-content-block-m;
+      }
+      @media only screen and (min-width: $width-l) {
+        padding-top: $inner-even-half-vertical-padding-content-block-l;
+        padding-bottom: $inner-even-half-vertical-padding-content-block-l;
       }
     } @else {
       @media only screen and (min-width: $width-m) {
+        padding-top: $inner-even-vertical-padding-content-block-m;
+        padding-bottom: $inner-even-vertical-padding-content-block-m;
+      }
+      @media only screen and (min-width: $width-l) {
+        padding-top: $inner-even-vertical-padding-content-block-l;
+        padding-bottom: $inner-even-vertical-padding-content-block-l;
       }
     }
   }
