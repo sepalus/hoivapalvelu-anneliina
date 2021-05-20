@@ -7,8 +7,32 @@
   @include setGap(true);
   @include setContentMaxWidth();
 }
+.info-card-container-card-wrapper {
+  display: flex;
+  position: relative;
+}
+.info-card-container-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  border-radius: 50%;
+  span {
+    font-size: 20px;
+  }
 
-.info-card-wrapper {
+  &:last-of-type {
+    left: unset;
+    right: -20px;
+  }
+}
+.info-card-container-cards {
   display: flex;
   flex-direction: column;
   gap: $x2;
@@ -21,7 +45,7 @@
 }
 
 @media only screen and (min-width: $width-m) {
-  .info-card-wrapper {
+  .info-card-container-cards {
     flex-direction: row;
     gap: $x3;
   }
@@ -32,13 +56,13 @@
 }
 
 @media only screen and (min-width: $width-l) {
-  .info-card-wrapper {
+  .info-card-container-cards {
     gap: $x4;
   }
 }
 
 .info-card-container-value {
-  .info-card-wrapper {
+  .info-card-container-cards {
     flex-direction: row;
     gap: $x1;
     overflow-x: scroll;
