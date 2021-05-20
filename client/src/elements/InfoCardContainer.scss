@@ -35,7 +35,9 @@
 .info-card-container-cards {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: $x2;
+  padding: 2px;
 }
 
 .info-card-container-expander {
@@ -66,5 +68,13 @@
     flex-direction: row;
     gap: $x1;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
