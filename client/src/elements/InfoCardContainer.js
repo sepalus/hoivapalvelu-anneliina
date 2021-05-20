@@ -9,6 +9,8 @@ export default function InfoCardContainer({
   backgroundColor,
   className,
   expanderElement,
+  infoCardFirstRef,
+  infoCardLastRef,
 }) {
   const [previousScrollXOffset, setPreviousScrollXOffset] = useState(0);
   const [showBackButton, setShowBackButton] = useState(true);
@@ -20,12 +22,11 @@ export default function InfoCardContainer({
     infoCardContainerCardsElement = document.getElementById(
       "info-card-container-cards"
     );
-    const firstInfoCardElement = document.getElementById("info-card-0");
-    const lastInfoCardElement = document.getElementById("info-card-4");
+
     if (
       !infoCardContainerCardsElement ||
-      !firstInfoCardElement ||
-      !lastInfoCardElement
+      !infoCardFirstRef.current ||
+      !infoCardLastRef.current
     )
       return;
 
@@ -36,11 +37,11 @@ export default function InfoCardContainer({
     const {
       left: lastCardLeft,
       width: lastCardWidth,
-    } = lastInfoCardElement.getBoundingClientRect();
+    } = infoCardLastRef.current.getBoundingClientRect();
     const {
       left: firstCardLeft,
       width: firstCardWidth,
-    } = firstInfoCardElement.getBoundingClientRect();
+    } = infoCardFirstRef.current.getBoundingClientRect();
 
     const lastCardIsVisible =
       lastCardLeft + lastCardWidth < wrapperLeft + wrapperWidth + errorMargin;
@@ -62,7 +63,7 @@ export default function InfoCardContainer({
         "scroll",
         updateButtonVisibility
       );
-  }, [previousScrollXOffset]);
+  }, [previousScrollXOffset, infoCardFirstRef, infoCardLastRef]);
 
   const scrollInDirection = (direction) => {
     infoCardContainerCardsElement.scrollLeft += direction * 95;
@@ -84,7 +85,7 @@ export default function InfoCardContainer({
             })}
             onClick={() => scrollInDirection(-1)}
           >
-            <span class="material-icons-outlined">arrow_back_ios</span>
+            <span className="material-icons-outlined">arrow_back_ios</span>
           </Button>
           <div
             id="info-card-container-cards"
@@ -98,7 +99,7 @@ export default function InfoCardContainer({
             })}
             onClick={() => scrollInDirection(1)}
           >
-            <span class="material-icons-outlined">arrow_forward_ios</span>
+            <span className="material-icons-outlined">arrow_forward_ios</span>
           </Button>
         </div>
         {expanderElement && (

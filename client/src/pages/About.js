@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Banner from "../elements/Banner";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
@@ -52,6 +52,8 @@ const infoCards = [
 
 export default function About() {
   const [activeInfoCardIndex, setActiveInfoCardIndex] = useState(-1);
+  const infoCardFirstRef = useRef();
+  const infoCardLastRef = useRef();
 
   return (
     <div className="about">
@@ -68,6 +70,8 @@ export default function About() {
           backgroundColor="pink"
           className="info-card-container-value"
           expanderElement={infoCards[activeInfoCardIndex]}
+          infoCardFirstRef={infoCardFirstRef}
+          infoCardLastRef={infoCardLastRef}
         >
           {infoCards.map((infoCard, index) => (
             <InfoCard
@@ -78,8 +82,15 @@ export default function About() {
               isCardDisactive={
                 activeInfoCardIndex !== index && activeInfoCardIndex !== -1
               }
+              infoCardRef={
+                index === 0
+                  ? infoCardFirstRef
+                  : index === infoCards.length - 1
+                  ? infoCardLastRef
+                  : null
+              }
               setCardToActive={() => setActiveInfoCardIndex(index)}
-              id={`info-card-${index}`}
+              key={`info-card-${index}`}
             />
           ))}
         </InfoCardContainer>

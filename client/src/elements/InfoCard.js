@@ -13,9 +13,10 @@ export default function InfoCard({
   isCardDisactive,
   setCardToActive,
   id,
+  infoCardRef,
 }) {
   return (
-    <div id={id}>
+    <div ref={infoCardRef}>
       <Button
         className={classNames("info-card", {
           "info-card-active": isCardActive,
