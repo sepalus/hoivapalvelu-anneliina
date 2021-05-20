@@ -14,16 +14,12 @@ export default function InfoCardContainer({
   infoCardLastRef,
 }) {
   const [previousScrollXOffset, setPreviousScrollXOffset] = useState(0);
-  const [showBackButton, setShowBackButton] = useState(true);
-  const [showForwardButton, setShowForwardButton] = useState(true);
+  const [showBackButton, setShowBackButton] = useState(false);
+  const [showForwardButton, setShowForwardButton] = useState(false);
   const errorMargin = 10;
 
   useEffect(() => {
-    if (
-      !infoCardContainerCardsRef.current ||
-      !infoCardFirstRef.current ||
-      !infoCardLastRef.current
-    )
+    if (!infoCardContainerCardsRef || !infoCardFirstRef || !infoCardLastRef)
       return;
 
     const {
@@ -53,12 +49,19 @@ export default function InfoCardContainer({
       "scroll",
       updateButtonVisibility
     );
-    return () =>
-      infoCardContainerCardsRef.current.removeEventListener(
+    return () => {
+      if (!infoCardContainerCardsRef.current) return;
+      return infoCardContainerCardsRef.current.removeEventListener(
         "scroll",
         updateButtonVisibility
       );
-  }, [previousScrollXOffset, infoCardFirstRef, infoCardLastRef]);
+    };
+  }, [
+    previousScrollXOffset,
+    infoCardFirstRef,
+    infoCardLastRef,
+    infoCardContainerCardsRef,
+  ]);
 
   const scrollInDirection = (direction) => {
     infoCardContainerCardsRef.current.scrollLeft += direction * 95;
@@ -79,6 +82,7 @@ export default function InfoCardContainer({
               "hide-element": !showBackButton,
             })}
             onClick={() => scrollInDirection(-1)}
+            noHoverEffect
           >
             <span className="material-icons-outlined">arrow_back_ios</span>
           </Button>
@@ -93,6 +97,7 @@ export default function InfoCardContainer({
               "hide-element": !showForwardButton,
             })}
             onClick={() => scrollInDirection(1)}
+            noHoverEffect
           >
             <span className="material-icons-outlined">arrow_forward_ios</span>
           </Button>

@@ -12,6 +12,7 @@
   position: relative;
 }
 .info-card-container-button {
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,5 +77,18 @@
     }
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+  @media only screen and (min-width: $width-m) {
+    .info-card-container-cards {
+      gap: $x2;
+    }
+    .info-card-container-button {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    .info-card-container-cards {
+      gap: $x3;
+    }
   }
 }
