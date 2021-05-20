@@ -33,6 +33,10 @@ export default function InfoCardContainer({
       );
   }, [previousScrollXOffset, infoCardContainerCardsRef]);
 
+  const scrollInDirection = (direction) => {
+    infoCardContainerCardsRef.current.scrollLeft += direction * 95;
+  };
+
   return (
     <div
       className={classNames("info-card-container", {
@@ -47,6 +51,7 @@ export default function InfoCardContainer({
             className={classNames("info-card-container-button", {
               "hide-element": !showBackButton,
             })}
+            onClick={() => scrollInDirection(-1)}
           >
             <span class="material-icons-outlined">arrow_back_ios</span>
           </Button>
@@ -56,7 +61,10 @@ export default function InfoCardContainer({
           >
             {children}
           </div>
-          <Button className="info-card-container-button">
+          <Button
+            className="info-card-container-button"
+            onClick={() => scrollInDirection(1)}
+          >
             <span class="material-icons-outlined">arrow_forward_ios</span>
           </Button>
         </div>
