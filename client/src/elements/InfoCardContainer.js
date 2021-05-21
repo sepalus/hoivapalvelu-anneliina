@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import "./InfoCardContainer.scss";
 import InfoCardScrollContainer from "./InfoCardScrollContainer";
+import Expander from "../components/Expander";
 
 export default function InfoCardContainer({
   title,
@@ -49,10 +50,10 @@ export default function InfoCardContainer({
           </div>
         )}
         {expanderElement && (
-          <div className="info-card-container-expander">
-            <h3>{expanderElement.expandedTitle}</h3>
-            <p>{expanderElement.expandedText}</p>
-          </div>
+          <Expander
+            title={expanderElement.expandedTitle}
+            text={expanderElement.expandedText}
+          ></Expander>
         )}
       </div>
     </div>

@@ -1,0 +1,14 @@
+@import "../variables";
+
+.expander {
+  display: flex;
+  flex-direction: column;
+  @include setInnerPaddings("sm", "sm", "sm", false, false);
+}
+
+@media only screen and (min-width: $width-m) {
+  .expander {
+    padding-top: $x1;
+    gap: $x1_5;
+  }
+}
