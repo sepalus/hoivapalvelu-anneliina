@@ -67,7 +67,9 @@ export default function ContentBlock(props) {
               text={expanderButtonText}
               className={classNames(
                 "content-block-button content-block-expander-button",
-                { "content-block-expander-button-open": expanderIsOpen }
+                {
+                  "content-block-expander-button-open text-bold": expanderIsOpen,
+                }
               )}
               onClick={() => setExpanderIsOpen(!expanderIsOpen)}
               noHoverEffect={expanderIsOpen}

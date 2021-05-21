@@ -1,9 +1,33 @@
+$x0_5: 4px;
+$x1: 8px;
+$x1_5: 12px;
+$x2: 16px;
+$x2_5: 20px;
+$x3: 24px;
+$x3_5: 28px;
+$x4: 32px;
+$x4_5: 36px;
+$x5: 40px;
+$x5_5: 44px;
+$x6: 48px;
+$x6_5: 52px;
+$x7: 56px;
+$x8: 64px;
+$x9: 72px;
+$x10: 80px;
+$x11: 88px;
+$x12: 96px;
+
 $width-xs: 480px;
 $width-s: 576px;
 $width-m: 768px;
 $width-l: 992px;
 $width-xl: 1200px;
 $width-xxl: 1440px;
+
+$padding-horizontal-s: $x3;
+$padding-horizontal-m: $x4;
+$padding-horizontal-l: $x5;
 
 $header-height: 60px;
 $content-height: calc(100vh - 60px);
@@ -30,26 +54,7 @@ $color-pink-light: #efbfcb33; //33 = 20% Opacity
 $border-radius: 3px;
 $box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
-
-$x0_5: 4px;
-$x1: 8px;
-$x1_5: 12px;
-$x2: 16px;
-$x2_5: 20px;
-$x3: 24px;
-$x3_5: 28px;
-$x4: 32px;
-$x4_5: 36px;
-$x5: 40px;
-$x5_5: 44px;
-$x6: 48px;
-$x6_5: 52px;
-$x7: 56px;
-$x8: 64px;
-$x9: 72px;
-$x10: 80px;
-$x11: 88px;
-$x12: 96px;
+$box-shadow-below-half: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
 
 $text-s: 16px;
 $text-m: 17px;
@@ -68,10 +73,9 @@ $outer-padding-content-block-m: $x7 $x4_5 $x8;
 $outer-padding-content-block-l: $x8 $x5_5 $x9;
 $outer-padding-content-block-xl: $x9 $x6_5 $x10;
 
-$inner-padding-content-block-s: $x3_5 $x3 $x4_5;
-$inner-padding-content-block-m: $x4_5 $x4 $x5_5;
-$inner-padding-content-block-l: $x6 $x5 $x7;
-$inner-padding-content-block-xl: $x7 $x6 $x8;
+$inner-padding-content-block-s: $x3_5 $padding-horizontal-s $x4_5;
+$inner-padding-content-block-m: $x4_5 $padding-horizontal-m $x5_5;
+$inner-padding-content-block-l: $x6 $padding-horizontal-l $x7;
 
 $inner-gap-s: $x1;
 $inner-gap-m: $x1;
@@ -117,6 +121,16 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
 
 @function increaseFontSize($currentSize, $increaseSize: 1px) {
   @return $currentSize + $increaseSize;
+}
+
+@function getHorizontalPadding($screenSize: null) {
+  @if $screenSize == "l" {
+    @return $padding-horizontal-l;
+  } @else if $screenSize == "m" {
+    @return $padding-horizontal-m;
+  } @else {
+    @return $padding-horizontal-s;
+  }
 }
 
 @mixin setOuterPaddings($noVerticalPadding: false, $extraSidePadding: false) {

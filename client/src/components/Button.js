@@ -14,10 +14,13 @@ export default function Button({
     <>
       {children && text ? (
         <button
-          className={classNames("action-button action-button-with-icon", {
-            [`${className}`]: className,
-            "action-button-with-hover-effect": !noHoverEffect,
-          })}
+          className={classNames(
+            "action-button action-button-with-icon text-weight-semibold",
+            {
+              [`${className}`]: className,
+              "action-button-with-hover-effect": !noHoverEffect,
+            }
+          )}
           onClick={onClick}
         >
           {text}
@@ -25,20 +28,26 @@ export default function Button({
         </button>
       ) : children ? (
         <button
-          className={classNames("action-button action-button-with-content", {
-            [`${className}`]: className,
-            "action-button-with-hover-effect": !noHoverEffect,
-          })}
+          className={classNames(
+            "action-button action-button-with-content text-weight-semibold",
+            {
+              [`${className}`]: className,
+              "action-button-with-hover-effect": !noHoverEffect,
+            }
+          )}
           onClick={onClick}
         >
           {children}
         </button>
       ) : imageUrl ? (
         <button
-          className={classNames("action-button action-button-with-image", {
-            [`${className}`]: className,
-            "action-button-with-hover-effect": !noHoverEffect,
-          })}
+          className={classNames(
+            "action-button action-button-with-image text-weight-semibold",
+            {
+              [`${className}`]: className,
+              "action-button-with-hover-effect": !noHoverEffect,
+            }
+          )}
         >
           <img src={imageUrl} alt="" />
         </button>
