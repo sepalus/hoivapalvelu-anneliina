@@ -7,6 +7,11 @@
   @include setGap(true);
   @include setContentMaxWidth();
 }
+.info-card-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include setGap();
+}
 .info-card-container-card-wrapper {
   display: flex;
   position: relative;

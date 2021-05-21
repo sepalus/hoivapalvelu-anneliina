@@ -20,7 +20,11 @@ export default function Services() {
             overlayReverse: true,
           }}
         />
-        <InfoCardContainer title="Palvelukokonaisuudet" backgroundColor="beige">
+        <InfoCardContainer
+          title="Palvelukokonaisuudet"
+          text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
+          backgroundColor="beige"
+        >
           <InfoCard
             iconFileName="anneliinan-kotisairaanhoito.png"
             logoFileName="anneliinan-kotisairaanhoito.png"

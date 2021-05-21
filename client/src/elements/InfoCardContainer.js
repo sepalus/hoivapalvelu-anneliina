@@ -5,6 +5,7 @@ import InfoCardScrollContainer from "./InfoCardScrollContainer";
 
 export default function InfoCardContainer({
   title,
+  text,
   children,
   backgroundColor,
   className,
@@ -22,7 +23,10 @@ export default function InfoCardContainer({
       })}
     >
       <div className="info-card-container-content-wrapper">
-        <h2>{title}</h2>
+        <div className="info-card-text-wrapper">
+          <h2>{title}</h2>
+          {text && <p>{text}</p>}
+        </div>
         {hasScrollableInfoCards ? (
           <InfoCardScrollContainer
             infoCardContainerCardsRef={infoCardContainerCardsRef}
