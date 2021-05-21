@@ -46,6 +46,25 @@
   @include setInnerPaddings();
 }
 
+.content-block-expander-button-open {
+  position: relative;
+  border: none;
+  width: calc(100% + 48px);
+  padding-left: 66px;
+  transform: translateX(-24px);
+  font-weight: 600;
+  border-radius: 0px;
+  box-shadow: $box-shadow-below;
+  span {
+    font-size: 24px;
+  }
+}
+
+.expander-button-open-extra-icon {
+  position: absolute;
+  left: 0;
+}
+
 @media only screen and (min-width: $width-m) {
   .content-block {
     flex-direction: row;

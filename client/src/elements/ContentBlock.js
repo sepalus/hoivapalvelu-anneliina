@@ -65,17 +65,26 @@ export default function ContentBlock(props) {
           <>
             <Button
               text={expanderButtonText}
-              className="content-block-button"
+              className={classNames(
+                "content-block-button content-block-expander-button",
+                { "content-block-expander-button-open": expanderIsOpen }
+              )}
               onClick={() => setExpanderIsOpen(!expanderIsOpen)}
+              noHoverEffect={expanderIsOpen}
             >
               <span className="material-icons">
                 {expanderIsOpen ? "expand_less" : "expand_more"}
               </span>
+              {expanderIsOpen && (
+                <span class="material-icons-outlined expander-button-open-extra-icon">
+                  favorite_border
+                </span>
+              )}
             </Button>
             <Expander
               list={expanderElement.list}
               isOpen={expanderIsOpen}
-              classNames={expanderClassName}
+              className={expanderClassName}
             ></Expander>
           </>
         )}

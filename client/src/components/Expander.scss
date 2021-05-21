@@ -12,3 +12,8 @@
     gap: $x1_5;
   }
 }
+
+.expander-service-more-information {
+  @include setInnerPaddings("sm", false, false, false, false);
+  padding-top: $x1_5;
+}
