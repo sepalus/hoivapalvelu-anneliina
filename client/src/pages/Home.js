@@ -14,7 +14,9 @@ export default function Home() {
     <div className="home">
       <SnapScrollArea>
         <Banner
+          className="banner-home"
           imageFileName="home-banner-wide.jpg"
+          backgroundColor="beige"
           sloganText="Meiltä saat kaikki kotona asumista tukevat palvelut vaivattomasti
         saman katon alta"
           buttonText="Tutustu palveluihimme"

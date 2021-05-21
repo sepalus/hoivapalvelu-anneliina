@@ -84,6 +84,10 @@ p.text-extrasmall {
   font-size: $text-extrasmall-s;
 }
 
+.background-transparent {
+  background-color: transparent;
+}
+
 .background-white {
   background-color: $color-white;
 }
@@ -138,6 +142,10 @@ p.text-extrasmall {
 
   p.text-extrasmall {
     font-size: $text-extrasmall-m;
+  }
+
+  .background-medium-transparent {
+    background-color: transparent;
   }
 
   .background-medium-white {

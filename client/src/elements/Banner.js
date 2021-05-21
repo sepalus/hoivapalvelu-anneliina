@@ -4,19 +4,29 @@ import "./Banner.scss";
 import Button from "../components/Button";
 
 export default function Banner({
+  className,
   imageFileName,
   title,
   text,
   sloganText,
   buttonText,
-  hasOverlay,
+  backgroundColor,
+  overlay,
 }) {
+  const hasOverlay = !!overlay;
+  const overlayColor = overlay && overlay.overlayColor;
+  const overlayReverse = overlay && overlay.overlayReverse;
+
   return (
-    <div className="banner">
+    <div className={classNames("banner", { [`${className}`]: className })}>
       <div className="banner-content-wrapper">
         <div
           className={classNames("banner-tagline", {
             "banner-tagline-background-overlay": hasOverlay,
+            "banner-tagline-background-overlay-reverse": overlayReverse,
+            [`background-${backgroundColor}`]: backgroundColor,
+            "background-medium-transparent": !overlayColor,
+            [`background-medium-${backgroundColor}`]: overlayColor,
           })}
         >
           {title && <h1>{title}</h1>}
