@@ -72,6 +72,7 @@ export default function About() {
           title="Anneliinan arvot"
           backgroundColor="pink"
           className="info-card-container-value"
+          hasScrollableInfoCards={true}
           expanderElement={infoCards[activeInfoCardIndex]}
           infoCardContainerCardsRef={infoCardContainerCardsRef}
           infoCardFirstRef={infoCardFirstRef}
