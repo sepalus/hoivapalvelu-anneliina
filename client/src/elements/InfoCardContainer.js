@@ -53,6 +53,7 @@ export default function InfoCardContainer({
           <Expander
             title={expanderElement.expandedTitle}
             text={expanderElement.expandedText}
+            isOpen={true}
           ></Expander>
         )}
       </div>

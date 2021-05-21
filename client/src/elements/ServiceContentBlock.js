@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 //import "./ServiceContentBlock.scss";
 import ContentBlock from "./ContentBlock";
 
 export default function ServiceContentBlock(props) {
-  return <ContentBlock {...props}></ContentBlock>;
+  const [expanderIsOpen, setExpanderIsOpen] = useState(false);
+  return (
+    <ContentBlock
+      {...props}
+      expanderIsOpen={expanderIsOpen}
+      setExpanderIsOpen={setExpanderIsOpen}
+      expanderClassName="expander-service-more-information"
+    ></ContentBlock>
+  );
 }

@@ -20,6 +20,7 @@ ul {
 }
 li {
   list-style: none;
+  font-weight: 100;
 }
 a {
   text-decoration: none;
@@ -117,6 +118,11 @@ p.text-extrasmall {
 }
 .text-bold {
   font-weight: 600;
+}
+.bullet-point-item {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 .hide-element {
   display: none !important;

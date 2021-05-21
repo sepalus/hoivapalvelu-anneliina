@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import "./ContentBlock.scss";
 import Button from "../components/Button";
+import Expander from "../components/Expander";
 
 export default function ContentBlock(props) {
   const {
@@ -16,6 +17,11 @@ export default function ContentBlock(props) {
     backgroundColor,
     backgroundColorMedium,
     imagePosition,
+    expanderElement,
+    expanderIsOpen,
+    expanderButtonText,
+    setExpanderIsOpen,
+    expanderClassName,
   } = props;
 
   return (
@@ -54,6 +60,24 @@ export default function ContentBlock(props) {
           >
             {buttonIcon && <span className="material-icons">{buttonIcon}</span>}
           </Button>
+        )}
+        {expanderElement && (
+          <>
+            <Button
+              text={expanderButtonText}
+              className="content-block-button"
+              onClick={() => setExpanderIsOpen(!expanderIsOpen)}
+            >
+              <span className="material-icons">
+                {expanderIsOpen ? "expand_less" : "expand_more"}
+              </span>
+            </Button>
+            <Expander
+              list={expanderElement.list}
+              isOpen={expanderIsOpen}
+              classNames={expanderClassName}
+            ></Expander>
+          </>
         )}
       </div>
     </div>

@@ -7,6 +7,30 @@ import ServiceContentBlock from "../elements/ServiceContentBlock";
 import Footer from "../elements/Footer";
 import ScrollArea from "../components/ScrollArea";
 
+const homeCareTaskList = [
+  "tarkkailee yleistä terveydentilaasi",
+  "neuvoo terveyteesi liittyvissä asioissa",
+  "jakaa ja antaa lääkkeesi",
+  "poistaa hakaset ja ompeleet",
+  "mittaa verenpaineesi, verensokerisi, hemoglobiinisi ja saturaatiosi",
+  "huuhtelee korviasi",
+  "laittaa silmätippasi tai -voiteesi",
+  "antaa injektiosi",
+  "hoitaa haavasi",
+  "katetroi",
+  "ottaa verinäytteesi ja toimittaa sen laboratorioon",
+  "tekee toimintakyvyn arvioinnit",
+];
+
+const dayActivityTaskList = [
+  "quis aute iure",
+  "reprehenderit in voluptate",
+  "velit esse",
+  "cillum dolore",
+  "eu fugiat nulla",
+  "pariatur",
+];
+
 export default function Services() {
   return (
     <div className="services">
@@ -48,8 +72,8 @@ export default function Services() {
             text="Kotisairaanhoidon tarkoituksena on helpottaa sairaalasta kotiutumista, sairaan henkilön kotona selviytymistä ja tukea omaisia sairaan henkilön kotihoidossa. Sairaanhoitopalvelut ovat erilaisia lääkärin määräämiä sairaanhoidon toimenpiteitä kuten näytteiden ottamista, lääkityksen valvomista ja asiakkaan voinnin seuraamista."
             backgroundColor="white"
             backgroundColorMedium="lightblue"
-            buttonIcon="expand_more"
-            buttonText="Hoitajamme auttavat"
+            expanderButtonText="Hoitajamme auttavat"
+            expanderElement={{ list: homeCareTaskList }}
           />
         </ContentBlockContainer>
         <ContentBlockContainer backgroundColor="beige">
@@ -70,8 +94,8 @@ export default function Services() {
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
             backgroundColor="white"
             backgroundColorMedium="beige"
-            buttonIcon="expand_more"
-            buttonText="Päivätoiminnassa"
+            expanderButtonText="Päivätoiminnassa"
+            expanderElement={{ list: dayActivityTaskList }}
           />
         </ContentBlockContainer>
         <Footer />
