@@ -40,7 +40,7 @@ export default function Home() {
               logoFileName="anneliinan-paivatoiminta.png"
             />
           </InfoCardContainer>
-          <ContentBlockContainer>
+          <ContentBlockContainer backgroundColor="beige">
             <ContentBlock
               isReverse={true}
               imageFileName="about-us.jpeg"

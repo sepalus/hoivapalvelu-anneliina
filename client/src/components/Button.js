@@ -12,7 +12,18 @@ export default function Button({
 }) {
   return (
     <>
-      {children ? (
+      {children && text ? (
+        <button
+          className={classNames("action-button action-button-with-icon", {
+            [`${className}`]: className,
+            "action-button-with-hover-effect": !noHoverEffect,
+          })}
+          onClick={onClick}
+        >
+          {text}
+          {children}
+        </button>
+      ) : children ? (
         <button
           className={classNames("action-button action-button-with-content", {
             [`${className}`]: className,

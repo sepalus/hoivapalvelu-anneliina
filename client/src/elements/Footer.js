@@ -13,7 +13,7 @@ export default function Footer() {
               src="./assets/logos/hoivapalvelu-anneliina-darkblue.png"
               alt=""
             />
-            <p className="p-16 text-medium">
+            <p className="p-16 text-medium-weight">
               Luotettavaa ja ammattitaitoista hoitopalvelua Etelä-Suomen
               alueella.
             </p>
@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
         <div className="footer-information">
           <div className="footer-information-services">
-            <h3 className="text-medium">Palvelut</h3>
+            <h3 className="text-medium-weight">Palvelut</h3>
             <div className="footer-information-content-items">
               <p className="text-small">Anneliinan Kotisairaanhoito</p>
               <p className="text-small">Anneliinan Kotiapu</p>
@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-information-contact">
-            <h3 className="text-medium">Yhteystiedot</h3>
+            <h3 className="text-medium-weight">Yhteystiedot</h3>
             <div className="footer-information-content-items">
               <p className="text-small">Hoivapalvelu Anneliina Oy</p>
               <p className="text-extrasmall">

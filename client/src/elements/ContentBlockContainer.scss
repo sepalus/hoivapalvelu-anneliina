@@ -1,17 +1,8 @@
 @import "../variables";
 
-.content-block-container {
-  background-color: $color-beige-light;
-}
 .content-block-container-content-wrapper {
   display: flex;
   flex-direction: column;
   @include setOuterPaddings();
   @include setContentMaxWidth();
-}
-
-@media only screen and (min-width: $width-m) {
-  .content-block-container {
-    background-color: $color-white;
-  }
 }

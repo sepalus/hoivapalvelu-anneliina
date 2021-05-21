@@ -29,6 +29,15 @@
   }
 }
 
+.action-button-with-icon {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: $x3;
+    font-size: 28px;
+  }
+}
+
 .action-button-with-content {
   border: none;
 }

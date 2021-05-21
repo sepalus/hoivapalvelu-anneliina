@@ -99,7 +99,7 @@ export default function About() {
             />
           ))}
         </InfoCardContainer>
-        <ContentBlockContainer>
+        <ContentBlockContainer backgroundColor="beige">
           <ContentBlock
             imageFileName="placeholder.jpeg"
             title="Tarinamme"
