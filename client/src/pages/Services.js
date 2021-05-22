@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Banner from "../elements/Banner";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
@@ -32,6 +32,11 @@ const dayActivityTaskList = [
 ];
 
 export default function Services() {
+  const [activeInfoCardIndex, setActiveInfoCardIndex] = useState(-1);
+  const infoCardServiceContainerCardsRef = useRef();
+  const infoCardServiceFirstRef = useRef();
+  const infoCardServiceLastRef = useRef();
+
   return (
     <div className="services">
       <ScrollArea>
@@ -85,6 +90,9 @@ export default function Services() {
             backgroundColor="white"
             backgroundColorMedium="beige"
             infoCardElement={true}
+            infoCardServiceContainerCardsRef={infoCardServiceContainerCardsRef}
+            infoCardServiceFirstRef={infoCardServiceFirstRef}
+            infoCardServiceLastRef={infoCardServiceLastRef}
           />
         </ContentBlockContainer>
         <ContentBlockContainer backgroundColor="pink">

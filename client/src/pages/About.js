@@ -52,9 +52,9 @@ const infoCards = [
 
 export default function About() {
   const [activeInfoCardIndex, setActiveInfoCardIndex] = useState(-1);
-  const infoCardContainerCardsRef = useRef();
-  const infoCardFirstRef = useRef();
-  const infoCardLastRef = useRef();
+  const infoCardValueContainerCardsRef = useRef();
+  const infoCardValueFirstRef = useRef();
+  const infoCardValueLastRef = useRef();
 
   return (
     <div className="about">
@@ -74,9 +74,9 @@ export default function About() {
           className="info-card-container-value"
           hasScrollableInfoCards={true}
           expanderElement={infoCards[activeInfoCardIndex]}
-          infoCardContainerCardsRef={infoCardContainerCardsRef}
-          infoCardFirstRef={infoCardFirstRef}
-          infoCardLastRef={infoCardLastRef}
+          infoCardContainerCardsRef={infoCardValueContainerCardsRef}
+          infoCardFirstRef={infoCardValueFirstRef}
+          infoCardLastRef={infoCardValueLastRef}
         >
           {infoCards.map((infoCard, index) => (
             <InfoCard
@@ -89,9 +89,9 @@ export default function About() {
               }
               infoCardRef={
                 index === 0
-                  ? infoCardFirstRef
+                  ? infoCardValueFirstRef
                   : index === infoCards.length - 1
-                  ? infoCardLastRef
+                  ? infoCardValueLastRef
                   : null
               }
               setCardToActive={() => setActiveInfoCardIndex(index)}
