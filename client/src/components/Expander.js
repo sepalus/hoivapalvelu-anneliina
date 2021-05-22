@@ -7,6 +7,7 @@ export default function Expander({
   title,
   text,
   listTitle,
+  listTitleIcon,
   list,
   className,
 }) {
@@ -19,16 +20,27 @@ export default function Expander({
     >
       {title && <h3>{title}</h3>}
       {text && <p>{text}</p>}
-      {listTitle && <h4>{listTitle}</h4>}
-      {list && (
-        <ul>
-          {list.map((listItem) => (
-            <li>
-              <p className="text-small bullet-point-item">{listItem}</p>
-            </li>
-          ))}
-        </ul>
-      )}
+      <div className="expander-list">
+        {listTitle && (
+          <>
+            {listTitleIcon && (
+              <span className="expander-list-title-icon material-icons-outlined">
+                {listTitleIcon}
+              </span>
+            )}
+            <h4 className="expander-list-title text-semibold">{listTitle}</h4>
+          </>
+        )}
+        {list && (
+          <ul>
+            {list.map((listItem) => (
+              <li>
+                <p className="text-small bullet-point-item">{listItem}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }

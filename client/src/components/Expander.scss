@@ -3,7 +3,17 @@
 .expander {
   display: flex;
   flex-direction: column;
-  @include setInnerPaddings("sm", "sm", "sm", false, false);
+  @include setInnerPaddings("sm", false, "sm", "sm", false, false);
+}
+
+.expander-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include setGap();
+}
+.expander-list-title-icon {
+  position: absolute;
 }
 
 @media only screen and (min-width: $width-m) {
@@ -14,6 +24,40 @@
 }
 
 .expander-service-more-information {
-  @include setInnerPaddings("sm", false, false, false, false);
-  padding-top: $x1_5;
+  background-color: $color-lightgray-ultralight;
+  box-shadow: inset $box-shadow-around;
+  @include marginToPadding(
+    $inner-padding-content-block-s,
+    $inner-padding-content-block-negative-s,
+    $x1
+  );
+  ul {
+    @include setInnerPaddings("s", "s");
+    padding-top: $x2;
+  }
+}
+
+.expander-service-info-card-more-information {
+  @include marginToPadding(null, null, $x2);
+  padding: 24px 36px 36px;
+
+  @include setGap(true);
+  .expander-list {
+    padding-top: $x0_5;
+  }
+
+  .expander-list-title {
+    color: $color-darkblue;
+    margin-left: 38px;
+  }
+
+  .expander-list-title-icon {
+    color: $color-darkblue;
+    position: absolute;
+    left: 3px;
+  }
+
+  ul {
+    @include setInnerPaddings("s", "s", "s", "s", false, false);
+  }
 }

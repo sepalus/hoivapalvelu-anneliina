@@ -100,3 +100,15 @@
     }
   }
 }
+.info-card-container-service-expander-open {
+  .info-card-ref {
+    padding-bottom: 0px;
+  }
+  .info-card-value {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    &.info-card-active {
+      border-bottom: 0px;
+    }
+  }
+}

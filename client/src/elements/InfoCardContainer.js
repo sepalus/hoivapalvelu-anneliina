@@ -12,6 +12,7 @@ export default function InfoCardContainer({
   backgroundColor,
   className,
   expanderElement,
+  expanderClassName,
   hasScrollableInfoCards,
   infoCardContainerCardsRef,
   infoCardFirstRef,
@@ -55,8 +56,10 @@ export default function InfoCardContainer({
             title={expanderElement.expandedTitle}
             text={expanderElement.expandedText}
             listTitle={expanderElement.expandedListTitle}
+            listTitleIcon={expanderElement.expandedListTitleIcon}
             list={expanderElement.expandedList}
             isOpen={true}
+            className={expanderClassName}
           ></Expander>
         )}
       </div>

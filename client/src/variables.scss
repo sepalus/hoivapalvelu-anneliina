@@ -40,14 +40,18 @@ $line-height-p-18: calc(18px * 1.66);
 
 $color-white: #ffffff;
 $color-black: #000000;
-$color-disactive: #e4e4e4;
-$color-disactive-hover: #e8e8e8;
+$color-lightgray: #e4e4e4;
+$color-lightgray-light: #e8e8e8;
+$color-lightgray-hover: #e8e8e8;
+$color-lightgray-light-hover: #ececec;
+$color-lightgray-ultralight: #fcfcfc;
 $color-lightblue: #a4d3f2;
 $color-darkblue: #0b4269;
 $color-lightblue-light: #a4d3f233; //33 = 20% Opacity
 $color-lightblue-ultralight: #a4d3f219; //19 = 10% Opacity
 $color-beige: #f4f1e9;
 $color-beige-light: #f4f1e966; //66 = 40% Opacity
+$color-beige-ultralight: #f4f1e933; //33 = 20% Opacity
 $color-pink: #efbfcb;
 $color-pink-light: #efbfcb33; //33 = 20% Opacity
 
@@ -76,6 +80,8 @@ $outer-padding-content-block-xl: $x9 $x6_5 $x10;
 $inner-padding-content-block-s: $x3_5 $padding-horizontal-s $x4_5;
 $inner-padding-content-block-m: $x4_5 $padding-horizontal-m $x5_5;
 $inner-padding-content-block-l: $x6 $padding-horizontal-l $x7;
+$inner-padding-content-block-negative-s: (-$x3_5) (-$padding-horizontal-s)
+  (-$x4_5);
 
 $inner-gap-s: $x1;
 $inner-gap-m: $x1;
@@ -166,6 +172,7 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
 
 @mixin setInnerPaddings(
   $removeBottomPadding: false,
+  $removeTopPadding: false,
   $halfHorizontalPadding: false,
   $halfVerticalPadding: false,
   $verticalAlignCenter: false,
@@ -212,6 +219,16 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     }
   }
 
+  @if $removeTopPadding == "s" or $removeTopPadding == "sm" {
+    padding-top: 0px;
+  }
+
+  @if $removeTopPadding == "m" or $removeTopPadding == "sm" {
+    @media only screen and (min-width: $width-m) {
+      padding-top: 0px;
+    }
+  }
+
   @if $verticalAlignCenter {
     @if $halfVerticalPadding == "s" or $halfVerticalPadding == "sm" {
       padding-top: $inner-even-half-vertical-padding-content-block-s;
@@ -247,7 +264,7 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
   } @else {
     gap: $inner-gap-s;
   }
-  button {
+  .content-block-button {
     margin-top: $inner-gap-s;
     margin-right: auto;
   }
@@ -258,7 +275,7 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     } @else {
       gap: $inner-gap-m;
     }
-    button {
+    .content-block-button {
       margin-top: $inner-gap-m;
     }
   }
@@ -269,7 +286,7 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     } @else {
       gap: $inner-gap-l;
     }
-    button {
+    .content-block-button {
       margin-top: $inner-gap-l;
     }
   }
@@ -358,5 +375,32 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
       left: calc(0px - #{getHorizontalPadding("l")});
       right: calc(0px - #{getHorizontalPadding("l")});
     }
+  }
+}
+
+@mixin marginToPadding(
+  $margin: null,
+  $marginNegative: null,
+  $marginTop: null,
+  $marginSide: null,
+  $marginBottom: null
+) {
+  @if $margin and $marginNegative {
+    padding: $margin;
+    margin: $marginNegative;
+  }
+  @if ($marginTop) {
+    margin-top: (-$marginTop);
+    padding-top: $marginTop;
+  }
+  @if ($marginSide) {
+    margin-left: (-$marginSide);
+    padding-left: $marginSide;
+    margin-right: (-$marginSide);
+    padding-right: $marginSide;
+  }
+  @if ($marginBottom) {
+    margin-bottom: (-$marginBottom);
+    padding-bottom: $marginBottom;
   }
 }

@@ -40,6 +40,7 @@ const homeServiceCards = [
     expandedText:
       "Kotihoivapalvelu on ikäihmiselle tarkoitettu palvelukokonaisuus, jonka tavoitteena on asiakkaan kotona selviytymisen tukeminen laadukkaan hoivatyön kautta, asiakkaan voimavaroja vahvistaen. Kotihoivan sisältö suunnitellaan yhdessä asiakkaan ja mahdollisesti hänen läheistensä kanssa. Jokaisen asiakkaan kanssa tehdään palvelusopimus, johon määritellään asiakkaan haluama palvelukokonaisuus.",
     expandedListTitle: "Hoitajamme auttavat sinua",
+    expandedListTitleIcon: "favorite_border",
     expandedList: [
       "arkitoimissa",
       " ravitsemukseen liittyvissä asioissa",
@@ -58,6 +59,7 @@ const homeServiceCards = [
     expandedText:
       "Kaikkea ei tarvitse tehdä itse. Hoidamme puolestasi kotisi, lapsesi, lemmikit ja kasvit. Meiltä saat halutessasi apua arkeen ja näin sinulle jää enemmän aikaa itsellesi, perheellesi ja ystävillesi.",
     expandedListTitle: "Autamme mielellämme",
+    expandedListTitleIcon: "favorite_border",
     expandedList: [
       "pyykkien pesussa ja silittämisessä",
       "siivouksessa ja ikkunanpesussa",
@@ -76,6 +78,7 @@ const homeServiceCards = [
     expandedText:
       "Henkilökohtainen apu on välttämätöntä toisen ihmisen antamaa apua tavanomaiseen elämään liittyvissä toimissa, jotka henkilö tekisi itse, mutta joista hän vamman tai sairauden vuoksi ei selviä yksin. Kyseessä on itsenäisen elämän mahdollistaja vaikeavammaiselle henkilölle.",
     expandedListTitle: "Voimme avustaa sinua",
+    expandedListTitleIcon: "favorite_border",
     expandedList: [
       "päivittäisissä toimissa",
       "työssä ja opiskelussa",
@@ -93,6 +96,7 @@ const homeServiceCards = [
     expandedText:
       "Omaishoitaja on henkilö, joka pitää huolta sairaasta, vammaisesta tai ikääntyvästä läheisestään. Omaishoitotilanne voi syntyä vähitellen ja omaishoidon tarve kasvaa esim. läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi tai äkillisesti sairauden tai vammautumisen seurauksena.",
     expandedListTitle: "Voimme avustaa sinua",
+    expandedListTitleIcon: "favorite_border",
     expandedList: [
       "arkitoimissa",
       "ravitsemukseen liittyvissä asioissa",

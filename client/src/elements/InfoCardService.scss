@@ -30,4 +30,17 @@
     white-space: normal;
     line-height: 1.25em;
   }
+
+  &.info-card-disactive {
+    background-color: $color-lightgray-light;
+    > * {
+      opacity: 0.5;
+    }
+    &:hover {
+      background-color: $color-lightgray-light-hover;
+      > * {
+        opacity: 1;
+      }
+    }
+  }
 }

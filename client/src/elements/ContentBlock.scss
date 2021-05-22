@@ -14,13 +14,13 @@
 
 .content-block-without-image {
   .content-block-information {
-    @include setInnerPaddings(false, "s");
+    @include setInnerPaddings(false, false "s");
     padding-bottom: $x5;
   }
 
   &:last-child {
     .content-block-information {
-      @include setInnerPaddings("s", "s");
+      @include setInnerPaddings("s", false, "s");
     }
   }
 }
