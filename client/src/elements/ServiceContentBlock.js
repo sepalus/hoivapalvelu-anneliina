@@ -4,9 +4,16 @@ import classNames from "classnames";
 import ContentBlock from "./ContentBlock";
 import Button from "../components/Button";
 import Expander from "../components/Expander";
+import InfoCardContainer from "../elements/InfoCardContainer";
+import InfoCard from "../elements/InfoCard";
 
 export default function ServiceContentBlock(props) {
-  const { expanderElement, expanderButtonText, expanderClassName } = props;
+  const {
+    expanderElement,
+    expanderButtonText,
+    expanderClassName,
+    infoCardElement,
+  } = props;
 
   const [expanderIsOpen, setExpanderIsOpen] = useState(false);
   return (
@@ -44,6 +51,35 @@ export default function ServiceContentBlock(props) {
             className={expanderClassName}
           ></Expander>
         </>
+      )}
+      {infoCardElement && (
+        <InfoCardContainer
+          title="Kotiavun palvelut"
+          backgroundColor="white"
+          lowerLevelTitle={true}
+          className="info-card-container-value info-card-container-service"
+        >
+          <InfoCard
+            text="Kotihoiva"
+            iconFileName="anneliinan-kotisairaanhoito.png"
+            className="info-card-value info-card-service"
+          />
+          <InfoCard
+            text="Kotipau"
+            iconFileName="anneliinan-kotisairaanhoito.png"
+            className="info-card-value info-card-service"
+          />
+          <InfoCard
+            text="Henkilökohtainen avustus"
+            iconFileName="anneliinan-kotisairaanhoito.png"
+            className="info-card-value info-card-service"
+          />
+          <InfoCard
+            text="Omaishoitajan vapaa"
+            iconFileName="anneliinan-kotisairaanhoito.png"
+            className="info-card-value info-card-service"
+          />
+        </InfoCardContainer>
       )}
     </ContentBlock>
   );

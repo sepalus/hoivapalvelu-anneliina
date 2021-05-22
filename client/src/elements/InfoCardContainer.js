@@ -7,6 +7,7 @@ import Expander from "../components/Expander";
 export default function InfoCardContainer({
   title,
   text,
+  lowerLevelTitle,
   children,
   backgroundColor,
   className,
@@ -25,7 +26,7 @@ export default function InfoCardContainer({
     >
       <div className="info-card-container-content-wrapper">
         <div className="info-card-text-wrapper">
-          <h2>{title}</h2>
+          {lowerLevelTitle ? <h3>{title}</h3> : <h2>{title}</h2>}
           {text && <p>{text}</p>}
         </div>
         {hasScrollableInfoCards ? (

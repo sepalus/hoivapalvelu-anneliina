@@ -1,0 +1,33 @@
+@import "../variables";
+
+@mixin setInfoCardServiceWidth() {
+  min-width: calc((100vw - 124px) / 3);
+
+  @media only screen and (min-width: 455px) {
+    min-width: calc((100vw - 132px) / 4);
+  }
+  @media only screen and (min-width: 550px) {
+    min-width: calc((100vw - 140px) / 5);
+  }
+  @media only screen and (min-width: $width-m) {
+    min-width: 0px;
+  }
+}
+
+.info-card-service {
+  height: 120px;
+  @include setInfoCardServiceWidth();
+  @include setGap(true);
+
+  .info-card-text {
+    position: relative;
+  }
+
+  .info-card-text p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: normal;
+    line-height: 1.25em;
+  }
+}

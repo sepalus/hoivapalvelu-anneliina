@@ -84,6 +84,7 @@ export default function Services() {
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
             backgroundColor="white"
             backgroundColorMedium="beige"
+            infoCardElement={true}
           />
         </ContentBlockContainer>
         <ContentBlockContainer backgroundColor="pink">

@@ -59,6 +59,7 @@
   }
 }
 
+//Value cards
 .info-card-container-value {
   .info-card-container-cards {
     flex-direction: row;
@@ -85,5 +86,13 @@
     .info-card-container-cards {
       gap: $x3;
     }
+  }
+}
+
+//Service cards
+.info-card-container-service {
+  .info-card-container-content-wrapper {
+    padding: 0;
+    padding-top: $x1_5;
   }
 }
