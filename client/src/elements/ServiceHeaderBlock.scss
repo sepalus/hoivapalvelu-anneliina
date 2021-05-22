@@ -1,0 +1,34 @@
+@import "../variables";
+
+.service-header-block-content-wrapper {
+  display: flex;
+  align-items: flex-end;
+  color: $color-darkblue;
+  @include setContentMaxWidth();
+  @include setOuterPaddings(false, true);
+  gap: $x3;
+}
+
+.service-header-block-logo {
+  width: 46px;
+  padding-bottom: 2px;
+  object-fit: contain;
+  object-position: 0 0;
+}
+
+.service-header-block-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.service-header-block-title {
+  line-height: 1em;
+}
+
+.service-header-block-title-image {
+  width: 210px;
+  height: 18px;
+  object-fit: contain;
+  object-position: 0 0;
+}

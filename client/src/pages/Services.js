@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Banner from "../elements/Banner";
+import ServiceHeaderBlock from "../elements/ServiceHeaderBlock";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
@@ -149,6 +150,11 @@ export default function Services() {
             logoFileName="anneliinan-paivatoiminta.png"
           />
         </InfoCardContainer>
+        <ServiceHeaderBlock
+          iconFileName="anneliinan-kotisairaanhoito.png"
+          logoFileName="anneliinan-kotisairaanhoito.png"
+          sloganText="Sairaanhoito kotiinkuljetettuna"
+        ></ServiceHeaderBlock>
         <ContentBlockContainer backgroundColor="lightblue">
           <ServiceContentBlock
             imageFileName="service-1.jpeg"
@@ -161,6 +167,11 @@ export default function Services() {
             expanderElement={{ list: homeCareTaskList }}
           />
         </ContentBlockContainer>
+        <ServiceHeaderBlock
+          iconFileName="anneliinan-kotisairaanhoito.png"
+          logoFileName="anneliinan-koti.png"
+          sloganText="Kotona asumista tukevat palvelut"
+        ></ServiceHeaderBlock>
         <ContentBlockContainer backgroundColor="beige">
           <ServiceContentBlock
             imageFileName="placeholder.jpeg"
@@ -177,6 +188,11 @@ export default function Services() {
             setActiveInfoCardServiceIndex={setActiveInfoCardServiceIndex}
           />
         </ContentBlockContainer>
+        <ServiceHeaderBlock
+          iconFileName="anneliinan-kotisairaanhoito.png"
+          logoFileName="anneliinan-paivatoiminta.png"
+          sloganText="Sosiaalista toimintaa"
+        ></ServiceHeaderBlock>
         <ContentBlockContainer backgroundColor="pink">
           <ServiceContentBlock
             imageFileName="placeholder.jpeg"
