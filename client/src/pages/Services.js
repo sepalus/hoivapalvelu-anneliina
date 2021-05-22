@@ -31,8 +31,45 @@ const dayActivityTaskList = [
   "pariatur",
 ];
 
+const homeServiceCards = [
+  {
+    iconFileName: "anneliinan-kotisairaanhoito.png",
+    text: "Kotihoiva",
+    className: "info-card-value info-card-service",
+    expandedTitle: "Kotihoivaa ja apua kotona asumiseen",
+    expandedText:
+      "Kotihoivapalvelu on ikäihmiselle tarkoitettu palvelukokonaisuus, jonka tavoitteena on asiakkaan kotona selviytymisen tukeminen laadukkaan hoivatyön kautta, asiakkaan voimavaroja vahvistaen. Kotihoivan sisältö suunnitellaan yhdessä asiakkaan ja mahdollisesti hänen läheistensä kanssa. Jokaisen asiakkaan kanssa tehdään palvelusopimus, johon määritellään asiakkaan haluama palvelukokonaisuus.",
+  },
+  {
+    iconFileName: "anneliinan-kotisairaanhoito.png",
+    text: "Kotiapu",
+    className: "info-card-value info-card-service",
+    expandedTitle: "Albucius patrioque et ius",
+    expandedText:
+      "Kaikkea ei tarvitse tehdä itse. Hoidamme puolestasi kotisi, lapsesi, lemmikit ja kasvit. Meiltä saat halutessasi apua arkeen ja näin sinulle jää enemmän aikaa itsellesi, perheellesi ja ystävillesi.",
+  },
+  {
+    iconFileName: "anneliinan-kotisairaanhoito.png",
+    text: "Henkilökohtainen apu",
+    className: "info-card-value info-card-service",
+    expandedTitle: "Lorem ipsum dolor sit amet",
+    expandedText:
+      "Henkilökohtainen apu on välttämätöntä toisen ihmisen antamaa apua tavanomaiseen elämään liittyvissä toimissa, jotka henkilö tekisi itse, mutta joista hän vamman tai sairauden vuoksi ei selviä yksin. Kyseessä on itsenäisen elämän mahdollistaja vaikeavammaiselle henkilölle.",
+  },
+  {
+    iconFileName: "anneliinan-kotisairaanhoito.png",
+    text: "Omaishoitajan vapaa",
+    className: "info-card-value info-card-service",
+    expandedTitle: "Omaishoitajalle voimia ja energiaa vapaista",
+    expandedText:
+      "Omaishoitaja on henkilö, joka pitää huolta sairaasta, vammaisesta tai ikääntyvästä läheisestään. Omaishoitotilanne voi syntyä vähitellen ja omaishoidon tarve kasvaa esim. läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi tai äkillisesti sairauden tai vammautumisen seurauksena.",
+  },
+];
+
 export default function Services() {
-  const [activeInfoCardIndex, setActiveInfoCardIndex] = useState(-1);
+  const [activeInfoCardServiceIndex, setActiveInfoCardServiceIndex] = useState(
+    -1
+  );
   const infoCardServiceContainerCardsRef = useRef();
   const infoCardServiceFirstRef = useRef();
   const infoCardServiceLastRef = useRef();
@@ -89,10 +126,12 @@ export default function Services() {
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
             backgroundColor="white"
             backgroundColorMedium="beige"
-            infoCardElement={true}
+            infoCardList={homeServiceCards}
             infoCardServiceContainerCardsRef={infoCardServiceContainerCardsRef}
             infoCardServiceFirstRef={infoCardServiceFirstRef}
             infoCardServiceLastRef={infoCardServiceLastRef}
+            activeInfoCardServiceIndex={activeInfoCardServiceIndex}
+            setActiveInfoCardServiceIndex={setActiveInfoCardServiceIndex}
           />
         </ContentBlockContainer>
         <ContentBlockContainer backgroundColor="pink">

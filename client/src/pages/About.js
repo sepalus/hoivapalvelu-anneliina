@@ -95,7 +95,7 @@ export default function About() {
                   : null
               }
               setCardToActive={() => setActiveInfoCardIndex(index)}
-              key={`info-card-${index}`}
+              key={`info-card-value-${index}`}
             />
           ))}
         </InfoCardContainer>

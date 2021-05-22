@@ -12,10 +12,12 @@ export default function ServiceContentBlock(props) {
     expanderElement,
     expanderButtonText,
     expanderClassName,
-    infoCardElement,
+    infoCardList,
     infoCardServiceContainerCardsRef,
     infoCardServiceFirstRef,
     infoCardServiceLastRef,
+    activeInfoCardServiceIndex,
+    setActiveInfoCardServiceIndex,
   } = props;
 
   const [expanderIsOpen, setExpanderIsOpen] = useState(false);
@@ -56,7 +58,7 @@ export default function ServiceContentBlock(props) {
           ></Expander>
         </>
       )}
-      {infoCardElement && (
+      {infoCardList && (
         <InfoCardContainer
           title="Kotiavun palvelut"
           backgroundColor="white"
@@ -67,28 +69,27 @@ export default function ServiceContentBlock(props) {
           infoCardFirstRef={infoCardServiceFirstRef}
           infoCardLastRef={infoCardServiceLastRef}
         >
-          <InfoCard
-            text="Kotihoiva"
-            iconFileName="anneliinan-kotisairaanhoito.png"
-            className="info-card-value info-card-service"
-            infoCardRef={infoCardServiceFirstRef}
-          />
-          <InfoCard
-            text="Kotipau"
-            iconFileName="anneliinan-kotisairaanhoito.png"
-            className="info-card-value info-card-service"
-          />
-          <InfoCard
-            text="Henkilökohtainen avustus"
-            iconFileName="anneliinan-kotisairaanhoito.png"
-            className="info-card-value info-card-service"
-          />
-          <InfoCard
-            text="Omaishoitajan vapaa"
-            iconFileName="anneliinan-kotisairaanhoito.png"
-            className="info-card-value info-card-service"
-            infoCardRef={infoCardServiceLastRef}
-          />
+          {infoCardList.map((infoCard, index) => (
+            <InfoCard
+              iconFileName={infoCard.iconFileName}
+              text={infoCard.text}
+              className={infoCard.className}
+              isCardActive={activeInfoCardServiceIndex === index}
+              isCardDisactive={
+                activeInfoCardServiceIndex !== index &&
+                activeInfoCardServiceIndex !== -1
+              }
+              infoCardRef={
+                index === 0
+                  ? infoCardServiceFirstRef
+                  : index === infoCardList.length - 1
+                  ? infoCardServiceLastRef
+                  : null
+              }
+              setCardToActive={() => setActiveInfoCardServiceIndex(index)}
+              key={`info-card-service-${index}`}
+            />
+          ))}
         </InfoCardContainer>
       )}
     </ContentBlock>
