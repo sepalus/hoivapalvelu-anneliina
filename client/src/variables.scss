@@ -339,3 +339,24 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     }
   }
 }
+
+@mixin setVerticalShadowLine() {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    left: calc(0px - #{getHorizontalPadding()});
+    right: calc(0px - #{getHorizontalPadding()});
+    bottom: 0px;
+    box-shadow: $box-shadow-below-half;
+    @media only screen and (min-width: $width-m) {
+      left: calc(0px - #{getHorizontalPadding("m")});
+      right: calc(0px - #{getHorizontalPadding("m")});
+    }
+    @media only screen and (min-width: $width-l) {
+      left: calc(0px - #{getHorizontalPadding("l")});
+      right: calc(0px - #{getHorizontalPadding("l")});
+    }
+  }
+}

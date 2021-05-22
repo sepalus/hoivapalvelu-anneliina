@@ -63,7 +63,13 @@ export default function ServiceContentBlock(props) {
           title="Kotiavun palvelut"
           backgroundColor="white"
           lowerLevelTitle={true}
-          className="info-card-container-value info-card-container-service"
+          className={classNames(
+            "info-card-container-value info-card-container-service",
+            {
+              "info-card-container-service-expander-open":
+                activeInfoCardServiceIndex !== -1,
+            }
+          )}
           hasScrollableInfoCards={true}
           expanderElement={infoCardList[activeInfoCardServiceIndex]}
           infoCardContainerCardsRef={infoCardServiceContainerCardsRef}

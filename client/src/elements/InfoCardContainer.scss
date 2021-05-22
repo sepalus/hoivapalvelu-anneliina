@@ -94,4 +94,9 @@
     padding: 0;
     padding-top: $x1_5;
   }
+  &.info-card-container-service-expander-open {
+    .info-card-container-card-wrapper {
+      @include setVerticalShadowLine();
+    }
+  }
 }

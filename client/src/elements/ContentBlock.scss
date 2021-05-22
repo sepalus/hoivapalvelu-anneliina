@@ -57,24 +57,7 @@
     font-size: 24px;
     margin-left: 16px;
   }
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 1px;
-    left: calc(0px - #{getHorizontalPadding()});
-    right: calc(0px - #{getHorizontalPadding()});
-    bottom: 0px;
-    box-shadow: $box-shadow-below-half;
-    @media only screen and (min-width: $width-m) {
-      left: calc(0px - #{getHorizontalPadding("m")});
-      right: calc(0px - #{getHorizontalPadding("m")});
-    }
-    @media only screen and (min-width: $width-l) {
-      left: calc(0px - #{getHorizontalPadding("l")});
-      right: calc(0px - #{getHorizontalPadding("l")});
-    }
-  }
+  @include setVerticalShadowLine();
 }
 
 .expander-button-open-extra-icon {
