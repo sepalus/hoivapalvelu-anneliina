@@ -39,6 +39,16 @@ const homeServiceCards = [
     expandedTitle: "Kotihoivaa ja apua kotona asumiseen",
     expandedText:
       "Kotihoivapalvelu on ikäihmiselle tarkoitettu palvelukokonaisuus, jonka tavoitteena on asiakkaan kotona selviytymisen tukeminen laadukkaan hoivatyön kautta, asiakkaan voimavaroja vahvistaen. Kotihoivan sisältö suunnitellaan yhdessä asiakkaan ja mahdollisesti hänen läheistensä kanssa. Jokaisen asiakkaan kanssa tehdään palvelusopimus, johon määritellään asiakkaan haluama palvelukokonaisuus.",
+    expandedListTitle: "Hoitajamme auttavat sinua",
+    expandedList: [
+      "arkitoimissa",
+      " ravitsemukseen liittyvissä asioissa",
+      "pyykkien pesussa ja silittämisessä",
+      "kodin siisteyden huolehtimisessa",
+      "kauppa,- apteekki,- ja muussa asioinnissa",
+      "henkilökohtaisen hygienia huolehtimisessa",
+      "lääkkeenjaossa",
+    ],
   },
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
@@ -47,6 +57,16 @@ const homeServiceCards = [
     expandedTitle: "Albucius patrioque et ius",
     expandedText:
       "Kaikkea ei tarvitse tehdä itse. Hoidamme puolestasi kotisi, lapsesi, lemmikit ja kasvit. Meiltä saat halutessasi apua arkeen ja näin sinulle jää enemmän aikaa itsellesi, perheellesi ja ystävillesi.",
+    expandedListTitle: "Autamme mielellämme",
+    expandedList: [
+      "pyykkien pesussa ja silittämisessä",
+      "siivouksessa ja ikkunanpesussa",
+      "kauppa- apteekki- ja muussa asioinnissa",
+      "ruoanlaitossa",
+      "lasten hoidossa",
+      "lemmikkien ulkoiluttamisessa",
+      "kukkien kastelemisessa",
+    ],
   },
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
@@ -55,6 +75,15 @@ const homeServiceCards = [
     expandedTitle: "Lorem ipsum dolor sit amet",
     expandedText:
       "Henkilökohtainen apu on välttämätöntä toisen ihmisen antamaa apua tavanomaiseen elämään liittyvissä toimissa, jotka henkilö tekisi itse, mutta joista hän vamman tai sairauden vuoksi ei selviä yksin. Kyseessä on itsenäisen elämän mahdollistaja vaikeavammaiselle henkilölle.",
+    expandedListTitle: "Voimme avustaa sinua",
+    expandedList: [
+      "päivittäisissä toimissa",
+      "työssä ja opiskelussa",
+      "harrastuksissa",
+      "sosiaalisen elämän ylläpitämisessä",
+      "henkilökohtaisen avustajan palkkaamisessa kun palkkaat avustajan itse",
+      "palkkaamasi avustajan lomituksissa",
+    ],
   },
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
@@ -63,6 +92,16 @@ const homeServiceCards = [
     expandedTitle: "Omaishoitajalle voimia ja energiaa vapaista",
     expandedText:
       "Omaishoitaja on henkilö, joka pitää huolta sairaasta, vammaisesta tai ikääntyvästä läheisestään. Omaishoitotilanne voi syntyä vähitellen ja omaishoidon tarve kasvaa esim. läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi tai äkillisesti sairauden tai vammautumisen seurauksena.",
+    expandedListTitle: "Voimme avustaa sinua",
+    expandedList: [
+      "arkitoimissa",
+      "ravitsemukseen liittyvissä asioissa",
+      "pyykkien pesussa ja silittämisessä",
+      "kodin siisteyden huolehtimisessa",
+      "kauppa- ja muussa asioinnissa",
+      "henkilökohtaisen hygienian huolehtimisessaa",
+      "lääkkeenjaossa",
+    ],
   },
 ];
 

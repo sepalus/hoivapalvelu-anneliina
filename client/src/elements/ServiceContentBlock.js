@@ -65,6 +65,7 @@ export default function ServiceContentBlock(props) {
           lowerLevelTitle={true}
           className="info-card-container-value info-card-container-service"
           hasScrollableInfoCards={true}
+          expanderElement={infoCardList[activeInfoCardServiceIndex]}
           infoCardContainerCardsRef={infoCardServiceContainerCardsRef}
           infoCardFirstRef={infoCardServiceFirstRef}
           infoCardLastRef={infoCardServiceLastRef}

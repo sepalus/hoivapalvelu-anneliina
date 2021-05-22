@@ -54,6 +54,8 @@ export default function InfoCardContainer({
           <Expander
             title={expanderElement.expandedTitle}
             text={expanderElement.expandedText}
+            listTitle={expanderElement.expandedListTitle}
+            list={expanderElement.expandedList}
             isOpen={true}
           ></Expander>
         )}
