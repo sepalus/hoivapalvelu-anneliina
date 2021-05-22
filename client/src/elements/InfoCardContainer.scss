@@ -43,7 +43,6 @@
   flex-direction: column;
   width: 100%;
   gap: $x2;
-  padding: 2px;
 }
 
 @media only screen and (min-width: $width-m) {
@@ -63,7 +62,7 @@
 .info-card-container-value {
   .info-card-container-cards {
     flex-direction: row;
-    gap: $x1;
+    gap: $x0_5;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
