@@ -5,6 +5,7 @@ import Button from "../components/Button";
 
 export default function ContentBlock(props) {
   const {
+    className,
     isReverse,
     imageFileName,
     title,
@@ -22,6 +23,7 @@ export default function ContentBlock(props) {
   return (
     <div
       className={classNames("content-block", {
+        [`${className}`]: className,
         "content-block-with-image": imageFileName,
         "content-block-without-image": !imageFileName,
         "content-block-reverse": isReverse,

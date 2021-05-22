@@ -2,7 +2,7 @@
 
 .action-button {
   height: 50px;
-  padding: 0px 32px;
+  padding: 0px 24px;
   margin-right: auto;
   border: 1px solid $color-darkblue;
   border-radius: $border-radius;
@@ -32,11 +32,22 @@
   display: flex;
   align-items: center;
   span {
-    margin-left: $x4;
+    margin-left: 28px;
     font-size: 28px;
   }
 }
 
 .action-button-with-content {
   border: none;
+}
+
+@media only screen and (min-width: $width-xs) {
+  .action-button {
+    padding: 0px 32px;
+  }
+  .action-button-with-icon {
+    span {
+      margin-left: 32px;
+    }
+  }
 }

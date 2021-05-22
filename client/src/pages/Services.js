@@ -155,7 +155,10 @@ export default function Services() {
           logoFileName="anneliinan-kotisairaanhoito.png"
           sloganText="Sairaanhoito kotiinkuljetettuna"
         ></ServiceHeaderBlock>
-        <ContentBlockContainer backgroundColor="lightblue">
+        <ContentBlockContainer
+          backgroundColor="lightblue"
+          className="service-content-block-container"
+        >
           <ServiceContentBlock
             imageFileName="service-1.jpeg"
             title="Kotisairaanhoito on asiakkaan omaan kotiin vietyä sairaanhoitoa"
@@ -172,7 +175,10 @@ export default function Services() {
           logoFileName="anneliinan-koti.png"
           sloganText="Kotona asumista tukevat palvelut"
         ></ServiceHeaderBlock>
-        <ContentBlockContainer backgroundColor="beige">
+        <ContentBlockContainer
+          backgroundColor="beige"
+          className="service-content-block-container"
+        >
           <ServiceContentBlock
             imageFileName="placeholder.jpeg"
             title="Kotiapu sisältää kaikki kotona asumista tukevat palvelut"
@@ -193,7 +199,10 @@ export default function Services() {
           logoFileName="anneliinan-paivatoiminta.png"
           sloganText="Sosiaalista toimintaa"
         ></ServiceHeaderBlock>
-        <ContentBlockContainer backgroundColor="pink">
+        <ContentBlockContainer
+          backgroundColor="pink"
+          className="service-content-block-container"
+        >
           <ServiceContentBlock
             imageFileName="placeholder.jpeg"
             title="Päivätoiminta ylläpitää sosiaaliset suhteet"
