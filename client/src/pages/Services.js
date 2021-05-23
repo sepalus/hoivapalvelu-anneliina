@@ -160,6 +160,7 @@ export default function Services() {
           className="service-content-block-container"
         >
           <ServiceContentBlock
+            isReverse={true}
             imageFileName="service-1.jpeg"
             title="Kotisairaanhoito on asiakkaan omaan kotiin vietyä sairaanhoitoa"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
@@ -204,6 +205,7 @@ export default function Services() {
           className="service-content-block-container"
         >
           <ServiceContentBlock
+            isReverse={true}
             imageFileName="placeholder.jpeg"
             title="Päivätoiminta ylläpitää sosiaaliset suhteet"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"

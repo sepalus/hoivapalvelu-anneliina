@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-//import "./ServiceContentBlock.scss";
+import "./ServiceContentBlock.scss";
 import ContentBlock from "./ContentBlock";
 import Button from "../components/Button";
 import Expander from "../components/Expander";
@@ -27,29 +27,27 @@ export default function ServiceContentBlock(props) {
       {...props}
       expanderIsOpen={expanderIsOpen}
       setExpanderIsOpen={setExpanderIsOpen}
+      className="service-content-block"
+      buttonIcon={expanderIsOpen ? "expand_less" : "expand_more"}
+      buttonFrontIcon={
+        expanderIsOpen && (
+          <span class="material-icons-outlined expander-button-open-extra-icon">
+            favorite_border
+          </span>
+        )
+      }
+      buttonText={expanderButtonText}
+      buttonClassName={classNames(
+        "content-block-button content-block-expander-button",
+        {
+          "content-block-expander-button-open text-bold": expanderIsOpen,
+        }
+      )}
+      buttonOnClick={() => setExpanderIsOpen(!expanderIsOpen)}
+      buttonNoHoverEffect={expanderIsOpen}
     >
       {expanderElement && (
         <>
-          <Button
-            text={expanderButtonText}
-            className={classNames(
-              "content-block-button content-block-expander-button",
-              {
-                "content-block-expander-button-open text-bold": expanderIsOpen,
-              }
-            )}
-            onClick={() => setExpanderIsOpen(!expanderIsOpen)}
-            noHoverEffect={expanderIsOpen}
-          >
-            <span className="material-icons">
-              {expanderIsOpen ? "expand_less" : "expand_more"}
-            </span>
-            {expanderIsOpen && (
-              <span class="material-icons-outlined expander-button-open-extra-icon">
-                favorite_border
-              </span>
-            )}
-          </Button>
           <Expander
             list={expanderElement.list}
             isOpen={expanderIsOpen}

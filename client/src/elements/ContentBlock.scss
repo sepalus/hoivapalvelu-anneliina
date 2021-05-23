@@ -45,24 +45,24 @@
   flex-direction: column;
   @include setInnerPaddings();
 }
-
+.content-block-information-content {
+}
 .content-block-expander-button-open {
   position: relative;
   border: none;
   width: 100%;
-  padding-left: 50px;
+  padding-left: 46px;
   border-radius: 0px;
   box-shadow: none;
   .expander-button-open-extra-icon {
+    position: absolute;
     font-size: 24px;
-    margin-left: 16px;
+    margin-left: 12px;
+    top: 0px;
+    left: -4px;
+    transform: translateY(50%);
   }
   @include setVerticalShadowLine();
-}
-
-.expander-button-open-extra-icon {
-  position: absolute;
-  left: 0;
 }
 
 @media only screen and (min-width: $width-m) {

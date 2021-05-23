@@ -25,16 +25,11 @@
 
 .expander-service-more-information {
   background-color: $color-lightgray-ultralight;
-  box-shadow: inset $box-shadow-around;
-  @include marginToPadding(
-    $inner-padding-content-block-s,
-    $inner-padding-content-block-negative-s,
-    $x1
-  );
-  ul {
-    @include setInnerPaddings("s", "s");
-    padding-top: $x2;
-  }
+  box-shadow: inset $box-shadow-around, inset $box-shadow-around-opposite;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  padding: 20px 40px 28px;
+  transform: translateY(-92px);
 }
 
 .expander-service-info-card-more-information {
