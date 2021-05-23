@@ -8,11 +8,13 @@
   @include setOuterPaddings(false, true);
   padding-bottom: 24px;
   margin-bottom: 56px;
-  gap: $x3;
+  gap: 6.6vw;
 }
 
 .service-header-block-logo {
-  width: 46px;
+  width: 20%;
+  min-height: 46px;
+  max-height: 90px;
   padding-bottom: 2px;
   object-fit: contain;
   object-position: 0 0;
@@ -25,12 +27,30 @@
   gap: 10px;
 }
 .service-header-block-title {
+  font-size: calc(min(calc(2.8vw + 3.6px), 23.6px)) !important;
   line-height: 1em;
 }
 
 .service-header-block-title-image {
-  width: 210px;
-  height: 18px;
+  height: calc(min(calc(3.7vw + 3.6px), 30px)) !important;
   object-fit: contain;
   object-position: 0 0;
+}
+
+@media only screen and (min-width: $width-xs) {
+  .service-header-block-content-wrapper {
+    padding-bottom: 32px;
+  }
+  .service-header-block-logo {
+    padding-left: 12px;
+  }
+}
+
+@media only screen and (min-width: $width-s) {
+  .service-header-block-content-wrapper {
+    gap: 32px;
+  }
+  .service-header-block-logo {
+    padding-left: 20px;
+  }
 }

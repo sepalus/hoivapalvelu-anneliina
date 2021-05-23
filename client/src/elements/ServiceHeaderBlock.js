@@ -21,7 +21,7 @@ export default function ServiceHeaderBlock({
             src={`./assets/logos/${logoFileName}`}
             alt=""
           />
-          <p className="text-small service-header-block-title text-semibold">
+          <p className="text-small service-header-block-title text-weight-medium">
             {sloganText}
           </p>
         </div>
