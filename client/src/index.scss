@@ -102,23 +102,39 @@ p.text-extrasmall {
 }
 
 .background-lightblue {
-  background-color: $color-lightblue-light;
+  background-color: $color-blue-light;
 }
 
 .background-ultralightblue {
-  background-color: $color-lightblue-ultralight;
+  background-color: $color-blue-ultralight;
 }
 
-.background-beige {
+.background-hyperlightblue {
+  background-color: $color-blue-hyperlight;
+}
+
+.background-lightbeige {
   background-color: $color-beige-light;
 }
 
-.background-ulralightbeige {
+.background-ultralightbeige {
   background-color: $color-beige-ultralight;
 }
 
-.background-pink {
+.background-hyperlightbeige {
+  background-color: $color-beige-hyperlight;
+}
+
+.background-lightpink {
   background-color: $color-pink-light;
+}
+
+.background-ultralightpink {
+  background-color: $color-pink-ultralight;
+}
+
+.background-hyperlightpink {
+  background-color: $color-pink-hyperlight;
 }
 
 // General classes
@@ -175,14 +191,18 @@ p.text-extrasmall {
   }
 
   .background-medium-lightblue {
-    background-color: $color-lightblue-light;
+    background-color: $color-blue-light;
   }
 
   .background-medium-ultralightblue {
-    background-color: $color-lightblue-ultralight;
+    background-color: $color-blue-ultralight;
   }
 
-  .background-medium-beige {
+  .background-medium-hyperlightblue {
+    background-color: $color-blue-hyperlight;
+  }
+
+  .background-medium-lightbeige {
     background-color: $color-beige-light;
   }
 
@@ -190,8 +210,20 @@ p.text-extrasmall {
     background-color: $color-beige-ultralight;
   }
 
-  .background-medium-pink {
+  .background-medium-hyperlightbeige {
+    background-color: $color-beige-hyperlight;
+  }
+
+  .background-medium-lightpink {
     background-color: $color-pink-light;
+  }
+
+  .background-medium-ultralightpink {
+    background-color: $color-pink-ultralight;
+  }
+
+  .background-medium-hyperlightpink {
+    background-color: $color-pink-hyperlight;
   }
 }
 

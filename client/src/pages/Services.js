@@ -127,14 +127,14 @@ export default function Services() {
           title="Palvelut"
           text="Tarjoamme yksilöllistä ja luotettavaa hoivapalvelua kaikille sitä tarvitseville. Meiltä saat sairaanhoitoa kotiin kuljetettuna, apua kotona asumiseen, henkilökohtaista apua ja voimia vapaista. Kaikkea ei tarvitse tehdä itse. Nyt saat myös halutessasi apua arkeen kuten ruoan valmistukseen, asiointiin tai siivoukseen. Huolehdimme tarvittaessa myös lemmikistäsi ja kasveistasi. Huomioimme aina sinun arkesi ja tottumuksesi. Toimimme laadukkaasti ja luotettavasti, emmekä tunne sanaa kiire. Räätälöimme palvelut juuri sinulle sopiviksi. Yhdessä varmistamme, että palvelusta tulee juuri sellainen kuin olet toivonutkin. Tavoitteemme on aina toimia asiakkaan ehdoilla ja yllättää sinut positiivisesti."
           overlay={{
-            overlayColor: "beige",
+            overlayColor: "lightbeige",
             overlayReverse: true,
           }}
         />
         <InfoCardContainer
           title="Palvelukokonaisuudet"
           text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
-          backgroundColor="beige"
+          backgroundColor="lightbeige"
         >
           <InfoCard
             iconFileName="anneliinan-kotisairaanhoito.png"
@@ -167,7 +167,7 @@ export default function Services() {
             backgroundColor="white"
             backgroundColorMedium="lightblue"
             backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="ultralightblue"
+            backgroundExpanderColorMedium="hyperlightblue"
             expanderButtonText="Hoitajamme auttavat"
             expanderElement={{ list: homeCareTaskList }}
           />
@@ -178,7 +178,7 @@ export default function Services() {
           sloganText="Kotona asumista tukevat palvelut"
         ></ServiceHeaderBlock>
         <ContentBlockContainer
-          backgroundColor="beige"
+          backgroundColor="lightbeige"
           className="service-content-block-container"
         >
           <ServiceContentBlock
@@ -187,9 +187,9 @@ export default function Services() {
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
             backgroundColor="white"
-            backgroundColorMedium="beige"
+            backgroundColorMedium="lightbeige"
             backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="ultralightbeige"
+            backgroundExpanderColorMedium="hyperlightbeige"
             infoCardList={homeServiceCards}
             infoCardServiceContainerCardsRef={infoCardServiceContainerCardsRef}
             infoCardServiceFirstRef={infoCardServiceFirstRef}
@@ -204,7 +204,7 @@ export default function Services() {
           sloganText="Sosiaalista toimintaa"
         ></ServiceHeaderBlock>
         <ContentBlockContainer
-          backgroundColor="pink"
+          backgroundColor="lightpink"
           className="service-content-block-container"
         >
           <ServiceContentBlock
@@ -214,9 +214,9 @@ export default function Services() {
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
             backgroundColor="white"
-            backgroundColorMedium="beige"
+            backgroundColorMedium="lightbeige"
             backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="ultralightbeige"
+            backgroundExpanderColorMedium="hyperlightbeige"
             expanderButtonText="Päivätoiminnassa"
             expanderElement={{ list: dayActivityTaskList }}
           />
