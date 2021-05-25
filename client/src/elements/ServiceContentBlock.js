@@ -52,6 +52,10 @@ export default function ServiceContentBlock(props) {
         expanderElement && (
           <>
             <Expander
+              title={expanderElement.expandedTitle}
+              text={expanderElement.expandedText}
+              listTitle={expanderElement.expandedListTitle}
+              listTitleIcon={expanderElement.expandedListTitleIcon}
               list={expanderElement.expandedList}
               isOpen={expanderIsOpen}
               className={classNames(
@@ -59,6 +63,7 @@ export default function ServiceContentBlock(props) {
                 {
                   [`background-medium-${backgroundExpanderColorMedium}`]:
                     backgroundExpanderColorMedium,
+                  "expander-service-info-card-more-information": infoCardList,
                 }
               )}
             ></Expander>

@@ -189,7 +189,7 @@ export default function Services() {
             imageFileName="placeholder.jpeg"
             title="Kotiapu sisältää kaikki kotona asumista tukevat palvelut"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
-            text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
+            text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
             backgroundColor="white"
             backgroundColorMedium="lightbeige"
             backgroundColorSecondaryMedium="white"
@@ -202,7 +202,6 @@ export default function Services() {
             activeInfoCardServiceIndex={activeInfoCardServiceIndex}
             setActiveInfoCardServiceIndex={setActiveInfoCardServiceIndex}
             expanderElement={homeServiceCards[activeInfoCardServiceIndex]}
-            expanderClassName="expander-service-more-information expander-service-info-card-more-information background-medium-white"
           />
         </ContentBlockContainer>
         <ServiceHeaderBlock

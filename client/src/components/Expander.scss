@@ -25,10 +25,8 @@
 }
 
 .expander-service-info-card-more-information {
-  @include marginToPadding(null, null, $x2);
-  padding: 24px 36px 36px;
-
   @include setGap(true);
+  .expander-title,
   .expander-list {
     padding-top: $x0_5;
   }
@@ -41,6 +39,7 @@
   .expander-list-title-icon {
     color: $color-darkblue;
     position: absolute;
+    top: 2px;
     left: 3px;
   }
 

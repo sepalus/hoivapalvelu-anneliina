@@ -6,6 +6,11 @@
   width: 100%;
   height: 100%;
 }
+.content-block-main-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
 .content-block-with-image {
   box-shadow: $box-shadow-around;
@@ -69,7 +74,7 @@
 }
 
 @media only screen and (min-width: $width-m) {
-  .content-block {
+  .content-block-main-content {
     flex-direction: row;
   }
 
@@ -79,13 +84,15 @@
   }
 
   .content-block-direction-reverse {
-    flex-direction: row-reverse;
+    .content-block-main-content {
+      flex-direction: row-reverse;
+    }
     .content-block-image {
       border-radius: 0 $border-radius $border-radius 0;
     }
   }
 
-  .content-block-with-image > * {
+  .content-block-with-image .content-block-main-content > * {
     width: 50%;
   }
 

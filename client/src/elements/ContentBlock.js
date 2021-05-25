@@ -39,53 +39,57 @@ export default function ContentBlock(props) {
           [`background-medium-${backgroundColorMedium}`]: backgroundColorMedium,
         })}
       >
-        {imageFileName && (
-          <div className="content-block-image-wrapper">
-            <img
-              className="content-block-image"
-              src={`./assets/images/${imageFileName}`}
-              alt=""
-              style={{ objectPosition: imagePosition }}
-            />
-          </div>
-        )}
-        <div className="content-block-information">
-          <div className="content-block-information-header">
-            <h2 className="content-block-title">{title}</h2>
-            {keywords && (
-              <p className="content-block-keywords text-small text-bold">
-                {keywords}
-              </p>
-            )}
-          </div>
-          <div
-            className={classNames("content-block-information-content", {
-              [`background-medium-${backgroundColorSecondaryMedium}`]:
-                backgroundColorSecondaryMedium,
-            })}
-          >
-            <p className="content-block-text">{text}</p>
-            {(buttonIcon || buttonImage || buttonText) && (
-              <Button
-                imageUrl={buttonImage ? `./assets/logos/${buttonImage}` : null}
-                text={buttonText}
-                className={classNames("content-block-button", {
-                  [`${buttonClassName}`]: buttonClassName,
-                })}
-                onClick={buttonOnClick}
-                noHoverEffect={buttonNoHoverEffect}
-              >
-                {buttonFrontIcon && (
-                  <span className="material-icons">{buttonFrontIcon}</span>
-                )}
-                {buttonIcon && (
-                  <span className="material-icons">{buttonIcon}</span>
-                )}
-              </Button>
-            )}
-            {children}
+        <div className="content-block-main-content">
+          {imageFileName && (
+            <div className="content-block-image-wrapper">
+              <img
+                className="content-block-image"
+                src={`./assets/images/${imageFileName}`}
+                alt=""
+                style={{ objectPosition: imagePosition }}
+              />
+            </div>
+          )}
+          <div className="content-block-information">
+            <div className="content-block-information-header">
+              <h2 className="content-block-title">{title}</h2>
+              {keywords && (
+                <p className="content-block-keywords text-small text-bold">
+                  {keywords}
+                </p>
+              )}
+            </div>
+            <div
+              className={classNames("content-block-information-content", {
+                [`background-medium-${backgroundColorSecondaryMedium}`]:
+                  backgroundColorSecondaryMedium,
+              })}
+            >
+              <p className="content-block-text">{text}</p>
+              {(buttonIcon || buttonImage || buttonText) && (
+                <Button
+                  imageUrl={
+                    buttonImage ? `./assets/logos/${buttonImage}` : null
+                  }
+                  text={buttonText}
+                  className={classNames("content-block-button", {
+                    [`${buttonClassName}`]: buttonClassName,
+                  })}
+                  onClick={buttonOnClick}
+                  noHoverEffect={buttonNoHoverEffect}
+                >
+                  {buttonFrontIcon && (
+                    <span className="material-icons">{buttonFrontIcon}</span>
+                  )}
+                  {buttonIcon && (
+                    <span className="material-icons">{buttonIcon}</span>
+                  )}
+                </Button>
+              )}
+            </div>
           </div>
         </div>
+        {children}
       </div>
       {outsideChildren}
     </div>

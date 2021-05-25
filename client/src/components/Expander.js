@@ -18,7 +18,7 @@ export default function Expander({
         [`${className}`]: className,
       })}
     >
-      {title && <h3>{title}</h3>}
+      {title && <h3 className="expander-title">{title}</h3>}
       {text && <p>{text}</p>}
       <div className="expander-list">
         {listTitle && (
