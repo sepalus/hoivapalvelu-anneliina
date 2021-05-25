@@ -17,7 +17,6 @@
 }
 
 .expander-service-more-information {
-  background-color: $color-lightgray-ultralight;
   box-shadow: inset $box-shadow-around, inset $box-shadow-around-opposite;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
@@ -57,5 +56,11 @@
   }
   .expander-service-more-information {
     transform: translateY(-100px);
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  .expander-service-more-information {
+    transform: translateY(-112px);
   }
 }

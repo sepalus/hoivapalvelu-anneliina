@@ -167,6 +167,7 @@ export default function Services() {
             backgroundColor="white"
             backgroundColorMedium="lightblue"
             backgroundColorSecondaryMedium="white"
+            backgroundExpanderColorMedium="ultralightblue"
             expanderButtonText="Hoitajamme auttavat"
             expanderElement={{ list: homeCareTaskList }}
           />
@@ -188,6 +189,7 @@ export default function Services() {
             backgroundColor="white"
             backgroundColorMedium="beige"
             backgroundColorSecondaryMedium="white"
+            backgroundExpanderColorMedium="ultralightbeige"
             infoCardList={homeServiceCards}
             infoCardServiceContainerCardsRef={infoCardServiceContainerCardsRef}
             infoCardServiceFirstRef={infoCardServiceFirstRef}
@@ -214,6 +216,7 @@ export default function Services() {
             backgroundColor="white"
             backgroundColorMedium="beige"
             backgroundColorSecondaryMedium="white"
+            backgroundExpanderColorMedium="ultralightbeige"
             expanderButtonText="Päivätoiminnassa"
             expanderElement={{ list: dayActivityTaskList }}
           />

@@ -11,7 +11,7 @@ export default function ServiceContentBlock(props) {
   const {
     expanderElement,
     expanderButtonText,
-    expanderClassName,
+    backgroundExpanderColorMedium,
     infoCardList,
     infoCardServiceContainerCardsRef,
     infoCardServiceFirstRef,
@@ -51,7 +51,13 @@ export default function ServiceContentBlock(props) {
           <Expander
             list={expanderElement.list}
             isOpen={expanderIsOpen}
-            className="expander-service-more-information"
+            className={classNames(
+              "expander-service-more-information background-ultralightgray",
+              {
+                [`background-medium-${backgroundExpanderColorMedium}`]:
+                  backgroundExpanderColorMedium,
+              }
+            )}
           ></Expander>
         </>
       )}

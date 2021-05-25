@@ -97,6 +97,10 @@ p.text-extrasmall {
   background-color: $color-white;
 }
 
+.background-ultralightgray {
+  background-color: $color-lightgray-ultralight;
+}
+
 .background-lightblue {
   background-color: $color-lightblue-light;
 }
@@ -107,6 +111,10 @@ p.text-extrasmall {
 
 .background-beige {
   background-color: $color-beige-light;
+}
+
+.background-ulralightbeige {
+  background-color: $color-beige-ultralight;
 }
 
 .background-pink {
@@ -162,6 +170,10 @@ p.text-extrasmall {
     background-color: $color-white;
   }
 
+  .background-medium-ultralightgray {
+    background-color: $color-lightgray-ultralight;
+  }
+
   .background-medium-lightblue {
     background-color: $color-lightblue-light;
   }
@@ -172,6 +184,10 @@ p.text-extrasmall {
 
   .background-medium-beige {
     background-color: $color-beige-light;
+  }
+
+  .background-medium-ultralightbeige {
+    background-color: $color-beige-ultralight;
   }
 
   .background-medium-pink {
