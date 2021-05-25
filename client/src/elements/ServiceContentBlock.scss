@@ -1,5 +1,54 @@
 @import "../variables";
 
+@mixin alignServiceBlockContent() {
+  @media only screen and (min-width: $width-m) {
+    &.content-block-direction-default {
+      .content-block-image-wrapper {
+        left: (-$padding-outer-horizontal-m);
+      }
+      .content-block-information {
+        > * {
+          padding-left: 50%;
+        }
+      }
+    }
+    &.content-block-direction-reverse {
+      .content-block-image-wrapper {
+        right: (-$padding-outer-horizontal-m);
+      }
+      .content-block-information > * {
+        padding-right: 50%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $width-l) {
+    &.content-block-direction-default {
+      .content-block-image-wrapper {
+        left: (-$padding-outer-horizontal-l);
+      }
+    }
+    &.content-block-direction-reverse {
+      .content-block-image-wrapper {
+        right: (-$padding-outer-horizontal-l);
+      }
+    }
+  }
+
+  @media only screen and (min-width: $width-xl) {
+    &.content-block-direction-default {
+      .content-block-image-wrapper {
+        left: (-$padding-outer-horizontal-xl);
+      }
+    }
+    &.content-block-direction-reverse {
+      .content-block-image-wrapper {
+        right: (-$padding-outer-horizontal-xl);
+      }
+    }
+  }
+}
+
 .service-content-block {
   @media only screen and (min-width: $width-m) {
     .content-block-image-wrapper {
@@ -26,30 +75,6 @@
       padding-top: 16px !important;
     }
 
-    &.content-block-direction-default {
-      .content-block-image-wrapper {
-        right: unset;
-        left: (-$padding-outer-horizontal-m);
-      }
-      .content-block-information {
-        > * {
-          padding-left: 50% !important;
-        }
-      }
-    }
-    &.content-block-direction-reverse {
-      .content-block-image-wrapper {
-        left: unset;
-        right: (-$padding-outer-horizontal-m);
-      }
-      .content-block-information > * {
-        padding-right: 50% !important;
-      }
-    }
-  }
-
-  @media only screen and (min-width: $width-l) {
-  }
-  @media only screen and (min-width: $width-xl) {
+    @include alignServiceBlockContent();
   }
 }
