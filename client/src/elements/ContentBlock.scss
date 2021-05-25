@@ -78,7 +78,7 @@
     border-radius: $border-radius 0 0 $border-radius;
   }
 
-  .content-block-reverse {
+  .content-block-direction-reverse {
     flex-direction: row-reverse;
     .content-block-image {
       border-radius: 0 $border-radius $border-radius 0;

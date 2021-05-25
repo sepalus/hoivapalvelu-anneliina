@@ -5,67 +5,51 @@
     .content-block-image-wrapper {
       position: absolute;
       height: 100%;
-      left: (-$padding-outer-horizontal-m);
       @include setInnerPaddings(false, false, "m");
     }
     .content-block-image {
       position: static;
     }
 
-    &.content-block-reverse {
+    .content-block-information {
+      width: 100%;
+      padding: 0px;
+      @include setGap();
+    }
+
+    .content-block-information-header {
+      @include setInnerPaddings("m", false);
+    }
+
+    .content-block-information-content {
+      @include setInnerPaddings(false, "m");
+      padding-top: 16px !important;
+    }
+
+    &.content-block-direction-default {
+      .content-block-image-wrapper {
+        right: unset;
+        left: (-$padding-outer-horizontal-m);
+      }
+      .content-block-information {
+        > * {
+          padding-left: 50% !important;
+        }
+      }
+    }
+    &.content-block-direction-reverse {
       .content-block-image-wrapper {
         left: unset;
         right: (-$padding-outer-horizontal-m);
       }
-    }
-
-    .content-block-information {
-      width: 100%;
-      padding: 0px;
-      > * {
-        @include setInnerPaddings("m", "m");
-        padding-left: 50% !important;
-      }
-      > *:first-child {
-        @include setInnerPaddings("m");
-      }
-      > *:nth-child(2) {
-        padding-bottom: 8px !important;
-      }
-
-      > *:last-child {
-        @include setInnerPaddings(false, "m");
-        padding-top: 16px !important;
-      }
-    }
-    &.content-block-reverse {
       .content-block-information > * {
-        padding-left: 36px !important;
         padding-right: 50% !important;
       }
     }
   }
 
   @media only screen and (min-width: $width-l) {
-    .content-block-image-wrapper {
-      left: (-$padding-outer-horizontal-l);
-    }
-    &.content-block-reverse {
-      .content-block-image-wrapper {
-        left: unset;
-        right: (-$padding-outer-horizontal-l);
-      }
-    }
   }
   @media only screen and (min-width: $width-xl) {
-    .content-block-image-wrapper {
-      left: (-$padding-outer-horizontal-xl);
-    }
-    &.content-block-reverse {
-      .content-block-image-wrapper {
-        left: unset;
-        right: (-$padding-outer-horizontal-xl);
-      }
-    }
   }
 }

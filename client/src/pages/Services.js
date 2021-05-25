@@ -111,9 +111,8 @@ const homeServiceCards = [
 ];
 
 export default function Services() {
-  const [activeInfoCardServiceIndex, setActiveInfoCardServiceIndex] = useState(
-    -1
-  );
+  const [activeInfoCardServiceIndex, setActiveInfoCardServiceIndex] =
+    useState(-1);
   const infoCardServiceContainerCardsRef = useRef();
   const infoCardServiceFirstRef = useRef();
   const infoCardServiceLastRef = useRef();
@@ -167,6 +166,7 @@ export default function Services() {
             text="Kotisairaanhoidon tarkoituksena on helpottaa sairaalasta kotiutumista, sairaan henkilön kotona selviytymistä ja tukea omaisia sairaan henkilön kotihoidossa. Sairaanhoitopalvelut ovat erilaisia lääkärin määräämiä sairaanhoidon toimenpiteitä kuten näytteiden ottamista, lääkityksen valvomista ja asiakkaan voinnin seuraamista."
             backgroundColor="white"
             backgroundColorMedium="lightblue"
+            backgroundColorSecondaryMedium="white"
             expanderButtonText="Hoitajamme auttavat"
             expanderElement={{ list: homeCareTaskList }}
           />
@@ -187,6 +187,7 @@ export default function Services() {
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
             backgroundColor="white"
             backgroundColorMedium="beige"
+            backgroundColorSecondaryMedium="white"
             infoCardList={homeServiceCards}
             infoCardServiceContainerCardsRef={infoCardServiceContainerCardsRef}
             infoCardServiceFirstRef={infoCardServiceFirstRef}
@@ -212,6 +213,7 @@ export default function Services() {
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
             backgroundColor="white"
             backgroundColorMedium="beige"
+            backgroundColorSecondaryMedium="white"
             expanderButtonText="Päivätoiminnassa"
             expanderElement={{ list: dayActivityTaskList }}
           />

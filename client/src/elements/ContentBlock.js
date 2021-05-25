@@ -20,6 +20,7 @@ export default function ContentBlock(props) {
     buttonNoHoverEffect,
     backgroundColor,
     backgroundColorMedium,
+    backgroundColorSecondaryMedium,
     imagePosition,
     children,
   } = props;
@@ -31,7 +32,8 @@ export default function ContentBlock(props) {
           [`${className}`]: className,
           "content-block-with-image": imageFileName,
           "content-block-without-image": !imageFileName,
-          "content-block-reverse": isReverse,
+          "content-block-direction-default": !isReverse,
+          "content-block-direction-reverse": isReverse,
           [`background-${backgroundColor}`]: backgroundColor,
           [`background-medium-${backgroundColorMedium}`]: backgroundColorMedium,
         })}
@@ -47,13 +49,20 @@ export default function ContentBlock(props) {
           </div>
         )}
         <div className="content-block-information">
-          <h2 className="content-block-title">{title}</h2>
-          {keywords && (
-            <p className="content-block-keywords text-small text-bold">
-              {keywords}
-            </p>
-          )}
-          <div className="content-block-information-content">
+          <div className="content-block-information-header">
+            <h2 className="content-block-title">{title}</h2>
+            {keywords && (
+              <p className="content-block-keywords text-small text-bold">
+                {keywords}
+              </p>
+            )}
+          </div>
+          <div
+            className={classNames("content-block-information-content", {
+              [`background-medium-${backgroundColorSecondaryMedium}`]:
+                backgroundColorSecondaryMedium,
+            })}
+          >
             <p className="content-block-text">{text}</p>
             {(buttonIcon || buttonImage || buttonText) && (
               <Button
