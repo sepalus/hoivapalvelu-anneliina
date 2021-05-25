@@ -2,6 +2,9 @@
 
 @mixin alignServiceBlockContent() {
   @media only screen and (min-width: $width-m) {
+    .content-block-image-wrapper {
+      width: calc(50vw - #{$padding-horizontal-m});
+    }
     &.content-block-direction-default {
       .content-block-image-wrapper {
         left: (-$padding-outer-horizontal-m);
@@ -15,6 +18,7 @@
     &.content-block-direction-reverse {
       .content-block-image-wrapper {
         right: (-$padding-outer-horizontal-m);
+        justify-content: flex-end;
       }
       .content-block-information > * {
         padding-right: 50%;
@@ -23,6 +27,9 @@
   }
 
   @media only screen and (min-width: $width-l) {
+    .content-block-image-wrapper {
+      width: calc(50vw - #{$padding-horizontal-l});
+    }
     &.content-block-direction-default {
       .content-block-image-wrapper {
         left: (-$padding-outer-horizontal-l);
@@ -38,12 +45,31 @@
   @media only screen and (min-width: $width-xl) {
     &.content-block-direction-default {
       .content-block-image-wrapper {
-        left: (-$padding-outer-horizontal-xl);
+        left: calc(
+          0px - #{$content-outer-margin} - #{$padding-outer-horizontal-xl}
+        );
       }
     }
     &.content-block-direction-reverse {
       .content-block-image-wrapper {
-        right: (-$padding-outer-horizontal-xl);
+        right: calc(
+          0px - #{$content-outer-margin} - #{$padding-outer-horizontal-xl}
+        );
+      }
+    }
+  }
+  @media only screen and (min-width: $width-xxl) {
+    .content-block-image {
+      width: 680px;
+    }
+    &.content-block-direction-default {
+      .content-block-image-wrapper {
+        left: -200px;
+      }
+    }
+    &.content-block-direction-reverse {
+      .content-block-image-wrapper {
+        right: -200px;
       }
     }
   }
@@ -54,6 +80,7 @@
     .content-block-image-wrapper {
       position: absolute;
       height: 100%;
+      display: flex;
       @include setInnerPaddings(false, false, "m");
     }
     .content-block-image {
@@ -72,7 +99,9 @@
 
     .content-block-information-content {
       @include setInnerPaddings(false, "m");
-      padding-top: 16px !important;
+    }
+    .content-block-text {
+      padding-top: 16px;
     }
 
     @include alignServiceBlockContent();
