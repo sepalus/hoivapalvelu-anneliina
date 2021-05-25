@@ -9,6 +9,7 @@ import InfoCard from "../elements/InfoCard";
 
 export default function ServiceContentBlock(props) {
   const {
+    noButton,
     expanderElement,
     expanderButtonText,
     backgroundExpanderColorMedium,
@@ -28,7 +29,9 @@ export default function ServiceContentBlock(props) {
       expanderIsOpen={expanderIsOpen}
       setExpanderIsOpen={setExpanderIsOpen}
       className="service-content-block"
-      buttonIcon={expanderIsOpen ? "expand_less" : "expand_more"}
+      buttonIcon={
+        noButton ? null : expanderIsOpen ? "expand_less" : "expand_more"
+      }
       buttonFrontIcon={
         expanderIsOpen && (
           <span class="material-icons-outlined expander-button-open-extra-icon">
@@ -45,22 +48,24 @@ export default function ServiceContentBlock(props) {
       )}
       buttonOnClick={() => setExpanderIsOpen(!expanderIsOpen)}
       buttonNoHoverEffect={expanderIsOpen}
+      outsideChildren={
+        expanderElement && (
+          <>
+            <Expander
+              list={expanderElement.list}
+              isOpen={expanderIsOpen}
+              className={classNames(
+                "expander-service-more-information background-ultralightgray",
+                {
+                  [`background-medium-${backgroundExpanderColorMedium}`]:
+                    backgroundExpanderColorMedium,
+                }
+              )}
+            ></Expander>
+          </>
+        )
+      }
     >
-      {expanderElement && (
-        <>
-          <Expander
-            list={expanderElement.list}
-            isOpen={expanderIsOpen}
-            className={classNames(
-              "expander-service-more-information background-ultralightgray",
-              {
-                [`background-medium-${backgroundExpanderColorMedium}`]:
-                  backgroundExpanderColorMedium,
-              }
-            )}
-          ></Expander>
-        </>
-      )}
       {infoCardList && (
         <InfoCardContainer
           title="Kotiavun palvelut"

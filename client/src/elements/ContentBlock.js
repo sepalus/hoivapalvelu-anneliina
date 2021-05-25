@@ -23,6 +23,7 @@ export default function ContentBlock(props) {
     backgroundColorSecondaryMedium,
     imagePosition,
     children,
+    outsideChildren,
   } = props;
 
   return (
@@ -82,10 +83,11 @@ export default function ContentBlock(props) {
                 )}
               </Button>
             )}
+            {children}
           </div>
         </div>
       </div>
-      {children}
+      {outsideChildren}
     </div>
   );
 }

@@ -190,6 +190,7 @@ export default function Services() {
             backgroundColorMedium="lightbeige"
             backgroundColorSecondaryMedium="white"
             backgroundExpanderColorMedium="hyperlightbeige"
+            noButton={true}
             infoCardList={homeServiceCards}
             infoCardServiceContainerCardsRef={infoCardServiceContainerCardsRef}
             infoCardServiceFirstRef={infoCardServiceFirstRef}
