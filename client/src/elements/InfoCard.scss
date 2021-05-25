@@ -13,7 +13,7 @@
   background-color: $color-white;
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
-  @include setInnerPaddings(false, false, "m", false, true, true);
+  @include setInnerPaddings(false, false, false, "m", false, true, true);
 }
 
 .info-card:not(.info-card-active):hover {

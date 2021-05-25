@@ -3,7 +3,7 @@
 .expander {
   display: flex;
   flex-direction: column;
-  @include setInnerPaddings("sm", false, "sm", "sm", false, false);
+  @include setInnerPaddings("sm", false, false, "sm", "sm", false, false);
 }
 
 .expander-list {
@@ -14,13 +14,6 @@
 }
 .expander-list-title-icon {
   position: absolute;
-}
-
-@media only screen and (min-width: $width-m) {
-  .expander {
-    padding-top: $x1;
-    gap: $x1_5;
-  }
 }
 
 .expander-service-more-information {
@@ -53,6 +46,16 @@
   }
 
   ul {
-    @include setInnerPaddings("s", "s", "s", "s", false, false);
+    @include setInnerPaddings("s", "s", false, "s", "s", false, false);
+  }
+}
+
+@media only screen and (min-width: $width-m) {
+  .expander {
+    padding-top: $x1;
+    gap: $x1_5;
+  }
+  .expander-service-more-information {
+    transform: translateY(-100px);
   }
 }

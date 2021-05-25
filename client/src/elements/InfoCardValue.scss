@@ -22,7 +22,7 @@
   flex: 1 0;
   flex-direction: column;
   align-items: center;
-  @include setInnerPaddings(false, false, "sm", "sm", true, false);
+  @include setInnerPaddings(false, false, false, "sm", "sm", true, false);
   @include setInfoCardValueWidth();
 
   .info-card-icon-wrapper {

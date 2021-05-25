@@ -14,13 +14,13 @@
 
 .content-block-without-image {
   .content-block-information {
-    @include setInnerPaddings(false, false "s");
+    @include setInnerPaddings(false, false, false, "s");
     padding-bottom: $x5;
   }
 
   &:last-child {
     .content-block-information {
-      @include setInnerPaddings("s", false, "s");
+      @include setInnerPaddings("s", false, false, "s");
     }
   }
 }
@@ -46,6 +46,9 @@
   @include setInnerPaddings();
 }
 .content-block-information-content {
+  display: flex;
+  flex-direction: column;
+  @include setGap();
 }
 .content-block-expander-button-open {
   position: relative;

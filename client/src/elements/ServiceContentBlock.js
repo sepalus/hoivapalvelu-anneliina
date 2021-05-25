@@ -69,7 +69,7 @@ export default function ServiceContentBlock(props) {
           )}
           hasScrollableInfoCards={true}
           expanderElement={infoCardList[activeInfoCardServiceIndex]}
-          expanderClassName="expander-service-more-information expander-service-info-card-more-information"
+          expanderClassName="expander-service-more-information expander-service-info-card-more-information background-medium-white"
           infoCardContainerCardsRef={infoCardServiceContainerCardsRef}
           infoCardFirstRef={infoCardServiceFirstRef}
           infoCardLastRef={infoCardServiceLastRef}

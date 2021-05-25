@@ -28,6 +28,10 @@ $width-xxl: 1440px;
 $padding-horizontal-s: $x3;
 $padding-horizontal-m: $x4;
 $padding-horizontal-l: $x5;
+$padding-outer-horizontal-s: $x3_5;
+$padding-outer-horizontal-m: $x4_5;
+$padding-outer-horizontal-l: $x5_5;
+$padding-outer-horizontal-xl: $x6_5;
 
 $header-height: 60px;
 $content-height: calc(100vh - 60px);
@@ -73,10 +77,10 @@ $text-extrasmall-s: 12px;
 $text-extrasmall-m: 13px;
 $text-extrasmall-l: 14px;
 
-$outer-padding-content-block-s: $x6 $x3_5 $x7;
-$outer-padding-content-block-m: $x7 $x4_5 $x8;
-$outer-padding-content-block-l: $x8 $x5_5 $x9;
-$outer-padding-content-block-xl: $x9 $x6_5 $x10;
+$outer-padding-content-block-s: $x6 $padding-outer-horizontal-s $x7;
+$outer-padding-content-block-m: $x7 $padding-outer-horizontal-m $x8;
+$outer-padding-content-block-l: $x8 $padding-outer-horizontal-l $x9;
+$outer-padding-content-block-xl: $x9 $padding-outer-horizontal-xl $x10;
 
 $inner-padding-content-block-s: $x3_5 $padding-horizontal-s $x4_5;
 $inner-padding-content-block-m: $x4_5 $padding-horizontal-m $x5_5;
@@ -174,6 +178,7 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
 @mixin setInnerPaddings(
   $removeBottomPadding: false,
   $removeTopPadding: false,
+  $removeSidePadding: false,
   $halfHorizontalPadding: false,
   $halfVerticalPadding: false,
   $verticalAlignCenter: false,
@@ -227,6 +232,18 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
   @if $removeTopPadding == "m" or $removeTopPadding == "sm" {
     @media only screen and (min-width: $width-m) {
       padding-top: 0px;
+    }
+  }
+
+  @if $removeSidePadding == "s" or $removeSidePadding == "sm" {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @if $removeSidePadding == "m" or $removeSidePadding == "sm" {
+    @media only screen and (min-width: $width-m) {
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
 
