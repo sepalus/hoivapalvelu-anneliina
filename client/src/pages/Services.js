@@ -8,29 +8,33 @@ import ServiceContentBlock from "../elements/ServiceContentBlock";
 import Footer from "../elements/Footer";
 import ScrollArea from "../components/ScrollArea";
 
-const homeCareTaskList = [
-  "tarkkailee yleistä terveydentilaasi",
-  "neuvoo terveyteesi liittyvissä asioissa",
-  "jakaa ja antaa lääkkeesi",
-  "poistaa hakaset ja ompeleet",
-  "mittaa verenpaineesi, verensokerisi, hemoglobiinisi ja saturaatiosi",
-  "huuhtelee korviasi",
-  "laittaa silmätippasi tai -voiteesi",
-  "antaa injektiosi",
-  "hoitaa haavasi",
-  "katetroi",
-  "ottaa verinäytteesi ja toimittaa sen laboratorioon",
-  "tekee toimintakyvyn arvioinnit",
-];
+const homeCareTaskList = {
+  expandedList: [
+    "tarkkailee yleistä terveydentilaasi",
+    "neuvoo terveyteesi liittyvissä asioissa",
+    "jakaa ja antaa lääkkeesi",
+    "poistaa hakaset ja ompeleet",
+    "mittaa verenpaineesi, verensokerisi, hemoglobiinisi ja saturaatiosi",
+    "huuhtelee korviasi",
+    "laittaa silmätippasi tai -voiteesi",
+    "antaa injektiosi",
+    "hoitaa haavasi",
+    "katetroi",
+    "ottaa verinäytteesi ja toimittaa sen laboratorioon",
+    "tekee toimintakyvyn arvioinnit",
+  ],
+};
 
-const dayActivityTaskList = [
-  "quis aute iure",
-  "reprehenderit in voluptate",
-  "velit esse",
-  "cillum dolore",
-  "eu fugiat nulla",
-  "pariatur",
-];
+const dayActivityTaskList = {
+  expandedList: [
+    "quis aute iure",
+    "reprehenderit in voluptate",
+    "velit esse",
+    "cillum dolore",
+    "eu fugiat nulla",
+    "pariatur",
+  ],
+};
 
 const homeServiceCards = [
   {
@@ -169,7 +173,7 @@ export default function Services() {
             backgroundColorSecondaryMedium="white"
             backgroundExpanderColorMedium="hyperlightblue"
             expanderButtonText="Hoitajamme auttavat"
-            expanderElement={{ list: homeCareTaskList }}
+            expanderElement={homeCareTaskList}
           />
         </ContentBlockContainer>
         <ServiceHeaderBlock
@@ -197,6 +201,8 @@ export default function Services() {
             infoCardServiceLastRef={infoCardServiceLastRef}
             activeInfoCardServiceIndex={activeInfoCardServiceIndex}
             setActiveInfoCardServiceIndex={setActiveInfoCardServiceIndex}
+            expanderElement={homeServiceCards[activeInfoCardServiceIndex]}
+            expanderClassName="expander-service-more-information expander-service-info-card-more-information background-medium-white"
           />
         </ContentBlockContainer>
         <ServiceHeaderBlock
@@ -219,7 +225,7 @@ export default function Services() {
             backgroundColorSecondaryMedium="white"
             backgroundExpanderColorMedium="hyperlightbeige"
             expanderButtonText="Päivätoiminnassa"
-            expanderElement={{ list: dayActivityTaskList }}
+            expanderElement={dayActivityTaskList}
           />
         </ContentBlockContainer>
         <Footer />

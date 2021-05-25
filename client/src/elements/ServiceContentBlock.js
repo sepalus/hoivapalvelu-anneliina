@@ -52,7 +52,7 @@ export default function ServiceContentBlock(props) {
         expanderElement && (
           <>
             <Expander
-              list={expanderElement.list}
+              list={expanderElement.expandedList}
               isOpen={expanderIsOpen}
               className={classNames(
                 "expander-service-more-information background-ultralightgray",
@@ -79,8 +79,6 @@ export default function ServiceContentBlock(props) {
             }
           )}
           hasScrollableInfoCards={true}
-          expanderElement={infoCardList[activeInfoCardServiceIndex]}
-          expanderClassName="expander-service-more-information expander-service-info-card-more-information background-medium-white"
           infoCardContainerCardsRef={infoCardServiceContainerCardsRef}
           infoCardFirstRef={infoCardServiceFirstRef}
           infoCardLastRef={infoCardServiceLastRef}
@@ -102,7 +100,10 @@ export default function ServiceContentBlock(props) {
                   ? infoCardServiceLastRef
                   : null
               }
-              setCardToActive={() => setActiveInfoCardServiceIndex(index)}
+              onClick={() => {
+                setExpanderIsOpen(true);
+                setActiveInfoCardServiceIndex(index);
+              }}
               key={`info-card-service-${index}`}
             />
           ))}

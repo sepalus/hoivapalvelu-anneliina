@@ -94,7 +94,7 @@ export default function About() {
                   ? infoCardValueLastRef
                   : null
               }
-              setCardToActive={() => setActiveInfoCardIndex(index)}
+              onClick={() => setActiveInfoCardIndex(index)}
               key={`info-card-value-${index}`}
             />
           ))}

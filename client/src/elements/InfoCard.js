@@ -12,8 +12,7 @@ export default function InfoCard({
   className,
   isCardActive,
   isCardDisactive,
-  setCardToActive,
-  id,
+  onClick,
   infoCardRef,
 }) {
   return (
@@ -24,7 +23,7 @@ export default function InfoCard({
           "info-card-disactive": isCardDisactive,
           [`${className}`]: className,
         })}
-        onClick={setCardToActive}
+        onClick={onClick}
       >
         <div className="info-card-icon-wrapper">
           <img
