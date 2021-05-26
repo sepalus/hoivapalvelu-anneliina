@@ -24,7 +24,7 @@ export default function Button({
           )}
           onClick={onClick}
         >
-          {text}
+          <p>{text}</p>
           {children}
         </button>
       ) : hasChildren ? (
@@ -59,7 +59,7 @@ export default function Button({
             "action-button-with-hover-effect": !noHoverEffect,
           })}
         >
-          {text}
+          <p>{text}</p>
         </button>
       )}
     </>

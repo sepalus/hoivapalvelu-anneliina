@@ -64,13 +64,19 @@ $color-pink: #efbfcb;
 $color-pink-light: #fcf2f5; // 20% Opacity
 $color-pink-ultralight: #fdf9fa; // 10% Opacity
 $color-pink-hyperlight: #fefefd; // 5% Opacity
+$color-button-hover: #fdfdff;
 
 $border-radius: 3px;
-$box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2),
-  -0.5px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
-$box-shadow-around-opposite: -1px -1px 2px 0px rgba(0, 0, 0, 0.2);
+
+$box-shadow-bottomright: 1.5px 1.5px 3px 0px rgba(0, 0, 0, 0.15);
+$box-shadow-bottomright-half: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.15);
+$box-shadow-topleft: -1.5px -1.5px 3px 0px rgba(0, 0, 0, 0.15);
+$box-shadow-topleft-half: -0.5px -0.5px 1px 0px rgba(0, 0, 0, 0.15);
 $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below-half: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+$box-shadow-around: $box-shadow-bottomright, $box-shadow-topleft-half;
+$box-shadow-around-inset: inset $box-shadow-bottomright,
+  inset $box-shadow-topleft-half;
 
 $text-s: 16px;
 $text-m: 17px;

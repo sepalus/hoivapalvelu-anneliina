@@ -10,11 +10,17 @@
   color: $color-darkblue;
   background-color: $color-white;
   box-shadow: $box-shadow-below;
+
+  p {
+    font-size: inherit;
+    font-weight: inherit;
+  }
 }
 
 .action-button-with-hover-effect:hover {
-  transform: translateY(-1px);
-  font-weight: 600;
+  text-shadow: 0.4px 0px;
+  box-shadow: $box-shadow-around-inset;
+  background-color: $color-button-hover;
 }
 
 .action-button-with-image {

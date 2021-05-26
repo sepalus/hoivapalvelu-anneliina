@@ -24,7 +24,7 @@
 }
 
 .expander-service-more-information {
-  box-shadow: inset $box-shadow-around, inset $box-shadow-around-opposite;
+  box-shadow: $box-shadow-around-inset;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
   @include setExpanderPaddings();

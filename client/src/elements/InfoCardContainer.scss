@@ -58,7 +58,6 @@
   }
   .info-card-container-cards {
     flex-direction: row;
-    gap: $x0_5;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -94,9 +93,6 @@
   }
 }
 .info-card-container-service-expander-open {
-  .info-card-ref {
-    padding-bottom: 0px;
-  }
   .info-card-value {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

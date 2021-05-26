@@ -2,14 +2,12 @@
 
 .info-card-ref {
   width: 100%;
-  padding: 2px;
 }
 .info-card {
   display: flex;
   align-items: flex-end;
   width: 100%;
   height: 84px;
-  margin-top: 2px;
   background-color: $color-white;
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
@@ -18,17 +16,6 @@
 }
 
 .info-card:not(.info-card-active):hover {
-  .info-card-logo,
-  .info-card-icon-wrapper {
-    transform: translate(-2px, 1px);
-  }
-  .info-card-logo {
-    height: increaseSize(20px);
-  }
-  .info-card-icon-wrapper {
-    width: increaseSize(40px);
-    height: increaseSize(32px);
-  }
 }
 
 .info-card-icon-wrapper {
@@ -73,18 +60,6 @@
   }
 
   .info-card:not(.info-card-active):hover {
-    margin-top: 0px;
-    .info-card-icon-wrapper {
-      width: increaseSize(64px);
-      height: increaseSize(50px);
-    }
-    .info-card-logo,
-    .info-card-icon-wrapper {
-      transform: none;
-    }
-    .info-card-logo {
-      height: increaseSize(15.5px);
-    }
   }
 }
 
@@ -93,8 +68,5 @@
     height: 20px;
   }
   .info-card:not(.info-card-active):hover {
-    .info-card-logo {
-      height: increaseSize(20px);
-    }
   }
 }
