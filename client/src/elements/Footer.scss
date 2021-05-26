@@ -9,7 +9,7 @@
   flex-direction: column;
   color: $color-darkblue;
   @include setOuterPaddings(false, true);
-  gap: $x5;
+  @include setGap("large");
   @include setContentMaxWidth();
 }
 
@@ -22,7 +22,7 @@
 .footer-slogan {
   display: flex;
   flex-direction: column;
-  gap: $x2;
+  @include setGap("large");
 
   p {
     width: 264px;
@@ -42,8 +42,7 @@
 .footer-information {
   display: flex;
   flex-direction: column;
-  gap: $x2;
-
+  @include setGap("medium");
   h3 {
     margin-bottom: 4px;
   }
@@ -72,9 +71,6 @@
 }
 
 @media only screen and (min-width: $width-xs) {
-  .footer-content-wrapper {
-    gap: $x3;
-  }
   .footer-slogan {
     flex-direction: row;
   }
@@ -84,6 +80,7 @@
   .footer-slogan-button {
     align-self: flex-end;
     width: 100%;
+    padding: 0px 24px;
   }
   .footer-information {
     flex-direction: row;
@@ -107,6 +104,5 @@
   }
   .footer-information {
     flex-grow: 1;
-    gap: $x4;
   }
 }

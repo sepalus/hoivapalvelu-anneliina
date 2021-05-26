@@ -76,6 +76,12 @@
 }
 
 .service-content-block {
+  .content-block-information {
+    @include setGap("medium");
+  }
+  .content-block-text {
+    padding-top: $inner-gap-s;
+  }
   @media only screen and (min-width: $width-m) {
     .content-block-image-wrapper {
       position: absolute;
@@ -101,9 +107,14 @@
       @include setInnerPaddings(false, "m");
     }
     .content-block-text {
-      padding-top: 16px;
+      padding-top: $inner-gap-m;
     }
 
     @include alignServiceBlockContent();
+  }
+  @media only screen and (min-width: $width-l) {
+    .content-block-text {
+      padding-top: $inner-gap-l;
+    }
   }
 }

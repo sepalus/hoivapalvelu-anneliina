@@ -27,7 +27,7 @@ export default function ContentBlock(props) {
   } = props;
 
   return (
-    <div>
+    <>
       <div
         className={classNames("content-block", {
           [`${className}`]: className,
@@ -103,6 +103,6 @@ export default function ContentBlock(props) {
         )}
       </div>
       {outsideChildren}
-    </div>
+    </>
   );
 }

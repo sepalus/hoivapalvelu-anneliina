@@ -67,7 +67,7 @@
 
 @media only screen and (min-width: $width-m) {
   .contact-card {
-    width: calc(50% - #{$inner-gap-triple-m / 2});
+    width: calc(50% - #{$inner-gap-medium-m / 2});
   }
   .contact-card-icon {
     font-size: 40px;
@@ -80,7 +80,7 @@
     align-items: flex-start;
   }
   .contact-card {
-    width: calc(50% - #{$inner-gap-triple-l / 2});
+    width: calc(50% - #{$inner-gap-medium-l / 2});
   }
 
   .contact-card-icon {

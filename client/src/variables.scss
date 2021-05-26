@@ -95,15 +95,15 @@ $inner-padding-content-block-l: $x6 $padding-horizontal-l $x7;
 $inner-padding-content-block-negative-s: (-$x3_5) (-$padding-horizontal-s)
   (-$x4_5);
 
-$inner-gap-s: $x1;
-$inner-gap-m: $x1;
-$inner-gap-l: $x1_5;
-$inner-gap-double-s: $x2;
-$inner-gap-double-m: $x2;
-$inner-gap-double-l: $x2_5;
-$inner-gap-triple-s: $x3;
-$inner-gap-triple-m: $x3;
-$inner-gap-triple-l: $x3_5;
+$inner-gap-s: $x1_5;
+$inner-gap-m: $x2;
+$inner-gap-l: $x2_5;
+$inner-gap-medium-s: $x2;
+$inner-gap-medium-m: $x2_5;
+$inner-gap-medium-l: $x3;
+$inner-gap-large-s: $x3;
+$inner-gap-large-m: $x3_5;
+$inner-gap-large-l: $x4_5;
 
 $outer-gap-s: $x1_5;
 $outer-gap-m: $x5;
@@ -285,34 +285,24 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
   }
 
   @if $doubleGap {
-    gap: $inner-gap-double-s;
+    gap: $inner-gap-large-s;
   } @else {
     gap: $inner-gap-s;
-  }
-  .content-block-button {
-    margin-top: $inner-gap-s;
-    margin-right: auto;
   }
 
   @media only screen and (min-width: $width-m) {
     @if $doubleGap {
-      gap: $inner-gap-double-m;
+      gap: $inner-gap-large-m;
     } @else {
       gap: $inner-gap-m;
-    }
-    .content-block-button {
-      margin-top: $inner-gap-m;
     }
   }
 
   @media only screen and (min-width: $width-l) {
     @if $doubleGap {
-      gap: $inner-gap-double-l;
+      gap: $inner-gap-large-l;
     } @else {
       gap: $inner-gap-l;
-    }
-    .content-block-button {
-      margin-top: $inner-gap-l;
     }
   }
 }
@@ -354,22 +344,28 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
   }
 }
 
-@mixin setGap($tripleGap: false) {
-  @if $tripleGap {
-    gap: $inner-gap-double-s;
+@mixin setGap($gapSize: null) {
+  @if $gapSize == "large" {
+    gap: $inner-gap-large-s;
+  } @else if $gapSize == "medium" {
+    gap: $inner-gap-medium-s;
   } @else {
     gap: $inner-gap-s;
   }
   @media only screen and (min-width: $width-m) {
-    @if $tripleGap {
-      gap: $inner-gap-triple-m;
+    @if $gapSize == "large" {
+      gap: $inner-gap-large-m;
+    } @else if $gapSize == "medium" {
+      gap: $inner-gap-medium-m;
     } @else {
       gap: $inner-gap-m;
     }
   }
   @media only screen and (min-width: $width-l) {
-    @if $tripleGap {
-      gap: $inner-gap-triple-l;
+    @if $gapSize == "large" {
+      gap: $inner-gap-large-l;
+    } @else if $gapSize == "medium" {
+      gap: $inner-gap-medium-l;
     } @else {
       gap: $inner-gap-l;
     }

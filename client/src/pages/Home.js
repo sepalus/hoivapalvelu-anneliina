@@ -27,6 +27,7 @@ export default function Home() {
             titleElement={
               <h2>Yksilöllistä hoivapalvelua kaikille sitä tarvitseville</h2>
             }
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             backgroundColor="lightblue"
           >
             <InfoCard

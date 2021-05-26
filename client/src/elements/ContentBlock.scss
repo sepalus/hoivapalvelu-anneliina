@@ -23,18 +23,7 @@
 .content-block-without-image {
   .content-block-information {
     @include setInnerPaddings(false, false, false, "s");
-    padding-bottom: $x5;
   }
-
-  &:last-child {
-    .content-block-information {
-      @include setInnerPaddings("s", false, false, "s");
-    }
-  }
-}
-.content-block-keywords {
-  padding-top: $x1;
-  padding-bottom: $x0_5;
 }
 
 .content-block-image-wrapper {
@@ -53,10 +42,17 @@
   flex-direction: column;
   @include setInnerPaddings();
 }
-.content-block-information-content {
+
+.content-block-information-header {
   display: flex;
   flex-direction: column;
   @include setGap();
+}
+
+.content-block-information-content {
+  display: flex;
+  flex-direction: column;
+  @include setGap("large");
 }
 .content-block-expander-button-open {
   position: relative;
@@ -73,6 +69,19 @@
     left: -8px;
   }
   @include setVerticalShadowLine();
+}
+
+@media only screen and (max-width: $width-max-s) {
+  .content-block-without-image {
+    .content-block-information {
+      padding-bottom: $x5;
+    }
+    &:last-child {
+      .content-block-information {
+        padding-bottom: 0;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $width-m) {

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   @include setOuterPaddings();
-  @include setGap(true);
+  @include setGap("large");
   @include setContentMaxWidth();
 }
 .info-card-text-wrapper {
@@ -42,7 +42,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  @include setGap(true);
+  @include setGap();
 }
 
 @media only screen and (min-width: $width-m) {
@@ -70,10 +70,8 @@
     .info-card-container-button {
       display: none;
     }
-  }
-  @media only screen and (min-width: $width-l) {
     .info-card-container-cards {
-      gap: $x3;
+      @include setGap();
     }
   }
 }
