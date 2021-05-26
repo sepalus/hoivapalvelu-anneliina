@@ -82,7 +82,9 @@ export default function ContentBlock(props) {
                     <span className="material-icons">{buttonFrontIcon}</span>
                   )}
                   {buttonIcon && (
-                    <span className="material-icons">{buttonIcon}</span>
+                    <span className="material-icons-outlined">
+                      {buttonIcon}
+                    </span>
                   )}
                 </Button>
               )}

@@ -1,0 +1,17 @@
+@import "../variables";
+
+.contact-person {
+  display: flex;
+  @include setGap(true);
+}
+
+.contact-person-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.contact-person-information {
+  display: flex;
+  flex-direction: column;
+  gap: $x1;
+}
