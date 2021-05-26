@@ -6,6 +6,7 @@ import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
 import Footer from "../elements/Footer";
 import ScrollArea from "../components/ScrollArea";
+import SnapScrollArea from "../components/SnapScrollArea";
 
 const infoCards = [
   {
@@ -58,7 +59,7 @@ export default function About() {
 
   return (
     <div className="about">
-      <ScrollArea>
+      <SnapScrollArea notInMobile={true}>
         <Banner
           className="banner-about"
           imageFileName="about-us.jpeg"
@@ -67,49 +68,50 @@ export default function About() {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           overlay={{ overlayColor: "lightbeige" }}
         />
-
-        <InfoCardContainer
-          titleElement={<h2>Kotiavun palvelut</h2>}
-          backgroundColor="lightpink"
-          className="info-card-container-value"
-          hasScrollableInfoCards={true}
-          expanderElement={infoCards[activeInfoCardIndex]}
-          infoCardContainerCardsRef={infoCardValueContainerCardsRef}
-          infoCardFirstRef={infoCardValueFirstRef}
-          infoCardLastRef={infoCardValueLastRef}
-        >
-          {infoCards.map((infoCard, index) => (
-            <InfoCard
-              iconFileName={infoCard.iconFileName}
-              text={infoCard.text}
-              className={infoCard.className}
-              isCardActive={activeInfoCardIndex === index}
-              isCardDisactive={
-                activeInfoCardIndex !== index && activeInfoCardIndex !== -1
-              }
-              infoCardRef={
-                index === 0
-                  ? infoCardValueFirstRef
-                  : index === infoCards.length - 1
-                  ? infoCardValueLastRef
-                  : null
-              }
-              onClick={() => setActiveInfoCardIndex(index)}
-              key={`info-card-value-${index}`}
+        <ScrollArea>
+          <InfoCardContainer
+            titleElement={<h2>Kotiavun palvelut</h2>}
+            backgroundColor="lightpink"
+            className="info-card-container-value"
+            hasScrollableInfoCards={true}
+            expanderElement={infoCards[activeInfoCardIndex]}
+            infoCardContainerCardsRef={infoCardValueContainerCardsRef}
+            infoCardFirstRef={infoCardValueFirstRef}
+            infoCardLastRef={infoCardValueLastRef}
+          >
+            {infoCards.map((infoCard, index) => (
+              <InfoCard
+                iconFileName={infoCard.iconFileName}
+                text={infoCard.text}
+                className={infoCard.className}
+                isCardActive={activeInfoCardIndex === index}
+                isCardDisactive={
+                  activeInfoCardIndex !== index && activeInfoCardIndex !== -1
+                }
+                infoCardRef={
+                  index === 0
+                    ? infoCardValueFirstRef
+                    : index === infoCards.length - 1
+                    ? infoCardValueLastRef
+                    : null
+                }
+                onClick={() => setActiveInfoCardIndex(index)}
+                key={`info-card-value-${index}`}
+              />
+            ))}
+          </InfoCardContainer>
+          <ContentBlockContainer backgroundColor="lightbeige">
+            <ContentBlock
+              imageFileName="placeholder.jpeg"
+              title="Tarinamme"
+              text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli Annen halu luoda asiakkaillensa parempi arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Tuntui, että niin paljon oli tehtävää, jotta asiakkaat voisivat asua kotona turvallisin mielin. Suomalaisen perheyrityksen Anneliinahoivan uudet tuulet jatkavat Annen viitoittamaa tietä."
+              backgroundColor="white"
+              backgroundColorMedium="lightbeige"
             />
-          ))}
-        </InfoCardContainer>
-        <ContentBlockContainer backgroundColor="lightbeige">
-          <ContentBlock
-            imageFileName="placeholder.jpeg"
-            title="Tarinamme"
-            text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli Annen halu luoda asiakkaillensa parempi arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Tuntui, että niin paljon oli tehtävää, jotta asiakkaat voisivat asua kotona turvallisin mielin. Suomalaisen perheyrityksen Anneliinahoivan uudet tuulet jatkavat Annen viitoittamaa tietä."
-            backgroundColor="white"
-            backgroundColorMedium="lightbeige"
-          />
-        </ContentBlockContainer>
-        <Footer />
-      </ScrollArea>
+          </ContentBlockContainer>
+          <Footer />
+        </ScrollArea>
+      </SnapScrollArea>
     </div>
   );
 }

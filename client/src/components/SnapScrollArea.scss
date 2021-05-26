@@ -13,6 +13,14 @@
   scrollbar-width: none;
 }
 
+@media only screen and (max-width: $width-max-s) {
+  .snap-scroll-area-not-mobile {
+    scroll-snap-type: none !important;
+    .scroll-area {
+      overflow: unset !important;
+    }
+  }
+}
 .freeze-child-scroll {
   .scroll-area {
     overflow-y: hidden;

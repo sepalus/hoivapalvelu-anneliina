@@ -6,6 +6,7 @@ import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ServiceContentBlock from "../elements/ServiceContentBlock";
 import Footer from "../elements/Footer";
+import SnapScrollArea from "../components/SnapScrollArea";
 import ScrollArea from "../components/ScrollArea";
 
 const homeCareTaskList = {
@@ -123,7 +124,7 @@ export default function Services() {
 
   return (
     <div className="services">
-      <ScrollArea>
+      <SnapScrollArea notInMobile={true}>
         <Banner
           className="banner-services"
           imageFileName="services.jpeg"
@@ -135,100 +136,104 @@ export default function Services() {
             overlayReverse: true,
           }}
         />
-        <InfoCardContainer
-          titleElement={<h2>Palvelukokonaisuudet</h2>}
-          text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
-          backgroundColor="lightbeige"
-        >
-          <InfoCard
+        <ScrollArea>
+          <InfoCardContainer
+            titleElement={<h2>Palvelukokonaisuudet</h2>}
+            text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
+            backgroundColor="lightbeige"
+          >
+            <InfoCard
+              iconFileName="anneliinan-kotisairaanhoito.png"
+              logoFileName="anneliinan-kotisairaanhoito.png"
+            />
+            <InfoCard
+              iconFileName="anneliinan-kotisairaanhoito.png"
+              logoFileName="anneliinan-koti.png"
+            />
+            <InfoCard
+              iconFileName="anneliinan-kotisairaanhoito.png"
+              logoFileName="anneliinan-paivatoiminta.png"
+            />
+          </InfoCardContainer>
+          <ServiceHeaderBlock
             iconFileName="anneliinan-kotisairaanhoito.png"
             logoFileName="anneliinan-kotisairaanhoito.png"
-          />
-          <InfoCard
+            sloganText="Sairaanhoito kotiinkuljetettuna"
+          ></ServiceHeaderBlock>
+          <ContentBlockContainer
+            backgroundColor="lightblue"
+            className="service-content-block-container"
+          >
+            <ServiceContentBlock
+              isReverse={true}
+              imageFileName="service-1.jpeg"
+              title="Kotisairaanhoito on asiakkaan omaan kotiin vietyä sairaanhoitoa"
+              keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
+              text="Kotisairaanhoidon tarkoituksena on helpottaa sairaalasta kotiutumista, sairaan henkilön kotona selviytymistä ja tukea omaisia sairaan henkilön kotihoidossa. Sairaanhoitopalvelut ovat erilaisia lääkärin määräämiä sairaanhoidon toimenpiteitä kuten näytteiden ottamista, lääkityksen valvomista ja asiakkaan voinnin seuraamista."
+              backgroundColor="white"
+              backgroundColorMedium="lightblue"
+              backgroundColorSecondaryMedium="white"
+              backgroundExpanderColorMedium="hyperlightblue"
+              expanderButtonText="Hoitajamme auttavat"
+              expanderElement={homeCareTaskList}
+            />
+          </ContentBlockContainer>
+          <ServiceHeaderBlock
             iconFileName="anneliinan-kotisairaanhoito.png"
             logoFileName="anneliinan-koti.png"
-          />
-          <InfoCard
+            sloganText="Kotona asumista tukevat palvelut"
+          ></ServiceHeaderBlock>
+          <ContentBlockContainer
+            backgroundColor="lightbeige"
+            className="service-content-block-container"
+          >
+            <ServiceContentBlock
+              imageFileName="placeholder.jpeg"
+              title="Kotiapu sisältää kaikki kotona asumista tukevat palvelut"
+              keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
+              text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
+              backgroundColor="white"
+              backgroundColorMedium="lightbeige"
+              backgroundColorSecondaryMedium="white"
+              backgroundExpanderColorMedium="hyperlightbeige"
+              noButton={true}
+              infoCardList={homeServiceCards}
+              infoCardServiceContainerCardsRef={
+                infoCardServiceContainerCardsRef
+              }
+              infoCardServiceFirstRef={infoCardServiceFirstRef}
+              infoCardServiceLastRef={infoCardServiceLastRef}
+              activeInfoCardServiceIndex={activeInfoCardServiceIndex}
+              setActiveInfoCardServiceIndex={setActiveInfoCardServiceIndex}
+              expanderElement={homeServiceCards[activeInfoCardServiceIndex]}
+            />
+          </ContentBlockContainer>
+          <ServiceHeaderBlock
             iconFileName="anneliinan-kotisairaanhoito.png"
             logoFileName="anneliinan-paivatoiminta.png"
-          />
-        </InfoCardContainer>
-        <ServiceHeaderBlock
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-kotisairaanhoito.png"
-          sloganText="Sairaanhoito kotiinkuljetettuna"
-        ></ServiceHeaderBlock>
-        <ContentBlockContainer
-          backgroundColor="lightblue"
-          className="service-content-block-container"
-        >
-          <ServiceContentBlock
-            isReverse={true}
-            imageFileName="service-1.jpeg"
-            title="Kotisairaanhoito on asiakkaan omaan kotiin vietyä sairaanhoitoa"
-            keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
-            text="Kotisairaanhoidon tarkoituksena on helpottaa sairaalasta kotiutumista, sairaan henkilön kotona selviytymistä ja tukea omaisia sairaan henkilön kotihoidossa. Sairaanhoitopalvelut ovat erilaisia lääkärin määräämiä sairaanhoidon toimenpiteitä kuten näytteiden ottamista, lääkityksen valvomista ja asiakkaan voinnin seuraamista."
-            backgroundColor="white"
-            backgroundColorMedium="lightblue"
-            backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="hyperlightblue"
-            expanderButtonText="Hoitajamme auttavat"
-            expanderElement={homeCareTaskList}
-          />
-        </ContentBlockContainer>
-        <ServiceHeaderBlock
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-koti.png"
-          sloganText="Kotona asumista tukevat palvelut"
-        ></ServiceHeaderBlock>
-        <ContentBlockContainer
-          backgroundColor="lightbeige"
-          className="service-content-block-container"
-        >
-          <ServiceContentBlock
-            imageFileName="placeholder.jpeg"
-            title="Kotiapu sisältää kaikki kotona asumista tukevat palvelut"
-            keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
-            text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
-            backgroundColor="white"
-            backgroundColorMedium="lightbeige"
-            backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="hyperlightbeige"
-            noButton={true}
-            infoCardList={homeServiceCards}
-            infoCardServiceContainerCardsRef={infoCardServiceContainerCardsRef}
-            infoCardServiceFirstRef={infoCardServiceFirstRef}
-            infoCardServiceLastRef={infoCardServiceLastRef}
-            activeInfoCardServiceIndex={activeInfoCardServiceIndex}
-            setActiveInfoCardServiceIndex={setActiveInfoCardServiceIndex}
-            expanderElement={homeServiceCards[activeInfoCardServiceIndex]}
-          />
-        </ContentBlockContainer>
-        <ServiceHeaderBlock
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-paivatoiminta.png"
-          sloganText="Sosiaalista toimintaa"
-        ></ServiceHeaderBlock>
-        <ContentBlockContainer
-          backgroundColor="lightpink"
-          className="service-content-block-container"
-        >
-          <ServiceContentBlock
-            isReverse={true}
-            imageFileName="placeholder.jpeg"
-            title="Päivätoiminta ylläpitää sosiaaliset suhteet"
-            keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
-            text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
-            backgroundColor="white"
-            backgroundColorMedium="lightbeige"
-            backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="hyperlightbeige"
-            expanderButtonText="Päivätoiminnassa"
-            expanderElement={dayActivityTaskList}
-          />
-        </ContentBlockContainer>
-        <Footer />
-      </ScrollArea>
+            sloganText="Sosiaalista toimintaa"
+          ></ServiceHeaderBlock>
+          <ContentBlockContainer
+            backgroundColor="lightpink"
+            className="service-content-block-container"
+          >
+            <ServiceContentBlock
+              isReverse={true}
+              imageFileName="placeholder.jpeg"
+              title="Päivätoiminta ylläpitää sosiaaliset suhteet"
+              keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
+              text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
+              backgroundColor="white"
+              backgroundColorMedium="lightbeige"
+              backgroundColorSecondaryMedium="white"
+              backgroundExpanderColorMedium="hyperlightbeige"
+              expanderButtonText="Päivätoiminnassa"
+              expanderElement={dayActivityTaskList}
+            />
+          </ContentBlockContainer>
+          <Footer />
+        </ScrollArea>
+      </SnapScrollArea>
     </div>
   );
 }
