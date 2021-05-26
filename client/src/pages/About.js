@@ -69,7 +69,7 @@ export default function About() {
         />
 
         <InfoCardContainer
-          title="Anneliinan arvot"
+          titleElement={<h2>Kotiavun palvelut</h2>}
           backgroundColor="lightpink"
           className="info-card-container-value"
           hasScrollableInfoCards={true}

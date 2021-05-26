@@ -10,7 +10,7 @@ export default function Contact() {
     <div className="contact">
       <ScrollArea>
         <InfoCardContainer
-          title="Yhteystiedot"
+          titleElement={<h1>Yhteystiedot</h1>}
           backgroundColor="lightblue"
           className="info-card-container-contact"
         >

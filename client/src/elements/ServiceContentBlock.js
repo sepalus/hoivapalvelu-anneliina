@@ -73,9 +73,8 @@ export default function ServiceContentBlock(props) {
     >
       {infoCardList && (
         <InfoCardContainer
-          title="Kotiavun palvelut"
+          titleElement={<h3>Kotiavun palvelut</h3>}
           backgroundColor="white"
-          lowerLevelTitle={true}
           className={classNames(
             "info-card-container-value info-card-container-service",
             {

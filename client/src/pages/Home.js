@@ -24,7 +24,9 @@ export default function Home() {
         <ScrollArea>
           <Slogan />
           <InfoCardContainer
-            title="Yksilöllistä hoivapalvelua kaikille sitä tarvitseville"
+            titleElement={
+              <h2>Yksilöllistä hoivapalvelua kaikille sitä tarvitseville</h2>
+            }
             backgroundColor="lightblue"
           >
             <InfoCard
