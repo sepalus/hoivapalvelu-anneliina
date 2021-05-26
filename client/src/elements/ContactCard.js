@@ -7,13 +7,13 @@ export default function ContactCard({ iconName, title, children, className }) {
     <div
       className={classNames("contact-card", { [`${className}`]: className })}
     >
-      <div className="contact-card-icon-wrapper">
+      <div className="contact-header-wrapper">
         <span className="contact-card-icon material-icons-outlined">
           {iconName}
         </span>
+        <h2 className="text-semibold">{title}</h2>
       </div>
-      <h3>{title}</h3>
-      <div className="contact-card-additional-items-wrapper">{children}</div>
+      <div className="contact-card-content-wrapper">{children}</div>
     </div>
   );
 }

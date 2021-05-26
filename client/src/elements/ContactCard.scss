@@ -11,25 +11,40 @@
   @include setInnerPaddings(false, false, false, false, false, false, true);
 }
 
+.contact-header-wrapper {
+  display: flex;
+  align-items: flex-end;
+  color: $color-darkblue;
+  gap: 12px;
+  padding: 12px 0px;
+}
+
 .contact-card-icon {
-  font-size: 80px;
+  font-size: 36px;
   color: $color-darkblue;
 }
 
-.contact-card-location {
-  .contact-card-additional-items-wrapper {
-    align-items: center;
-  }
-}
-.contact-card-location-map-wrapper {
-  width: 100%;
-  height: 400px;
-  border: 1px solid;
-}
-
-.contact-card-additional-items-wrapper {
+.contact-card-content-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
   @include setGap(true);
+}
+
+.contact-card-location-map-wrapper {
+  width: 100%;
+  height: 400px;
+  box-shadow: $box-shadow-around;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.contact-card-location {
+  .contact-card-content-wrapper {
+    align-items: center;
+  }
 }
