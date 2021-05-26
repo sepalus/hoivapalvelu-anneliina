@@ -314,6 +314,26 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
   }
 }
 
+@mixin setExpanderPaddings($extraVerticalSpace: false) {
+  @if $extraVerticalSpace {
+    padding: 24px 36px 32px;
+    @media only screen and (min-width: $width-m) {
+      padding: 28px 44px 36px;
+    }
+    @media only screen and (min-width: $width-l) {
+      padding: 32px 48px 40px;
+    }
+  } @else {
+    padding: 20px 36px 28px;
+    @media only screen and (min-width: $width-m) {
+      padding: 20px 44px 28px;
+    }
+    @media only screen and (min-width: $width-l) {
+      padding: 20px 48px 32px;
+    }
+  }
+}
+
 @mixin setExtraPaddings() {
   padding: $extra-padding-content-block-s;
   gap: $extra-gap-s;

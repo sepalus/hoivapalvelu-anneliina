@@ -20,39 +20,31 @@
   box-shadow: inset $box-shadow-around, inset $box-shadow-around-opposite;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
-  padding: 20px 40px 28px;
+  @include setExpanderPaddings();
   transform: translateY(-92px);
 }
 
 .expander-service-info-card-more-information {
-  @include setGap(true);
-  .expander-title,
+  @include setExpanderPaddings(true);
+  gap: $x2;
   .expander-list {
-    padding-top: $x0_5;
+    padding: 0px 12px;
   }
 
   .expander-list-title {
     color: $color-darkblue;
-    margin-left: 38px;
+    padding: 8px 0px 2px 26px;
   }
 
   .expander-list-title-icon {
     color: $color-darkblue;
     position: absolute;
-    top: 2px;
+    top: 6px;
     left: 3px;
-  }
-
-  ul {
-    @include setInnerPaddings("s", "s", false, "s", "s", false, false);
   }
 }
 
 @media only screen and (min-width: $width-m) {
-  .expander {
-    padding-top: $x1;
-    gap: $x1_5;
-  }
   .expander-service-more-information {
     transform: translateY(-100px);
   }

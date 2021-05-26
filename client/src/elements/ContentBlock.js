@@ -89,7 +89,16 @@ export default function ContentBlock(props) {
             </div>
           </div>
         </div>
-        {children}
+        {children && (
+          <div
+            className={classNames("content-block-additional-content", {
+              [`background-medium-${backgroundColorSecondaryMedium}`]:
+                backgroundColorSecondaryMedium,
+            })}
+          >
+            {children}
+          </div>
+        )}
       </div>
       {outsideChildren}
     </div>

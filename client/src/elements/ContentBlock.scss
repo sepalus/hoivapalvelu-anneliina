@@ -11,6 +11,9 @@
   flex-direction: column;
   position: relative;
 }
+.content-block-additional-content {
+  @include setInnerPaddings(false, "sm");
+}
 
 .content-block-with-image {
   box-shadow: $box-shadow-around;
@@ -66,9 +69,8 @@
     position: absolute;
     font-size: 24px;
     margin-left: 12px;
-    top: 0px;
-    left: -4px;
-    transform: translateY(50%);
+    top: 11px;
+    left: -8px;
   }
   @include setVerticalShadowLine();
 }
@@ -99,5 +101,11 @@
   .content-block-without-image {
     box-shadow: $box-shadow-around;
     border-radius: $border-radius;
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  .content-block-expander-button-open .expander-button-open-extra-icon {
+    left: -12px;
   }
 }
