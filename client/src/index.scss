@@ -57,7 +57,7 @@ p {
 
 h1 {
   font-family: "Crimson Text", serif;
-  font-size: 42px;
+  font-size: 32px;
 }
 
 h2 {
@@ -161,6 +161,9 @@ p.text-extrasmall {
     font-size: $text-m;
     line-height: $line-height-p-17;
   }
+  h1 {
+    font-size: 36px;
+  }
 
   h2 {
     font-size: 28px;
@@ -235,6 +238,10 @@ p.text-extrasmall {
   p {
     font-size: $text-l;
     line-height: $line-height-p-18;
+  }
+
+  h1 {
+    font-size: 40px;
   }
 
   h2 {

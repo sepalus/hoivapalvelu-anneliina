@@ -11,7 +11,7 @@ export default function Contact() {
       <ScrollArea>
         <InfoCardContainer
           titleElement={<h1>Yhteystiedot</h1>}
-          backgroundColor="lightblue"
+          backgroundColor="lightbeige"
           className="info-card-container-contact"
         >
           <ContactCard

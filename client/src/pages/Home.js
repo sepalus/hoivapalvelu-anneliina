@@ -16,7 +16,7 @@ export default function Home() {
         <Banner
           className="banner-home"
           imageFileName="home-banner-wide.jpg"
-          backgroundColor="lightbeige"
+          backgroundColor="ultralightbeige"
           sloganText="Meiltä saat kaikki kotona asumista tukevat palvelut vaivattomasti
         saman katon alta"
           buttonText="Tutustu palveluihimme"

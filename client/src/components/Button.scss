@@ -41,6 +41,12 @@
   border: none;
 }
 
+.action-button-wide {
+  width: 100%;
+  margin: auto;
+  max-width: 400px;
+}
+
 @media only screen and (min-width: $width-xs) {
   .action-button {
     padding: 0px 32px;

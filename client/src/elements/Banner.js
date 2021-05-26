@@ -19,6 +19,13 @@ export default function Banner({
 
   return (
     <div className={classNames("banner", { [`${className}`]: className })}>
+      <div className="banner-image-wrapper">
+        <img
+          className="banner-image"
+          src={`./assets/images/${imageFileName}`}
+          alt=""
+        />
+      </div>
       <div className="banner-content-wrapper">
         <div
           className={classNames("banner-tagline", {
@@ -29,18 +36,15 @@ export default function Banner({
             [`background-medium-${backgroundColor}`]: overlayColor,
           })}
         >
-          {title && <h1>{title}</h1>}
-          {sloganText && <h3>{sloganText}</h3>}
-          {text && <p>{text}</p>}
-          {buttonText && <Button text={buttonText}></Button>}
+          <div className="banner-tagline-content-wrapper">
+            {title && <h1>{title}</h1>}
+            {sloganText && <h3>{sloganText}</h3>}
+            {text && <p>{text}</p>}
+            {buttonText && (
+              <Button text={buttonText} className="action-button-wide"></Button>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="banner-image-wrapper">
-        <img
-          className="banner-image"
-          src={`./assets/images/${imageFileName}`}
-          alt=""
-        />
       </div>
     </div>
   );
