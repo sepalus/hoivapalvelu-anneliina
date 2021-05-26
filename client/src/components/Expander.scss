@@ -13,6 +13,7 @@
 }
 
 .expander-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -61,8 +62,18 @@
     flex-direction: row;
     @include setGap(true);
     transform: translateY(-112px);
+    .expander-list-item-wrapper {
+      column-count: 2;
+      column-gap: 100px;
+      column-width: 50%;
+    }
+  }
+  .expander-service-info-card-more-information {
     > * {
       width: 50%;
+    }
+    .expander-list-item-wrapper {
+      column-count: 1;
     }
   }
 }

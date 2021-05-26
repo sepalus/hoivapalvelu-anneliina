@@ -64,7 +64,8 @@ $color-pink-ultralight: #fdf9fa; // 10% Opacity
 $color-pink-hyperlight: #fefefd; // 5% Opacity
 
 $border-radius: 3px;
-$box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+$box-shadow-around: 1px 1px 2px 0px rgba(0, 0, 0, 0.2),
+  -0.5px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
 $box-shadow-around-opposite: -1px -1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-below-half: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);

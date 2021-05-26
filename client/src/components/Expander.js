@@ -36,7 +36,7 @@ export default function Expander({
               <h4 className="expander-list-title text-semibold">{listTitle}</h4>
             </>
           )}
-          <ul>
+          <ul className="expander-list-item-wrapper">
             {list.map((listItem) => (
               <li>
                 <p className="text-small bullet-point-item">{listItem}</p>
