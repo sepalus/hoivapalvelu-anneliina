@@ -18,20 +18,24 @@ export default function Expander({
         [`${className}`]: className,
       })}
     >
-      {title && <h3 className="expander-title">{title}</h3>}
-      {text && <p>{text}</p>}
-      <div className="expander-list">
-        {listTitle && (
-          <>
-            {listTitleIcon && (
-              <span className="expander-list-title-icon material-icons-outlined">
-                {listTitleIcon}
-              </span>
-            )}
-            <h4 className="expander-list-title text-semibold">{listTitle}</h4>
-          </>
-        )}
-        {list && (
+      {(title || text) && (
+        <div className="expander-information">
+          {title && <h3 className="expander-title">{title}</h3>}
+          {text && <p>{text}</p>}
+        </div>
+      )}
+      {list && (
+        <div className="expander-list">
+          {listTitle && (
+            <>
+              {listTitleIcon && (
+                <span className="expander-list-title-icon material-icons-outlined">
+                  {listTitleIcon}
+                </span>
+              )}
+              <h4 className="expander-list-title text-semibold">{listTitle}</h4>
+            </>
+          )}
           <ul>
             {list.map((listItem) => (
               <li>
@@ -39,8 +43,8 @@ export default function Expander({
               </li>
             ))}
           </ul>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
