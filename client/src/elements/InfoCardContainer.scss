@@ -42,19 +42,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: $x2;
+  @include setGap(true);
 }
 
 @media only screen and (min-width: $width-m) {
   .info-card-container-cards {
     flex-direction: row;
-    gap: $x3;
-  }
-}
-
-@media only screen and (min-width: $width-l) {
-  .info-card-container-cards {
-    gap: $x4;
   }
 }
 
@@ -74,9 +67,6 @@
     scrollbar-width: none;
   }
   @media only screen and (min-width: $width-m) {
-    .info-card-container-cards {
-      gap: $x2;
-    }
     .info-card-container-button {
       display: none;
     }

@@ -24,3 +24,32 @@
   display: flex;
   flex-direction: column;
 }
+
+@media only screen and (min-width: $width-xs) and (max-width: $width-max-s) {
+  .contact-person {
+    flex-direction: row;
+  }
+  .contact-person-image {
+    width: 110px;
+    height: 110px;
+    border-radius: $border-radius;
+  }
+  .contact-person-information-items {
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  .contact-person {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .contact-person-image {
+    width: 100px;
+    height: 110px;
+    border-radius: $border-radius;
+  }
+  .contact-person-information-items {
+    align-items: flex-start;
+  }
+}

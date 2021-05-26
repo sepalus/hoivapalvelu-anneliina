@@ -9,6 +9,12 @@
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
   @include setInnerPaddings(false, false, false, false, false, false, true);
+
+  h3,
+  h4,
+  p {
+    white-space: nowrap;
+  }
 }
 
 .contact-header-wrapper {
@@ -46,5 +52,38 @@
 .contact-card-location {
   .contact-card-content-wrapper {
     align-items: center;
+  }
+}
+
+@media only screen and (min-width: $width-xs) and (max-width: $width-max-s) {
+  .contact-card,
+  .contact-card-location .contact-card-content-wrapper {
+    align-items: flex-start;
+  }
+  .contact-card-icon {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: $width-m) {
+  .contact-card {
+    width: calc(50% - #{$inner-gap-triple-m / 2});
+  }
+  .contact-card-icon {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  .contact-card,
+  .contact-card-location .contact-card-content-wrapper {
+    align-items: flex-start;
+  }
+  .contact-card {
+    width: calc(50% - #{$inner-gap-triple-l / 2});
+  }
+
+  .contact-card-icon {
+    font-size: 48px;
   }
 }
