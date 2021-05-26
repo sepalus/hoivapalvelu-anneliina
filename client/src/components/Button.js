@@ -10,9 +10,10 @@ export default function Button({
   onClick,
   noHoverEffect,
 }) {
+  const hasChildren = !!(children && children[0]);
   return (
     <>
-      {children && text ? (
+      {hasChildren && text ? (
         <button
           className={classNames(
             "action-button action-button-with-icon text-weight-semibold",
@@ -26,7 +27,7 @@ export default function Button({
           {text}
           {children}
         </button>
-      ) : children ? (
+      ) : hasChildren ? (
         <button
           className={classNames(
             "action-button action-button-with-content text-weight-semibold",
