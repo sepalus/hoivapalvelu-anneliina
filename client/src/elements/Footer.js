@@ -13,7 +13,7 @@ export default function Footer() {
               src="./assets/logos/hoivapalvelu-anneliina-darkblue.png"
               alt=""
             />
-            <p className="p-16 text-medium-weight">
+            <p className="footer-slogan-text p-16 text-medium-weight">
               Luotettavaa ja ammattitaitoista hoitopalvelua Etelä-Suomen
               alueella.
             </p>

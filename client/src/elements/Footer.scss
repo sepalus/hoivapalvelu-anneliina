@@ -23,10 +23,9 @@
   display: flex;
   flex-direction: column;
   @include setGap("large");
-
-  p {
-    width: 264px;
-  }
+}
+.footer-slogan-text {
+  width: 264px;
 }
 
 .footer-slogan-button {

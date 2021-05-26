@@ -10,7 +10,9 @@ export default function Button({
   onClick,
   noHoverEffect,
 }) {
-  const hasChildren = !!(children && children[0]);
+  const hasChildren =
+    children && children.length ? children.some((child) => !!child) : children;
+
   return (
     <>
       {hasChildren && text ? (

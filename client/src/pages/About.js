@@ -70,7 +70,7 @@ export default function About() {
         />
         <ScrollArea>
           <InfoCardContainer
-            titleElement={<h2>Kotiavun palvelut</h2>}
+            titleElement={<h2>Arvomme</h2>}
             backgroundColor="lightpink"
             className="info-card-container-value"
             hasScrollableInfoCards={true}

@@ -20,7 +20,7 @@ export default function Expander({
     >
       {(title || text) && (
         <div className="expander-information">
-          {title && <h3 className="expander-title">{title}</h3>}
+          {title && <h4 className="expander-title">{title}</h4>}
           {text && <p>{text}</p>}
         </div>
       )}
@@ -33,7 +33,7 @@ export default function Expander({
                   {listTitleIcon}
                 </span>
               )}
-              <h4 className="expander-list-title text-semibold">{listTitle}</h4>
+              <p className="expander-list-title text-semibold">{listTitle}</p>
             </>
           )}
           <ul className="expander-list-item-wrapper">
