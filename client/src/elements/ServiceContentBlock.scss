@@ -79,9 +79,7 @@
   .content-block-information {
     @include setGap("medium");
   }
-  .content-block-text {
-    padding-top: $inner-gap-s;
-  }
+
   @media only screen and (min-width: $width-m) {
     .content-block-image-wrapper {
       position: absolute;

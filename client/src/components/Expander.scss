@@ -3,7 +3,7 @@
 .expander {
   display: flex;
   flex-direction: column;
-  @include setInnerPaddings("sm", false, false, "sm", "sm", false, false);
+  @include setInnerPaddings("sm", "sm", false, "sm", "sm", false, false);
 }
 
 .expander-information {
@@ -28,46 +28,53 @@
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
   @include setExpanderPaddings();
-  transform: translateY(-92px);
+  transform: translateY(-104px);
 }
 
 .expander-service-info-card-more-information {
   @include setExpanderPaddings(true);
-  gap: $x2;
+  @include setGap("large");
+
   .expander-list {
     padding: 0px 12px;
   }
 
   .expander-list-title {
     color: $color-darkblue;
-    padding: 4px 0px 2px 26px;
+    padding-left: 26px;
   }
 
   .expander-list-title-icon {
     color: $color-darkblue;
     position: absolute;
-    top: 2px;
+    top: 0px;
     left: 3px;
   }
 }
 
 @media only screen and (min-width: $width-m) {
   .expander-service-more-information {
-    transform: translateY(-100px);
+    transform: translateY(-140px);
   }
 }
 
 @media only screen and (min-width: $width-l) {
   .expander-service-more-information {
     flex-direction: row;
-    @include setGap(true);
-    transform: translateY(-112px);
+    transform: translateY(-168px);
     .expander-list-item-wrapper {
       column-count: 2;
       column-gap: 100px;
       column-width: 50%;
     }
+    .expander-list-title {
+      padding-top: 3px;
+    }
+    .expander-list-title-icon {
+      top: 3px;
+    }
   }
+
   .expander-service-info-card-more-information {
     > * {
       width: 50%;

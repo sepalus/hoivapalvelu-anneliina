@@ -8,8 +8,8 @@
   background-color: $color-white;
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
-  @include setInnerPaddings(false, false, false, false, false, false, true);
-
+  @include setInnerPaddings();
+  @include setGap("large");
   h3,
   h4,
   p {
@@ -21,8 +21,7 @@
   display: flex;
   align-items: flex-end;
   color: $color-darkblue;
-  gap: 12px;
-  padding: 12px 0px;
+  @include setGap();
 }
 
 .contact-card-icon {
@@ -34,7 +33,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  @include setGap(true);
+  @include setGap("medium");
+}
+
+.contact-card-persons {
+  .contact-card-content-wrapper {
+    @include setContactCardGap();
+  }
 }
 
 .contact-card-location-map-wrapper {

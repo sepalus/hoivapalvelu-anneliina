@@ -36,7 +36,6 @@
 
   @media only screen and (min-width: $width-m) {
     height: auto;
-    gap: $x1_5;
     .info-card-icon-wrapper {
       margin-top: $x0_5;
       height: $x4;
@@ -47,7 +46,6 @@
     }
   }
   @media only screen and (min-width: $width-l) {
-    gap: $x2;
     .info-card-icon-wrapper {
       height: $x5;
     }
@@ -56,7 +54,6 @@
     }
   }
   @media only screen and (min-width: $width-xl) {
-    gap: $x2_5;
     .info-card-icon-wrapper {
       height: $x5_5;
     }

@@ -53,6 +53,9 @@
 
 //Value cards
 .info-card-container-value {
+  .info-card-container-content-wrapper {
+    @include setGap("medium");
+  }
   .info-card-container-cards {
     flex-direction: row;
     gap: $x0_5;
@@ -65,6 +68,9 @@
     }
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+  .expander {
+    padding-top: 8px;
   }
   @media only screen and (min-width: $width-m) {
     .info-card-container-button {

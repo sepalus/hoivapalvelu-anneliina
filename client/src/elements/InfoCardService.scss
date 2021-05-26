@@ -17,7 +17,7 @@
 .info-card-service {
   height: 120px;
   @include setInfoCardServiceWidth();
-  @include setGap(true);
+  @include setGap("medium");
 
   .info-card-text {
     position: relative;

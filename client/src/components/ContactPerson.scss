@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include setGap(true);
+  @include setGap();
 }
 
 .contact-person-image {
@@ -42,7 +42,6 @@
 @media only screen and (min-width: $width-l) {
   .contact-person {
     flex-direction: row;
-    gap: 24px;
   }
   .contact-person-image {
     width: 100px;
