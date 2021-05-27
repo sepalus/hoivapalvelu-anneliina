@@ -10,6 +10,7 @@ export default function InfoCard({
   iconFileName,
   logoFileName,
   text,
+  textHtml,
   className,
   isCardActive,
   isCardDisactive,
@@ -42,7 +43,13 @@ export default function InfoCard({
           />
         ) : (
           <div className="info-card-text">
-            <p className="text-small text-semibold">{text}</p>
+            {text && <p className="text-small text-semibold">{text}</p>}
+            {textHtml && (
+              <p
+                className="text-small text-semibold"
+                dangerouslySetInnerHTML={{ __html: textHtml }}
+              />
+            )}
           </div>
         )}
       </LinkButton>

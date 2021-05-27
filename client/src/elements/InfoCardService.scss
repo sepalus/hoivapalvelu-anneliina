@@ -19,15 +19,8 @@
   @include setInfoCardServiceWidth();
   @include setGap("medium");
 
-  .info-card-text {
-    position: relative;
-  }
-
   .info-card-text p {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: normal;
+    white-space: pre-wrap;
     line-height: 1.25em;
   }
 

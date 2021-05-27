@@ -90,7 +90,7 @@ export default function ServiceContentBlock(props) {
           {infoCardList.map((infoCard, index) => (
             <InfoCard
               iconFileName={infoCard.iconFileName}
-              text={infoCard.text}
+              textHtml={infoCard.textHtml}
               className={infoCard.className}
               isCardActive={activeInfoCardServiceIndex === index}
               isCardDisactive={

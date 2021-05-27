@@ -40,7 +40,7 @@ const dayActivityTaskList = {
 const homeServiceCards = [
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
-    text: "Kotihoiva",
+    textHtml: "Kotihoiva",
     className: "info-card-value info-card-service",
     expandedTitle: "Kotihoivaa ja apua kotona asumiseen",
     expandedText:
@@ -59,7 +59,7 @@ const homeServiceCards = [
   },
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
-    text: "Kotiapu",
+    textHtml: "Kotiapu",
     className: "info-card-value info-card-service",
     expandedTitle: "Albucius patrioque et ius",
     expandedText:
@@ -78,7 +78,7 @@ const homeServiceCards = [
   },
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
-    text: "Henkilökohtainen apu",
+    textHtml: "Henkilö&#8203;kohtainen apu",
     className: "info-card-value info-card-service",
     expandedTitle: "Lorem ipsum dolor sit amet",
     expandedText:
@@ -96,7 +96,7 @@ const homeServiceCards = [
   },
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
-    text: "Omaishoitajan vapaa",
+    textHtml: "Omais&#8203;hoitajan vapaa",
     className: "info-card-value info-card-service",
     expandedTitle: "Omaishoitajalle voimia ja energiaa vapaista",
     expandedText:
