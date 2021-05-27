@@ -3,7 +3,7 @@ import classNames from "classnames";
 import "./InfoCard.scss";
 import "./InfoCardValue.scss";
 import "./InfoCardService.scss";
-import Button from "../components/Button";
+import LinkButton from "../components/LinkButton";
 
 export default function InfoCard({
   linkPath,
@@ -18,7 +18,7 @@ export default function InfoCard({
 }) {
   return (
     <div ref={infoCardRef} className="info-card-ref">
-      <Button
+      <LinkButton
         className={classNames("info-card", {
           "info-card-active": isCardActive,
           "info-card-disactive": isCardDisactive,
@@ -45,7 +45,7 @@ export default function InfoCard({
             <p className="text-small text-semibold">{text}</p>
           </div>
         )}
-      </Button>
+      </LinkButton>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import "./Banner.scss";
-import Button from "../components/Button";
+import LinkButton from "../components/LinkButton";
 
 export default function Banner({
   className,
@@ -41,11 +41,11 @@ export default function Banner({
             {sloganText && <h3>{sloganText}</h3>}
             {text && <p>{text}</p>}
             {buttonText && (
-              <Button
+              <LinkButton
                 text={buttonText}
                 className="action-button-wide"
                 linkPath="/palvelut"
-              ></Button>
+              ></LinkButton>
             )}
           </div>
         </div>

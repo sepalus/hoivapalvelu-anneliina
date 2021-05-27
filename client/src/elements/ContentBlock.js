@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import "./ContentBlock.scss";
-import Button from "../components/Button";
+import LinkButton from "../components/LinkButton";
 
 export default function ContentBlock(props) {
   const {
@@ -68,7 +68,7 @@ export default function ContentBlock(props) {
             >
               <p className="content-block-text">{text}</p>
               {(buttonIcon || buttonImage || buttonText) && (
-                <Button
+                <LinkButton
                   imageUrl={
                     buttonImage ? `./assets/logos/${buttonImage}` : null
                   }
@@ -88,7 +88,7 @@ export default function ContentBlock(props) {
                       {buttonIcon}
                     </span>
                   )}
-                </Button>
+                </LinkButton>
               )}
             </div>
           </div>

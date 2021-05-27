@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import Button from "../components/Button";
+import LinkButton from "../components/LinkButton";
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
               alueella.
             </p>
           </div>
-          <Button
+          <LinkButton
             text="Ota yhteyttä"
             className="footer-slogan-button"
             linkPath="/yhteystiedot"
