@@ -78,7 +78,7 @@ const homeServiceCards = [
   },
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
-    textHtml: "Henkilö&#8203;kohtainen apu",
+    textHtml: "Henkilö&#173;kohtainen apu",
     className: "info-card-value info-card-service",
     expandedTitle: "Lorem ipsum dolor sit amet",
     expandedText:
@@ -96,7 +96,7 @@ const homeServiceCards = [
   },
   {
     iconFileName: "anneliinan-kotisairaanhoito.png",
-    textHtml: "Omais&#8203;hoitajan vapaa",
+    textHtml: "Omais&#173;hoitajan vapaa",
     className: "info-card-value info-card-service",
     expandedTitle: "Omaishoitajalle voimia ja energiaa vapaista",
     expandedText:
