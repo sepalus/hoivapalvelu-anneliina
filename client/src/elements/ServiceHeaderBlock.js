@@ -3,12 +3,13 @@ import classNames from "classnames";
 import "./ServiceHeaderBlock.scss";
 
 export default function ServiceHeaderBlock({
+  id,
   iconFileName,
   logoFileName,
   sloganText,
 }) {
   return (
-    <div className="service-header-block">
+    <div id={id} className="service-header-block">
       <div className="service-header-block-content-wrapper">
         <img
           className="service-header-block-logo"

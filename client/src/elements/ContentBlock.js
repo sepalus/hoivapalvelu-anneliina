@@ -11,6 +11,7 @@ export default function ContentBlock(props) {
     title,
     keywords,
     text,
+    linkPath,
     buttonIcon,
     buttonFrontIcon,
     buttonImage,
@@ -76,6 +77,7 @@ export default function ContentBlock(props) {
                     [`${buttonClassName}`]: buttonClassName,
                   })}
                   onClick={buttonOnClick}
+                  linkPath={linkPath}
                   noHoverEffect={buttonNoHoverEffect}
                 >
                   {buttonFrontIcon && (

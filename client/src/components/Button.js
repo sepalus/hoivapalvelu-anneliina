@@ -1,8 +1,10 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import classNames from "classnames";
 import "./Button.scss";
 
 export default function Button({
+  linkPath,
   children,
   imageUrl,
   text,
@@ -14,7 +16,7 @@ export default function Button({
     children && children.length ? children.some((child) => !!child) : children;
 
   return (
-    <>
+    <HashLink to={linkPath}>
       {hasChildren && text ? (
         <button
           className={classNames(
@@ -64,6 +66,6 @@ export default function Button({
           <p>{text}</p>
         </button>
       )}
-    </>
+    </HashLink>
   );
 }

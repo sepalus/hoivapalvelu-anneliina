@@ -145,17 +145,21 @@ export default function Services() {
             <InfoCard
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-kotisairaanhoito.png"
+              linkPath="/palvelut#kotisairaanhoito"
             />
             <InfoCard
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-koti.png"
+              linkPath="/palvelut#kotihoito"
             />
             <InfoCard
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-paivatoiminta.png"
+              linkPath="/palvelut#paivatoiminta"
             />
           </InfoCardContainer>
           <ServiceHeaderBlock
+            id="kotisairaanhoito"
             iconFileName="anneliinan-kotisairaanhoito.png"
             logoFileName="anneliinan-kotisairaanhoito.png"
             sloganText="Sairaanhoito kotiinkuljetettuna"
@@ -179,6 +183,7 @@ export default function Services() {
             />
           </ContentBlockContainer>
           <ServiceHeaderBlock
+            id="kotihoito"
             iconFileName="anneliinan-kotisairaanhoito.png"
             logoFileName="anneliinan-koti.png"
             sloganText="Kotona asumista tukevat palvelut"
@@ -209,6 +214,7 @@ export default function Services() {
             />
           </ContentBlockContainer>
           <ServiceHeaderBlock
+            id="paivatoiminta"
             iconFileName="anneliinan-kotisairaanhoito.png"
             logoFileName="anneliinan-paivatoiminta.png"
             sloganText="Sosiaalista toimintaa"

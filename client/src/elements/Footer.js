@@ -18,7 +18,11 @@ export default function Footer() {
               alueella.
             </p>
           </div>
-          <Button text="Ota yhteyttä" className="footer-slogan-button" />
+          <Button
+            text="Ota yhteyttä"
+            className="footer-slogan-button"
+            linkPath="/yhteystiedot"
+          />
         </div>
         <div className="footer-information">
           <div className="footer-information-services">

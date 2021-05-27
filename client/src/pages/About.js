@@ -70,6 +70,7 @@ export default function About() {
         />
         <ScrollArea>
           <InfoCardContainer
+            id="arvot"
             titleElement={<h2>Arvomme</h2>}
             backgroundColor="lightpink"
             className="info-card-container-value"

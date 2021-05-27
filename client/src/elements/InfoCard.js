@@ -6,6 +6,7 @@ import "./InfoCardService.scss";
 import Button from "../components/Button";
 
 export default function InfoCard({
+  linkPath,
   iconFileName,
   logoFileName,
   text,
@@ -24,6 +25,7 @@ export default function InfoCard({
           [`${className}`]: className,
         })}
         onClick={onClick}
+        linkPath={linkPath}
       >
         <div className="info-card-icon-wrapper">
           <img

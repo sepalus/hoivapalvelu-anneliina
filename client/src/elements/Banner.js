@@ -41,7 +41,11 @@ export default function Banner({
             {sloganText && <h3>{sloganText}</h3>}
             {text && <p>{text}</p>}
             {buttonText && (
-              <Button text={buttonText} className="action-button-wide"></Button>
+              <Button
+                text={buttonText}
+                className="action-button-wide"
+                linkPath="/palvelut"
+              ></Button>
             )}
           </div>
         </div>

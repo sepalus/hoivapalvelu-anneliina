@@ -5,11 +5,12 @@ import InfoCardScrollContainer from "./InfoCardScrollContainer";
 import Expander from "../components/Expander";
 
 export default function InfoCardContainer({
+  id,
+  className,
   titleElement,
   text,
   children,
   backgroundColor,
-  className,
   expanderElement,
   expanderClassName,
   hasScrollableInfoCards,
@@ -19,6 +20,7 @@ export default function InfoCardContainer({
 }) {
   return (
     <div
+      id={id}
       className={classNames("info-card-container", {
         [`${className}`]: className,
         [`background-${backgroundColor}`]: backgroundColor,
