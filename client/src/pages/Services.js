@@ -121,11 +121,13 @@ export default function Services({ servicesSnapScrollEnabled }) {
   const infoCardServiceContainerCardsRef = useRef();
   const infoCardServiceFirstRef = useRef();
   const infoCardServiceLastRef = useRef();
+  const scrollAreaId = "scroll-area-services";
+  const snapScrollAreaId = "snap-scroll-area-services";
 
   return (
     <div className="services">
       <SnapScrollArea
-        id="snap-scroll-area-services"
+        id={snapScrollAreaId}
         snapScrollDisabledMobile={true}
         snapScrollDisabled={!servicesSnapScrollEnabled}
       >
@@ -140,7 +142,10 @@ export default function Services({ servicesSnapScrollEnabled }) {
             overlayReverse: true,
           }}
         />
-        <ScrollArea>
+        <ScrollArea
+          scrollAreaId={scrollAreaId}
+          snapScrollAreaId={snapScrollAreaId}
+        >
           <InfoCardContainer
             titleElement={<h2>Palvelukokonaisuudet</h2>}
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."

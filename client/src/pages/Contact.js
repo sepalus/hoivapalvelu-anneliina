@@ -6,9 +6,11 @@ import ScrollArea from "../components/ScrollArea";
 import Footer from "../elements/Footer";
 
 export default function Contact() {
+  const scrollAreaId = "scroll-area-contact";
+
   return (
     <div className="contact">
-      <ScrollArea>
+      <ScrollArea scrollAreaId={scrollAreaId}>
         <InfoCardContainer
           titleElement={<h1>Yhteystiedot</h1>}
           backgroundColor="lightbeige"

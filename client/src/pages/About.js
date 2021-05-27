@@ -56,13 +56,12 @@ export default function About() {
   const infoCardValueContainerCardsRef = useRef();
   const infoCardValueFirstRef = useRef();
   const infoCardValueLastRef = useRef();
+  const scrollAreaId = "scroll-area-about";
+  const snapScrollAreaId = "snap-scroll-area-about";
 
   return (
     <div className="about">
-      <SnapScrollArea
-        id="snap-scroll-area-about"
-        snapScrollDisabledMobile={true}
-      >
+      <SnapScrollArea id={snapScrollAreaId} snapScrollDisabledMobile={true}>
         <Banner
           className="banner-about"
           imageFileName="about-us.jpeg"
@@ -71,7 +70,10 @@ export default function About() {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           overlay={{ overlayColor: "lightbeige" }}
         />
-        <ScrollArea>
+        <ScrollArea
+          scrollAreaId={scrollAreaId}
+          snapScrollAreaId={snapScrollAreaId}
+        >
           <InfoCardContainer
             id="arvot"
             titleElement={<h2>Arvomme</h2>}

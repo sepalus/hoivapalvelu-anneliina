@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./ScrollArea.scss";
 
-export default function ScrollArea({ children }) {
+export default function ScrollArea({
+  scrollAreaId,
+  snapScrollAreaId,
+  children,
+}) {
   const [previousSnapScrollYOffset, setPreviousSnapScrollYOffset] = useState(0);
   const contentHeight = window.innerHeight - 60;
 
   useEffect(() => {
-    const scrollElement = document.getElementById("scroll-area");
-    const snapScrollElement = document.getElementById("snap-scroll-area");
+    const scrollElement = document.getElementById(scrollAreaId);
+    const snapScrollElement = document.getElementById(snapScrollAreaId);
+
+    if (!scrollElement || !snapScrollElement) return;
 
     const updateSnapScrollPosition = () => {
       if (!scrollElement || !snapScrollElement) return;
@@ -19,12 +25,17 @@ export default function ScrollArea({ children }) {
     };
 
     scrollElement.addEventListener("scroll", updateSnapScrollPosition);
-    return () =>
-      scrollElement.removeEventListener("scroll", updateSnapScrollPosition);
+    return () => {
+      if (!scrollElement) return;
+      return scrollElement.removeEventListener(
+        "scroll",
+        updateSnapScrollPosition
+      );
+    };
   }, [previousSnapScrollYOffset]);
 
   return (
-    <div id="scroll-area" className="scroll-area">
+    <div id={scrollAreaId} className="scroll-area">
       {children}
     </div>
   );

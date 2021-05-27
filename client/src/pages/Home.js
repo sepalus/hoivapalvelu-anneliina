@@ -10,9 +10,12 @@ import SnapScrollArea from "../components/SnapScrollArea";
 import ScrollArea from "../components/ScrollArea";
 
 export default function Home({ setServicesSnapScrollEnabled }) {
+  const scrollAreaId = "scroll-area-home";
+  const snapScrollAreaId = "snap-scroll-area-home";
+
   return (
     <div className="home">
-      <SnapScrollArea id="snap-scroll-area-home">
+      <SnapScrollArea id={snapScrollAreaId}>
         <Banner
           className="banner-home"
           imageFileName="home-banner-wide.jpg"
@@ -21,7 +24,10 @@ export default function Home({ setServicesSnapScrollEnabled }) {
         saman katon alta"
           buttonText="Tutustu palveluihimme"
         />
-        <ScrollArea>
+        <ScrollArea
+          scrollAreaId={scrollAreaId}
+          snapScrollAreaId={snapScrollAreaId}
+        >
           <Slogan />
           <InfoCardContainer
             titleElement={
