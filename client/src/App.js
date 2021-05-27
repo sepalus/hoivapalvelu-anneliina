@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./elements/Header";
 import Home from "./pages/Home";
@@ -8,6 +8,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 function App() {
+  const [servicesSnapScrollEnabled, setServicesSnapScrollEnabled] =
+    useState(true);
+
   return (
     <>
       <Router>
@@ -15,7 +18,7 @@ function App() {
         <div>
           <Switch>
             <Route path="/palvelut">
-              <Services />
+              <Services servicesSnapScrollEnabled={servicesSnapScrollEnabled} />
             </Route>
             <Route path="/hinnasto">
               <Pricing />
@@ -27,7 +30,9 @@ function App() {
               <Contact />
             </Route>
             <Route path="/">
-              <Home />
+              <Home
+                setServicesSnapScrollEnabled={setServicesSnapScrollEnabled}
+              />
             </Route>
           </Switch>
         </div>

@@ -59,7 +59,10 @@ export default function About() {
 
   return (
     <div className="about">
-      <SnapScrollArea notInMobile={true}>
+      <SnapScrollArea
+        id="snap-scroll-area-about"
+        snapScrollDisabledMobile={true}
+      >
         <Banner
           className="banner-about"
           imageFileName="about-us.jpeg"

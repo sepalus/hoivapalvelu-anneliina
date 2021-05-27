@@ -13,11 +13,18 @@
   scrollbar-width: none;
 }
 
+.snap-scroll-disabled {
+  scroll-snap-type: none !important;
+  .scroll-area {
+    overflow: visible !important;
+  }
+}
+
 @media only screen and (max-width: $width-max-s) {
-  .snap-scroll-area-not-mobile {
+  .snap-scroll-disabled-mobile {
     scroll-snap-type: none !important;
     .scroll-area {
-      overflow: unset !important;
+      overflow: visible !important;
     }
   }
 }

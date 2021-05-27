@@ -115,7 +115,7 @@ const homeServiceCards = [
   },
 ];
 
-export default function Services() {
+export default function Services({ servicesSnapScrollEnabled }) {
   const [activeInfoCardServiceIndex, setActiveInfoCardServiceIndex] =
     useState(-1);
   const infoCardServiceContainerCardsRef = useRef();
@@ -124,7 +124,11 @@ export default function Services() {
 
   return (
     <div className="services">
-      <SnapScrollArea notInMobile={true}>
+      <SnapScrollArea
+        id="snap-scroll-area-services"
+        snapScrollDisabledMobile={true}
+        snapScrollDisabled={!servicesSnapScrollEnabled}
+      >
         <Banner
           className="banner-services"
           imageFileName="services.jpeg"

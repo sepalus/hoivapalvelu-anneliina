@@ -2,12 +2,18 @@ import React from "react";
 import classNames from "classnames";
 import "./SnapScrollArea.scss";
 
-export default function SnapScrollArea({ notInMobile, children }) {
+export default function SnapScrollArea({
+  id,
+  snapScrollDisabled,
+  snapScrollDisabledMobile,
+  children,
+}) {
   return (
     <div
-      id="snap-scroll-area"
+      id={id}
       className={classNames("snap-scroll-area", {
-        "snap-scroll-area-not-mobile": notInMobile,
+        "snap-scroll-disabled": snapScrollDisabled,
+        "snap-scroll-disabled-mobile": snapScrollDisabledMobile,
       })}
     >
       {children}

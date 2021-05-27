@@ -9,10 +9,10 @@ import Footer from "../elements/Footer";
 import SnapScrollArea from "../components/SnapScrollArea";
 import ScrollArea from "../components/ScrollArea";
 
-export default function Home() {
+export default function Home({ setServicesSnapScrollEnabled }) {
   return (
     <div className="home">
-      <SnapScrollArea>
+      <SnapScrollArea id="snap-scroll-area-home">
         <Banner
           className="banner-home"
           imageFileName="home-banner-wide.jpg"
@@ -34,16 +34,19 @@ export default function Home() {
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-kotisairaanhoito.png"
               linkPath="/palvelut#kotisairaanhoito"
+              onClick={() => setServicesSnapScrollEnabled(false)}
             />
             <InfoCard
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-koti.png"
               linkPath="/palvelut#kotihoito"
+              onClick={() => setServicesSnapScrollEnabled(false)}
             />
             <InfoCard
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-paivatoiminta.png"
               linkPath="/palvelut#paivatoiminta"
+              onClick={() => setServicesSnapScrollEnabled(false)}
             />
           </InfoCardContainer>
           <ContentBlockContainer backgroundColor="lightbeige">
