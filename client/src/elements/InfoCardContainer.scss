@@ -57,6 +57,7 @@
     @include setGap("medium");
   }
   .info-card-container-cards {
+    gap: 4px;
     flex-direction: row;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;

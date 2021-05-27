@@ -1,6 +1,7 @@
 @import "../variables";
 
 .info-card-ref {
+  padding: 2px;
   width: 100%;
 }
 .info-card {
@@ -13,9 +14,6 @@
   border-radius: $border-radius;
   @include setInnerPaddings(false, false, false, "m", false, true);
   @include setGap("medium");
-}
-
-.info-card:not(.info-card-active):hover {
 }
 
 .info-card-icon-wrapper {
@@ -39,6 +37,9 @@
   .info-card {
     height: 96px;
   }
+  .info-card-logo {
+    height: 22px;
+  }
   .info-card-icon-wrapper {
     display: flex;
   }
@@ -54,12 +55,10 @@
   .info-card-logo {
     height: 15.5px;
   }
+
   .info-card-icon-wrapper {
     width: 64px;
     height: 50px;
-  }
-
-  .info-card:not(.info-card-active):hover {
   }
 }
 
@@ -67,6 +66,18 @@
   .info-card-logo {
     height: 20px;
   }
-  .info-card:not(.info-card-active):hover {
+  .info-card-icon-wrapper {
+    width: 70px;
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width: $width-xl) {
+  .info-card-logo {
+    height: 22px;
+  }
+  .info-card-icon-wrapper {
+    width: 77px;
+    height: 60px;
   }
 }

@@ -1,14 +1,18 @@
 @import "../variables";
 
 @mixin setInfoCardValueWidth() {
-  min-width: calc((100vw - 76px) / 3);
+  min-width: calc(
+    (100vw - 76px) / 3
+  ); //margins: 56px, gaps: 8px, paddings: 12px
 
   @media only screen and (min-width: 455px) {
-    min-width: calc((100vw - 84px) / 4);
+    min-width: calc(
+      (100vw - 84px) / 4
+    ); //margins: 56px, gaps: 12px, paddings: 16px
   }
   @media only screen and (min-width: 550px) {
     min-width: calc((100vw - 92px) / 5);
-  }
+  } //margins: 56px, gaps: 16px, paddings: 20px
   @media only screen and (min-width: $width-m) {
     min-width: 0px;
   }
@@ -27,8 +31,8 @@
 
   .info-card-icon-wrapper {
     display: flex;
-    width: 36px;
-    height: 28px;
+    height: 26px;
+    width: auto;
   }
   .info-card-text p {
     font-size: $text-extrasmall-s;
@@ -38,7 +42,7 @@
     height: auto;
     .info-card-icon-wrapper {
       margin-top: $x0_5;
-      height: $x4;
+      height: 30px;
       width: auto;
     }
     .info-card-text p {
@@ -47,7 +51,7 @@
   }
   @media only screen and (min-width: $width-l) {
     .info-card-icon-wrapper {
-      height: $x5;
+      height: 36px;
     }
     .info-card-text p {
       font-size: $text-small-l;
@@ -55,7 +59,7 @@
   }
   @media only screen and (min-width: $width-xl) {
     .info-card-icon-wrapper {
-      height: $x5_5;
+      height: 40px;
     }
   }
 

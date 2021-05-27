@@ -28,7 +28,7 @@
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
   @include setExpanderPaddings();
-  transform: translateY(-104px);
+  transform: translateY(-106px);
 }
 
 .expander-service-info-card-more-information {
