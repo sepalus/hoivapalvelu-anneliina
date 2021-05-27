@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
-export default function Header() {
+export default function Header({ setServicesSnapScrollEnabled }) {
   return (
     <div className="header">
       <div className="header-content-wrapper">
@@ -18,7 +18,10 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link to="/palvelut">
+              <Link
+                to="/palvelut"
+                onClick={() => setServicesSnapScrollEnabled(true)}
+              >
                 <p>Palvelut</p>
               </Link>
             </li>

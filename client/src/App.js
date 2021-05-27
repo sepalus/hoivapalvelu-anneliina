@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
+        <Header setServicesSnapScrollEnabled={setServicesSnapScrollEnabled} />
         <div>
           <Switch>
             <Route path="/palvelut">
