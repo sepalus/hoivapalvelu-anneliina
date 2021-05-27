@@ -92,13 +92,23 @@
       @include setVerticalShadowLine();
     }
   }
-}
-.info-card-container-service-expander-open {
-  .info-card-value {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    &.info-card-active {
-      border-bottom: 0px;
+  .info-card-container-service-expander-open {
+    .info-card-value {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      &.info-card-active {
+        border-bottom: 0px;
+      }
+    }
+  }
+  @media only screen and (min-width: $width-m) {
+    .info-card-container-cards {
+      gap: 6px;
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    .info-card-container-cards {
+      @include setGap("medium");
     }
   }
 }

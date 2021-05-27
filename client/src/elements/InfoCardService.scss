@@ -15,7 +15,7 @@
 }
 
 .info-card-service {
-  height: 120px;
+  height: 135px;
   @include setInfoCardServiceWidth();
   @include setGap("medium");
 
@@ -34,6 +34,28 @@
       > * {
         opacity: 1;
       }
+    }
+  }
+  @media only screen and (min-width: $width-xs) {
+    height: 145px;
+
+    .info-card-text p {
+      font-size: $text-small-m;
+    }
+  }
+
+  @media only screen and (min-width: $width-m) {
+    padding-left: 12px;
+    padding-right: 12px;
+    justify-content: flex-start;
+    .info-card-text p {
+      font-size: $text-small-m;
+    }
+  }
+
+  @media only screen and (min-width: $width-l) {
+    .info-card-text p {
+      font-size: $text-small-l;
     }
   }
 }
