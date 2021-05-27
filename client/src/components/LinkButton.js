@@ -5,10 +5,20 @@ import "./Button.scss";
 import Button from "./Button";
 
 export default function LinkButton(props) {
-  const { linkPath } = props;
+  const { externalLinkPath, linkPath } = props;
   return (
-    <HashLink to={linkPath}>
-      <Button {...props}></Button>
-    </HashLink>
+    <>
+      {externalLinkPath ? (
+        <a href={externalLinkPath} target="_blank" rel="noreferrer noopener">
+          <Button {...props} onClick={(e) => e.preventDefault()}></Button>
+        </a>
+      ) : linkPath ? (
+        <HashLink to={linkPath}>
+          <Button {...props}></Button>
+        </HashLink>
+      ) : (
+        <Button {...props}></Button>
+      )}
+    </>
   );
 }

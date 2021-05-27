@@ -12,6 +12,7 @@ export default function ContentBlock(props) {
     keywords,
     text,
     linkPath,
+    externalLinkPath,
     buttonIcon,
     buttonFrontIcon,
     buttonImage,
@@ -78,6 +79,7 @@ export default function ContentBlock(props) {
                   })}
                   onClick={buttonOnClick}
                   linkPath={linkPath}
+                  externalLinkPath={externalLinkPath}
                   noHoverEffect={buttonNoHoverEffect}
                 >
                   {buttonFrontIcon && (
