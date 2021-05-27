@@ -58,15 +58,14 @@
   position: relative;
   border: none;
   width: 100%;
-  padding-left: 46px;
+  padding-left: 40px;
   border-radius: 0px;
   box-shadow: none;
   .expander-button-open-extra-icon {
     position: absolute;
     font-size: 24px;
-    margin-left: 12px;
     top: 11px;
-    left: -8px;
+    left: -28px;
   }
   @include setVerticalShadowLine();
 }
@@ -114,7 +113,9 @@
 }
 
 @media only screen and (min-width: $width-l) {
-  .content-block-expander-button-open .expander-button-open-extra-icon {
-    left: -12px;
+  .content-block-expander-button-open {
+    .expander-button-open-extra-icon {
+      left: -33px;
+    }
   }
 }

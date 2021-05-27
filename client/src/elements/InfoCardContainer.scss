@@ -69,9 +69,13 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  .info-card-active:hover {
+    background-color: $color-white;
+  }
   .expander {
     padding-top: 8px;
   }
+
   @media only screen and (min-width: $width-m) {
     .info-card-container-button {
       display: none;

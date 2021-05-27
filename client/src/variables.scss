@@ -68,15 +68,18 @@ $color-button-hover: #fdfdff;
 
 $border-radius: 3px;
 
-$box-shadow-bottomright: 1.5px 1.5px 3px 0px rgba(0, 0, 0, 0.15);
-$box-shadow-bottomright-half: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.15);
-$box-shadow-topleft: -1.5px -1.5px 3px 0px rgba(0, 0, 0, 0.15);
-$box-shadow-topleft-half: -0.5px -0.5px 1px 0px rgba(0, 0, 0, 0.15);
-$box-shadow-below: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
-$box-shadow-below-half: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+$box-shadow-bottomright: 1.5px 1.5px 3px 0px #d9d9d9;
+$box-shadow-bottomright-half: 0.5px 0.5px 1px 0px #d9d9d9;
+$box-shadow-left: -1.5px 0px 1.5px 0px #d9d9d9;
+$box-shadow-right: 1.5px 0px 1.5px 0px #d9d9d9;
+$box-shadow-topleft: -1.5px -1.5px 3px 0px #d9d9d9;
+$box-shadow-topleft-half: -0.5px -0.5px 1px 0px #d9d9d9;
+$box-shadow-below: 0px 1px 2px 0px #cccccc;
+$box-shadow-below-half: 0px 1px 1px 0px #cccccc;
 $box-shadow-around: $box-shadow-bottomright, $box-shadow-topleft-half;
 $box-shadow-around-inset: inset $box-shadow-bottomright,
   inset $box-shadow-topleft-half;
+$box-shadow-sides: $box-shadow-left, $box-shadow-right;
 
 $text-s: 16px;
 $text-m: 17px;

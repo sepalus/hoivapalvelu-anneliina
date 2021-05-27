@@ -87,30 +87,32 @@ export default function ServiceContentBlock(props) {
           infoCardFirstRef={infoCardServiceFirstRef}
           infoCardLastRef={infoCardServiceLastRef}
         >
-          {infoCardList.map((infoCard, index) => (
-            <InfoCard
-              iconFileName={infoCard.iconFileName}
-              textHtml={infoCard.textHtml}
-              className={infoCard.className}
-              isCardActive={activeInfoCardServiceIndex === index}
-              isCardDisactive={
-                activeInfoCardServiceIndex !== index &&
-                activeInfoCardServiceIndex !== -1
-              }
-              infoCardRef={
-                index === 0
-                  ? infoCardServiceFirstRef
-                  : index === infoCardList.length - 1
-                  ? infoCardServiceLastRef
-                  : null
-              }
-              onClick={() => {
-                setExpanderIsOpen(true);
-                setActiveInfoCardServiceIndex(index);
-              }}
-              key={`info-card-service-${index}`}
-            />
-          ))}
+          {infoCardList.map((infoCard, index) => {
+            const isCardActive = activeInfoCardServiceIndex === index;
+            return (
+              <InfoCard
+                iconFileName={infoCard.iconFileName}
+                textHtml={infoCard.textHtml}
+                className={infoCard.className}
+                isCardActive={isCardActive}
+                isCardDisactive={
+                  !isCardActive && activeInfoCardServiceIndex !== -1
+                }
+                infoCardRef={
+                  index === 0
+                    ? infoCardServiceFirstRef
+                    : index === infoCardList.length - 1
+                    ? infoCardServiceLastRef
+                    : null
+                }
+                onClick={() => {
+                  setExpanderIsOpen(!isCardActive);
+                  setActiveInfoCardServiceIndex(isCardActive ? -1 : index);
+                }}
+                key={`info-card-service-${index}`}
+              />
+            );
+          })}
         </InfoCardContainer>
       )}
     </ContentBlock>

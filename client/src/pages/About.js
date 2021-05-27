@@ -85,26 +85,29 @@ export default function About() {
             infoCardFirstRef={infoCardValueFirstRef}
             infoCardLastRef={infoCardValueLastRef}
           >
-            {infoCards.map((infoCard, index) => (
-              <InfoCard
-                iconFileName={infoCard.iconFileName}
-                text={infoCard.text}
-                className={infoCard.className}
-                isCardActive={activeInfoCardIndex === index}
-                isCardDisactive={
-                  activeInfoCardIndex !== index && activeInfoCardIndex !== -1
-                }
-                infoCardRef={
-                  index === 0
-                    ? infoCardValueFirstRef
-                    : index === infoCards.length - 1
-                    ? infoCardValueLastRef
-                    : null
-                }
-                onClick={() => setActiveInfoCardIndex(index)}
-                key={`info-card-value-${index}`}
-              />
-            ))}
+            {infoCards.map((infoCard, index) => {
+              const isCardActive = activeInfoCardIndex === index;
+              return (
+                <InfoCard
+                  iconFileName={infoCard.iconFileName}
+                  text={infoCard.text}
+                  className={infoCard.className}
+                  isCardActive={isCardActive}
+                  isCardDisactive={!isCardActive && activeInfoCardIndex !== -1}
+                  infoCardRef={
+                    index === 0
+                      ? infoCardValueFirstRef
+                      : index === infoCards.length - 1
+                      ? infoCardValueLastRef
+                      : null
+                  }
+                  onClick={() =>
+                    setActiveInfoCardIndex(isCardActive ? -1 : index)
+                  }
+                  key={`info-card-value-${index}`}
+                />
+              );
+            })}
           </InfoCardContainer>
           <ContentBlockContainer backgroundColor="lightbeige">
             <ContentBlock

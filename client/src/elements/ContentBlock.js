@@ -82,13 +82,13 @@ export default function ContentBlock(props) {
                   externalLinkPath={externalLinkPath}
                   noHoverEffect={buttonNoHoverEffect}
                 >
-                  {buttonFrontIcon && (
-                    <span className="material-icons">{buttonFrontIcon}</span>
-                  )}
                   {buttonIcon && (
                     <span className="material-icons-outlined">
                       {buttonIcon}
                     </span>
+                  )}
+                  {buttonFrontIcon && (
+                    <span className="material-icons">{buttonFrontIcon}</span>
                   )}
                 </LinkButton>
               )}
