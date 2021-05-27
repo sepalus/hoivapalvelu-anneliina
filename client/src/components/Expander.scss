@@ -1,5 +1,18 @@
 @import "../variables";
 
+@mixin tranformExpander($extra: 0px) {
+  transform: translateY(-104px - $extra);
+  @media only screen and (min-width: $width-m) {
+    transform: translateY(-140px - $extra);
+  }
+  @media only screen and (min-width: $width-l) {
+    transform: translateY(-160px - $extra);
+  }
+  @media only screen and (min-width: $width-xl) {
+    transform: translateY(-168px - $extra);
+  }
+}
+
 .expander {
   display: flex;
   flex-direction: column;
@@ -28,12 +41,13 @@
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
   @include setExpanderPaddings();
-  transform: translateY(-106px);
+  @include tranformExpander();
 }
 
 .expander-service-info-card-more-information {
   @include setExpanderPaddings(true);
   @include setGap("large");
+  @include tranformExpander(6px);
 
   .expander-list {
     padding: 0px 12px;
@@ -52,16 +66,9 @@
   }
 }
 
-@media only screen and (min-width: $width-m) {
-  .expander-service-more-information {
-    transform: translateY(-140px);
-  }
-}
-
 @media only screen and (min-width: $width-l) {
   .expander-service-more-information {
     flex-direction: row;
-    transform: translateY(-168px);
     .expander-list-item-wrapper {
       column-count: 2;
       column-gap: 100px;
