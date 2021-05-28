@@ -134,7 +134,7 @@ export default function Services({ servicesSnapScrollEnabled }) {
         <Banner
           className="banner-services"
           imageFileName="services.jpeg"
-          backgroundColor="ultralightblue"
+          backgroundColor="lightbeige"
           title="Palvelut"
           text="Tarjoamme yksilöllistä ja luotettavaa hoivapalvelua kaikille sitä tarvitseville. Meiltä saat sairaanhoitoa kotiin kuljetettuna, apua kotona asumiseen, henkilökohtaista apua ja voimia vapaista. Kaikkea ei tarvitse tehdä itse. Nyt saat myös halutessasi apua arkeen kuten ruoan valmistukseen, asiointiin tai siivoukseen. Huolehdimme tarvittaessa myös lemmikistäsi ja kasveistasi."
           overlay={{
@@ -147,6 +147,7 @@ export default function Services({ servicesSnapScrollEnabled }) {
           snapScrollAreaId={snapScrollAreaId}
         >
           <InfoCardContainer
+            className="info-card-container-service-units"
             titleElement={<h2>Palvelukokonaisuudet</h2>}
             text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
             backgroundColor="lightbeige"

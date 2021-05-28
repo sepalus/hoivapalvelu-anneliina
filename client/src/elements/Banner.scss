@@ -1,5 +1,7 @@
 @import "../variables";
 
+@include mergeBannerWithTopContainer();
+
 .banner {
   scroll-snap-align: start;
   position: relative;

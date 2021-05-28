@@ -21,17 +21,12 @@ export default function InfoCardScrollContainer({
     if (!infoCardContainerCardsRef || !infoCardFirstRef || !infoCardLastRef)
       return;
 
-    const {
-      left: wrapperLeft,
-      width: wrapperWidth,
-    } = infoCardContainerCardsRef.current.getBoundingClientRect();
-    const {
-      left: lastCardLeft,
-      width: lastCardWidth,
-    } = infoCardLastRef.current.getBoundingClientRect();
-    const {
-      left: firstCardLeft,
-    } = infoCardFirstRef.current.getBoundingClientRect();
+    const { left: wrapperLeft, width: wrapperWidth } =
+      infoCardContainerCardsRef.current.getBoundingClientRect();
+    const { left: lastCardLeft, width: lastCardWidth } =
+      infoCardLastRef.current.getBoundingClientRect();
+    const { left: firstCardLeft } =
+      infoCardFirstRef.current.getBoundingClientRect();
 
     const lastCardIsVisible =
       lastCardLeft + lastCardWidth < wrapperLeft + wrapperWidth + errorMargin;
@@ -63,7 +58,7 @@ export default function InfoCardScrollContainer({
   ]);
 
   return (
-    <div className="info-card-container-card-wrapper">
+    <div className="info-card-container-card-wrapper info-card-scroll-container-card-wrapper">
       <Button
         className={classNames("info-card-container-button", {
           "hide-element": !showBackButton,

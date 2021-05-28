@@ -479,3 +479,21 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     padding-bottom: $marginBottom;
   }
 }
+
+@mixin mergeBannerWithTopContainer {
+  @media only screen and (max-width: $width-max-s) {
+    .banner-about,
+    .banner-services {
+      .banner-tagline {
+        padding-bottom: 24px;
+        box-shadow: none;
+      }
+    }
+    .info-card-container-value,
+    .info-card-container-service-units {
+      .info-card-container-content-wrapper {
+        padding-top: 0px;
+      }
+    }
+  }
+}
