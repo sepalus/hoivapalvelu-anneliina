@@ -2,7 +2,7 @@
 
 .contact-card-item {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 .contact-card-item-information {
   display: flex;
@@ -11,20 +11,45 @@
 }
 
 .contact-card-item-person {
-  @include setGap();
+  @include setGap("medium");
+  margin-top: 14px;
+
+  .contact-card-item-image-wrapper {
+    width: 140px;
+    height: 140px;
+    margin-top: -14px;
+  }
 
   .contact-card-item-image {
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: $border-radius;
   }
   .contact-card-item-information {
+    width: 204px;
+    margin-top: -4px;
     gap: $x1;
   }
 
   .contact-card-item-information-items {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: $width-m) {
+  .contact-card-item-person {
+    .contact-card-item-information {
+      width: 228px;
+    }
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  .contact-card-item-person {
+    .contact-card-item-information {
+      width: 240px;
+    }
   }
 }

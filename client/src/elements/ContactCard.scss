@@ -29,28 +29,27 @@
 .contact-card-header-icon {
   font-size: 1.25em;
   color: $color-darkblue;
+  padding-bottom: 2px;
 }
 
 .contact-card-content-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   @include setInnerPaddings(false, false, false, "sm", "sm");
   @include setGap("medium");
 }
 
 .contact-card-persons {
-  @include setGap("large");
-
   .contact-card-content-wrapper {
-    @include setContactCardGap();
+    @include setGap("large");
   }
 }
 
 .contact-card-location-map-wrapper {
   width: 100%;
   height: 360px;
-  box-shadow: $box-shadow-around;
 
   iframe {
     width: 100%;
@@ -61,5 +60,27 @@
 @media only screen and (min-width: $width-xs) {
   .contact-card-location-map-wrapper {
     height: 400px;
+  }
+}
+@media only screen and (min-width: $width-m) {
+  .contact-card-header-icon {
+    padding-bottom: 3px;
+  }
+
+  .contact-card-location-map-wrapper {
+    min-height: 400px;
+    height: 100%;
+  }
+  .contact-card-content-wrapper,
+  .contact-header-wrapper {
+    padding: 0px;
+  }
+  .contact-header-wrapper {
+    padding-top: 8px;
+  }
+  .contact-card-persons {
+    .contact-card-content-wrapper {
+      padding-top: 8px;
+    }
   }
 }

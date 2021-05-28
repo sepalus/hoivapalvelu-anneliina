@@ -43,13 +43,14 @@ export default function Contact() {
               jobTitle="Toimitusjohtaja"
               phone="+358 503683286"
               email="tove@anneliina.fi"
-              imageFileName="placeholder.jpeg"
+              imageFileName="tove.jpeg"
             ></ContactPerson>
             <ContactPerson
               className="contact-card-item-person"
+              jobTitle=""
               name="Asiakaspalvelu"
-              phone="+358 503683286"
-              email="tove@anneliina.fi"
+              phone="+358 400877966"
+              email="hoiva@anneliina.fi"
               imageFileName="placeholder.jpeg"
             ></ContactPerson>
           </ContactCard>
