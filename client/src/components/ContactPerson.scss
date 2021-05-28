@@ -1,54 +1,60 @@
 @import "../variables";
 
-.contact-person {
+.contact-card-item {
   display: flex;
   flex-direction: column;
+}
+.contact-card-item-information {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-card-item-person {
   align-items: center;
   @include setGap();
-}
 
-.contact-person-image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-.contact-person-information {
-  display: flex;
-  flex-direction: column;
-  gap: $x1;
-}
+  .contact-card-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .contact-card-item-information {
+    gap: $x1;
+  }
 
-.contact-person-information-items {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
+  .contact-card-item-information-items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 
-@media only screen and (min-width: $width-xs) and (max-width: $width-max-s) {
-  .contact-person {
-    flex-direction: row;
+  @media only screen and (min-width: $width-xs) and (max-width: $width-max-s) {
+    .contact-card-item {
+      flex-direction: row;
+    }
+    .contact-card-item-image {
+      width: 110px;
+      height: 110px;
+      border-radius: $border-radius;
+    }
+    .contact-card-item-information-items {
+      align-items: flex-start;
+    }
   }
-  .contact-person-image {
-    width: 110px;
-    height: 110px;
-    border-radius: $border-radius;
-  }
-  .contact-person-information-items {
-    align-items: flex-start;
-  }
-}
 
-@media only screen and (min-width: $width-l) {
-  .contact-person {
-    flex-direction: row;
-  }
-  .contact-person-image {
-    width: 100px;
-    height: 110px;
-    border-radius: $border-radius;
-  }
-  .contact-person-information-items {
-    align-items: flex-start;
+  @media only screen and (min-width: $width-l) {
+    .contact-card-item {
+      flex-direction: row;
+    }
+    .contact-card-item-image {
+      width: 100px;
+      height: 110px;
+      border-radius: $border-radius;
+    }
+    .contact-card-item-information-items {
+      align-items: flex-start;
+    }
   }
 }

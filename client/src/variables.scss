@@ -409,24 +409,24 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
 
 @mixin setContactCardGap() {
   gap: $inner-gap-large-s;
-  .contact-person {
+  .contact-card-item {
     gap: $inner-gap-s;
   }
   @media only screen and (min-width: $width-xs) {
     gap: $inner-gap-s;
-    .contact-person {
+    .contact-card-item {
       gap: $inner-gap-medium-s;
     }
   }
   @media only screen and (min-width: $width-m) {
     gap: $inner-gap-large-m;
-    .contact-person {
+    .contact-card-item {
       gap: $inner-gap-m;
     }
   }
   @media only screen and (min-width: $width-l) {
     gap: $inner-gap-l;
-    .contact-person {
+    .contact-card-item {
       gap: $inner-gap-medium-l;
     }
   }
