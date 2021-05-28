@@ -30,7 +30,7 @@ $width-xxl: 1440px;
 $padding-horizontal-s: $x3;
 $padding-horizontal-m: $x4;
 $padding-horizontal-l: $x5;
-$padding-outer-horizontal-s: $x3_5;
+$padding-outer-horizontal-s: $x3;
 $padding-outer-horizontal-m: $x4_5;
 $padding-outer-horizontal-l: $x5_5;
 $padding-outer-horizontal-xl: $x6_5;
@@ -124,7 +124,7 @@ $extra-gap-m: $x6;
 $extra-gap-l: $x10;
 $extra-gap-xl: $x12;
 
-$inner-half-horizontal-padding-content-block-s: $x1_5;
+$inner-half-horizontal-padding-content-block-s: $x1;
 $inner-half-horizontal-padding-content-block-m: $x2;
 $inner-half-vertical-padding-content-block-s: $x1;
 $inner-half-vertical-padding-content-block-m: $x2;
@@ -135,7 +135,7 @@ $inner-even-vertical-padding-content-block-m: $x5;
 $inner-even-half-vertical-padding-content-block-m: $x3_5;
 $inner-even-vertical-padding-content-block-l: $x6;
 $inner-even-half-vertical-padding-content-block-l: $x4;
-$outer-extra-padding-content-block-s: $x5;
+$outer-extra-padding-content-block-s: $x4;
 
 $extra-padding-content-block-s: $x7 $x6 $x8;
 $extra-padding-content-block-m: $x8 $x7 $x9;
@@ -485,7 +485,7 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     .banner-about,
     .banner-services {
       .banner-tagline {
-        padding-bottom: 24px;
+        padding-bottom: 20px;
         box-shadow: none;
       }
     }
