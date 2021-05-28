@@ -12,7 +12,7 @@
   position: relative;
 }
 .content-block-additional-content {
-  @include setInnerPaddings(false, "sm");
+  @include setInnerPaddings();
 }
 
 .content-block-with-image {

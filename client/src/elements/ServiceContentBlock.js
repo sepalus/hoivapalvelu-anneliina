@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import "./ServiceContentBlock.scss";
 import ContentBlock from "./ContentBlock";
-import Button from "../components/Button";
 import Expander from "../components/Expander";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
@@ -28,7 +27,9 @@ export default function ServiceContentBlock(props) {
       {...props}
       expanderIsOpen={expanderIsOpen}
       setExpanderIsOpen={setExpanderIsOpen}
-      className="service-content-block"
+      className={classNames("service-content-block", {
+        "service-content-block-with-info-cards": !!infoCardList,
+      })}
       buttonIcon={
         noButton ? null : expanderIsOpen ? "expand_less" : "expand_more"
       }

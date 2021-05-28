@@ -79,24 +79,19 @@
   .content-block-information {
     @include setGap("medium");
   }
+  &.service-content-block-with-info-cards {
+    .content-block-information,
+    .content-block-information-content {
+      padding-bottom: 0px;
+    }
+  }
 
   @media only screen and (min-width: $width-m) {
-    .content-block-image-wrapper {
-      position: absolute;
-      height: 100%;
-      display: flex;
-      @include setInnerPaddings(false, false, "m");
-    }
-    .content-block-image {
-      position: static;
-    }
-
     .content-block-information {
-      width: 100%;
       padding: 0px;
+
       @include setGap();
     }
-
     .content-block-information-header {
       @include setInnerPaddings("m", false);
     }
@@ -107,8 +102,6 @@
     .content-block-text {
       padding-top: $inner-gap-m;
     }
-
-    @include alignServiceBlockContent();
   }
   @media only screen and (min-width: $width-l) {
     .content-block-text {

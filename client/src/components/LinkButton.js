@@ -13,7 +13,7 @@ export default function LinkButton(props) {
           <Button {...props} onClick={(e) => e.preventDefault()}></Button>
         </a>
       ) : linkPath ? (
-        <HashLink to={linkPath}>
+        <HashLink to={linkPath} smooth>
           <Button {...props}></Button>
         </HashLink>
       ) : (
