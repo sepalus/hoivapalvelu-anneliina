@@ -1,15 +1,19 @@
 @import "../variables";
 
 @mixin tranformExpander($extra: 0px) {
-  transform: translateY(-104px - $extra);
+  transform: translateY(-48px - $extra);
+  margin-bottom: (-48px - $extra);
   @media only screen and (min-width: $width-m) {
-    transform: translateY(-140px - $extra);
+    transform: translateY(-84px - $extra);
+    margin-bottom: (-84px - $extra);
   }
   @media only screen and (min-width: $width-l) {
-    transform: translateY(-160px - $extra);
+    transform: translateY(-104px - $extra);
+    margin-bottom: (-104px - $extra);
   }
   @media only screen and (min-width: $width-xl) {
-    transform: translateY(-168px - $extra);
+    transform: translateY(-112px - $extra);
+    margin-bottom: (-112px - $extra);
   }
 }
 

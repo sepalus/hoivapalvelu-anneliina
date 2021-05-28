@@ -1,19 +1,10 @@
 @import "../variables";
 
+@include alignServiceHeaderWithCotentBlock();
+
 .content-block-container-content-wrapper {
   display: flex;
   flex-direction: column;
   @include setOuterPaddings();
   @include setContentMaxWidth();
-}
-
-.service-content-block-container {
-  .content-block-container-content-wrapper {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  .content-block {
-    transform: translateY(-56px);
-  }
 }

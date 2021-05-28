@@ -497,3 +497,38 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     }
   }
 }
+
+@mixin alignServiceHeaderWithCotentBlock {
+  .service-content-block-container {
+    background-color: green($color: #000000);
+    .content-block-container-content-wrapper {
+      padding-top: 36px;
+    }
+    @media only screen and (min-width: $width-xs) {
+      .content-block-container-content-wrapper {
+        padding-top: 40px;
+      }
+    }
+    @media only screen and (min-width: $width-m) {
+      .content-block-container-content-wrapper {
+        padding-top: 0px;
+      }
+
+      &:not(:last-of-type) {
+        .content-block-container-content-wrapper {
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+  .service-header-block-content-wrapper {
+    @include setOuterPaddings(false, true);
+    padding-bottom: 24px;
+    @media only screen and (min-width: $width-xs) {
+      padding-bottom: 28px;
+    }
+    @media only screen and (min-width: $width-m) {
+      padding-bottom: 32px;
+    }
+  }
+}

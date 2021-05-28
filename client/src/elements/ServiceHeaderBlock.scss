@@ -5,9 +5,6 @@
   align-items: flex-end;
   color: $color-darkblue;
   @include setContentMaxWidth();
-  @include setOuterPaddings(false, true);
-  padding-bottom: 24px;
-  margin-bottom: 56px;
   gap: 6.6vw;
 }
 
@@ -38,9 +35,6 @@
 }
 
 @media only screen and (min-width: $width-xs) {
-  .service-header-block-content-wrapper {
-    padding-bottom: 32px;
-  }
   .service-header-block-logo {
     padding-left: 12px;
   }
