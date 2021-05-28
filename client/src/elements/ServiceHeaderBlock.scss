@@ -5,46 +5,50 @@
   align-items: flex-end;
   color: $color-darkblue;
   @include setContentMaxWidth();
-  gap: 6.6vw;
+  @include setGap("large");
 }
 
 .service-header-block-logo {
-  width: 20%;
-  min-height: 46px;
-  max-height: 90px;
-  padding-bottom: 2px;
+  max-height: 80px;
+  height: 12.5vw;
+  padding: 0px 0px 2px 4px;
   object-fit: contain;
-  object-position: 0 0;
 }
 
 .service-header-block-title-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 10px;
-}
-.service-header-block-title {
-  font-size: calc(min(calc(2.8vw + 3.6px), 23.6px)) !important;
+  font-size: calc(min(4vw, 25.6px)) !important;
+  gap: 0.5em;
   line-height: 1em;
+}
+p.service-header-block-title {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .service-header-block-title-image {
-  height: calc(min(calc(3.7vw + 3.6px), 30px)) !important;
+  max-height: 32px;
+  height: 5vw;
   object-fit: contain;
   object-position: 0 0;
 }
 
 @media only screen and (min-width: $width-xs) {
   .service-header-block-logo {
-    padding-left: 12px;
+    padding-left: 8px;
   }
 }
 
-@media only screen and (min-width: $width-s) {
-  .service-header-block-content-wrapper {
-    gap: 32px;
-  }
+@media only screen and (min-width: $width-m) {
   .service-header-block-logo {
-    padding-left: 20px;
+    padding-left: 16px;
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  .service-header-block-logo {
+    padding-left: 24px;
   }
 }

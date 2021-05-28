@@ -28,7 +28,6 @@ export default function Contact() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1966.3691025944286!2d25.081341616096378!3d60.47213562591104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468e00638dfde0ab%3A0x28fe0c4bbf2ddbac!2zVHVwYWxhbnRpZSAxMiwgMDQ0MDAgSsOkcnZlbnDDpMOk!5e0!3m2!1sfi!2sfi!4v1622029133131!5m2!1sfi!2sfi"
                 allowfullscreen=""
-                loading="lazy"
               ></iframe>
             </div>
           </ContactCard>
