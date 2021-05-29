@@ -389,20 +389,23 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
 }
 
 @mixin setNavigationGap() {
-  gap: $x2;
-  li:first-of-type {
-    margin-right: $x2;
+  gap: $x3;
+  a:first-of-type {
+    margin-right: $x6;
   }
   @media only screen and (min-width: $width-m) {
-    gap: $x3;
-    li:first-of-type {
-      margin-right: $x3;
+    a:first-of-type {
+      margin-right: $x6;
     }
   }
   @media only screen and (min-width: $width-l) {
-    gap: $x4;
-    li:first-of-type {
-      margin-right: $x4;
+    a:first-of-type {
+      margin-right: $x8;
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    a:first-of-type {
+      margin-right: $x10;
     }
   }
 }
