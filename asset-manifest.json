@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/hoivapalvelu-anneliina/static/css/main.e3c54d12.chunk.css",
-    "main.js": "/hoivapalvelu-anneliina/static/js/main.e5f4e740.chunk.js",
-    "main.js.map": "/hoivapalvelu-anneliina/static/js/main.e5f4e740.chunk.js.map",
-    "runtime-main.js": "/hoivapalvelu-anneliina/static/js/runtime-main.367d6b40.js",
-    "runtime-main.js.map": "/hoivapalvelu-anneliina/static/js/runtime-main.367d6b40.js.map",
+    "main.css": "/hoivapalvelu-anneliina/static/css/main.8d219436.chunk.css",
+    "main.js": "/hoivapalvelu-anneliina/static/js/main.240ca356.chunk.js",
+    "main.js.map": "/hoivapalvelu-anneliina/static/js/main.240ca356.chunk.js.map",
+    "runtime-main.js": "/hoivapalvelu-anneliina/static/js/runtime-main.e860943a.js",
+    "runtime-main.js.map": "/hoivapalvelu-anneliina/static/js/runtime-main.e860943a.js.map",
     "static/js/2.75c8b4a7.chunk.js": "/hoivapalvelu-anneliina/static/js/2.75c8b4a7.chunk.js",
     "static/js/2.75c8b4a7.chunk.js.map": "/hoivapalvelu-anneliina/static/js/2.75c8b4a7.chunk.js.map",
-    "static/js/3.b8837792.chunk.js": "/hoivapalvelu-anneliina/static/js/3.b8837792.chunk.js",
-    "static/js/3.b8837792.chunk.js.map": "/hoivapalvelu-anneliina/static/js/3.b8837792.chunk.js.map",
+    "static/js/3.6c10cc16.chunk.js": "/hoivapalvelu-anneliina/static/js/3.6c10cc16.chunk.js",
+    "static/js/3.6c10cc16.chunk.js.map": "/hoivapalvelu-anneliina/static/js/3.6c10cc16.chunk.js.map",
     "index.html": "/hoivapalvelu-anneliina/index.html",
-    "static/css/main.e3c54d12.chunk.css.map": "/hoivapalvelu-anneliina/static/css/main.e3c54d12.chunk.css.map",
+    "static/css/main.8d219436.chunk.css.map": "/hoivapalvelu-anneliina/static/css/main.8d219436.chunk.css.map",
     "static/js/2.75c8b4a7.chunk.js.LICENSE.txt": "/hoivapalvelu-anneliina/static/js/2.75c8b4a7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.367d6b40.js",
+    "static/js/runtime-main.e860943a.js",
     "static/js/2.75c8b4a7.chunk.js",
-    "static/css/main.e3c54d12.chunk.css",
-    "static/js/main.e5f4e740.chunk.js"
+    "static/css/main.8d219436.chunk.css",
+    "static/js/main.240ca356.chunk.js"
   ]
 }
