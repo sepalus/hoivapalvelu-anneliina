@@ -2,6 +2,8 @@ import React from "react";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import ContactCard from "../elements/ContactCard";
 import PricingTable from "../components/PricingTable";
+import ContentBlockContainer from "../elements/ContentBlockContainer";
+import ContentBlock from "../elements/ContentBlock";
 import ScrollArea from "../components/ScrollArea";
 import Footer from "../elements/Footer";
 
@@ -67,6 +69,18 @@ export default function Pricing() {
             <PricingTable tableContent={visitPricing} />
           </ContactCard>
         </InfoCardContainer>
+        <ContentBlockContainer backgroundColor="lightbeige">
+          <ContentBlock
+            isReverse={true}
+            imageFileName="placeholder.jpeg"
+            title="​Kotitalousvähennys"
+            text="Voit saada kotitalousvähennyksen, jos teetät kotitalous- tai tavanomaista hoiva-tai hoitotyötä. Vähennys on jopa 40% maksamasi palvelun hinnasta ja se hyvitetään sinulle henkilökohtaisessa verotuksessa. Voimme autta sinua verovähennyksen hakemisessa."
+            backgroundColor="white"
+            backgroundColorMedium="lightbeige"
+            buttonText="Lue lisää vero.fi sivuilta"
+            externalLinkPath="https://www.vero.fi/henkiloasiakkaat/verokortti-ja-veroilmoitus/tulot-ja-vahennykset/kotitalousvahennys/"
+          />
+        </ContentBlockContainer>
         <Footer />
       </ScrollArea>
     </div>
