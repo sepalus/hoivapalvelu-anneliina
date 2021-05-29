@@ -17,6 +17,8 @@ export default function Banner({
   const overlayColor = overlay && overlay.overlayColor;
   const overlayReverse = overlay && overlay.overlayReverse;
 
+  const rootPath = "/hoivapalvelu-anneliina";
+
   return (
     <div className={classNames("banner", { [`${className}`]: className })}>
       <div className="banner-image-wrapper">
@@ -44,7 +46,7 @@ export default function Banner({
               <LinkButton
                 text={buttonText}
                 className="action-button-wide"
-                linkPath="/palvelut"
+                linkPath={rootPath + "/palvelut"}
               ></LinkButton>
             )}
           </div>
