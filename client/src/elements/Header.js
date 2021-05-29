@@ -1,24 +1,35 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Button from "../components/Button";
 import "./Header.scss";
 
-export default function Header({ setServicesSnapScrollEnabled }) {
+export default function Header({
+  setServicesSnapScrollEnabled,
+  showMenuOverlay,
+  setShowMenuOverlay,
+}) {
   return (
     <div className="header">
       <div className="header-content-wrapper">
         <nav className="header-navigation">
+          <NavLink
+            to="/"
+            className="header-navigation-item header-navigation-item-logo"
+            activeClassName="header-navigation-item-active"
+          >
+            <img
+              className="header-image"
+              src="./assets/logos/hoivapalvelu-anneliina.png"
+              alt=""
+            />
+          </NavLink>
+          <Button
+            className="header-navigation-button no-background-button"
+            onClick={() => setShowMenuOverlay(!showMenuOverlay)}
+          >
+            <span class="material-icons-outlined">menu</span>
+          </Button>
           <div className="header-navigation-list">
-            <NavLink
-              to="/"
-              className="header-navigation-item"
-              activeClassName="header-navigation-item-active"
-            >
-              <img
-                className="header-image"
-                src="./assets/logos/hoivapalvelu-anneliina.png"
-                alt=""
-              />
-            </NavLink>
             <NavLink
               to="/palvelut"
               className="header-navigation-item"
