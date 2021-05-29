@@ -11,25 +11,27 @@ function App() {
   const [servicesSnapScrollEnabled, setServicesSnapScrollEnabled] =
     useState(true);
 
+  const rootPath = "/hoivapalvelu-anneliina";
+
   return (
     <>
       <Router>
         <Header setServicesSnapScrollEnabled={setServicesSnapScrollEnabled} />
         <div>
           <Switch>
-            <Route path="/palvelut">
+            <Route path={rootPath + "/palvelut"}>
               <Services servicesSnapScrollEnabled={servicesSnapScrollEnabled} />
             </Route>
-            <Route path="/hinnasto">
+            <Route path={rootPath + "/hinnasto"}>
               <Pricing />
             </Route>
-            <Route path="/meista">
+            <Route path={rootPath + "/meista"}>
               <About />
             </Route>
-            <Route path="/yhteystiedot">
+            <Route path={rootPath + "/yhteystiedot"}>
               <Contact />
             </Route>
-            <Route path="/">
+            <Route path={rootPath + "/"}>
               <Home
                 setServicesSnapScrollEnabled={setServicesSnapScrollEnabled}
               />

@@ -124,6 +124,8 @@ export default function Services({ servicesSnapScrollEnabled }) {
   const scrollAreaId = "scroll-area-services";
   const snapScrollAreaId = "snap-scroll-area-services";
 
+  const rootPath = "/hoivapalvelu-anneliina";
+
   return (
     <div className="services">
       <SnapScrollArea
@@ -155,17 +157,17 @@ export default function Services({ servicesSnapScrollEnabled }) {
             <InfoCard
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-kotisairaanhoito.png"
-              linkPath="/palvelut#kotisairaanhoito"
+              linkPath={rootPath + "/palvelut#kotisairaanhoito"}
             />
             <InfoCard
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-koti.png"
-              linkPath="/palvelut#kotihoito"
+              linkPath={rootPath + "/palvelut#kotihoito"}
             />
             <InfoCard
               iconFileName="anneliinan-kotisairaanhoito.png"
               logoFileName="anneliinan-paivatoiminta.png"
-              linkPath="/palvelut#paivatoiminta"
+              linkPath={rootPath + "/palvelut#paivatoiminta"}
             />
           </InfoCardContainer>
           <div className="services-content-blocks-container">

@@ -7,6 +7,7 @@ import "./HeaderOverlay.scss";
 
 export default function Header({ setServicesSnapScrollEnabled }) {
   const [showMenuOverlay, setShowMenuOverlay] = useState(false);
+  const rootPath = "/hoivapalvelu-anneliina";
 
   return (
     <div
@@ -17,7 +18,7 @@ export default function Header({ setServicesSnapScrollEnabled }) {
       <div className="header-content-wrapper">
         <nav className="header-navigation">
           <NavLink
-            to="/"
+            to={rootPath + "/"}
             className="header-navigation-item header-navigation-item-logo"
             activeClassName="header-navigation-item-active"
             onClick={() => setShowMenuOverlay(false)}
@@ -38,7 +39,7 @@ export default function Header({ setServicesSnapScrollEnabled }) {
           </Button>
           <div className="header-navigation-list">
             <NavLink
-              to="/palvelut"
+              to={rootPath + "/palvelut"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
               onClick={() => {
@@ -49,7 +50,7 @@ export default function Header({ setServicesSnapScrollEnabled }) {
               <p className="text-weight-medium p-17">Palvelut</p>
             </NavLink>
             <NavLink
-              to="/hinnasto"
+              to={rootPath + "/hinnasto"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
               onClick={() => setShowMenuOverlay(false)}
@@ -57,7 +58,7 @@ export default function Header({ setServicesSnapScrollEnabled }) {
               <p className="text-weight-medium p-17">Hinnasto</p>
             </NavLink>
             <NavLink
-              to="/meista"
+              to={rootPath + "/meista"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
               onClick={() => setShowMenuOverlay(false)}
@@ -65,7 +66,7 @@ export default function Header({ setServicesSnapScrollEnabled }) {
               <p className="text-weight-medium p-17">Meistä</p>
             </NavLink>
             <NavLink
-              to="/yhteystiedot"
+              to={rootPath + "/yhteystiedot"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
               onClick={() => setShowMenuOverlay(false)}
