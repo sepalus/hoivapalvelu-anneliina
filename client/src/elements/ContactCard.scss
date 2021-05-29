@@ -17,13 +17,19 @@
 }
 
 .contact-header-wrapper {
+  display: flex;
+  flex-direction: column;
   @include setInnerPaddings("sm", false, false, "sm", "sm");
 }
+
 .contact-header {
   display: flex;
   align-items: flex-end;
   color: $color-darkblue;
   gap: 0.4em;
+}
+.contact-subtitle {
+  color: $color-darkblue;
 }
 
 .contact-card-header-icon {
@@ -41,35 +47,9 @@
   @include setGap("medium");
 }
 
-.contact-card-persons {
-  .contact-card-content-wrapper {
-    @include setGap("large");
-  }
-}
-
-.contact-card-location-map-wrapper {
-  width: 100%;
-  height: 360px;
-
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-}
-@media only screen and (min-width: $width-xs) {
-  .contact-card-location-map-wrapper {
-    height: 400px;
-  }
-}
 @media only screen and (min-width: $width-m) {
   .contact-card-header-icon {
     padding-bottom: 3px;
-  }
-
-  .contact-card-location-map-wrapper {
-    min-height: 400px;
-    height: 100%;
   }
   .contact-card-content-wrapper,
   .contact-header-wrapper {
@@ -78,7 +58,58 @@
   .contact-header-wrapper {
     padding-top: 8px;
   }
+}
+
+//Contact card contact
+.contact-card-contact {
   .contact-card-persons {
+    .contact-card-content-wrapper {
+      @include setGap("large");
+    }
+  }
+  .contact-card-location-map-wrapper {
+    width: 100%;
+    height: 360px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+  @media only screen and (min-width: $width-xs) {
+    .contact-card-location-map-wrapper {
+      height: 400px;
+    }
+  }
+  @media only screen and (min-width: $width-m) {
+    .contact-card-location-map-wrapper {
+      min-height: 400px;
+      height: 100%;
+    }
+
+    .contact-card-persons {
+      .contact-card-content-wrapper {
+        padding-top: 8px;
+      }
+    }
+  }
+}
+
+//Contact card pricing
+.contact-card-pricing {
+  .contact-header-wrapper {
+    @include setGap("small");
+  }
+  .contact-card-content-wrapper {
+    max-width: 320px;
+  }
+  @media only screen and (max-width: $width-max-xxs) {
+    .contact-subtitle {
+      font-size: 17px;
+    }
+  }
+  @media only screen and (min-width: $width-m) {
     .contact-card-content-wrapper {
       padding-top: 8px;
     }

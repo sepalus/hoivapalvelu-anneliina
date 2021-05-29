@@ -18,6 +18,7 @@ $x10: 80px;
 $x11: 88px;
 $x12: 96px;
 
+$width-max-xxs: 479px;
 $width-xs: 480px;
 $width-s: 576px;
 $width-max-s: 767px;
@@ -104,6 +105,9 @@ $inner-padding-content-block-l: $x6 $padding-horizontal-l $x7;
 $inner-padding-content-block-negative-s: (-$x3_5) (-$padding-horizontal-s)
   (-$x4_5);
 
+$inner-gap-small-s: $x1;
+$inner-gap-small-m: $x1_5;
+$inner-gap-small-l: $x1_5;
 $inner-gap-s: $x1_5;
 $inner-gap-m: $x2;
 $inner-gap-l: $x2_5;
@@ -358,6 +362,8 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     gap: $inner-gap-large-s;
   } @else if $gapSize == "medium" {
     gap: $inner-gap-medium-s;
+  } @else if $gapSize == "small" {
+    gap: $inner-gap-small-s;
   } @else {
     gap: $inner-gap-s;
   }
@@ -366,6 +372,8 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
       gap: $inner-gap-large-m;
     } @else if $gapSize == "medium" {
       gap: $inner-gap-medium-m;
+    } @else if $gapSize == "small" {
+      gap: $inner-gap-small-m;
     } @else {
       gap: $inner-gap-m;
     }
@@ -375,6 +383,8 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
       gap: $inner-gap-large-l;
     } @else if $gapSize == "medium" {
       gap: $inner-gap-medium-l;
+    } @else if $gapSize == "small" {
+      gap: $inner-gap-small-l;
     } @else {
       gap: $inner-gap-l;
     }

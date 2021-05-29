@@ -19,7 +19,7 @@ export default function Contact() {
           <ContactCard
             iconName="place"
             title="Sijainti"
-            className="contact-card-location"
+            className="contact-card-contact contact-card-location"
           >
             <ContactPerson
               name="Osoite"
@@ -35,7 +35,7 @@ export default function Contact() {
           <ContactCard
             iconName="person_outline"
             title="Yhteyshenkilöt"
-            className="contact-card-persons"
+            className="contact-card-contact contact-card-persons"
           >
             <ContactPerson
               className="contact-card-item-person"
