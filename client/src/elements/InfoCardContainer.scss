@@ -44,6 +44,12 @@
   width: 100%;
   @include setGap();
 }
+.info-card-post-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include setInnerPaddings("sm", false, fale, "sm", "sm");
+  @include setGap("small");
+}
 
 @media only screen and (min-width: $width-m) {
   .info-card-container-cards {

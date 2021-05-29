@@ -9,6 +9,7 @@ export default function InfoCardContainer({
   className,
   titleElement,
   text,
+  postTextElement,
   children,
   backgroundColor,
   expanderElement,
@@ -51,6 +52,9 @@ export default function InfoCardContainer({
           >
             {children}
           </div>
+        )}
+        {postTextElement && (
+          <div className="info-card-post-text-wrapper">{postTextElement}</div>
         )}
         {expanderElement && (
           <Expander

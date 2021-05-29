@@ -43,6 +43,12 @@ export default function Pricing() {
       <ScrollArea scrollAreaId={scrollAreaId}>
         <InfoCardContainer
           titleElement={<h1>Hinnasto</h1>}
+          postTextElement={
+            <>
+              <h4>Kaikki palvelumme ovat arvolisäverottomia.</h4>
+              <h4>Emme veloita matkakuluja eikä muita lisäkuluja.</h4>
+            </>
+          }
           backgroundColor="lightblue"
           className="info-card-container-pricing"
         >
