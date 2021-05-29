@@ -22,6 +22,7 @@ export default function Header({
             to="/"
             className="header-navigation-item header-navigation-item-logo"
             activeClassName="header-navigation-item-active"
+            onClick={() => setShowMenuOverlay(false)}
           >
             <img
               className="header-image"
@@ -33,14 +34,19 @@ export default function Header({
             className="header-navigation-button no-background-button"
             onClick={() => setShowMenuOverlay(!showMenuOverlay)}
           >
-            <span class="material-icons-outlined">menu</span>
+            <span class="material-icons-outlined">
+              {showMenuOverlay ? "close" : "menu"}
+            </span>
           </Button>
           <div className="header-navigation-list">
             <NavLink
               to="/palvelut"
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
-              onClick={() => setServicesSnapScrollEnabled(true)}
+              onClick={() => {
+                setShowMenuOverlay(false);
+                setServicesSnapScrollEnabled(true);
+              }}
             >
               <p className="text-weight-medium p-17">Palvelut</p>
             </NavLink>
@@ -48,6 +54,7 @@ export default function Header({
               to="/hinnasto"
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
+              onClick={() => setShowMenuOverlay(false)}
             >
               <p className="text-weight-medium p-17">Hinnasto</p>
             </NavLink>
@@ -55,6 +62,7 @@ export default function Header({
               to="/meista"
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
+              onClick={() => setShowMenuOverlay(false)}
             >
               <p className="text-weight-medium p-17">Meistä</p>
             </NavLink>
@@ -62,6 +70,7 @@ export default function Header({
               to="/yhteystiedot"
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
+              onClick={() => setShowMenuOverlay(false)}
             >
               <p className="text-weight-medium p-17">Yhteystiedot</p>
             </NavLink>
