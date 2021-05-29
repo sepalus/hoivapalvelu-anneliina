@@ -3,6 +3,7 @@ import classNames from "classnames";
 import "./ServiceContentBlock.scss";
 import ContentBlock from "./ContentBlock";
 import Expander from "../components/Expander";
+import Button from "../components/Button";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
 
@@ -67,6 +68,14 @@ export default function ServiceContentBlock(props) {
                   "expander-service-info-card-more-information": infoCardList,
                 }
               )}
+              closeButtonElement={
+                <Button
+                  className="expander-close-button no-background-button"
+                  onClick={() => setExpanderIsOpen(false)}
+                >
+                  <span class="material-icons-outlined">close</span>
+                </Button>
+              }
             ></Expander>
           </>
         )

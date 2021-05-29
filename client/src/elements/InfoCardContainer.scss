@@ -29,6 +29,7 @@
   height: 40px;
   padding: 0px;
   border-radius: 50%;
+  box-shadow: $box-shadow-around;
   span {
     font-size: 20px;
   }
@@ -103,11 +104,6 @@
 .info-card-container-service {
   .info-card-container-content-wrapper {
     padding: 0;
-  }
-  &.info-card-container-service-expander-open {
-    .info-card-container-card-wrapper {
-      @include setVerticalShadowLine();
-    }
   }
   .info-card-container-service-expander-open {
     .info-card-value {

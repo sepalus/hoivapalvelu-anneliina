@@ -24,6 +24,7 @@
 }
 
 .expander-information {
+  position: relative;
   display: flex;
   flex-direction: column;
   @include setGap();
@@ -67,6 +68,16 @@
     position: absolute;
     top: 0px;
     left: 3px;
+  }
+}
+
+.expander-close-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: auto;
+  span {
+    font-size: 20px;
   }
 }
 

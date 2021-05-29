@@ -10,7 +10,10 @@ export default function Expander({
   listTitleIcon,
   list,
   className,
+  closeButtonElement,
 }) {
+  const hasInformationElement = title || text;
+  const hasListTitle = listTitle;
   return (
     <div
       className={classNames("expander", {
@@ -18,9 +21,10 @@ export default function Expander({
         [`${className}`]: className,
       })}
     >
-      {(title || text) && (
+      {hasInformationElement && (
         <div className="expander-information">
           {title && <h4 className="expander-title">{title}</h4>}
+          {closeButtonElement}
           {text && <p>{text}</p>}
         </div>
       )}
@@ -34,9 +38,11 @@ export default function Expander({
                 </span>
               )}
               <p className="expander-list-title text-semibold">{listTitle}</p>
+              {!hasInformationElement && hasListTitle && closeButtonElement}
             </>
           )}
           <ul className="expander-list-item-wrapper">
+            {!hasInformationElement && !hasListTitle && closeButtonElement}
             {list.map((listItem) => (
               <li>
                 <p className="text-small bullet-point-item">{listItem}</p>

@@ -22,7 +22,7 @@ export default function Contact() {
             className="contact-card-contact contact-card-location"
           >
             <ContactPerson
-              name="Osoite"
+              name="Käyntiosoite"
               jobTitle="Tupalantie 12, 04400 Järvenpää"
             ></ContactPerson>
             <div className="contact-card-location-map-wrapper">

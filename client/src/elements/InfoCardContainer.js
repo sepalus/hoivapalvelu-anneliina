@@ -14,6 +14,7 @@ export default function InfoCardContainer({
   backgroundColor,
   expanderElement,
   expanderClassName,
+  expanderCloseButtonElement,
   hasScrollableInfoCards,
   infoCardContainerCardsRef,
   infoCardFirstRef,
@@ -65,6 +66,7 @@ export default function InfoCardContainer({
             list={expanderElement.expandedList}
             isOpen={true}
             className={expanderClassName}
+            closeButtonElement={expanderCloseButtonElement}
           ></Expander>
         )}
       </div>

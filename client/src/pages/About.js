@@ -4,6 +4,7 @@ import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
+import Button from "../components/Button";
 import Footer from "../elements/Footer";
 import ScrollArea from "../components/ScrollArea";
 import SnapScrollArea from "../components/SnapScrollArea";
@@ -76,11 +77,20 @@ export default function About() {
         >
           <InfoCardContainer
             id="arvot"
-            titleElement={<h2>Arvomme</h2>}
+            titleElement={<h2>Anneliinan arvot</h2>}
+            text="Toimintamme perustuu arvoihimme. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
             backgroundColor="lightpink"
             className="info-card-container-value"
             hasScrollableInfoCards={true}
             expanderElement={infoCards[activeInfoCardIndex]}
+            expanderCloseButtonElement={
+              <Button
+                className="expander-close-button no-background-button"
+                onClick={() => setActiveInfoCardIndex(-1)}
+              >
+                <span class="material-icons-outlined">close</span>
+              </Button>
+            }
             infoCardContainerCardsRef={infoCardValueContainerCardsRef}
             infoCardFirstRef={infoCardValueFirstRef}
             infoCardLastRef={infoCardValueLastRef}
