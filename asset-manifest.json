@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hoivapalvelu-anneliina/static/css/main.e3c54d12.chunk.css",
-    "main.js": "/hoivapalvelu-anneliina/static/js/main.3b026d2e.chunk.js",
-    "main.js.map": "/hoivapalvelu-anneliina/static/js/main.3b026d2e.chunk.js.map",
+    "main.js": "/hoivapalvelu-anneliina/static/js/main.f6f330b6.chunk.js",
+    "main.js.map": "/hoivapalvelu-anneliina/static/js/main.f6f330b6.chunk.js.map",
     "runtime-main.js": "/hoivapalvelu-anneliina/static/js/runtime-main.367d6b40.js",
     "runtime-main.js.map": "/hoivapalvelu-anneliina/static/js/runtime-main.367d6b40.js.map",
     "static/js/2.75c8b4a7.chunk.js": "/hoivapalvelu-anneliina/static/js/2.75c8b4a7.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.367d6b40.js",
     "static/js/2.75c8b4a7.chunk.js",
     "static/css/main.e3c54d12.chunk.css",
-    "static/js/main.3b026d2e.chunk.js"
+    "static/js/main.f6f330b6.chunk.js"
   ]
 }
