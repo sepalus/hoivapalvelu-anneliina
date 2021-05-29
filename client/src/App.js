@@ -11,16 +11,10 @@ function App() {
   const [servicesSnapScrollEnabled, setServicesSnapScrollEnabled] =
     useState(true);
 
-  const [showMenuOverlay, setShowMenuOverlay] = useState(true);
-
   return (
     <>
       <Router>
-        <Header
-          showMenuOverlay={showMenuOverlay}
-          setShowMenuOverlay={setShowMenuOverlay}
-          setServicesSnapScrollEnabled={setServicesSnapScrollEnabled}
-        />
+        <Header setServicesSnapScrollEnabled={setServicesSnapScrollEnabled} />
         <div>
           <Switch>
             <Route path="/palvelut">

@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 import Button from "../components/Button";
 import "./Header.scss";
 import "./HeaderOverlay.scss";
 
-export default function Header({
-  setServicesSnapScrollEnabled,
-  showMenuOverlay,
-  setShowMenuOverlay,
-}) {
+export default function Header({ setServicesSnapScrollEnabled }) {
+  const [showMenuOverlay, setShowMenuOverlay] = useState(false);
+
   return (
     <div
       className={classNames("header", {
