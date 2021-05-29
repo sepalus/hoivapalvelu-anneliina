@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header({ setServicesSnapScrollEnabled }) {
-  const rootPath = "/hoivapalvelu-anneliina";
-
   return (
     <div className="header">
       <div className="header-content-wrapper">
         <nav className="header-navigation">
           <ul className="header-navigation-list">
             <li>
-              <Link to={rootPath + "/"}>
+              <Link to="/">
                 <img
                   className="header-image"
                   src="./assets/logos/hoivapalvelu-anneliina.png"
@@ -21,24 +19,24 @@ export default function Header({ setServicesSnapScrollEnabled }) {
             </li>
             <li>
               <Link
-                to={rootPath + "/palvelut"}
+                to="/palvelut"
                 onClick={() => setServicesSnapScrollEnabled(true)}
               >
                 <p>Palvelut</p>
               </Link>
             </li>
             <li>
-              <Link to={rootPath + "/hinnasto"}>
+              <Link to="/hinnasto">
                 <p>Hinnasto</p>
               </Link>
             </li>
             <li>
-              <Link to={rootPath + "/meista"}>
+              <Link to="/meista">
                 <p>Meistä</p>
               </Link>
             </li>
             <li>
-              <Link to={rootPath + "/yhteystiedot"}>
+              <Link to="/yhteystiedot">
                 <p>Yhteystiedot</p>
               </Link>
             </li>
