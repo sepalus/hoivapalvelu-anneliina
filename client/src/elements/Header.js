@@ -3,13 +3,15 @@ import { NavLink } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header({ setServicesSnapScrollEnabled }) {
+  const rootPath = "/hoivapalvelu-anneliina";
+
   return (
     <div className="header">
       <div className="header-content-wrapper">
         <nav className="header-navigation">
           <div className="header-navigation-list">
             <NavLink
-              to="/"
+              to={rootPath + "/"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
             >
@@ -20,7 +22,7 @@ export default function Header({ setServicesSnapScrollEnabled }) {
               />
             </NavLink>
             <NavLink
-              to="/palvelut"
+              to={rootPath + "/palvelut"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
               onClick={() => setServicesSnapScrollEnabled(true)}
@@ -28,21 +30,21 @@ export default function Header({ setServicesSnapScrollEnabled }) {
               <p className="text-weight-medium p-17">Palvelut</p>
             </NavLink>
             <NavLink
-              to="/hinnasto"
+              to={rootPath + "/hinnasto"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
             >
               <p className="text-weight-medium p-17">Hinnasto</p>
             </NavLink>
             <NavLink
-              to="/meista"
+              to={rootPath + "/meista"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
             >
               <p className="text-weight-medium p-17">Meistä</p>
             </NavLink>
             <NavLink
-              to="/yhteystiedot"
+              to={rootPath + "/yhteystiedot"}
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
             >
