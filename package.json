@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://sepalus.github.io/hoivapalvelu-anneliina/",
   "scripts": {
     "start": "node server/index.js",
     "build": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d client/build"
   },
   "engines": {
     "node": "15.14.0"
@@ -17,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "gh-pages": "^3.2.0",
     "react-scripts": "^4.0.3"
   }
 }
