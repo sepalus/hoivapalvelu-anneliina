@@ -26,16 +26,18 @@
       margin-left: 2px;
       gap: 4px;
     }
-    .header-navigation-item {
-      p {
-        padding: 0px;
-        font-weight: 100;
-        font-family: "Crimson Text", serif;
-        font-size: 24px;
-        border: none;
-      }
+    .header-navigation-item p {
+      padding: 0px;
+      font-family: "Crimson Text", serif;
+      font-size: 24px;
     }
+
     .header-navigation-item:hover {
+      text-shadow: 0.4px 0px;
+    }
+
+    .header-navigation-item-active p {
+      font-weight: 100;
       text-shadow: 0.4px 0px;
     }
   }
