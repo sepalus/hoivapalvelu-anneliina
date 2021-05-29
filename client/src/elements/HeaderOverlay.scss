@@ -1,0 +1,42 @@
+@import "../variables";
+
+@media only screen and (max-width: $width-max-s) {
+  .header-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-blue-ultralight;
+    .header-content-wrapper {
+      display: flex;
+      align-items: center;
+      @include setOuterPaddings(true, true);
+    }
+    .header-navigation {
+      position: relative;
+    }
+
+    .header-navigation-list {
+      padding-top: 64px;
+    }
+
+    .header-navigation-list {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-left: 2px;
+      gap: 4px;
+    }
+    .header-navigation-item {
+      p {
+        padding: 0px;
+        font-weight: 100;
+        font-family: "Crimson Text", serif;
+        font-size: 24px;
+        border: none;
+      }
+    }
+    .header-navigation-item:hover {
+      text-shadow: 0.4px 0px;
+    }
+  }
+}

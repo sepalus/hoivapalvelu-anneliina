@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import classNames from "classnames";
 import Button from "../components/Button";
 import "./Header.scss";
+import "./HeaderOverlay.scss";
 
 export default function Header({
   setServicesSnapScrollEnabled,
@@ -9,7 +11,11 @@ export default function Header({
   setShowMenuOverlay,
 }) {
   return (
-    <div className="header">
+    <div
+      className={classNames("header", {
+        "header-overlay": showMenuOverlay,
+      })}
+    >
       <div className="header-content-wrapper">
         <nav className="header-navigation">
           <NavLink
