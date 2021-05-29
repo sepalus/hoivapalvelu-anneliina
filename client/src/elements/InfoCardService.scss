@@ -2,13 +2,13 @@
 
 @mixin setInfoCardServiceWidth() {
   min-width: calc(
-    (100vw - 124px) / 3
-  ); //margins: 104px, gaps: 8px, paddings: 12px
+    (100vw - 116px) / 3
+  ); //margins: 96px, gaps: 8px, paddings: 12px
 
   @media only screen and (min-width: 455px) {
     min-width: calc(
-      (100vw - 132px) / 4
-    ); //margins: 104px, gaps: 12px, paddings: 16px
+      (100vw - 124px) / 4
+    ); //margins: 96px, gaps: 12px, paddings: 16px
   }
 
   @media only screen and (min-width: $width-m) {
