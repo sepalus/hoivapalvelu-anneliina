@@ -43,10 +43,10 @@ export default function InfoCard({
           />
         ) : (
           <div className="info-card-text">
-            {text && <p className="text-small text-semibold">{text}</p>}
+            {text && <p className="text-small text-weight-semibold">{text}</p>}
             {textHtml && (
               <p
-                className="text-small text-semibold"
+                className="text-small text-weight-semibold"
                 dangerouslySetInnerHTML={{ __html: textHtml }}
               />
             )}

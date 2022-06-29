@@ -5,6 +5,12 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  h3 {
+    padding-bottom: $x0_5;
+    @media only screen and (min-width: $width-m) {
+      padding-bottom: $x1;
+    }
+  }
 }
 .content-block-main-content {
   display: flex;
@@ -54,6 +60,13 @@
   flex-direction: column;
   @include setGap("large");
 }
+
+.content-block-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: $inner-gap-small-s;
+}
+
 .content-block-expander-button-open {
   position: relative;
   border: none;
@@ -109,6 +122,9 @@
     box-shadow: $box-shadow-around;
     border-radius: $border-radius;
   }
+  .content-block-text-container {
+    gap: $inner-gap-small-m;
+  }
 }
 
 @media only screen and (min-width: $width-l) {
@@ -116,5 +132,8 @@
     .expander-button-open-extra-icon {
       left: -33px;
     }
+  }
+  .content-block-text-container {
+    gap: $inner-gap-small-l;
   }
 }

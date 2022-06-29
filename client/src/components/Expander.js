@@ -37,7 +37,9 @@ export default function Expander({
                   {listTitleIcon}
                 </span>
               )}
-              <p className="expander-list-title text-semibold">{listTitle}</p>
+              <p className="expander-list-title text-weight-semibold">
+                {listTitle}
+              </p>
               {!hasInformationElement && hasListTitle && closeButtonElement}
             </>
           )}

@@ -3,12 +3,13 @@ import classNames from "classnames";
 import "./InfoCardContainer.scss";
 import InfoCardScrollContainer from "./InfoCardScrollContainer";
 import Expander from "../components/Expander";
+import LinkButton from "../components/Button";
 
 export default function InfoCardContainer({
   id,
   className,
   titleElement,
-  text,
+  textElement,
   postTextElement,
   children,
   backgroundColor,
@@ -31,7 +32,7 @@ export default function InfoCardContainer({
       <div className="info-card-container-content-wrapper">
         <div className="info-card-text-wrapper">
           {titleElement}
-          {text && <p>{text}</p>}
+          {textElement}
         </div>
         {hasScrollableInfoCards ? (
           <InfoCardScrollContainer

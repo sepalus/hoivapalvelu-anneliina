@@ -4,6 +4,7 @@ import ServiceHeaderBlock from "../elements/ServiceHeaderBlock";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
+import ContentBlock from "../elements/ContentBlock";
 import ServiceContentBlock from "../elements/ServiceContentBlock";
 import Footer from "../elements/Footer";
 
@@ -21,6 +22,17 @@ const homeCareTaskList = {
     "katetroi",
     "ottaa verinäytteesi ja toimittaa sen laboratorioon",
     "tekee toimintakyvyn arvioinnit",
+  ],
+};
+
+const homeHelpTaskList = {
+  expandedList: [
+    "quis aute iure",
+    "reprehenderit in voluptate",
+    "velit esse",
+    "cillum dolore",
+    "eu fugiat nulla",
+    "pariatur",
   ],
 };
 
@@ -96,9 +108,10 @@ const homeServiceCards = [
     iconFileName: "anneliinan-kotisairaanhoito.png",
     textHtml: "Omais&#173;hoitajan vapaa",
     className: "info-card-value info-card-service",
-    expandedTitle: "Omaishoitajalle voimia ja energiaa vapaista",
+    expandedTitle:
+      "Ammattitaitoista ja turvallista huolenpitoa omaisellesi vapaapäivinäsi.",
     expandedText:
-      "Omaishoitaja on henkilö, joka pitää huolta sairaasta, vammaisesta tai ikääntyvästä läheisestään. Omaishoitotilanne voi syntyä vähitellen ja omaishoidon tarve kasvaa esim. läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi tai äkillisesti sairauden tai vammautumisen seurauksena.",
+      "Omaishoitaja on henkilö, joka pitää huolta sairaasta, vammaisesta tai ikääntyvästä läheisestään. Omaishoitotilanne voi syntyä vähitellen ja omaishoidon tarve kasvaa esim. läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi tai äkillisesti sairauden tai vammautumisen seurauksena. Säännöllinen vapaa auttaa omaishoitajaa jaksamaan ja lisää voimavaroja omaishoitotilanteissa.",
     expandedListTitle: "Voimme avustaa sinua",
     expandedListTitleIcon: "favorite_border",
     expandedList: [
@@ -127,7 +140,7 @@ export default function Services() {
         imageFileName="services.jpeg"
         backgroundColor="lightbeige"
         title="Palvelut"
-        text="Tarjoamme yksilöllistä ja luotettavaa hoivapalvelua kaikille sitä tarvitseville. Meiltä saat sairaanhoitoa kotiin kuljetettuna, apua kotona asumiseen, henkilökohtaista apua ja voimia vapaista. Kaikkea ei tarvitse tehdä itse. Nyt saat myös halutessasi apua arkeen kuten ruoan valmistukseen, asiointiin tai siivoukseen. Huolehdimme tarvittaessa myös lemmikistäsi ja kasveistasi."
+        text="Tarjoamme yksilöllistä ja luotettavaa sairaanhoito- ja huolenpitopalvelua kaikille sitä tarvitseville. Oma koti on turvallinen paikka, jossa ihmisellä on hyvä olla. Haluamme varmistaa että ihmiset voivat asua omassa kodissaan aivan niin kauan kuin he itse haluavat. Autamme ihmisiä päivittäisessä elämässä, tarjoamalla heille henkilökohtaista apua kotona asumiseen ja arkeen. Huomioimme aina sinun arkesi ja tottumuksesi. Toimimme laadukkaasti ja luotettavasti, emmekä tunne sanaa kiire. Räätälöimme palvelut juuri sinulle sopiviksi. Yhdessä varmistamme, että palvelusta tulee juuri sellainen kuin olet toivonutkin."
         overlay={{
           overlayColor: "lightbeige",
           overlayReverse: true,
@@ -136,7 +149,26 @@ export default function Services() {
       <InfoCardContainer
         className="info-card-container-service-units"
         titleElement={<h2>Palvelukokonaisuudet</h2>}
-        text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
+        textElement={
+          <p>
+            Meiltä saat kaikki asumista tukevat palvelut saman katon alta.
+            <span className="text-weight-semibold">
+              {" "}
+              Kotihoito- ja sairaanhoitopalvelun{" "}
+            </span>{" "}
+            myötä tarjoamme yksilöllistä ja luotettavaa kotihoitoa
+            pääsääntöisesti ikääntyneille henkilöille, jotka tarvitsevat hoivaa,
+            huolenpitoa ja sairaanhoidollista apua kotona selviytymisen tueksi.
+            Kaikkea ei tarvitse tehdä itse.{" "}
+            <span className="text-weight-semibold">Kotiapupalveluna</span> voit
+            saada halutessasi apua arkeen ja näin sinulle jää enemmän aikaa
+            itsellesi, perheellesi ja ystävillesi.{" "}
+            <span className="text-weight-semibold">Päivätoiminta</span> tarjoaa
+            virikkeellistä toimintaa ja kuntoutusta kotona asuville
+            ikääntyneille, jotka taritsevat tukea kotona selviytymiseen tai
+            seuraa yksinäisiin päiviin.
+          </p>
+        }
         backgroundColor="lightbeige"
       >
         <InfoCard
@@ -160,7 +192,6 @@ export default function Services() {
           id="kotisairaanhoito"
           iconFileName="anneliinan-kotisairaanhoito.png"
           logoFileName="anneliinan-kotisairaanhoito.png"
-          sloganText="Sairaanhoito kotiinkuljetettuna"
         ></ServiceHeaderBlock>
         <ContentBlockContainer
           backgroundColor="lightblue"
@@ -169,9 +200,25 @@ export default function Services() {
           <ServiceContentBlock
             isReverse={true}
             imageFileName="service-1.jpeg"
-            title="Kotisairaanhoito on asiakkaan omaan kotiin vietyä sairaanhoitoa"
+            title="Hoivaa, huolenpitoa ja sairaanhoidollista apua kotona selviytymisen tueksi"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
-            text="Kotisairaanhoidon tarkoituksena on helpottaa sairaalasta kotiutumista, sairaan henkilön kotona selviytymistä ja tukea omaisia sairaan henkilön kotihoidossa. Sairaanhoitopalvelut ovat erilaisia lääkärin määräämiä sairaanhoidon toimenpiteitä kuten näytteiden ottamista, lääkityksen valvomista ja asiakkaan voinnin seuraamista."
+            textElement={
+              <>
+                <p>
+                  Kotisairaanhoito on asiakkaan omaan kotiin vietyä
+                  sairaanhoitoa. Tavoitteena on asiakkaan terveyden edistäminen
+                  sekä sairauksien hoito. Sen tarkoituksena on helpottaa
+                  sairaalasta kotiutumista, sairaan henkilön kotona
+                  selviytymistä ja tukea omaisia sairaan henkilön kotihoidossa.
+                </p>
+                <p>
+                  Kotihoito on ikäihmiselle tarkoitettu palvelu, jonka tavoite
+                  on asiakkaan kotona selviytymisen tukeminen ja avustaminen
+                  henkilökohtaisissa päivittäistoiminnoissa. Palvelu tapahtuu
+                  laadukkaan hoivatyön kautta, asiakkaan voimavaroja vahvistaen.
+                </p>
+              </>
+            }
             backgroundColor="white"
             backgroundColorMedium="lightblue"
             backgroundColorSecondaryMedium="white"
@@ -184,7 +231,6 @@ export default function Services() {
           id="kotihoito"
           iconFileName="anneliinan-kotisairaanhoito.png"
           logoFileName="anneliinan-koti.png"
-          sloganText="Kotona asumista tukevat palvelut"
         ></ServiceHeaderBlock>
         <ContentBlockContainer
           backgroundColor="lightbeige"
@@ -192,28 +238,74 @@ export default function Services() {
         >
           <ServiceContentBlock
             imageFileName="placeholder.jpeg"
-            title="Kotiapu sisältää kaikki kotona asumista tukevat palvelut"
+            title="Kotiapupalveluna voita saada erilaisia kotona asumista helpottavia palveluita"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
-            text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation."
+            textElement={
+              <>
+                <p>
+                  Oma koti on turvallinen paikka, jossa ihmisellä on hyvä olla.
+                  Useimmat ihmiset voivat paremmin, kun he saavat asua omassa
+                  kodissaan. Aivan niin kauan kuin he itse haluavat. Tämä on
+                  mahdollista, jos he saavat kotona asumiseen tarvitsemansa tuen
+                  ja avun. Avun joltakin, joka osaa asiansa ja välittää.
+                </p>
+                <p>
+                  Omien voimien vähentyessä kotiin saatavien palveluiden
+                  merkitys kasvaa. Ammattitaitoinen ja luotettava
+                  henkilökuntamme helpottaa arkeasi ja hyvinvointiasi.
+                  Kotiapupalveluna voita saada erilaisia kotona asumista
+                  helpottavia palveluita.
+                </p>
+              </>
+            }
             backgroundColor="white"
             backgroundColorMedium="lightbeige"
             backgroundColorSecondaryMedium="white"
             backgroundExpanderColorMedium="hyperlightbeige"
-            noButton={true}
-            infoCardList={homeServiceCards}
-            infoCardServiceContainerCardsRef={infoCardServiceContainerCardsRef}
-            infoCardServiceFirstRef={infoCardServiceFirstRef}
-            infoCardServiceLastRef={infoCardServiceLastRef}
-            activeInfoCardServiceIndex={activeInfoCardServiceIndex}
-            setActiveInfoCardServiceIndex={setActiveInfoCardServiceIndex}
-            expanderElement={homeServiceCards[activeInfoCardServiceIndex]}
+            expanderButtonText="Kotiapuhoitajamme"
+            expanderElement={homeHelpTaskList}
+          />
+
+          <ContentBlock
+            title="Kotiapu sisältää myös"
+            textElement={
+              <>
+                <div>
+                  <h3>Henkilökohtainen apu</h3>
+                  <p>
+                    Henkilökohtainen apu on välttämätöntä toisen ihmisen antamaa
+                    apua tavanomaiseen elämään liittyvissä toimissa, jotka
+                    henkilö tekisi itse, mutta joista hän vamman tai sairauden
+                    vuoksi ei selviä yksin. Kyseessä on itsenäisen elämän
+                    mahdollistaja vaikeavammaiselle henkilölle.
+                  </p>
+                </div>
+                <div>
+                  <h3>Omaishoitajan vapaa</h3>
+                  <p>
+                    Omaishoitaja on henkilö, joka pitää huolta sairaasta,
+                    vammaisesta tai ikääntyvästä läheisestään. Omaishoitotilanne
+                    voi syntyä vähitellen ja omaishoidon tarve kasvaa esim.
+                    läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi
+                    tai äkillisesti sairauden tai vammautumisen seurauksena.
+                    Säännöllinen vapaa auttaa omaishoitajaa jaksamaan ja lisää
+                    voimavaroja omaishoitotilanteissa.
+                  </p>
+                  <p>
+                    Anneliinasta saat ammattitaitoista ja turvallista
+                    huolenpitoa omaisellesi vapaapäivinäsi. Toimimme
+                    omaishoitajan sijaisena kotonasi.
+                  </p>
+                </div>
+              </>
+            }
+            backgroundColorMedium="lightbeige"
           />
         </ContentBlockContainer>
         <ServiceHeaderBlock
           id="paivatoiminta"
           iconFileName="anneliinan-kotisairaanhoito.png"
           logoFileName="anneliinan-paivatoiminta.png"
-          sloganText="Sosiaalista toimintaa"
         ></ServiceHeaderBlock>
         <ContentBlockContainer
           backgroundColor="lightpink"
@@ -222,9 +314,30 @@ export default function Services() {
           <ServiceContentBlock
             isReverse={true}
             imageFileName="placeholder.jpeg"
-            title="Päivätoiminta ylläpitää sosiaaliset suhteet"
+            title="Päivätoiminta tarjoaa virikkeellistä toimintaa ja kuntoutusta kotona asuville ikääntyneille"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
-            text="Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Altera scriptorem pri in, putent intellegam mel in. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his. Ut pro sumo tation. Quo in consul scripta detraxit, mollis verterem ea his."
+            textElement={
+              <>
+                <p>
+                  Anneliinan päivätoiminta tarjoaa iloista toimintaa ja
+                  kuntoutusta kotona asuville ikääntyneille, jotka tarvitsevat
+                  tukea kotona selviytymiseen tai seuraa yksinäisiin päiviin.
+                  Anneliinassa tavataan muita ihmisiä ja päiväohjelma
+                  rakennetaan yhdessä ryhmän toiveiden ja toimintakykyjen
+                  mukaisesti. Ryhmät pyritään kokoamaan siten, että kaikille
+                  löytyy seuraa ja mieluisaa tekemistä. Yhteen ryhmään mahtuu
+                  6–8 asiakasta kerrallaan.
+                </p>
+                <p>
+                  Päivätoimintapäivän pituus on kuusi tuntia klo 8–16.30
+                  välisenä aikana. Aloitus- ja päättymisajat vaihtelevat
+                  asiakkaiden tarpeista ja kuljetusaikatauluista riippuen.
+                  Päivän aikana nautitaan kevyt aamupala, maukas lounas sekä
+                  päiväkahvit. Järjestämme asiakkaillemme tarpeen mukaan myös
+                  ryhmäkuljetuksen päivätoimintaan ja takaisin kotiin.
+                </p>
+              </>
+            }
             backgroundColor="white"
             backgroundColorMedium="lightpink"
             backgroundColorSecondaryMedium="white"

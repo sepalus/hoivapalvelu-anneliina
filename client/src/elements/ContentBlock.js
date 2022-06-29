@@ -11,6 +11,7 @@ export default function ContentBlock(props) {
     title,
     keywords,
     text,
+    textElement,
     linkPath,
     externalLinkPath,
     buttonIcon,
@@ -67,7 +68,15 @@ export default function ContentBlock(props) {
                   backgroundColorSecondaryMedium,
               })}
             >
-              <p className="content-block-text">{text}</p>
+              {text ? (
+                <p className="content-block-text">{text}</p>
+              ) : textElement ? (
+                <div className="content-block-text content-block-text-container">
+                  {textElement}
+                </div>
+              ) : (
+                <></>
+              )}
               {(buttonIcon || buttonImage || buttonText) && (
                 <LinkButton
                   imageUrl={

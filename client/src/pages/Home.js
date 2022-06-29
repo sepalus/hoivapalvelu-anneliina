@@ -20,7 +20,14 @@ export default function Home() {
       <Slogan />
       <InfoCardContainer
         titleElement={<h2>Yksilöllistä palvelua kotona asumisen tueksi</h2>}
-        text="Huomioimme aina sinun arkesi ja tottumuksesi. Toimintamme on ammattimaista, laadukasta ja luotettavaa, emmekä tunne sanaa kiire. Räätälöimme palvelut juuri sinulle sopiviksi. Yhdessä varmistamme, että palvelusta tulee juuri sellainen kuin olet toivonutkin."
+        textElement={
+          <p>
+            Huomioimme aina sinun arkesi ja tottumuksesi. Toimintamme on
+            ammattimaista, laadukasta ja luotettavaa, emmekä tunne sanaa kiire.
+            Räätälöimme palvelut juuri sinulle sopiviksi. Yhdessä varmistamme,
+            että palvelusta tulee juuri sellainen kuin olet toivonutkin.
+          </p>
+        }
         backgroundColor="lightblue"
       >
         <InfoCard
