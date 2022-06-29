@@ -3,7 +3,6 @@
 @include mergeBannerWithTopContainer();
 
 .banner {
-  scroll-snap-align: start;
   position: relative;
   width: 100%;
   display: flex;
