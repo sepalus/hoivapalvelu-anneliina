@@ -8,3 +8,24 @@
   @include setOuterPaddings();
   @include setContentMaxWidth();
 }
+
+.services-content-blocks-container {
+  .content-block-container-content-wrapper {
+    gap: $x4;
+  }
+  @media only screen and (min-width: $width-s) {
+    .content-block-container-content-wrapper {
+      gap: $x6;
+    }
+  }
+  @media only screen and (min-width: $width-m) {
+    .content-block-container-content-wrapper {
+      gap: $x7;
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    .content-block-container-content-wrapper {
+      gap: $x8;
+    }
+  }
+}

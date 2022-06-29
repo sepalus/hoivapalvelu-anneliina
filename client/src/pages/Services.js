@@ -1,11 +1,10 @@
 import React, { useState, useRef } from "react";
 import Banner from "../elements/Banner";
-import ServiceHeaderBlock from "../elements/ServiceHeaderBlock";
 import InfoCardContainer from "../elements/InfoCardContainer";
 import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
-import ServiceContentBlock from "../elements/ServiceContentBlock";
+import ServiceLiftup from "../elements/ServiceLiftup";
 import Footer from "../elements/Footer";
 
 const homeCareTaskList = {
@@ -188,19 +187,11 @@ export default function Services() {
         />
       </InfoCardContainer>
       <div className="services-content-blocks-container">
-        <ServiceHeaderBlock
-          id="kotisairaanhoito"
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-kotisairaanhoito.png"
-        ></ServiceHeaderBlock>
-        <ContentBlockContainer
-          backgroundColor="lightblue"
-          className="service-content-block-container"
-        >
-          <ServiceContentBlock
-            isReverse={true}
+        <ContentBlockContainer>
+          <ServiceLiftup
             imageFileName="service-1.jpeg"
-            title="Hoivaa, huolenpitoa ja sairaanhoidollista apua kotona selviytymisen tueksi"
+            title="Anneliina Kotihoito ja sairaanhoito"
+            description="Hoivaa, huolenpitoa ja sairaanhoidollista apua kotona selviytymisen tueksi"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
             textElement={
               <>
@@ -226,19 +217,11 @@ export default function Services() {
             expanderButtonText="Hoitajamme auttavat"
             expanderElement={homeCareTaskList}
           />
-        </ContentBlockContainer>
-        <ServiceHeaderBlock
-          id="kotihoito"
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-koti.png"
-        ></ServiceHeaderBlock>
-        <ContentBlockContainer
-          backgroundColor="lightbeige"
-          className="service-content-block-container"
-        >
-          <ServiceContentBlock
+          <ServiceLiftup
+            isReverse={true}
             imageFileName="placeholder.jpeg"
-            title="Kotiapupalveluna voita saada erilaisia kotona asumista helpottavia palveluita"
+            title="Anneliina Kotiapu"
+            description="Kotiapupalveluna voita saada erilaisia kotona asumista helpottavia palveluita"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
             textElement={
               <>
@@ -266,55 +249,10 @@ export default function Services() {
             expanderElement={homeHelpTaskList}
           />
 
-          <ContentBlock
-            title="Kotiapu sisältää myös"
-            textElement={
-              <>
-                <div>
-                  <h3>Henkilökohtainen apu</h3>
-                  <p>
-                    Henkilökohtainen apu on välttämätöntä toisen ihmisen antamaa
-                    apua tavanomaiseen elämään liittyvissä toimissa, jotka
-                    henkilö tekisi itse, mutta joista hän vamman tai sairauden
-                    vuoksi ei selviä yksin. Kyseessä on itsenäisen elämän
-                    mahdollistaja vaikeavammaiselle henkilölle.
-                  </p>
-                </div>
-                <div>
-                  <h3>Omaishoitajan vapaa</h3>
-                  <p>
-                    Omaishoitaja on henkilö, joka pitää huolta sairaasta,
-                    vammaisesta tai ikääntyvästä läheisestään. Omaishoitotilanne
-                    voi syntyä vähitellen ja omaishoidon tarve kasvaa esim.
-                    läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi
-                    tai äkillisesti sairauden tai vammautumisen seurauksena.
-                    Säännöllinen vapaa auttaa omaishoitajaa jaksamaan ja lisää
-                    voimavaroja omaishoitotilanteissa.
-                  </p>
-                  <p>
-                    Anneliinasta saat ammattitaitoista ja turvallista
-                    huolenpitoa omaisellesi vapaapäivinäsi. Toimimme
-                    omaishoitajan sijaisena kotonasi.
-                  </p>
-                </div>
-              </>
-            }
-            backgroundColorMedium="lightbeige"
-          />
-        </ContentBlockContainer>
-        <ServiceHeaderBlock
-          id="paivatoiminta"
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-paivatoiminta.png"
-        ></ServiceHeaderBlock>
-        <ContentBlockContainer
-          backgroundColor="lightpink"
-          className="service-content-block-container"
-        >
-          <ServiceContentBlock
-            isReverse={true}
+          <ServiceLiftup
             imageFileName="placeholder.jpeg"
-            title="Päivätoiminta tarjoaa virikkeellistä toimintaa ja kuntoutusta kotona asuville ikääntyneille"
+            title="Anneliinan Päivätoiminta"
+            description="Päivätoiminta tarjoaa virikkeellistä toimintaa ja kuntoutusta kotona asuville ikääntyneille"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
             textElement={
               <>

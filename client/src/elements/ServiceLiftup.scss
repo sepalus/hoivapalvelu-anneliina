@@ -1,0 +1,98 @@
+@import "../variables";
+
+.service-liftup-content-upper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $x2;
+  padding-bottom: $x4;
+  padding-top: $x6;
+
+  h2 {
+    font-weight: 600;
+  }
+}
+
+.service-liftup-content-lower {
+  display: flex;
+  flex-direction: column;
+  gap: $inner-gap-s;
+  padding-top: $x3;
+}
+
+.service-liftup-image-wrapper {
+  padding-top: $x3;
+}
+
+.service-liftup-image {
+  width: 100%;
+}
+
+.service-liftup-color {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 100%;
+  left: -$padding-horizontal-s;
+  z-index: -1;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: $width-m) {
+  .service-liftup-content-upper {
+    padding-top: $x7;
+  }
+
+  .service-liftup-color {
+    left: -$padding-horizontal-m;
+  }
+}
+
+@media only screen and (min-width: $width-l) {
+  .service-liftup {
+    height: calc(100vh - 60px);
+    display: flex;
+  }
+
+  .service-liftup-content {
+    width: 50%;
+    padding-right: $x5_5;
+  }
+
+  .service-liftup-content-upper {
+    padding-top: $x12;
+    gap: $x3;
+    padding-bottom: $x4_5;
+  }
+
+  .service-liftup-content-lower {
+    padding-top: $x3_5;
+  }
+
+  .service-liftup-color {
+    left: -$padding-horizontal-l;
+  }
+
+  .service-liftup-image-wrapper {
+    position: absolute;
+    right: 0px;
+    width: 50vw;
+    height: calc(100vh - 60px);
+    padding-top: $x12;
+  }
+
+  .service-liftup-image {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: $width-xl) {
+  .service-liftup-content {
+    padding-right: $x7;
+  }
+
+  .service-liftup-color {
+    left: calc(518px - 50vw);
+  }
+}
