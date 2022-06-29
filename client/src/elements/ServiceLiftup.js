@@ -3,6 +3,7 @@ import classNames from "classnames";
 import "./ServiceLiftup.scss";
 
 export default function InfoCard({
+  isReverse,
   title,
   description,
   textElement,
@@ -10,7 +11,11 @@ export default function InfoCard({
   backgroundColorMedium,
 }) {
   return (
-    <div className="service-liftup">
+    <div
+      className={classNames("service-liftup", {
+        "service-liftup-reverse": isReverse,
+      })}
+    >
       <div className="service-liftup-content">
         <div className="service-liftup-content-upper">
           <div

@@ -85,6 +85,20 @@
     height: 100%;
     object-fit: cover;
   }
+  .service-liftup-reverse {
+    .service-liftup-content {
+      margin-left: 50%;
+      padding-right: 0px;
+      padding-left: $x5_5;
+    }
+    .service-liftup-color {
+      right: -$padding-horizontal-l;
+      left: unset;
+    }
+    .service-liftup-image-wrapper {
+      left: 0px;
+    }
+  }
 }
 
 @media only screen and (min-width: $width-xl) {
@@ -94,5 +108,14 @@
 
   .service-liftup-color {
     left: calc(518px - 50vw);
+  }
+  .service-liftup-reverse {
+    .service-liftup-content {
+      padding-left: $x7;
+    }
+    .service-liftup-color {
+      left: unset;
+      right: calc(518px - 50vw);
+    }
   }
 }
