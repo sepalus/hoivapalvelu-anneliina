@@ -14,6 +14,7 @@ div {
   box-sizing: border-box;
 }
 ul {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -111,6 +112,22 @@ p.text-extrasmall {
   font-size: $text-extrasmall-s;
 }
 
+p.text-underline {
+  text-decoration: underline;
+}
+
+.color-blue {
+  color: $color-blue;
+}
+
+.color-beige {
+  color: $color-beige;
+}
+
+.color-pink {
+  color: $color-pink;
+}
+
 .background-transparent {
   background-color: transparent;
 }
@@ -172,11 +189,7 @@ p.text-extrasmall {
 .text-weight-bold {
   font-weight: 600;
 }
-.bullet-point-item {
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-}
+
 .hide-element {
   display: none !important;
 }

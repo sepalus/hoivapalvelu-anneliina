@@ -1,5 +1,8 @@
 @import "../variables";
 
+.service-liftup {
+  position: relative;
+}
 .service-liftup-content-upper {
   position: relative;
   display: flex;
@@ -38,6 +41,18 @@
   overflow: hidden;
 }
 
+.service-liftup-service-list-container {
+  padding: $x1 $x2;
+  border-left: 8px solid;
+  p,
+  span {
+    color: black;
+  }
+  p {
+    padding-bottom: $x0_5;
+  }
+}
+
 @media only screen and (min-width: $width-m) {
   .service-liftup-content-upper {
     padding-top: $x7;
@@ -50,7 +65,6 @@
 
 @media only screen and (min-width: $width-l) {
   .service-liftup {
-    height: calc(100vh - 60px);
     display: flex;
   }
 
@@ -75,9 +89,9 @@
 
   .service-liftup-image-wrapper {
     position: absolute;
-    right: 0px;
+    right: -$padding-horizontal-l;
     width: 50vw;
-    height: calc(100vh - 60px);
+    height: 100%;
     padding-top: $x12;
   }
 
@@ -92,11 +106,12 @@
       padding-left: $x5_5;
     }
     .service-liftup-color {
-      right: -$padding-horizontal-l;
       left: unset;
+      right: -$padding-horizontal-l;
     }
     .service-liftup-image-wrapper {
-      left: 0px;
+      right: unset;
+      left: -$padding-horizontal-l;
     }
   }
 }
@@ -105,9 +120,12 @@
   .service-liftup-content {
     padding-right: $x7;
   }
-
   .service-liftup-color {
     left: calc(518px - 50vw);
+  }
+  .service-liftup-image-wrapper {
+    left: unset;
+    right: calc(518px - 50vw);
   }
   .service-liftup-reverse {
     .service-liftup-content {
@@ -116,6 +134,10 @@
     .service-liftup-color {
       left: unset;
       right: calc(518px - 50vw);
+    }
+    .service-liftup-image-wrapper {
+      right: unset;
+      left: calc(518px - 50vw);
     }
   }
 }

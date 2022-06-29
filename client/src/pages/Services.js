@@ -7,44 +7,40 @@ import ContentBlock from "../elements/ContentBlock";
 import ServiceLiftup from "../elements/ServiceLiftup";
 import Footer from "../elements/Footer";
 
-const homeCareTaskList = {
-  expandedList: [
-    "tarkkailee yleistä terveydentilaasi",
-    "neuvoo terveyteesi liittyvissä asioissa",
-    "jakaa ja antaa lääkkeesi",
-    "poistaa hakaset ja ompeleet",
-    "mittaa verenpaineesi, verensokerisi, hemoglobiinisi ja saturaatiosi",
-    "huuhtelee korviasi",
-    "laittaa silmätippasi tai -voiteesi",
-    "antaa injektiosi",
-    "hoitaa haavasi",
-    "katetroi",
-    "ottaa verinäytteesi ja toimittaa sen laboratorioon",
-    "tekee toimintakyvyn arvioinnit",
-  ],
-};
+const homeCareTaskList = [
+  "tarkkailee yleistä terveydentilaasi",
+  "neuvoo terveyteesi liittyvissä asioissa",
+  "jakaa ja antaa lääkkeesi",
+  "poistaa hakaset ja ompeleet",
+  "mittaa verenpaineesi, verensokerisi, hemoglobiinisi ja saturaatiosi",
+  "huuhtelee korviasi",
+  "laittaa silmätippasi tai -voiteesi",
+  "antaa injektiosi",
+  "hoitaa haavasi",
+  "katetroi",
+  "ottaa verinäytteesi ja toimittaa sen laboratorioon",
+  "tekee toimintakyvyn arvioinnit",
+];
 
-const homeHelpTaskList = {
-  expandedList: [
-    "quis aute iure",
-    "reprehenderit in voluptate",
-    "velit esse",
-    "cillum dolore",
-    "eu fugiat nulla",
-    "pariatur",
-  ],
-};
+const homeHelpTaskList = [
+  "pyykkien pesussa ja silittämisessä",
+  "siivouksessa ja ikkunanpesussa",
+  "kauppa- apteekki- ja muussa asioinnissa",
+  "ruoanlaitossa",
+  "lasten hoidossa",
+  "lemmikkien ulkoiluttamisessa",
+  "kukkien kastelemisessa",
+];
 
-const dayActivityTaskList = {
-  expandedList: [
-    "quis aute iure",
-    "reprehenderit in voluptate",
-    "velit esse",
-    "cillum dolore",
-    "eu fugiat nulla",
-    "pariatur",
-  ],
-};
+const dayActivityTaskList = [
+  "luetaan lehtiä",
+  "keskustellaan ajankohtaisista asioista",
+  "harrastetaan kevyttä liikuntaa",
+  "ulkoillaan",
+  "pelataan pelejä",
+  "harjoitetaan kädentaitoja",
+  "muistellaan menneitä",
+];
 
 const homeServiceCards = [
   {
@@ -210,12 +206,10 @@ export default function Services() {
                 </p>
               </>
             }
-            backgroundColor="white"
-            backgroundColorMedium="lightblue"
-            backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="hyperlightblue"
-            expanderButtonText="Hoitajamme auttavat"
-            expanderElement={homeCareTaskList}
+            color="blue"
+            backgroundColor="lightblue"
+            serviceListTitle="Hoitajamme"
+            serviceList={homeCareTaskList}
           />
           <ServiceLiftup
             isReverse={true}
@@ -241,12 +235,10 @@ export default function Services() {
                 </p>
               </>
             }
-            backgroundColor="white"
-            backgroundColorMedium="lightbeige"
-            backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="hyperlightbeige"
-            expanderButtonText="Kotiapuhoitajamme"
-            expanderElement={homeHelpTaskList}
+            color="beige"
+            backgroundColor="lightbeige"
+            serviceListTitle="Hoitajamme auttavat sinua"
+            serviceList={homeHelpTaskList}
           />
 
           <ServiceLiftup
@@ -267,21 +259,16 @@ export default function Services() {
                   6–8 asiakasta kerrallaan.
                 </p>
                 <p>
-                  Päivätoimintapäivän pituus on kuusi tuntia klo 8–16.30
-                  välisenä aikana. Aloitus- ja päättymisajat vaihtelevat
-                  asiakkaiden tarpeista ja kuljetusaikatauluista riippuen.
                   Päivän aikana nautitaan kevyt aamupala, maukas lounas sekä
                   päiväkahvit. Järjestämme asiakkaillemme tarpeen mukaan myös
                   ryhmäkuljetuksen päivätoimintaan ja takaisin kotiin.
                 </p>
               </>
             }
-            backgroundColor="white"
-            backgroundColorMedium="lightpink"
-            backgroundColorSecondaryMedium="white"
-            backgroundExpanderColorMedium="hyperlightbeige"
-            expanderButtonText="Päivätoiminnassa"
-            expanderElement={dayActivityTaskList}
+            color="pink"
+            backgroundColor="lightpink"
+            serviceListTitle="Päivätoiminnassa"
+            serviceList={dayActivityTaskList}
           />
         </ContentBlockContainer>
       </div>
