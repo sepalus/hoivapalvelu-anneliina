@@ -243,6 +243,41 @@ export default function Services() {
             serviceListTitle="Hoitajamme auttavat sinua"
             serviceList={homeHelpTaskList}
           />
+          <ContentBlock
+            title="Kotiapu sisältää myös"
+            textElement={
+              <>
+                <div>
+                  <h3>Henkilökohtainen apu</h3>
+                  <p>
+                    Henkilökohtainen apu on välttämätöntä toisen ihmisen antamaa
+                    apua tavanomaiseen elämään liittyvissä toimissa, jotka
+                    henkilö tekisi itse, mutta joista hän vamman tai sairauden
+                    vuoksi ei selviä yksin. Kyseessä on itsenäisen elämän
+                    mahdollistaja vaikeavammaiselle henkilölle.
+                  </p>
+                </div>
+                <div>
+                  <h3>Omaishoitajan vapaa</h3>
+                  <p>
+                    Omaishoitaja on henkilö, joka pitää huolta sairaasta,
+                    vammaisesta tai ikääntyvästä läheisestään. Omaishoitotilanne
+                    voi syntyä vähitellen ja omaishoidon tarve kasvaa esim.
+                    läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi
+                    tai äkillisesti sairauden tai vammautumisen seurauksena.
+                    Säännöllinen vapaa auttaa omaishoitajaa jaksamaan ja lisää
+                    voimavaroja omaishoitotilanteissa.
+                  </p>
+                  <p>
+                    Anneliinasta saat ammattitaitoista ja turvallista
+                    huolenpitoa omaisellesi vapaapäivinäsi. Toimimme
+                    omaishoitajan sijaisena kotonasi.
+                  </p>
+                </div>
+              </>
+            }
+            backgroundColorMedium="lightbeige"
+          />
 
           <ServiceLiftup
             id="paivatoiminta"
