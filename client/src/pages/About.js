@@ -78,7 +78,7 @@ export default function About() {
           <InfoCardContainer
             id="arvot"
             titleElement={<h2>Anneliinan arvot</h2>}
-            text="Toimintamme perustuu arvoihimme. Lorem ipsum dolor sit amet, albucius patrioque et ius, ex his duis iisque. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+            text="Kaiken toimintamme lähtökohtana ovat asiakkaidemme toiveet ja tarpeet. Asiakastyötämme ohjaavia arvoja ovat yksilöllisyys, ammatillisuus, inhimillisyys, luotettavuus ja arvostus. Asiakkaitamme hoidamme vastuuhoitajaperiaatteen mukaisesti ja samalla turvaamme hoidon yksilöllisyyden, jatkuvuuden ja luotettavuuden."
             backgroundColor="lightpink"
             className="info-card-container-value"
             hasScrollableInfoCards={true}
