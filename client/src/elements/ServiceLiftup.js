@@ -3,6 +3,7 @@ import classNames from "classnames";
 import "./ServiceLiftup.scss";
 
 export default function InfoCard({
+  id,
   isReverse,
   title,
   description,
@@ -15,6 +16,7 @@ export default function InfoCard({
 }) {
   return (
     <div
+      id={id}
       className={classNames("service-liftup", {
         "service-liftup-reverse": isReverse,
       })}

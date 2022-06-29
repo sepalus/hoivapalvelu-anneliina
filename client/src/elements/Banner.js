@@ -12,10 +12,12 @@ export default function Banner({
   buttonText,
   backgroundColor,
   overlay,
+  overlayWhite,
 }) {
   const hasOverlay = !!overlay;
   const overlayColor = overlay && overlay.overlayColor;
   const overlayReverse = overlay && overlay.overlayReverse;
+  const overlayWhiter = overlay && overlay.overlayWhiter;
 
   return (
     <div className={classNames("banner", { [`${className}`]: className })}>
@@ -31,6 +33,7 @@ export default function Banner({
           className={classNames("banner-tagline", {
             "banner-tagline-background-overlay": hasOverlay,
             "banner-tagline-background-overlay-reverse": overlayReverse,
+            "banner-tagline-background-overlay-whiter": overlayWhiter,
             [`background-${backgroundColor}`]: backgroundColor,
             "background-medium-transparent": !overlayColor,
             [`background-medium-${backgroundColor}`]: overlayColor,

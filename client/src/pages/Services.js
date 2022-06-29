@@ -139,6 +139,7 @@ export default function Services() {
         overlay={{
           overlayColor: "lightbeige",
           overlayReverse: true,
+          overlayWhiter: true,
         }}
       />
       <InfoCardContainer
@@ -169,12 +170,12 @@ export default function Services() {
         <InfoCard
           iconFileName="anneliinan-kotisairaanhoito.png"
           logoFileName="anneliinan-kotisairaanhoito.png"
-          linkPath="/palvelut#kotisairaanhoito"
+          linkPath="/palvelut#kotihoito"
         />
         <InfoCard
           iconFileName="anneliinan-kotisairaanhoito.png"
           logoFileName="anneliinan-koti.png"
-          linkPath="/palvelut#kotihoito"
+          linkPath="/palvelut#kotiapu"
         />
         <InfoCard
           iconFileName="anneliinan-kotisairaanhoito.png"
@@ -185,8 +186,9 @@ export default function Services() {
       <div className="services-content-blocks-container">
         <ContentBlockContainer>
           <ServiceLiftup
+            id="kotihoito"
             imageFileName="service-1.jpeg"
-            title="Anneliina Kotihoito ja sairaanhoito"
+            title="Anneliinan Kotihoito ja Sairaanhoito"
             description="Hoivaa, huolenpitoa ja sairaanhoidollista apua kotona selviytymisen tueksi"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
             textElement={
@@ -212,9 +214,10 @@ export default function Services() {
             serviceList={homeCareTaskList}
           />
           <ServiceLiftup
+            id="kotiapu"
             isReverse={true}
             imageFileName="placeholder.jpeg"
-            title="Anneliina Kotiapu"
+            title="Anneliinan Kotiapu"
             description="Kotiapupalveluna voita saada erilaisia kotona asumista helpottavia palveluita"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
             textElement={
@@ -242,6 +245,7 @@ export default function Services() {
           />
 
           <ServiceLiftup
+            id="paivatoiminta"
             imageFileName="placeholder.jpeg"
             title="Anneliinan Päivätoiminta"
             description="Päivätoiminta tarjoaa virikkeellistä toimintaa ja kuntoutusta kotona asuville ikääntyneille"
