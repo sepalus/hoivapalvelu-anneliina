@@ -8,17 +8,16 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 function App() {
-  const [servicesSnapScrollEnabled, setServicesSnapScrollEnabled] =
-    useState(true);
+  useState(true);
 
   return (
     <>
       <Router>
-        <Header setServicesSnapScrollEnabled={setServicesSnapScrollEnabled} />
+        <Header />
         <div>
           <Switch>
             <Route path="/palvelut">
-              <Services servicesSnapScrollEnabled={servicesSnapScrollEnabled} />
+              <Services />
             </Route>
             <Route path="/hinnasto">
               <Pricing />
@@ -30,9 +29,7 @@ function App() {
               <Contact />
             </Route>
             <Route path="/">
-              <Home
-                setServicesSnapScrollEnabled={setServicesSnapScrollEnabled}
-              />
+              <Home />
             </Route>
           </Switch>
         </div>

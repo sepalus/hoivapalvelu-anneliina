@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import "./Header.scss";
 import "./HeaderOverlay.scss";
 
-export default function Header({ setServicesSnapScrollEnabled }) {
+export default function Header() {
   const [showMenuOverlay, setShowMenuOverlay] = useState(false);
 
   return (
@@ -41,10 +41,7 @@ export default function Header({ setServicesSnapScrollEnabled }) {
               to="/palvelut"
               className="header-navigation-item"
               activeClassName="header-navigation-item-active"
-              onClick={() => {
-                setShowMenuOverlay(false);
-                setServicesSnapScrollEnabled(true);
-              }}
+              onClick={() => setShowMenuOverlay(false)}
             >
               <p className="text-weight-medium p-17">Palvelut</p>
             </NavLink>
