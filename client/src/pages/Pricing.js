@@ -81,10 +81,10 @@ export default function Pricing() {
           isReverse={true}
           imageFileName="placeholder.jpeg"
           title="​Kotitalousvähennys"
-          text="Voit saada kotitalousvähennyksen, jos teetät kotitalous- tai tavanomaista hoiva-tai hoitotyötä. Vähennys on jopa 40% maksamasi palvelun hinnasta ja se hyvitetään sinulle henkilökohtaisessa verotuksessa. Voimme autta sinua verovähennyksen hakemisessa."
+          text="Voit saada kotitalousvähennyksen, jos teetät kotitalous- tai tavanomaista hoiva-tai hoitotyötä. Vähennys on jopa 60% maksamasi palvelun hinnasta ja se hyvitetään sinulle henkilökohtaisessa verotuksessa. Voimme autta sinua verovähennyksen hakemisessa."
           backgroundColor="white"
           backgroundColorMedium="lightbeige"
-          buttonText="Lue lisää vero.fi sivuilta"
+          buttonText="Lue lisää vero.fi-sivuilta"
           externalLinkPath="https://www.vero.fi/henkiloasiakkaat/verokortti-ja-veroilmoitus/tulot-ja-vahennykset/kotitalousvahennys/"
         />
       </ContentBlockContainer>
