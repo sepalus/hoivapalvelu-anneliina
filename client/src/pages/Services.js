@@ -244,7 +244,7 @@ export default function Services() {
             serviceList={homeHelpTaskList}
           />
           <ContentBlock
-            title="Kotiapu sisältää myös"
+            title="Palveluihimme kuuluu myös"
             textElement={
               <>
                 <div>

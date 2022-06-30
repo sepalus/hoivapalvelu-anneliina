@@ -46,7 +46,7 @@ const infoCards = [
     className: "info-card-value",
     expandedTitle: "Tiimimme on ammattitaitoinen",
     expandedText:
-      "Kannustamme työntekijöidemme kasvua ammattilaisina ja ihmisinä. Palveluksessamme on koulutettua terveydenhuoltoalan henkilökuntaa ja panostamme systemaattisesti heidän ammattitaitonsa ylläpitämiseen ja kehittämiseen. Meille työn ja muun elämän tasapaino on tärkeätä.",
+      "Kannustamme työntekijöidemme kasvua ammattilaisina ja ihmisinä. Palveluksessamme on koulutettua terveydenhuoltoalan henkilökuntaa ja panostamme systemaattisesti heidän ammattitaitonsa ylläpitämiseen ja kehittämiseen. Meille työn ja muun elämän tasapaino on tärkeää.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function About() {
         imageFileName="about-us.jpeg"
         title="Tietoa Meistä"
         backgroundColor="lightpink"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        text="Hoivapalvelu Anneliina tukee ihmisen kotona asumista tarjoamalla luotettavaa, laadukasta ja asiakaslähtöistä sairaanhoito- ja huolenpitopalvelua. Autamme ihmisiä päivittäisessä elämässä tarjoamalla heille henkilökohtaista apua kotona-asumiseen ja arkeen. Teemme saumatonta ja tavoitteellista yhteistyötä muiden yhteistyökumppaneiden ja omaisten kanssa. Haluamme, että Anneliina tunnetaan hoiva-alalla luotettavana kotihoidon palvelun tarjoajana, jossa ammattitaito ja ihmisläheisyys kohtaavat. Haluamme tarjota toimialueemme parasta kotihoitopalvelua."
         overlay={{ overlayColor: "lightbeige" }}
       />
       <InfoCardContainer
@@ -91,6 +91,7 @@ export default function About() {
             <span class="material-icons-outlined">close</span>
           </Button>
         }
+        expanderClassName="background-white"
         infoCardContainerCardsRef={infoCardValueContainerCardsRef}
         infoCardFirstRef={infoCardValueFirstRef}
         infoCardLastRef={infoCardValueLastRef}
@@ -121,7 +122,7 @@ export default function About() {
         <ContentBlock
           imageFileName="placeholder.jpeg"
           title="Tarinamme"
-          text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli Annen halu luoda asiakkaillensa parempi arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Tuntui, että niin paljon oli tehtävää, jotta asiakkaat voisivat asua kotona turvallisin mielin. Suomalaisen perheyrityksen Anneliinahoivan uudet tuulet jatkavat Annen viitoittamaa tietä."
+          text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli halu luoda kotona asuville ikäihmisille hyvä arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Suomalaisen perheyrityksen hoivapalvelu Anneliinan tuulet jatkavat perustajansa viitoittamaa tietä."
           backgroundColor="white"
           backgroundColorMedium="lightbeige"
         />

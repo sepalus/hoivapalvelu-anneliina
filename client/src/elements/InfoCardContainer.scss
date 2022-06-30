@@ -87,7 +87,9 @@
     background-color: $color-white;
   }
   .expander {
-    padding-top: 8px;
+    @include setExpanderPaddings();
+    @include setGap("small");
+    border-radius: $border-radius;
   }
 
   @media only screen and (min-width: $width-m) {
