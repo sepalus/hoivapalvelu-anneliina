@@ -9,7 +9,7 @@ import Footer from "../elements/Footer";
 
 const infoCards = [
   {
-    iconFileName: "value-1.png",
+    iconFileName: "value_individuality.png",
     text: "Ykislöllisyys",
     className: "info-card-value",
     expandedTitle: "Hoito on yksilöllistä",
@@ -17,7 +17,7 @@ const infoCards = [
       "Yksilöllinen sydämestä lähtevä palvelu tarkoittaa sitä, että asiakasta kohdellaan ainutlaatuisena ihmisenä. Meille asiakas on aina yksilö ja oman elämänsä asiantuntija ja kunnioitamme hänen itsemääräämisoikeuttaan. Uskomme ihmisen ainutlaatuisuuteen.",
   },
   {
-    iconFileName: "value-2.png",
+    iconFileName: "value_humanity.png",
     text: "Inhimillisyys",
     className: "info-card-value",
     expandedTitle: "Kohtaaminen on ystävällistä ja inhimillistä",
@@ -25,7 +25,7 @@ const infoCards = [
       "Emme tunne sanaa kiire. Hoitajamme tarjoavat aikaa ja läsnäoloa ja kohtelu on lämmintä ja ystävällistä.",
   },
   {
-    iconFileName: "value-3.png",
+    iconFileName: "value_trust.png",
     text: "Luotettavuus",
     className: "info-card-value",
     expandedTitle: "Olemme luotettavia",
@@ -33,7 +33,7 @@ const infoCards = [
       "Panostamme palveluidemme luotettavuuteen ja turvallisuuteen. Palvelemme sovitusti ja täsmällisesti, laadusta tinkimättä. Annettu palvelu perustuu hoito ja –palvelusuunnitelmaan. Kaikessa toiminnassamme edellytämme rehellisyyttä itseä ja toisia kohtaan ja sitä kautta rakennamme vahvan luottamuksen ilmapiirin.",
   },
   {
-    iconFileName: "value-1.png",
+    iconFileName: "value_respect.png",
     text: "Arvostus",
     className: "info-card-value",
     expandedTitle: "Arvostamme toinen toisiamme",
@@ -41,7 +41,7 @@ const infoCards = [
       "Arvostamme ja kunnioitamme asiakkaitamme, yhteistyökumppaneitamme sekä toinen toisiamme. On tärkeätä toimia itse tavalla, mitä myös muilta edellyttää. Toimintamme edellyttää joustavaa ja tavoitteellista toimintatapaa jolloin avoimuuden ja yhteistyön merkitykset korostuvat. Joukkuepelissä meillä kaikilla on oma tärkeä roolimme.",
   },
   {
-    iconFileName: "value-2.png",
+    iconFileName: "value_professionalism.png",
     text: "Ammattitaito",
     className: "info-card-value",
     expandedTitle: "Tiimimme on ammattitaitoinen",

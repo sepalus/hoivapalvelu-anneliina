@@ -325,14 +325,14 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
   }
 }
 
-@mixin setExpanderPaddings($extraVerticalSpace: false) {
-  @if $extraVerticalSpace {
-    padding: 24px;
+@mixin setExpanderPaddings($noSidePaddings: false) {
+  @if $noSidePaddings {
+    padding: 24px 0px;
     @media only screen and (min-width: $width-m) {
-      padding: 32px;
+      padding: 32px 0px;
     }
     @media only screen and (min-width: $width-l) {
-      padding: 36px;
+      padding: 36px 0px;
     }
   } @else {
     padding: 24px;

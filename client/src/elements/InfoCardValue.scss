@@ -21,17 +21,17 @@
 .info-card-value {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-
-  height: 105px;
+  height: 100%;
   flex: 1 0;
   flex-direction: column;
   align-items: center;
-  @include setInnerPaddings(false, false, false, "sm", "sm", true, false);
+  @include setExpanderPaddings(true);
+  @include setGap("small");
   @include setInfoCardValueWidth();
 
   .info-card-icon-wrapper {
     display: flex;
-    height: 26px;
+    height: 36px;
     width: auto;
   }
   .info-card-text p {
@@ -42,7 +42,7 @@
     height: auto;
     .info-card-icon-wrapper {
       margin-top: $x0_5;
-      height: 30px;
+      height: 40px;
       width: auto;
     }
     .info-card-text p {
@@ -51,7 +51,7 @@
   }
   @media only screen and (min-width: $width-l) {
     .info-card-icon-wrapper {
-      height: 36px;
+      height: 46px;
     }
     .info-card-text p {
       font-size: $text-small-l;
@@ -59,7 +59,7 @@
   }
   @media only screen and (min-width: $width-xl) {
     .info-card-icon-wrapper {
-      height: 40px;
+      height: 50px;
     }
   }
 

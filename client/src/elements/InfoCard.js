@@ -7,6 +7,7 @@ import LinkButton from "../components/LinkButton";
 
 export default function InfoCard({
   linkPath,
+  iconName,
   iconFileName,
   logoFileName,
   text,

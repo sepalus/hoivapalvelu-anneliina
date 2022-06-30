@@ -45,7 +45,7 @@ export default function Contact() {
                 @anneliina.net
               </p>
             }
-            imageFileName="tove.jpeg"
+            imageFileName="contact_tove.jpeg"
           ></ContactPerson>
           <ContactPerson
             className="contact-card-item-person"
@@ -59,7 +59,7 @@ export default function Contact() {
                 @anneliina.net
               </p>
             }
-            imageFileName="placeholder.jpeg"
+            imageFileName="contact_placeholder.png"
           ></ContactPerson>
           <ContactPerson
             className="contact-card-item-person"
@@ -73,7 +73,7 @@ export default function Contact() {
                 @anneliina.net
               </p>
             }
-            imageFileName="placeholder.jpeg"
+            imageFileName="contact_placeholder.png"
           ></ContactPerson>
         </ContactCard>
       </InfoCardContainer>
