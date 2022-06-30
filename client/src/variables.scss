@@ -106,6 +106,9 @@ $inner-padding-content-block-l: $x6 $padding-horizontal-l $x7;
 $inner-padding-content-block-negative-s: (-$x3_5) (-$padding-horizontal-s)
   (-$x4_5);
 
+$inner-gap-extrasmall-s: $x0_5;
+$inner-gap-extrasmall-m: $x1;
+$inner-gap-extrasmall-l: $x1;
 $inner-gap-small-s: $x1;
 $inner-gap-small-m: $x1_5;
 $inner-gap-small-l: $x1_5;
@@ -365,6 +368,8 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
     gap: $inner-gap-medium-s;
   } @else if $gapSize == "small" {
     gap: $inner-gap-small-s;
+  } @else if $gapSize == "extrasmall" {
+    gap: $inner-gap-extrasmall-s;
   } @else {
     gap: $inner-gap-s;
   }
@@ -375,6 +380,8 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
       gap: $inner-gap-medium-m;
     } @else if $gapSize == "small" {
       gap: $inner-gap-small-m;
+    } @else if $gapSize == "extrasmall" {
+      gap: $inner-gap-extrasmall-m;
     } @else {
       gap: $inner-gap-m;
     }
@@ -386,6 +393,8 @@ $extra-padding-content-block-xl: $x10 $x9 $x11;
       gap: $inner-gap-medium-l;
     } @else if $gapSize == "small" {
       gap: $inner-gap-small-l;
+    } @else if $gapSize == "extrasmall" {
+      gap: $inner-gap-extrasmall-l;
     } @else {
       gap: $inner-gap-l;
     }

@@ -138,7 +138,6 @@
 .info-card-container-pricing {
   @media only screen and (min-width: $width-m) {
     .info-card-container-cards {
-      display: flex;
       flex-wrap: wrap;
     }
   }

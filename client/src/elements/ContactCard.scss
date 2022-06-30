@@ -105,13 +105,16 @@
     max-width: 320px;
   }
 
-  td:first-of-type {
-    width: 37.5%;
+  &.contact-card-pricing-call {
+    width: 100%;
+    @include setGap("small");
+
+    .contact-card-content-wrapper {
+      padding-top: 4px;
+      @include setGap("extrasmall");
+    }
   }
 
-  td:nth-of-type(2) {
-    width: 37.5%;
-  }
   @media only screen and (max-width: $width-max-xxs) {
     .contact-subtitle {
       font-size: 17px;
