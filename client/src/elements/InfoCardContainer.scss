@@ -130,6 +130,16 @@
 .info-card-container-contact,
 .info-card-container-pricing {
   .info-card-container-cards {
-    gap: 40px 20px;
+    gap: 32px 24px;
+  }
+}
+
+//Pricing cards
+.info-card-container-pricing {
+  @media only screen and (min-width: $width-m) {
+    .info-card-container-cards {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }

@@ -66,6 +66,13 @@ export default function Pricing() {
         >
           <PricingTable tableContent={visitPricing} />
         </ContactCard>
+        <ContactCard
+          title="Soittoapu"
+          subtitle="Palvelemme myös puhelimitse"
+          className="contact-card-pricing"
+        >
+          <PricingTable tableContent={callingPricing} />
+        </ContactCard>
       </InfoCardContainer>
       <ContentBlockContainer backgroundColor="lightbeige">
         <ContentBlock
