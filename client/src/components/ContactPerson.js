@@ -6,8 +6,10 @@ export default function ContactPerson({
   imageFileName,
   name,
   jobTitle,
+  jobTitleElement,
   phone,
   email,
+  emailElement,
 }) {
   return (
     <div
@@ -29,9 +31,15 @@ export default function ContactPerson({
           {name}
         </h4>
         <div className="contact-card-item-information-items">
-          <p>{jobTitle}</p>
+          {jobTitle ? (
+            <p>{jobTitle}</p>
+          ) : jobTitleElement ? (
+            jobTitleElement
+          ) : (
+            <></>
+          )}
           <p>{phone}</p>
-          <p>{email}</p>
+          {email ? <p>{email}</p> : emailElement ? emailElement : <></>}
         </div>
       </div>
     </div>

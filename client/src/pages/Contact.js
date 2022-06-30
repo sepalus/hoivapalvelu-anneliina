@@ -37,16 +37,42 @@ export default function Contact() {
             className="contact-card-item-person"
             name="Tove Seppelin-Högnabba"
             jobTitle="Toimitusjohtaja"
-            phone="+358 503683286"
-            email="tove@anneliina.fi"
+            phone="+358 50 368 3286"
+            emailElement={
+              <p>
+                tove.seppelin-hognabba
+                <wbr />
+                @anneliina.net
+              </p>
+            }
             imageFileName="tove.jpeg"
+          ></ContactPerson>
+          <ContactPerson
+            className="contact-card-item-person"
+            name="Niina Brunner"
+            jobTitleElement={<p>Johtava&nbsp;sairaanhoitaja</p>}
+            phone="+358 50 540 4234"
+            emailElement={
+              <p>
+                niina.brunner
+                <wbr />
+                @anneliina.net
+              </p>
+            }
+            imageFileName="placeholder.jpeg"
           ></ContactPerson>
           <ContactPerson
             className="contact-card-item-person"
             jobTitle=""
             name="Asiakaspalvelu"
-            phone="+358 400877966"
-            email="hoiva@anneliina.fi"
+            phone="+358 40 087 7966"
+            emailElement={
+              <p>
+                hoiva
+                <wbr />
+                @anneliina.net
+              </p>
+            }
             imageFileName="placeholder.jpeg"
           ></ContactPerson>
         </ContactCard>

@@ -47,7 +47,7 @@ export default function Footer() {
                 <span className="material-icons-outlined footer-information-contact-icon">
                   phone
                 </span>
-                0400 877 966
+                040 087 7966
               </p>
               <p className="text-extrasmall">
                 <span className="material-icons-outlined footer-information-contact-icon">

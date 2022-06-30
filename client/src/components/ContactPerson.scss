@@ -2,12 +2,21 @@
 
 .contact-card-item {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 .contact-card-item-information {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  h4 {
+    white-space: nowrap;
+  }
+}
+
+.contact-card-persons {
+  .contact-card-content-wrapper {
+    gap: $x3;
+  }
 }
 
 .contact-card-item-person {
@@ -21,13 +30,12 @@
   }
 
   .contact-card-item-image {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: $border-radius;
   }
   .contact-card-item-information {
-    width: 204px;
     margin-top: -4px;
     gap: $x1;
   }
@@ -37,19 +45,36 @@
     flex-direction: column;
   }
 }
+@media only screen and (min-width: $width-s) {
+  .contact-card-item {
+    flex-direction: row;
+  }
+}
 
 @media only screen and (min-width: $width-m) {
+  .contact-card-persons {
+    .contact-card-content-wrapper {
+      @include setGap("medium");
+    }
+  }
+
   .contact-card-item-person {
-    .contact-card-item-information {
-      width: 228px;
+    .contact-card-item-image-wrapper {
+      width: 160px;
+      height: 160px;
     }
   }
 }
 
-@media only screen and (min-width: $width-l) {
+@media only screen and (min-width: $width-l-plus) {
   .contact-card-item-person {
-    .contact-card-item-information {
-      width: 240px;
+    margin-top: 8px;
+
+    .contact-card-item-image-wrapper {
+      margin-top: -8px;
+      width: 160px;
+      min-width: 160px;
+      height: 160px;
     }
   }
 }

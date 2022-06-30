@@ -144,3 +144,17 @@
     }
   }
 }
+
+//Contact cards
+.info-card-container-contact {
+  @media only screen and (min-width: $width-m) {
+    .info-card-container-cards {
+      flex-direction: column;
+    }
+  }
+  @media only screen and (min-width: $width-l-plus) {
+    .info-card-container-cards {
+      flex-direction: row;
+    }
+  }
+}

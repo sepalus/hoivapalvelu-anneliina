@@ -7,13 +7,8 @@
   background-color: $color-white;
   box-shadow: $box-shadow-around;
   border-radius: $border-radius;
-  @include setInnerPaddings();
+  @include setExpanderPaddings();
   @include setGap("medium");
-  h3,
-  h4,
-  p {
-    white-space: nowrap;
-  }
 }
 
 .contact-header-wrapper {
@@ -55,9 +50,6 @@
   .contact-header-wrapper {
     padding: 0px;
   }
-  .contact-header-wrapper {
-    padding-top: 8px;
-  }
 }
 
 //Contact card contact
@@ -69,6 +61,7 @@
   }
   .contact-card-location-map-wrapper {
     width: 100%;
+    max-width: 600px;
     height: 360px;
 
     iframe {
@@ -83,15 +76,18 @@
     }
   }
   @media only screen and (min-width: $width-m) {
-    .contact-card-location-map-wrapper {
-      min-height: 400px;
-      height: 100%;
-    }
-
     .contact-card-persons {
       .contact-card-content-wrapper {
         padding-top: 8px;
       }
+    }
+  }
+  @media only screen and (min-width: $width-l-plus) {
+    width: calc(50% - 12px);
+
+    .contact-card-location-map-wrapper {
+      min-height: 400px;
+      height: 100%;
     }
   }
 }
