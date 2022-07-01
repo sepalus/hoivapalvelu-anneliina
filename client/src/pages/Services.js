@@ -46,7 +46,7 @@ export const ServiceInfoCards = (
   <>
     <InfoCard
       className="info-card-service"
-      iconFileName="service_homecare.png"
+      iconFileName="service-homecare.png"
       textElement={
         <>
           <h4 className="color-mediumblue text-weight-bold">Anneliinan </h4>
@@ -57,7 +57,7 @@ export const ServiceInfoCards = (
     />
     <InfoCard
       className="info-card-service"
-      iconFileName="service_homehelp.png"
+      iconFileName="service-homehelp.png"
       textElement={
         <>
           <h4 className="color-mediumblue text-weight-bold">Anneliinan </h4>
@@ -68,7 +68,7 @@ export const ServiceInfoCards = (
     />
     <InfoCard
       className="info-card-service"
-      iconFileName="service_daycare.png"
+      iconFileName="service-daycare.png"
       textElement={
         <>
           <h4 className="color-mediumblue text-weight-bold">Anneliinan </h4>
@@ -186,7 +186,7 @@ export default function Services() {
             title="Palveluihimme kuuluu myös"
             textElement={
               <>
-                <div>
+                <div id="muut-palvelut">
                   <h3>Henkilökohtainen apu</h3>
                   <p>
                     Henkilökohtainen apu on välttämätöntä toisen ihmisen antamaa
