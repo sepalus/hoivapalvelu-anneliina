@@ -18,26 +18,25 @@ const ScrollToTop = (props) => {
 };
 
 function App() {
-  const rootPath = "/hoivapalvelu-anneliina";
   return (
     <>
       <Router>
         <Header />
         <ScrollToTop>
           <Switch>
-            <Route path={rootPath + "/palvelut"}>
+            <Route path="/palvelut">
               <Services />
             </Route>
-            <Route path={rootPath + "/hinnasto"}>
+            <Route path="/hinnasto">
               <Pricing />
             </Route>
-            <Route path={rootPath + "/meista"}>
+            <Route path="/meista">
               <About />
             </Route>
-            <Route path={rootPath + "/yhteystiedot"}>
+            <Route path="/yhteystiedot">
               <Contact />
             </Route>
-            <Route path={rootPath + "/"}>
+            <Route path="/">
               <Home />
             </Route>
           </Switch>

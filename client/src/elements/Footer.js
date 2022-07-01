@@ -3,8 +3,6 @@ import "./Footer.scss";
 import LinkButton from "../components/LinkButton";
 
 export default function Footer() {
-  const rootPath = "/hoivapalvelu-anneliina";
-
   return (
     <div className="footer">
       <div className="footer-content-wrapper">
@@ -23,7 +21,7 @@ export default function Footer() {
           <LinkButton
             text="Ota yhteyttä"
             className="footer-slogan-button"
-            linkPath={rootPath + "/yhteystiedot#"}
+            linkPath="/yhteystiedot#"
           />
         </div>
         <div className="footer-information">
