@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/hoivapalvelu-anneliina/static/css/main.4cae2f06.chunk.css",
-    "main.js": "/hoivapalvelu-anneliina/static/js/main.2ee563fd.chunk.js",
-    "main.js.map": "/hoivapalvelu-anneliina/static/js/main.2ee563fd.chunk.js.map",
-    "runtime-main.js": "/hoivapalvelu-anneliina/static/js/runtime-main.04e80f9e.js",
-    "runtime-main.js.map": "/hoivapalvelu-anneliina/static/js/runtime-main.04e80f9e.js.map",
-    "static/js/2.36b71fba.chunk.js": "/hoivapalvelu-anneliina/static/js/2.36b71fba.chunk.js",
-    "static/js/2.36b71fba.chunk.js.map": "/hoivapalvelu-anneliina/static/js/2.36b71fba.chunk.js.map",
-    "static/js/3.a2ac45cb.chunk.js": "/hoivapalvelu-anneliina/static/js/3.a2ac45cb.chunk.js",
-    "static/js/3.a2ac45cb.chunk.js.map": "/hoivapalvelu-anneliina/static/js/3.a2ac45cb.chunk.js.map",
+    "main.css": "/hoivapalvelu-anneliina/static/css/main.5bc042c7.css",
+    "main.js": "/hoivapalvelu-anneliina/static/js/main.beedd23e.js",
+    "static/js/787.44e022fc.chunk.js": "/hoivapalvelu-anneliina/static/js/787.44e022fc.chunk.js",
     "index.html": "/hoivapalvelu-anneliina/index.html",
-    "static/css/main.4cae2f06.chunk.css.map": "/hoivapalvelu-anneliina/static/css/main.4cae2f06.chunk.css.map",
-    "static/js/2.36b71fba.chunk.js.LICENSE.txt": "/hoivapalvelu-anneliina/static/js/2.36b71fba.chunk.js.LICENSE.txt"
+    "main.5bc042c7.css.map": "/hoivapalvelu-anneliina/static/css/main.5bc042c7.css.map",
+    "main.beedd23e.js.map": "/hoivapalvelu-anneliina/static/js/main.beedd23e.js.map",
+    "787.44e022fc.chunk.js.map": "/hoivapalvelu-anneliina/static/js/787.44e022fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.04e80f9e.js",
-    "static/js/2.36b71fba.chunk.js",
-    "static/css/main.4cae2f06.chunk.css",
-    "static/js/main.2ee563fd.chunk.js"
+    "static/css/main.5bc042c7.css",
+    "static/js/main.beedd23e.js"
   ]
 }
