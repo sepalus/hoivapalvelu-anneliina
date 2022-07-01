@@ -22,10 +22,12 @@ export default function Home() {
         titleElement={<h2>Yksilöllistä palvelua kotona asumisen tueksi</h2>}
         textElement={
           <p>
-            Huomioimme aina sinun arkesi ja tottumuksesi. Toimintamme on
-            ammattimaista, laadukasta ja luotettavaa, emmekä tunne sanaa kiire.
-            Räätälöimme palvelut juuri sinulle sopiviksi. Yhdessä varmistamme,
-            että palvelusta tulee juuri sellainen kuin olet toivonutkin.
+            Tarjoamme yksilöllistä ja luotettavaa sairaanhoito- ja hoiva- ja
+            kotiapupalvelua kaikille sitä tarvitseville. Huomioimme aina sinun
+            arkesi ja tottumuksesi. Toimintamme on ammattimaista, laadukasta ja
+            luotettavaa, emmekä tunne sanaa kiire. Räätälöimme palvelut juuri
+            sinulle sopiviksi. Yhdessä varmistamme, että palvelusta tulee juuri
+            sellainen kuin olet toivonutkin.
           </p>
         }
         backgroundColor="lightblue"

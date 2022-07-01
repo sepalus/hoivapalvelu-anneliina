@@ -213,6 +213,11 @@ button.no-background-button:hover {
   padding: 0;
 }
 
+.horizontal-line {
+  border-top: 0.5px solid #696969;
+  width: 100%;
+}
+
 @media only screen and (min-width: $width-m) {
   p {
     font-size: $text-m;

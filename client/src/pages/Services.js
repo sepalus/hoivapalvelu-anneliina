@@ -88,7 +88,28 @@ export default function Services() {
         imageFileName="service-hero.jpeg"
         backgroundColor="lightbeige"
         title="Palvelut"
-        text="Tarjoamme yksilöllistä ja luotettavaa sairaanhoito- ja huolenpitopalvelua kaikille sitä tarvitseville. Oma koti on turvallinen paikka, jossa ihmisellä on hyvä olla. Haluamme varmistaa että ihmiset voivat asua omassa kodissaan aivan niin kauan kuin he itse haluavat. Autamme ihmisiä päivittäisessä elämässä, tarjoamalla heille henkilökohtaista apua kotona asumiseen ja arkeen. Huomioimme aina sinun arkesi ja tottumuksesi. Toimimme laadukkaasti ja luotettavasti, emmekä tunne sanaa kiire. Räätälöimme palvelut juuri sinulle sopiviksi. Yhdessä varmistamme, että palvelusta tulee juuri sellainen kuin olet toivonutkin."
+        textElement={
+          <>
+            <p>
+              Meiltä saat kaikki asumista tukevat palvelut saman katon alta. Oma
+              koti on turvallinen paikka, jossa ihmisellä on hyvä olla. Haluamme
+              varmistaa että ihmiset voivat asua omassa kodissaan aivan niin
+              kauan kuin he itse haluavat.{" "}
+            </p>
+            <div className="horizontal-line"></div>
+            <p>
+              Kotihoito- ja sairaanhoitopalvelun myötä tarjoamme yksilöllistä ja
+              luotettavaa kotihoitoa pääsääntöisesti ikääntyneille henkilöille,
+              jotka tarvitsevat hoivaa, huolenpitoa ja sairaanhoidollista apua
+              kotona selviytymisen tueksi. Kaikkea ei tarvitse tehdä itse.
+              Kotiapupalveluna voit saada halutessasi apua arkeen ja näin
+              sinulle jää enemmän aikaa itsellesi, perheellesi ja ystävillesi.
+              Päivätoiminta tarjoaa virikkeellistä toimintaa ja kuntoutusta
+              kotona asuville ikääntyneille, jotka taritsevat tukea kotona
+              selviytymiseen tai seuraa yksinäisiin päiviin.
+            </p>
+          </>
+        }
         overlay={{
           overlayColor: "lightbeige",
           overlayReverse: true,
@@ -98,26 +119,6 @@ export default function Services() {
       <InfoCardContainer
         className="info-card-container-service-units"
         titleElement={<h2>Palvelukokonaisuudet</h2>}
-        textElement={
-          <p>
-            Meiltä saat kaikki asumista tukevat palvelut saman katon alta.
-            <span className="text-weight-semibold">
-              {" "}
-              Kotihoito- ja sairaanhoitopalvelun{" "}
-            </span>{" "}
-            myötä tarjoamme yksilöllistä ja luotettavaa kotihoitoa
-            pääsääntöisesti ikääntyneille henkilöille, jotka tarvitsevat hoivaa,
-            huolenpitoa ja sairaanhoidollista apua kotona selviytymisen tueksi.
-            Kaikkea ei tarvitse tehdä itse.{" "}
-            <span className="text-weight-semibold">Kotiapupalveluna</span> voit
-            saada halutessasi apua arkeen ja näin sinulle jää enemmän aikaa
-            itsellesi, perheellesi ja ystävillesi.{" "}
-            <span className="text-weight-semibold">Päivätoiminta</span> tarjoaa
-            virikkeellistä toimintaa ja kuntoutusta kotona asuville
-            ikääntyneille, jotka taritsevat tukea kotona selviytymiseen tai
-            seuraa yksinäisiin päiviin.
-          </p>
-        }
         backgroundColor="lightbeige"
       >
         {ServiceInfoCards}

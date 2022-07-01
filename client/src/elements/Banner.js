@@ -8,6 +8,7 @@ export default function Banner({
   imageFileName,
   title,
   text,
+  textElement,
   sloganText,
   buttonText,
   backgroundColor,
@@ -42,7 +43,7 @@ export default function Banner({
           <div className="banner-tagline-content-wrapper">
             {title && <h1>{title}</h1>}
             {sloganText && <h3>{sloganText}</h3>}
-            {text && <p>{text}</p>}
+            {text ? <p>{text}</p> : textElement ? textElement : <></>}
             {buttonText && (
               <LinkButton
                 text={buttonText}
