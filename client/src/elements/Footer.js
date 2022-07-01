@@ -21,7 +21,7 @@ export default function Footer() {
           <LinkButton
             text="Ota yhteyttä"
             className="footer-slogan-button"
-            linkPath="/yhteystiedot"
+            linkPath="/yhteystiedot#"
           />
         </div>
         <div className="footer-information">
