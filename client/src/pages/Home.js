@@ -12,7 +12,7 @@ export default function Home() {
     <div className="home">
       <Banner
         className="banner-home"
-        imageFileName="home-banner-wide.jpg"
+        imageFileName="home-hero-wide.jpeg"
         backgroundColor="ultralightbeige"
         sloganText="Meiltä saat kaikki kotona asumista tukevat palvelut vaivattomasti saman katon alta"
         buttonText="Tutustu palveluihimme"
@@ -35,7 +35,7 @@ export default function Home() {
       <ContentBlockContainer backgroundColor="lightbeige">
         <ContentBlock
           isReverse={true}
-          imageFileName="about-us.jpeg"
+          imageFileName="about-hero.jpeg"
           title="Jokainen meistä on yksilö"
           text="Jokainen meistä on yksilö. Meillä on kaikilla oma tarinamme, omat kokemuksemme, omat ilomme ja surumme ja ennen kaikkea oma tapa elää. Yksilöllinen sydämestä lähtevä hoivamme tarkoittaa sitä, että asiakasta kohdellaan ainutlaatuisena ihmisenä, jolla on paljon annettavaa ja oikeus hyvään elämään."
           linkPath="/meista#arvot"

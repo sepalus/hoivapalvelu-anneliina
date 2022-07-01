@@ -85,7 +85,7 @@ export default function Services() {
     <div className="services">
       <Banner
         className="banner-services"
-        imageFileName="services.jpeg"
+        imageFileName="service-hero.jpeg"
         backgroundColor="lightbeige"
         title="Palvelut"
         text="Tarjoamme yksilöllistä ja luotettavaa sairaanhoito- ja huolenpitopalvelua kaikille sitä tarvitseville. Oma koti on turvallinen paikka, jossa ihmisellä on hyvä olla. Haluamme varmistaa että ihmiset voivat asua omassa kodissaan aivan niin kauan kuin he itse haluavat. Autamme ihmisiä päivittäisessä elämässä, tarjoamalla heille henkilökohtaista apua kotona asumiseen ja arkeen. Huomioimme aina sinun arkesi ja tottumuksesi. Toimimme laadukkaasti ja luotettavasti, emmekä tunne sanaa kiire. Räätälöimme palvelut juuri sinulle sopiviksi. Yhdessä varmistamme, että palvelusta tulee juuri sellainen kuin olet toivonutkin."
@@ -126,7 +126,7 @@ export default function Services() {
         <ContentBlockContainer>
           <ServiceLiftup
             id="kotihoito"
-            imageFileName="service-1.jpeg"
+            imageFileName="service-homecare.jpeg"
             title="Anneliinan Kotihoito ja Sairaanhoito"
             description="Hoivaa, huolenpitoa ja sairaanhoidollista apua kotona selviytymisen tueksi"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
@@ -155,7 +155,7 @@ export default function Services() {
           <ServiceLiftup
             id="kotiapu"
             isReverse={true}
-            imageFileName="placeholder.jpeg"
+            imageFileName="service-homehelp.jpeg"
             title="Anneliinan Kotiapu"
             description="Kotiapupalveluna voita saada erilaisia kotona asumista helpottavia palveluita"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
@@ -217,7 +217,7 @@ export default function Services() {
 
           <ServiceLiftup
             id="paivatoiminta"
-            imageFileName="placeholder.jpeg"
+            imageFileName="service-daycare.jpeg"
             title="Anneliinan Päivätoiminta"
             description="Päivätoiminta tarjoaa virikkeellistä toimintaa ja kuntoutusta kotona asuville ikääntyneille"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"

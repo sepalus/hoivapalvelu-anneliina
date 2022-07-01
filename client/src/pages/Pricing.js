@@ -79,7 +79,6 @@ export default function Pricing() {
       <ContentBlockContainer backgroundColor="lightbeige">
         <ContentBlock
           isReverse={true}
-          imageFileName="placeholder.jpeg"
           title="​Kotitalousvähennys"
           text="Voit saada kotitalousvähennyksen, jos teetät kotitalous- tai tavanomaista hoiva-tai hoitotyötä. Vähennys on jopa 60% maksamasi palvelun hinnasta ja se hyvitetään sinulle henkilökohtaisessa verotuksessa. Voimme autta sinua verovähennyksen hakemisessa."
           backgroundColor="white"

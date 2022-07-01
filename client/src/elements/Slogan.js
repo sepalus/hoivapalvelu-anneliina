@@ -15,7 +15,7 @@ export default function Slogan() {
         <div className="slogan-image-wrapper">
           <img
             className="slogan-image"
-            src="./assets/icons/home-logo-hand.png"
+            src="./assets/icons/home-hand-logo.png"
             alt=""
           />
         </div>

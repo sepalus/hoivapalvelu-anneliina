@@ -9,7 +9,7 @@ import Footer from "../elements/Footer";
 
 const infoCards = [
   {
-    iconFileName: "value_individuality.png",
+    iconFileName: "value-individuality.png",
     text: "Ykislöllisyys",
     className: "info-card-value",
     expandedTitle: "Hoito on yksilöllistä",
@@ -17,7 +17,7 @@ const infoCards = [
       "Yksilöllinen sydämestä lähtevä palvelu tarkoittaa sitä, että asiakasta kohdellaan ainutlaatuisena ihmisenä. Meille asiakas on aina yksilö ja oman elämänsä asiantuntija ja kunnioitamme hänen itsemääräämisoikeuttaan. Uskomme ihmisen ainutlaatuisuuteen.",
   },
   {
-    iconFileName: "value_humanity.png",
+    iconFileName: "value-humanity.png",
     text: "Inhimillisyys",
     className: "info-card-value",
     expandedTitle: "Kohtaaminen on ystävällistä ja inhimillistä",
@@ -25,7 +25,7 @@ const infoCards = [
       "Emme tunne sanaa kiire. Hoitajamme tarjoavat aikaa ja läsnäoloa ja kohtelu on lämmintä ja ystävällistä.",
   },
   {
-    iconFileName: "value_trust.png",
+    iconFileName: "value-trust.png",
     text: "Luotettavuus",
     className: "info-card-value",
     expandedTitle: "Olemme luotettavia",
@@ -33,7 +33,7 @@ const infoCards = [
       "Panostamme palveluidemme luotettavuuteen ja turvallisuuteen. Palvelemme sovitusti ja täsmällisesti, laadusta tinkimättä. Annettu palvelu perustuu hoito ja –palvelusuunnitelmaan. Kaikessa toiminnassamme edellytämme rehellisyyttä itseä ja toisia kohtaan ja sitä kautta rakennamme vahvan luottamuksen ilmapiirin.",
   },
   {
-    iconFileName: "value_respect.png",
+    iconFileName: "value-respect.png",
     text: "Arvostus",
     className: "info-card-value",
     expandedTitle: "Arvostamme toinen toisiamme",
@@ -41,7 +41,7 @@ const infoCards = [
       "Arvostamme ja kunnioitamme asiakkaitamme, yhteistyökumppaneitamme sekä toinen toisiamme. On tärkeätä toimia itse tavalla, mitä myös muilta edellyttää. Toimintamme edellyttää joustavaa ja tavoitteellista toimintatapaa jolloin avoimuuden ja yhteistyön merkitykset korostuvat. Joukkuepelissä meillä kaikilla on oma tärkeä roolimme.",
   },
   {
-    iconFileName: "value_professionalism.png",
+    iconFileName: "value-professionalism.png",
     text: "Ammattitaito",
     className: "info-card-value",
     expandedTitle: "Tiimimme on ammattitaitoinen",
@@ -60,7 +60,7 @@ export default function About() {
     <div className="about">
       <Banner
         className="banner-about"
-        imageFileName="about-us.jpeg"
+        imageFileName="about-hero.jpeg"
         title="Tietoa Meistä"
         backgroundColor="lightpink"
         text="Hoivapalvelu Anneliina tukee ihmisen kotona asumista tarjoamalla luotettavaa, laadukasta ja asiakaslähtöistä sairaanhoito- ja huolenpitopalvelua. Autamme ihmisiä päivittäisessä elämässä tarjoamalla heille henkilökohtaista apua kotona-asumiseen ja arkeen. Teemme saumatonta ja tavoitteellista yhteistyötä muiden yhteistyökumppaneiden ja omaisten kanssa. Haluamme, että Anneliina tunnetaan hoiva-alalla luotettavana kotihoidon palvelun tarjoajana, jossa ammattitaito ja ihmisläheisyys kohtaavat. Haluamme tarjota toimialueemme parasta kotihoitopalvelua."
@@ -120,7 +120,7 @@ export default function About() {
       </InfoCardContainer>
       <ContentBlockContainer backgroundColor="lightbeige">
         <ContentBlock
-          imageFileName="placeholder.jpeg"
+          imageFileName="about-story.jpeg"
           title="Tarinamme"
           text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli halu luoda kotona asuville ikäihmisille hyvä arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Suomalaisen perheyrityksen hoivapalvelu Anneliinan tuulet jatkavat perustajansa viitoittamaa tietä."
           backgroundColor="white"
