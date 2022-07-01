@@ -8,6 +8,7 @@ import ContentBlock from "../elements/ContentBlock";
 import Footer from "../elements/Footer";
 
 export default function Home() {
+  const rootPath = "/hoivapalvelu-anneliina";
   return (
     <div className="home">
       <Banner
@@ -40,7 +41,7 @@ export default function Home() {
           imageFileName="about-hero.jpeg"
           title="Jokainen meistä on yksilö"
           text="Jokainen meistä on yksilö. Meillä on kaikilla oma tarinamme, omat kokemuksemme, omat ilomme ja surumme ja ennen kaikkea oma tapa elää. Yksilöllinen sydämestä lähtevä hoivamme tarkoittaa sitä, että asiakasta kohdellaan ainutlaatuisena ihmisenä, jolla on paljon annettavaa ja oikeus hyvään elämään."
-          linkPath="/meista#arvot"
+          linkPath={rootPath + "/meista#arvot"}
           buttonText="Lue lisää arvoistamme"
           backgroundColor="white"
           backgroundColorMedium="lightbeige"
@@ -49,7 +50,7 @@ export default function Home() {
         <ContentBlock
           title="Voisitko sinä tai läheisesi hyötyä palvelustamme?"
           text="Haluamme palvella sinua. Meiltä saat kaikki kotona asumista tukevat palvelut laadukkaasti ja kiireettömästi kotiisi. Tuomme mielellämme juuri sinulle tai läheisellesi räätälöidyn palvelumme kotiisi. Ota yhteyttä jo tänään ja pyydä meiltä ilmainen palvelutarpeen kartoituskäynti kotiisi."
-          linkPath="/yhteystiedot"
+          linkPath={rootPath + "/yhteystiedot"}
           buttonText="Ota yhteyttä"
           backgroundColorMedium="ultralightblue"
         />
@@ -65,7 +66,7 @@ export default function Home() {
         <ContentBlock
           title="Oletko sinä seuraava Anneliinalainen?"
           text="Hoivapalvelu Anneliina tunnetaan hyvästä tiimistä ja ihanista asiakkaista. Yhteisöllisyys näkyy. Autamme asiakkaitamme päivittäisessä elämässä tarjoamalla heille kiireetöntä kotihoitoa tai henkilökohtaista apua kotona-asumiseen ja arkeen. Etsimme aina iloiseen joukkoomme sitoutuneita, sydämellisiä ja ammattitaitoisia lähihoitajia. Tarjoamme kilpailukykyisen palkan, joten jos olet työtä pelkäämätön, asenteeltasi positiivinen lähihoitaja, jolla on vahva halu palvella muita ihmisiä, tule toteuttamaan ja kehittämään itseäsi ja toimintaamme kanssamme."
-          linkPath="/yhteystiedot"
+          linkPath={rootPath + "/yhteystiedot"}
           buttonText="Ota yhteyttä"
           backgroundColorMedium="ultralightblue"
         />

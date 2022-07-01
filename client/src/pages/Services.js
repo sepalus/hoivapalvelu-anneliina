@@ -43,6 +43,8 @@ const dayActivityTaskList = [
   "muistellaan menneitä",
 ];
 
+const rootPath = "/hoivapalvelu-anneliina";
+
 export const ServiceInfoCards = (
   <>
     <InfoCard
@@ -54,7 +56,7 @@ export const ServiceInfoCards = (
           <h4 className="text-weight-semibold">Kotihoito ja Sairaanhoito</h4>
         </>
       }
-      linkPath="/palvelut#kotihoito"
+      linkPath={rootPath + "/palvelut#kotihoito"}
     />
     <InfoCard
       className="info-card-service"
@@ -65,7 +67,7 @@ export const ServiceInfoCards = (
           <h4 className="text-weight-semibold">Kotiapu</h4>
         </>
       }
-      linkPath="/palvelut#kotiapu"
+      linkPath={rootPath + "/palvelut#kotiapu"}
     />
     <InfoCard
       className="info-card-service"
@@ -76,7 +78,7 @@ export const ServiceInfoCards = (
           <h4 className="text-weight-semibold">Päivätoiminta</h4>
         </>
       }
-      linkPath="/palvelut#paivatoiminta"
+      linkPath={rootPath + "/palvelut#paivatoiminta"}
     />
   </>
 );
@@ -126,13 +128,13 @@ export default function Services() {
             <LinkButton
               text="henkilökohtainen apu"
               className="no-background-button text-underline text-weight-medium"
-              linkPath="/palvelut#muut-palvelut"
+              linkPath={rootPath + "/palvelut#muut-palvelut"}
             ></LinkButton>{" "}
             ja{" "}
             <LinkButton
               text="omaishoitajan vapaa."
               className="no-background-button text-underline text-weight-medium"
-              linkPath="/palvelut#muut-palvelut"
+              linkPath={rootPath + "/palvelut#muut-palvelut"}
             ></LinkButton>
           </h4>
         }
