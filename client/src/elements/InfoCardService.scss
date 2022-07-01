@@ -1,80 +1,63 @@
 @import "../variables";
 
-@mixin setInfoCardServiceWidth() {
-  min-width: calc(
-    (100vw - 116px) / 3
-  ); //margins: 96px, gaps: 8px, paddings: 12px
-
-  @media only screen and (min-width: 455px) {
-    min-width: calc(
-      (100vw - 124px) / 4
-    ); //margins: 96px, gaps: 12px, paddings: 16px
-  }
-
-  @media only screen and (min-width: $width-m) {
-    min-width: 0px;
-  }
-}
-
 .info-card-service {
-  height: 110px;
-  @include setInfoCardServiceWidth();
-  @include setGap("medium");
-
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
   .info-card-icon-wrapper {
-    display: none;
+    display: block;
+    height: 40px;
   }
-
   .info-card-text {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    p {
-      white-space: pre-wrap;
-      line-height: 1.25em;
+    text-align: start;
+
+    h4 {
+      line-height: 1;
+      font-weight: 400;
+      white-space: normal;
+    }
+    h4:not(:first-of-type) {
+      padding-top: 4px;
     }
   }
 
-  &.info-card-disactive {
-    background-color: $color-lightgray-light;
-    > * {
-      opacity: 0.5;
-    }
-    &:hover {
-      background-color: $color-lightgray-light-hover;
-      > * {
-        opacity: 1;
+  @media only screen and (min-width: $width-xs) and (max-width: $width-max-s) {
+    .info-card-text {
+      display: flex;
+      h4 {
+        font-size: 19px;
+      }
+      h4:not(:first-of-type) {
+        padding-top: 0px;
+        padding-left: 6px;
       }
     }
   }
-  @media only screen and (min-width: $width-xs) {
-    height: 120px;
-
-    .info-card-text p {
-      font-size: $text-small-s;
-    }
-  }
 
   @media only screen and (min-width: $width-m) {
-    padding-left: 12px;
-    padding-right: 12px;
-    height: 140px;
-    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
     .info-card-icon-wrapper {
+      height: 45px;
       display: flex;
+      justify-content: flex-end;
     }
     .info-card-text {
-      align-items: flex-start;
-      p {
-        font-size: $text-small-m;
+      margin-bottom: auto;
+      h4 {
+        font-size: 19px;
+        line-height: 1.1em;
       }
     }
   }
 
   @media only screen and (min-width: $width-l) {
-    height: 150px;
-    .info-card-text p {
-      font-size: $text-small-l;
+    h4 {
+      font-size: 21px;
+      line-height: 1em;
     }
   }
 }

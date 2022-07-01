@@ -19,6 +19,7 @@ export default function Home() {
       />
       <Slogan />
       <InfoCardContainer
+        className="info-card-container-service-units"
         titleElement={<h2>Yksilöllistä palvelua kotona asumisen tueksi</h2>}
         textElement={
           <p>
@@ -31,18 +32,36 @@ export default function Home() {
         backgroundColor="lightblue"
       >
         <InfoCard
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-kotisairaanhoito.png"
+          className="info-card-service"
+          iconFileName="service_homecare.png"
+          textElement={
+            <>
+              <h4 className="color-mediumblue">Anneliinan </h4>
+              <h4>Kotihoito ja sairaanhoito</h4>
+            </>
+          }
           linkPath="/palvelut#kotisairaanhoito"
         />
         <InfoCard
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-koti.png"
+          className="info-card-service"
+          iconFileName="service_homehelp.png"
+          textElement={
+            <>
+              <h4 className="color-mediumblue">Anneliinan </h4>
+              <h4>Kotiapu</h4>
+            </>
+          }
           linkPath="/palvelut#kotihoito"
         />
         <InfoCard
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-paivatoiminta.png"
+          className="info-card-service"
+          iconFileName="service_daycare.png"
+          textElement={
+            <>
+              <h4 className="color-mediumblue">Anneliinan </h4>
+              <h4>Päivätoiminta</h4>
+            </>
+          }
           linkPath="/palvelut#paivatoiminta"
         />
       </InfoCardContainer>

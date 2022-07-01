@@ -7,10 +7,10 @@ import LinkButton from "../components/LinkButton";
 
 export default function InfoCard({
   linkPath,
-  iconName,
   iconFileName,
   logoFileName,
   text,
+  textElement,
   textHtml,
   className,
   isCardActive,
@@ -45,6 +45,7 @@ export default function InfoCard({
         ) : (
           <div className="info-card-text">
             {text && <p className="text-small text-weight-semibold">{text}</p>}
+            {textElement}
             {textHtml && (
               <p
                 className="text-small text-weight-semibold"

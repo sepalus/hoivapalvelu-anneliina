@@ -102,6 +102,20 @@
   }
 }
 
+//Service unit cards
+.info-card-container-service-units {
+  @media only screen and (min-width: $width-m) {
+    .info-card-ref {
+      width: calc(33.33% - 10.67px);
+    }
+  }
+  @media only screen and (min-width: $width-l) {
+    .info-card-ref {
+      width: calc(33.33% - 13.33px);
+    }
+  }
+}
+
 //Service cards
 .info-card-container-service {
   .info-card-container-content-wrapper {
