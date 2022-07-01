@@ -42,6 +42,44 @@ const dayActivityTaskList = [
   "muistellaan menneitä",
 ];
 
+export const ServiceInfoCards = (
+  <>
+    <InfoCard
+      className="info-card-service"
+      iconFileName="service_homecare.png"
+      textElement={
+        <>
+          <h4 className="color-mediumblue text-weight-bold">Anneliinan </h4>
+          <h4 className="text-weight-semibold">Kotihoito ja Sairaanhoito</h4>
+        </>
+      }
+      linkPath="/palvelut#kotihoito"
+    />
+    <InfoCard
+      className="info-card-service"
+      iconFileName="service_homehelp.png"
+      textElement={
+        <>
+          <h4 className="color-mediumblue text-weight-bold">Anneliinan </h4>
+          <h4 className="text-weight-semibold">Kotiapu</h4>
+        </>
+      }
+      linkPath="/palvelut#kotiapu"
+    />
+    <InfoCard
+      className="info-card-service"
+      iconFileName="service_daycare.png"
+      textElement={
+        <>
+          <h4 className="color-mediumblue text-weight-bold">Anneliinan </h4>
+          <h4 className="text-weight-semibold">Päivätoiminta</h4>
+        </>
+      }
+      linkPath="/palvelut#paivatoiminta"
+    />
+  </>
+);
+
 export default function Services() {
   return (
     <div className="services">
@@ -82,21 +120,7 @@ export default function Services() {
         }
         backgroundColor="lightbeige"
       >
-        <InfoCard
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-kotisairaanhoito.png"
-          linkPath="/palvelut#kotihoito"
-        />
-        <InfoCard
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-koti.png"
-          linkPath="/palvelut#kotiapu"
-        />
-        <InfoCard
-          iconFileName="anneliinan-kotisairaanhoito.png"
-          logoFileName="anneliinan-paivatoiminta.png"
-          linkPath="/palvelut#paivatoiminta"
-        />
+        {ServiceInfoCards}
       </InfoCardContainer>
       <div className="services-content-blocks-container">
         <ContentBlockContainer>

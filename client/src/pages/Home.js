@@ -1,8 +1,8 @@
 import React from "react";
+import { ServiceInfoCards } from "../pages/Services";
 import Banner from "../elements/Banner";
 import Slogan from "../elements/Slogan";
 import InfoCardContainer from "../elements/InfoCardContainer";
-import InfoCard from "../elements/InfoCard";
 import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
 import Footer from "../elements/Footer";
@@ -31,39 +31,7 @@ export default function Home() {
         }
         backgroundColor="lightblue"
       >
-        <InfoCard
-          className="info-card-service"
-          iconFileName="service_homecare.png"
-          textElement={
-            <>
-              <h4 className="color-mediumblue">Anneliinan </h4>
-              <h4>Kotihoito ja sairaanhoito</h4>
-            </>
-          }
-          linkPath="/palvelut#kotisairaanhoito"
-        />
-        <InfoCard
-          className="info-card-service"
-          iconFileName="service_homehelp.png"
-          textElement={
-            <>
-              <h4 className="color-mediumblue">Anneliinan </h4>
-              <h4>Kotiapu</h4>
-            </>
-          }
-          linkPath="/palvelut#kotihoito"
-        />
-        <InfoCard
-          className="info-card-service"
-          iconFileName="service_daycare.png"
-          textElement={
-            <>
-              <h4 className="color-mediumblue">Anneliinan </h4>
-              <h4>Päivätoiminta</h4>
-            </>
-          }
-          linkPath="/palvelut#paivatoiminta"
-        />
+        {ServiceInfoCards}
       </InfoCardContainer>
       <ContentBlockContainer backgroundColor="lightbeige">
         <ContentBlock
