@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 import Button from "../components/Button";
@@ -7,6 +7,11 @@ import "./HeaderOverlay.scss";
 
 export default function Header() {
   const [showMenuOverlay, setShowMenuOverlay] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = showMenuOverlay ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "unset");
+  }, [showMenuOverlay]);
 
   return (
     <div
