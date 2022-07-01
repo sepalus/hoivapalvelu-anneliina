@@ -43,13 +43,19 @@
   flex-direction: column;
   @include setGap("medium");
   h3 {
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+    line-height: 1em;
   }
 }
 
 .footer-information-content-items {
-  margin-left: 4px;
-  white-space: nowrap;
+  margin-left: 2px;
+  p {
+    line-height: 18px;
+  }
+  p:not(:first-of-type) {
+    padding-top: 6px;
+  }
 }
 
 .footer-information-contact {

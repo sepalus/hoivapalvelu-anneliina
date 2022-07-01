@@ -205,12 +205,9 @@ export default function Services() {
                     läheisen ikääntymisen mukanaan tuomien sairauksien vuoksi
                     tai äkillisesti sairauden tai vammautumisen seurauksena.
                     Säännöllinen vapaa auttaa omaishoitajaa jaksamaan ja lisää
-                    voimavaroja omaishoitotilanteissa.
-                  </p>
-                  <p>
-                    Anneliinasta saat ammattitaitoista ja turvallista
-                    huolenpitoa omaisellesi vapaapäivinäsi. Toimimme
-                    omaishoitajan sijaisena kotonasi.
+                    voimavaroja omaishoitotilanteissa. Anneliinasta saat
+                    ammattitaitoista ja turvallista huolenpitoa omaisellesi
+                    vapaapäivinäsi. Toimimme omaishoitajan sijaisena kotonasi.
                   </p>
                 </div>
               </>

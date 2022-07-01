@@ -61,16 +61,18 @@ h4,
 p {
   margin: 0px;
   padding: 0px;
-  font-weight: 100;
-  line-height: 1.33em;
 }
 
+h1,
+h2,
 h3,
 h4 {
+  line-height: 1.33em;
   font-weight: 300;
 }
 
 p {
+  font-weight: 100;
   line-height: 1.5em;
 }
 
@@ -192,6 +194,10 @@ p.text-underline {
 }
 .text-weight-bold {
   font-weight: 600;
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 
 .hide-element {

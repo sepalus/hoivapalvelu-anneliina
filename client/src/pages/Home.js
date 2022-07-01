@@ -19,7 +19,6 @@ export default function Home() {
       />
       <Slogan />
       <InfoCardContainer
-        className="info-card-container-service-units"
         titleElement={<h2>Yksilöllistä palvelua kotona asumisen tueksi</h2>}
         textElement={
           <p>

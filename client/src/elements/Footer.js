@@ -28,14 +28,14 @@ export default function Footer() {
           <div className="footer-information-services">
             <h3 className="text-medium-weight">Palvelut</h3>
             <div className="footer-information-content-items">
-              <p className="text-small">Anneliinan Kotisairaanhoito</p>
+              <p className="text-small">Anneliinan Kotihoito ja Sairaanhoito</p>
               <p className="text-small">Anneliinan Kotiapu</p>
               <p className="text-small">Anneliinan Päivätoiminta</p>
             </div>
           </div>
           <div className="footer-information-contact">
             <h3 className="text-medium-weight">Yhteystiedot</h3>
-            <div className="footer-information-content-items">
+            <div className="footer-information-content-items no-wrap">
               <p className="text-small">Hoivapalvelu Anneliina Oy</p>
               <p className="text-extrasmall">
                 <span className="material-icons-outlined footer-information-contact-icon">

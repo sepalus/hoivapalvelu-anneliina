@@ -41,7 +41,7 @@ export default function Banner({
         >
           <div className="banner-tagline-content-wrapper">
             {title && <h1>{title}</h1>}
-            {sloganText && <h3 className="text-weight-light">{sloganText}</h3>}
+            {sloganText && <h3>{sloganText}</h3>}
             {text && <p>{text}</p>}
             {buttonText && (
               <LinkButton
