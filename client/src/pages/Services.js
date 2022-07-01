@@ -6,6 +6,7 @@ import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
 import ServiceLiftup from "../elements/ServiceLiftup";
 import Footer from "../elements/Footer";
+import LinkButton from "../components/LinkButton";
 
 const homeCareTaskList = [
   "tarkkailee yleistä terveydentilaasi",
@@ -119,6 +120,22 @@ export default function Services() {
       <InfoCardContainer
         className="info-card-container-service-units"
         titleElement={<h2>Palvelukokonaisuudet</h2>}
+        postTextElement={
+          <h4>
+            Palvelutarjontaamme kuuluu myös{" "}
+            <LinkButton
+              text="henkilökohtainen apu"
+              className="no-background-button text-underline text-weight-medium"
+              linkPath="/palvelut#muut-palvelut"
+            ></LinkButton>{" "}
+            ja{" "}
+            <LinkButton
+              text="omaishoitajan vapaa."
+              className="no-background-button text-underline text-weight-medium"
+              linkPath="/palvelut#muut-palvelut"
+            ></LinkButton>
+          </h4>
+        }
         backgroundColor="lightbeige"
       >
         {ServiceInfoCards}
