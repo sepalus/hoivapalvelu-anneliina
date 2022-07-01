@@ -6,7 +6,6 @@ import ContentBlockContainer from "../elements/ContentBlockContainer";
 import ContentBlock from "../elements/ContentBlock";
 import ServiceLiftup from "../elements/ServiceLiftup";
 import Footer from "../elements/Footer";
-import LinkButton from "../components/LinkButton";
 
 const homeCareTaskList = [
   "tarkkailee yleistä terveydentilaasi",
@@ -118,24 +117,6 @@ export default function Services() {
             ikääntyneille, jotka taritsevat tukea kotona selviytymiseen tai
             seuraa yksinäisiin päiviin.
           </p>
-        }
-        postTextElement={
-          <div>
-            <h4>
-              Palveluihimme kuuluu myös{" "}
-              <LinkButton
-                text="henkilökohtainen apu"
-                className="no-background-button text-underline text-weight-semibold"
-                linkPath="/palvelut#muut-palvelut"
-              ></LinkButton>{" "}
-              ja{" "}
-              <LinkButton
-                text="omaishoitajan vapaa"
-                className="no-background-button text-underline text-weight-semibold"
-                linkPath="/palvelut#muut-palvelut"
-              ></LinkButton>
-            </h4>
-          </div>
         }
         backgroundColor="lightbeige"
       >
