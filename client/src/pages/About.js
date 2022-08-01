@@ -60,7 +60,7 @@ export default function About() {
     <div className="about">
       <Banner
         className="banner-about"
-        imageFileName="about-hero.jpeg"
+        imageFileName="about-hero.jpg"
         title="Tietoa Meistä"
         backgroundColor="lightpink"
         text="Hoivapalvelu Anneliina tukee ihmisen kotona asumista tarjoamalla luotettavaa, laadukasta ja asiakaslähtöistä sairaanhoito- ja huolenpitopalvelua. Autamme ihmisiä päivittäisessä elämässä tarjoamalla heille henkilökohtaista apua kotona-asumiseen ja arkeen. Teemme saumatonta ja tavoitteellista yhteistyötä muiden yhteistyökumppaneiden ja omaisten kanssa. Haluamme, että Anneliina tunnetaan hoiva-alalla luotettavana kotihoidon palvelun tarjoajana, jossa ammattitaito ja ihmisläheisyys kohtaavat. Haluamme tarjota toimialueemme parasta kotihoitopalvelua."
@@ -120,7 +120,7 @@ export default function About() {
       </InfoCardContainer>
       <ContentBlockContainer backgroundColor="lightbeige">
         <ContentBlock
-          imageFileName="about-story.jpeg"
+          imageFileName="about-story.jpg"
           title="Tarinamme"
           text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli halu luoda kotona asuville ikäihmisille hyvä arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Suomalaisen perheyrityksen hoivapalvelu Anneliinan tuulet jatkavat perustajansa viitoittamaa tietä."
           backgroundColor="white"

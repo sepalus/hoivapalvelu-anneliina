@@ -86,7 +86,7 @@ export default function Services() {
     <div className="services">
       <Banner
         className="banner-services"
-        imageFileName="service-hero.jpeg"
+        imageFileName="service-hero.jpg"
         backgroundColor="lightbeige"
         title="Palvelut"
         textElement={
@@ -144,7 +144,7 @@ export default function Services() {
         <ContentBlockContainer>
           <ServiceLiftup
             id="kotihoito"
-            imageFileName="service-homecare.jpeg"
+            imageFileName="service-homecare.jpg"
             title="Anneliinan Kotihoito ja Sairaanhoito"
             description="Hoivaa, huolenpitoa ja sairaanhoidollista apua kotona selviytymisen tueksi"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
@@ -173,7 +173,7 @@ export default function Services() {
           <ServiceLiftup
             id="kotiapu"
             isReverse={true}
-            imageFileName="service-homehelp.jpeg"
+            imageFileName="service-homehelp.jpg"
             title="Anneliinan Kotiapu"
             description="Kotiapupalveluna voita saada erilaisia kotona asumista helpottavia palveluita"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"
@@ -235,7 +235,7 @@ export default function Services() {
 
           <ServiceLiftup
             id="paivatoiminta"
-            imageFileName="service-daycare.jpeg"
+            imageFileName="service-daycare.jpg"
             title="Anneliinan Päivätoiminta"
             description="Päivätoiminta tarjoaa virikkeellistä toimintaa ja kuntoutusta kotona asuville ikääntyneille"
             keywords="Lorem ipsum, dolor sit amet, albucius, patrioque, duisiisque"

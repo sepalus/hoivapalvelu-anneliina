@@ -45,7 +45,7 @@ export default function Contact() {
                 @anneliina.net
               </p>
             }
-            imageFileName="contact-tove.jpeg"
+            imageFileName="contact-tove.jpg"
           ></ContactPerson>
           <ContactPerson
             className="contact-card-item-person"
