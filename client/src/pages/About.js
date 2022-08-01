@@ -121,6 +121,7 @@ export default function About() {
       <ContentBlockContainer backgroundColor="lightbeige">
         <ContentBlock
           imageFileName="about-story.jpg"
+          className="about-story-content-block"
           title="Tarinamme"
           text="Hoivapalvelu Anneliina Oy on aloittanut toimintansa vuonna 2007 yhden naisen yrityksenä. Vuosien myötä toiminta on laajentunut ja henkilöstömäärä lisääntynyt. Yrityksen perustamisen syynä oli halu luoda kotona asuville ikäihmisille hyvä arki antamalla heille aikaa, välittämistä ja apua kotona asumiseen. Suomalaisen perheyrityksen hoivapalvelu Anneliinan tuulet jatkavat perustajansa viitoittamaa tietä."
           backgroundColor="white"
