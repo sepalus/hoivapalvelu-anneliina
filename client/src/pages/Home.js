@@ -22,7 +22,7 @@ export default function Home() {
         titleElement={<h2>Yksilöllistä palvelua kotona asumisen tueksi</h2>}
         textElement={
           <p>
-            Tarjoamme yksilöllistä ja luotettavaa sairaanhoito- ja hoiva- ja
+            Tarjoamme yksilöllistä ja luotettavaa sairaanhoito-, hoiva- ja
             kotiapupalvelua kaikille sitä tarvitseville. Huomioimme aina sinun
             arkesi ja tottumuksesi. Toimintamme on ammattimaista, laadukasta ja
             luotettavaa, emmekä tunne sanaa kiire. Räätälöimme palvelut juuri
@@ -64,7 +64,7 @@ export default function Home() {
         />
         <ContentBlock
           title="Oletko sinä seuraava Anneliinalainen?"
-          text="Hoivapalvelu Anneliina tunnetaan hyvästä tiimistä ja ihanista asiakkaista. Yhteisöllisyys näkyy. Autamme asiakkaitamme päivittäisessä elämässä tarjoamalla heille kiireetöntä kotihoitoa tai henkilökohtaista apua kotona-asumiseen ja arkeen. Etsimme aina iloiseen joukkoomme sitoutuneita, sydämellisiä ja ammattitaitoisia lähihoitajia. Tarjoamme kilpailukykyisen palkan, joten jos olet työtä pelkäämätön, asenteeltasi positiivinen lähihoitaja, jolla on vahva halu palvella muita ihmisiä, tule toteuttamaan ja kehittämään itseäsi ja toimintaamme kanssamme."
+          text="Hoivapalvelu Anneliina tunnetaan hyvästä tiimistä ja ihanista asiakkaista. Yhteisöllisyys näkyy. Autamme asiakkaitamme päivittäisessä elämässä tarjoamalla heille kiireetöntä kotihoitoa tai henkilökohtaista apua kotona asumiseen ja arkeen. Etsimme aina iloiseen joukkoomme sitoutuneita, sydämellisiä ja ammattitaitoisia lähihoitajia. Tarjoamme kilpailukykyisen palkan, joten jos olet työtä pelkäämätön, asenteeltasi positiivinen lähihoitaja, jolla on vahva halu palvella muita ihmisiä, tule toteuttamaan ja kehittämään itseäsi ja toimintaamme kanssamme."
           linkPath="/yhteystiedot"
           buttonText="Ota yhteyttä"
           backgroundColorMedium="ultralightblue"

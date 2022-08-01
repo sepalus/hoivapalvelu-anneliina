@@ -10,7 +10,7 @@ import Footer from "../elements/Footer";
 const infoCards = [
   {
     iconFileName: "value-individuality.png",
-    text: "Ykislöllisyys",
+    text: "Yksilöllisyys",
     className: "info-card-value",
     expandedTitle: "Hoito on yksilöllistä",
     expandedText:
@@ -38,7 +38,7 @@ const infoCards = [
     className: "info-card-value",
     expandedTitle: "Arvostamme toinen toisiamme",
     expandedText:
-      "Arvostamme ja kunnioitamme asiakkaitamme, yhteistyökumppaneitamme sekä toinen toisiamme. On tärkeätä toimia itse tavalla, mitä myös muilta edellyttää. Toimintamme edellyttää joustavaa ja tavoitteellista toimintatapaa jolloin avoimuuden ja yhteistyön merkitykset korostuvat. Joukkuepelissä meillä kaikilla on oma tärkeä roolimme.",
+      "Arvostamme ja kunnioitamme asiakkaitamme, yhteistyökumppaneitamme sekä toinen toisiamme. On tärkeätä toimia itse tavalla, mitä myös muilta edellyttää. Toimintamme edellyttää joustavaa ja tavoitteellista toimintatapaa, jolloin avoimuuden ja yhteistyön merkitykset korostuvat. Joukkuepelissä meillä kaikilla on oma tärkeä roolimme.",
   },
   {
     iconFileName: "value-professionalism.png",
@@ -63,7 +63,7 @@ export default function About() {
         imageFileName="about-hero.jpg"
         title="Tietoa Meistä"
         backgroundColor="lightpink"
-        text="Hoivapalvelu Anneliina tukee ihmisen kotona asumista tarjoamalla luotettavaa, laadukasta ja asiakaslähtöistä sairaanhoito- ja huolenpitopalvelua. Autamme ihmisiä päivittäisessä elämässä tarjoamalla heille henkilökohtaista apua kotona-asumiseen ja arkeen. Teemme saumatonta ja tavoitteellista yhteistyötä muiden yhteistyökumppaneiden ja omaisten kanssa. Haluamme, että Anneliina tunnetaan hoiva-alalla luotettavana kotihoidon palvelun tarjoajana, jossa ammattitaito ja ihmisläheisyys kohtaavat. Haluamme tarjota toimialueemme parasta kotihoitopalvelua."
+        text="Hoivapalvelu Anneliina tukee ihmisen kotona asumista tarjoamalla luotettavaa, laadukasta ja asiakaslähtöistä sairaanhoito- ja huolenpitopalvelua. Autamme ihmisiä päivittäisessä elämässä tarjoamalla heille henkilökohtaista apua kotona asumiseen ja arkeen. Teemme saumatonta ja tavoitteellista yhteistyötä muiden yhteistyökumppaneiden ja omaisten kanssa. Haluamme, että Anneliina tunnetaan hoiva-alalla luotettavana kotihoidon palvelun tarjoajana, jossa ammattitaito ja ihmisläheisyys kohtaavat. Haluamme tarjota toimialueemme parasta kotihoitopalvelua."
         overlay={{ overlayColor: "lightbeige" }}
       />
       <InfoCardContainer
@@ -73,10 +73,9 @@ export default function About() {
           <p>
             Kaiken toimintamme lähtökohtana ovat asiakkaidemme toiveet ja
             tarpeet. Asiakastyötämme ohjaavia arvoja ovat yksilöllisyys,
-            ammatillisuus, inhimillisyys, luotettavuus ja arvostus.
-            Asiakkaitamme hoidamme vastuuhoitajaperiaatteen mukaisesti ja
-            samalla turvaamme hoidon yksilöllisyyden, jatkuvuuden ja
-            luotettavuuden.
+            inhimillisyys, luotettavuus, arvostus ja ammattitaito. Asiakkaitamme
+            hoidamme vastuuhoitajaperiaatteen mukaisesti ja samalla turvaamme
+            hoidon yksilöllisyyden, jatkuvuuden ja luotettavuuden.
           </p>
         }
         backgroundColor="lightpink"

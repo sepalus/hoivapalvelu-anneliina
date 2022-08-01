@@ -190,7 +190,7 @@ export default function Services() {
                   Omien voimien vähentyessä kotiin saatavien palveluiden
                   merkitys kasvaa. Ammattitaitoinen ja luotettava
                   henkilökuntamme helpottaa arkeasi ja hyvinvointiasi.
-                  Kotiapupalveluna voita saada erilaisia kotona asumista
+                  Kotiapupalveluna voit saada erilaisia kotona asumista
                   helpottavia palveluita.
                 </p>
               </>
