@@ -1,17 +1,20 @@
 {
   "name": "hoivapalvelu-anneliina",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
-  "homepage": "https://sepalus.github.io/hoivapalvelu-anneliina/",
+  "homepage": ".",
   "scripts": {
     "start": "node server/index.js",
     "build": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d client/build"
+    "deploy": "gh-pages -d client/build",
+    "heroku-postbuild": "npm install"
   },
   "engines": {
-    "node": "15.14.0"
+    "npm": "8.15.1",
+    "node": "18.7.0"
   },
   "keywords": [],
   "author": "",
