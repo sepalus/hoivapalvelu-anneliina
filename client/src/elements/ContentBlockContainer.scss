@@ -11,7 +11,7 @@
 
 .services-content-blocks-container {
   .content-block-container-content-wrapper {
-    gap: $x4;
+    gap: $x6;
   }
   @media only screen and (min-width: $width-s) {
     .content-block-container-content-wrapper {
@@ -25,7 +25,9 @@
   }
   @media only screen and (min-width: $width-l) {
     .content-block-container-content-wrapper {
-      gap: $x8;
+      gap: $x11;
+      padding-top: $x11;
+      padding-bottom: $x11;
     }
   }
 }
