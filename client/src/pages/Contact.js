@@ -35,20 +35,6 @@ export default function Contact() {
         >
           <ContactPerson
             className="contact-card-item-person"
-            name="Tove Seppelin-Högnabba"
-            jobTitle="Toimitusjohtaja"
-            phone="+358 50 368 3286"
-            emailElement={
-              <p>
-                tove.seppelin-hognabba
-                <wbr />
-                @anneliina.net
-              </p>
-            }
-            imageFileName="contact-tove.jpg"
-          ></ContactPerson>
-          <ContactPerson
-            className="contact-card-item-person"
             name="Niina Brunner"
             jobTitleElement={<p>Johtava&nbsp;sairaanhoitaja</p>}
             phone="+358 50 540 4234"
